@@ -1,0 +1,14 @@
+q_label,q_inv_angstrom,omega_meV,omega_uncertainty_meV,branch,polarization_e,wavevector_q,phase,T_K,source_figure,note
+"[0,0,0]",0.000,3.0,1.0,TO,010,00zeta,cubic,423,Fig_5,Optical square marker at Gamma
+"[0.2,0,0]",0.313,9.5,1.5,TO,010,00zeta,cubic,423,Fig_5,Neutron scattering cross marker
+"[0.305,0,0]",0.478,14.0,1.0,TO,010,00zeta,cubic,423,Fig_5,Neutron scattering cross marker
+"[0.05,0,0]",0.078,2.3,0.0,TA,010,00zeta,cubic,423,Fig_5,Filled circle marker
+"[0.15,0,0]",0.235,7.0,0.0,TA,010,00zeta,cubic,423,Fig_5,Filled circle marker
+"[0.20,0,0]",0.313,8.9,0.0,TA,010,00zeta,cubic,423,Fig_5,Filled circle marker
+"[0.30,0,0]",0.470,12.0,0.0,TA,010,00zeta,cubic,423,Fig_5,Filled circle marker
+"[0.50,0,0]",0.784,14.4,0.0,TA,010,00zeta,cubic,423,Fig_5,Zone boundary filled circle marker
+"[0.07,0,0]",0.110,3.2,0.0,TA,010,00zeta,cubic,503,Fig_5,Open circle marker
+"[0.13,0,0]",0.204,5.8,0.0,TA,010,00zeta,cubic,503,Fig_5,Open circle marker
+"[0.25,0,0]",0.392,10.9,0.0,TA,010,00zeta,cubic,503,Fig_5,Open circle marker
+"[0.38,0,0]",0.596,13.5,0.0,TA,010,00zeta,cubic,503,Fig_5,Open circle marker
+"[0.45,0,0]",0.706,14.0,0.0,TA,010,00zeta,cubic,503,Fig_5,Open circle marker

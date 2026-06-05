@@ -1,0 +1,5 @@
+material,direction,T_K,omega0_meV,eta,lambda_sq_meV2ang2,lambda_sq_frac_unc,kappa_soft_W_m_K,kappa_soft_lo,kappa_soft_hi,regime,note
+STO,isotropic,299.3,10.96,0.1096,889.0,0.3,0.13712,0.10217,0.16662,underdamped,Vogt cubic_F1u Omega(T); eta=Vogt gamma/2; Lambda2=Verdi Gamma->X-TO1 effective curvature (not small-q)
+KTO,isotropic,294.36,10.15,0.1257,889.0,0.5,0.11776,0.06536,0.1569,underdamped,Vogt Omega(T); eta=Vogt gamma/2; Lambda2=STO-proxy +/-50%
+BTO,soft_100,723.0,15.0,2.265,972.0,0.2,0.0055,0.00441,0.00654,overdamped(order-of-mag),HAS cubic TO near-Gamma; eta=Gamma/Omega; K_P invalid -> Wigner K_C
+BTO,stiff_110_111,723.0,15.0,2.265,4750.0,0.2,0.01899,0.01645,0.02123,overdamped(order-of-mag),HAS cubic TO near-Gamma; eta=Gamma/Omega; K_P invalid -> Wigner K_C

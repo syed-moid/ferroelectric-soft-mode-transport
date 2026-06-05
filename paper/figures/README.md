@@ -1,0 +1,39 @@
+# Manuscript figures
+
+Standalone scripts that re-plot the manuscript figures from committed data / kernel
+outputs. Each script reproduces its original analysis-notebook plotting cell **verbatim**
+(same colors, markers, sizes, line styles, fonts via `fekappa.plots.set_publication_style`,
+axis scales/limits) and applies only surgical edits — titles removed, repo-only prose boxes
+removed, legends relocated only where they collided, panel labels for multi-panel figures.
+Figure captions live in the manuscript, not in the images.
+
+## Regenerate
+
+```bash
+source ../../.venv/bin/activate      # repo venv with `pip install -e ".[dev]"`
+python make_fig01.py                 # ... make_fig02 ... make_fig06
+python make_supp.py                  # S1–S3
+```
+
+Each script prints a manifest (outputs + the exact list of what was removed/moved/kept) and
+writes `out/<name>.pdf` (vector) + `out/<name>.png` (600 dpi). Rendering is deterministic
+(Agg backend); the same inputs produce byte-identical output.
+
+## Files
+
+| Script | Figure | Source cell | Data dependency |
+| --- | --- | --- | --- |
+| `make_fig01.py` | Fig 1 — ω(T) triangulation (STO / KTaO₃), stacked 2×1 | NB 07 + NB 07b | `literature_io` Ω(T) loaders |
+| `make_fig02.py` | Fig 2 — STO Γ(T): YS vs Vogt (HWHM basis) | NB 07 | YS + Vogt γ(T) loaders |
+| `make_fig03.py` | Fig 3 — BTO hybrid negative result (Ω²/δ, η) | NB 09 | `data/raw/BTO/phonon_modes_*K.csv` + `archive/scph_calibration` |
+| `make_fig04.py` | Fig 4 — damping-axis classification (main) | NB 08 | `fekappa.eta` + HAS Table I |
+| `make_fig05.py` | Fig 5 — cubic BTO directional Λ² | NB 06 | HAS 1971 dispersion + Λ² loaders |
+| `make_fig06.py` | Fig 6 — soft-mode kernel κ_soft(T) | NB 08 | `fekappa.kappa_kernel` + Vogt Ω(T) |
+| `make_supp.py` | S1–S3 — STO/KTaO₃ LST, η–κ plane | NB 07 / 07b / 08 | LST loaders + `data/processed/section4_eta_kappa_triples.csv` |
+| `pubstyle.py` | — | — | thin helpers: path shim, margin panel label, dual PDF+PNG saver |
+
+## Tracking
+
+`out/` and all `paper/**/*.png` / `paper/**/*.pdf` are gitignored — figures regenerate from
+the scripts. Only the scripts (and the committed `data/processed/section4_eta_kappa_triples.csv`
+that Fig S3 reads) are tracked. Source publication PDFs are never committed.

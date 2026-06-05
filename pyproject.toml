@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fekappa"
+version = "1.0.0"
+description = "Thermal conductivity of anharmonic ferroelectrics: SCPH + Wigner"
+requires-python = ">=3.11"
+authors = [{ name = "Syed A. Moid" }]
+readme = "README.md"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "pandas>=2.1",
+    "matplotlib>=3.8",
+    "lmfit>=1.2",
+    "jupyter>=1.0",
+    "ipykernel>=6.27",
+    "openpyxl>=3.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "ruff>=0.1",
+    "mypy>=1.7",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint.per-file-ignores]
+# Notebooks bootstrap sys.path before importing the package (E402) and import
+# numpy/pandas for interactive convenience (F401); both are intentional.
+"notebooks/*.ipynb" = ["E402", "F401"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

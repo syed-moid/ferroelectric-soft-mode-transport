@@ -1,0 +1,97 @@
+# ---------------------------------------------------------------------------
+# Byte-compiled / optimized / DLL files
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ---------------------------------------------------------------------------
+# Distribution / packaging
+# ---------------------------------------------------------------------------
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ---------------------------------------------------------------------------
+# Unit test / coverage reports
+# ---------------------------------------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# ---------------------------------------------------------------------------
+# Virtual environments
+# ---------------------------------------------------------------------------
+.venv/
+venv/
+.uv/
+env/
+ENV/
+
+# ---------------------------------------------------------------------------
+# Jupyter
+# ---------------------------------------------------------------------------
+notebooks/.ipynb_checkpoints/
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------------------
+# Project data and figures
+# ---------------------------------------------------------------------------
+# Processed/derived data is gitignored EXCEPT curated notebook-stage interfaces
+# (diffable, low-volume, the data of record handed between notebooks).
+data/processed/*
+!data/processed/section4_eta_kappa_triples.csv
+# Generated figures regenerate from the notebooks on run -> NOT tracked (any format).
+# Anchored to repo root so it does not also swallow paper/figures/ (whose scripts
+# are tracked; only paper/figures/out/ binaries are ignored, below).
+/figures/
+
+# ---------------------------------------------------------------------------
+# LaTeX build artifacts
+# ---------------------------------------------------------------------------
+*.aux
+*.log
+*.out
+*.synctex.gz
+
+# ---------------------------------------------------------------------------
+# Working memory (declares itself not-checked-in; contains unpublished notes)
+# ---------------------------------------------------------------------------
+session_log.md
+
+# ---------------------------------------------------------------------------
+# Source publication PDFs (copyrighted; kept local for digitization workflow)
+# Provenance recorded in data/literature/digitization_plan.md.
+# ---------------------------------------------------------------------------
+data/*.pdf
+data/**/*.pdf
+
+# ---------------------------------------------------------------------------
+# OS / editor cruft
+# ---------------------------------------------------------------------------
+.DS_Store
+
+# ---------------------------------------------------------------------------
+# Manuscript figure pipeline: track the scripts, gitignore the rendered binaries
+# (paper/figures/out/). Figures regenerate from paper/figures/make_*.py.
+# ---------------------------------------------------------------------------
+paper/figures/out/
+paper/**/*.png
+paper/**/*.pdf

@@ -1,0 +1,17 @@
+T_K,q_label,q_inv_angstrom,omega_meV,branch,method,source_figure
+0,Gamma,0.0,-12.41,Soft_Optical,harmonic_small_disp,Fig_2
+0,Gamma,0.0,3.31,Soft_Optical,Calculated_SSCHA,Fig_2
+300,Gamma,0.0,10.75,Soft_Optical,Calculated_SSCHA,Fig_2
+0,X,0.788,8.27,Acoustic_TA,Calculated_SSCHA,Fig_2
+300,X,0.788,8.27,Acoustic_TA,Calculated_SSCHA,Fig_2
+0,X,0.788,20.68,Acoustic_LA,Calculated_SSCHA,Fig_2
+300,X,0.788,20.68,Acoustic_LA,Calculated_SSCHA,Fig_2
+0,Gamma,0.0,97.19,Highest_Optical,Calculated_SSCHA,Fig_2
+300,Gamma,0.0,97.19,Highest_Optical,Calculated_SSCHA,Fig_2
+0,X,0.788,102.57,Highest_Optical,Calculated_SSCHA,Fig_2
+300,X,0.788,102.57,Highest_Optical,Calculated_SSCHA,Fig_2
+0,M,1.114,107.53,Highest_Optical,Calculated_SSCHA,Fig_2
+300,M,1.114,107.53,Highest_Optical,Calculated_SSCHA,Fig_2
+0,R,1.365,109.60,Highest_Optical,Calculated_SSCHA,Fig_2
+300,R,1.365,109.60,Highest_Optical,Calculated_SSCHA,Fig_2
+

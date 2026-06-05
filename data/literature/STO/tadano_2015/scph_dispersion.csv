@@ -1,0 +1,16 @@
+T_K,q_label,q_inv_angstrom,omega_meV,branch,method,source_figure
+300,Gamma,0.0,99.2,Highest_Optical,SCPH,Fig_4
+300,Gamma,0.0,99.2,Highest_Optical,harmonic,Fig_4
+300,X,0.804,91.7,Highest_Optical,SCPH,Fig_4
+300,X,0.804,91.7,Highest_Optical,harmonic,Fig_4
+300,M,1.137,99.2,Highest_Optical,SCPH,Fig_4
+300,M,1.137,99.2,Highest_Optical,harmonic,Fig_4
+300,Gamma_mid,0.0,12.4,Soft_Optical,SCPH,Fig_4
+300,Gamma_mid,0.0,12.4,Soft_Optical,experimental,Fig_4
+300,R,0.696,6.2,Structural_Soft_Mode,SCPH,Fig_4
+300,R,0.696,-11.2,Structural_Soft_Mode,harmonic,Fig_4
+300,R,0.696,6.2,Structural_Soft_Mode,experimental,Fig_4
+300,X,0.804,34.7,Acoustic_LA,SCPH,Fig_4
+300,X,0.804,34.7,Acoustic_LA,harmonic,Fig_4
+300,X,0.804,21.1,Acoustic_TA,experimental,Fig_4
+

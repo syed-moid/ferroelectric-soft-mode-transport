@@ -1,0 +1,17 @@
+T_K,condition,branch_label,q_label,q_inv_angstrom,omega_cm_inv
+0,nonthermalized,Highest_Optical,Gamma,0.0,710
+0,nonthermalized,Highest_Optical,X,0.7829,650
+0,nonthermalized,Highest_Optical,M,1.107,750
+0,nonthermalized,Highest_Optical,Gamma,0.0,690
+0,nonthermalized,Highest_Optical,R,1.3559,750
+0,nonthermalized,Ferroelectric_Soft_Mode,Gamma,0.0,-166
+0,nonthermalized,Ferroelectric_Soft_Mode,X,0.7829,-130
+500,thermalized,Highest_Optical,Gamma,0.0,750
+500,thermalized,Highest_Optical,X,0.7829,650
+500,thermalized,Highest_Optical,M,1.107,750
+500,thermalized,Highest_Optical,Gamma,0.0,750
+500,thermalized,Highest_Optical,R,1.3559,780
+500,thermalized,Ferroelectric_Soft_Mode,Gamma,0.0,170
+500,thermalized,Ferroelectric_Soft_Mode,X,0.7829,160
+500,thermalized,Acoustic_TA,Gamma,0.0,0
+500,thermalized,Acoustic_LA,X,0.7829,120

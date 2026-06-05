@@ -1,0 +1,7 @@
+mode_name,label,omega_Q_meV,Gamma_Q_HWHM_meV,Q_x,Q_y,Q_z,expected_peak_barns,mode_type,temperature_K
+Mode_1_Ti-O_soft,Ti-O soft mode (Q=0.1),11.2,0.6,0.1,0.0,0.0,450.0,polar_soft,100
+Mode_2_A-O_TO2_gamma,A-site-O TO2 (Q=0),23.5,0.5,0.0,0.0,0.0,0.8,optical_high,100
+Mode_3_A-O_TO2,A-O TO2 (Q=0.2),21.3,0.6,0.2,0.0,0.0,1.2,optical_high,100
+Mode_4_TA,Acoustic TA (Q=0.4),10.1,0.4,0.4,0.0,0.0,550.0,acoustic,100
+Mode_5_A-O_TO2,A-O TO2 (Q=0.5),26.8,0.7,0.5,0.0,0.0,0.6,optical_high,100
+Mode_6_E_TO,E-symmetry TO,15.5,0.8,0.15,0.15,0.0,180.0,polar_optical,100

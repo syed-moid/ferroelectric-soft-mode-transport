@@ -1,0 +1,12 @@
+angle_deg,q_inv_angstrom,omega_meV,omega_uncertainty_meV,T_K,phase,source_figure,note
+-54.74,NaN,NaN,0.0,423,cubic,Fig_7,Symmetry direction [111] max Lambda_3
+-40.00,NaN,NaN,0.0,423,cubic,Fig_7,Arc path down from [111] toward [100]
+-20.00,NaN,NaN,0.0,423,cubic,Fig_7,Arc path down from [111] toward [100]
+0.00,NaN,NaN,0.0,423,cubic,Fig_7,Symmetry direction [100] minimum Delta_5 branch apex
+15.00,NaN,NaN,0.0,423,cubic,Fig_7,Arc path up from [100] toward [110] (solid lower branch)
+30.00,NaN,NaN,0.0,423,cubic,Fig_7,Arc path up from [100] toward [110] (solid lower branch)
+45.00,NaN,NaN,0.0,423,cubic,Fig_7,Symmetry direction [110] horizontal asymptote Sigma_4
+15.00,NaN,NaN,0.0,423,cubic,Fig_7,Arc path up from [100] toward [110] (dashed upper branch)
+30.00,NaN,NaN,0.0,423,cubic,Fig_7,Arc path up from [100] toward [110] (dashed upper branch)
+45.00,NaN,NaN,0.0,423,cubic,Fig_7,Symmetry direction [110] upper branch terminus Sigma_3
+

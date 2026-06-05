@@ -1,0 +1,11 @@
+phase,a_angstrom,c_angstrom,c_over_a,V_cell_A3,atom,Wyckoff_x,Wyckoff_y,Wyckoff_z,source
+cubic,4.013,4.013,1.0,64.63,Ba,0.0,0.0,0.0,Table_I_Expt_473K
+cubic,4.013,4.013,1.0,64.63,Ti,0.5,0.5,0.5,Table_I_Expt_473K
+cubic,4.013,4.013,1.0,64.63,O,0.5,0.5,0.0,Table_I_Expt_473K
+cubic,4.013,4.013,1.0,64.63,O,0.5,0.0,0.5,Table_I_Expt_473K
+cubic,4.013,4.013,1.0,64.63,O,0.0,0.5,0.5,Table_I_Expt_473K
+tetragonal,4.002,4.028,1.007,64.51,Ba,0.0,0.0,0.0,Table_I_Expt_293K
+tetragonal,4.002,4.028,1.007,64.51,Ti,0.5,0.5,0.515,Table_I_Expt_293K
+tetragonal,4.002,4.028,1.007,64.51,O,0.5,0.5,0.025,Table_I_Expt_293K
+tetragonal,4.002,4.028,1.007,64.51,O,0.5,0.0,0.485,Table_I_Expt_293K
+tetragonal,4.002,4.028,1.007,64.51,O,0.0,0.5,0.485,Table_I_Expt_293K

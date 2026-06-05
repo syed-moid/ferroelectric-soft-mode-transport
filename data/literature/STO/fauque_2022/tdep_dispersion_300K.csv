@@ -1,0 +1,15 @@
+T_K,q_label,q_inv_angstrom,omega_meV,branch,method,source_figure
+300,M,1.138,10.8,Acoustic_TA,TDEP,Fig_1c
+300,M_mid,0.569,6.0,Acoustic_TA,TDEP,Fig_1c
+300,Gamma,0.0,0.0,Acoustic_TA,TDEP,Fig_1c
+300,Gamma_mid,0.697,3.0,Acoustic_TA,TDEP,Fig_1c
+300,R,1.393,5.5,AFD_Soft_Mode,TDEP,Fig_1c
+300,M,1.138,15.2,Acoustic_LA,TDEP,Fig_1c
+300,Gamma,0.0,0.0,Acoustic_LA,TDEP,Fig_1c
+300,Gamma,0.0,9.5,TO_Soft_Mode,TDEP,Fig_1c
+300,R,1.393,16.0,Higher_Optical,TDEP,Fig_1c
+300,M,1.138,15.2,Optical,TDEP,Fig_1c
+300,M_mid,0.569,21.0,Optical,TDEP,Fig_1c
+300,Gamma,0.0,17.0,Optical,TDEP,Fig_1c
+300,Gamma_mid,0.697,23.0,Optical,TDEP,Fig_1c
+300,R,1.393,18.0,Optical,TDEP,Fig_1c
