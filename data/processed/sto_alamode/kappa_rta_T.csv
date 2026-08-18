@@ -1,0 +1,13 @@
+# source: data/raw/alamode_sto/STO_RTA_scph_{100..400}K.kl (SCPH-coupled anphon RTA)
+# method: ALAMODE 1.5.0 anphon MODE=RTA, 8x8x8 mesh; kappa tensor verified diagonal and isotropic before collapsing
+# units: kappa_W_mK in W m^-1 K^-1
+# provenance: ext-FP-alamode (ALAMODE tutorial force constants -- see data/raw/alamode_sto/IMPORT_NOTE.md)
+# T-grid: 100-400 K step 50 (7 temperatures)
+T_K,kappa_W_mK
+100.0,17.0639
+150.0,14.3412
+200.0,12.188899999999999
+250.0,10.5938
+300.0,9.5283
+350.0,8.7029
+400.0,8.0557
