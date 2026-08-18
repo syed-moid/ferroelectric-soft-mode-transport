@@ -1,9 +1,9 @@
-"""Supplementary figures S1-S3 for the computed SrTiO3 dataset.
+"""Supplementary figures S1-S3 for the computed SrTiO3 dataset (one file each).
 
 S1 -- mesh convergence: kappa_P and kappa_C at 300 K on 8x8x8 vs 12x12x12,
       plus the eta-map summary shift.
 S2 -- small-q Lambda^2 fit: Omega^2 vs q^2 at 300 K (fit line + points from the
-      committed path table's Gamma-X segment) and Lambda^2(T) with Omega_0(T).
+      committed path table's Gamma-X segment) and Lambda^2(T) inset.
 S3 -- band-resolved tau(300 K) validation: bare vs SCPH-coupled band medians
       (p10-p90 whiskers) against the digitized Tadano 2015 Fig. 7 ranges.
 
@@ -31,7 +31,9 @@ TIDY = ROOT / "data" / "processed" / "sto_alamode"
 CROSS = ROOT / "data" / "processed" / "alamode_crosscheck"
 CM1_TO_MEV = 1.0 / 8.06554
 
-fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(12.6, 3.6))
+fig1, ax1 = plt.subplots(figsize=(4.4, 3.6))
+fig2, ax2 = plt.subplots(figsize=(4.4, 3.6))
+fig3, ax3 = plt.subplots(figsize=(4.6, 3.6))
 
 # --- S1: mesh convergence ---------------------------------------------------
 mesh = pd.read_csv(TIDY / "mesh_convergence.csv", comment="#")
@@ -54,7 +56,6 @@ ax1.annotate(
     xy=(0.5, 0.97), xycoords="axes fraction", ha="center", va="top", fontsize=8,
 )
 ax1.legend(fontsize=8, loc="center right")
-pubstyle.panel_label(ax1, "a")
 
 # --- S2: Lambda^2 fit --------------------------------------------------------
 lam = pd.read_csv(TIDY / "lambda_sq_T.csv", comment="#")
@@ -80,7 +81,6 @@ ax2in.plot(lam["T_K"], lam["lambda_sq_meV2_ang2"], "s-", ms=3, color="tab:purple
 ax2in.set_xlabel("$T$ (K)", fontsize=7)
 ax2in.set_ylabel(r"$\Lambda^2$", fontsize=7)
 ax2in.tick_params(labelsize=7)
-pubstyle.panel_label(ax2, "b")
 
 # --- S3: band-resolved tau validation ----------------------------------------
 bare = pd.read_csv(CROSS / "alamode_sto_tau300K_bands_bare.csv", comment="#")
@@ -115,8 +115,8 @@ ax3.set_yscale("log")
 ax3.set_xlabel(r"$\Omega$ band (cm$^{-1}$)")
 ax3.set_ylabel(r"$\tau$(300 K) (ps)")
 ax3.legend(fontsize=8, loc="upper right")
-pubstyle.panel_label(ax3, "c")
 
-fig.tight_layout()
-paths = pubstyle.save(fig, "fsupp_sto")
-print("wrote:", *paths)
+for fig, name in ((fig1, "fs1_mesh"), (fig2, "fs2_lambda"), (fig3, "fs3_tau")):
+    fig.tight_layout()
+    paths = pubstyle.save(fig, name)
+    print("wrote:", *paths)

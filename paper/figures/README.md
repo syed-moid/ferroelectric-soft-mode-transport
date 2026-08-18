@@ -28,7 +28,12 @@ All read committed `data/processed/` (+ `data/literature/`) only — never `data
 | `make_f3_kappa_decomposition.py` | F3 — κ(T) five-way stack + negative control | `sto_alamode/kappa_five_way_T.csv`, `bare_vs_scph_control.csv`, κ literature anchors |
 | `make_f4_classification.py` | F4 — damping-axis classification (+ computed STO) | `fekappa.eta`, HAS Table I, `sto_alamode/eta_validity_T.csv` |
 | `make_f5_soft_kernel.py` | F5 — soft kernel: computed vs literature-input | `sto_alamode/soft_kernel_T.csv`, `kappa_five_way_T.csv`, `section4_eta_kappa_triples.csv` |
-| `make_fsupp_sto.py` | S1–S3 — mesh convergence; Λ² fit; τ validation | `sto_alamode/*`, `alamode_crosscheck/*` |
+| `make_fsupp_sto.py` | S1–S3 — mesh convergence; Λ² fit; τ validation (one file each: `fs1_mesh`, `fs2_lambda`, `fs3_tau`) | `sto_alamode/*`, `alamode_crosscheck/*` |
+
+Manuscript v6.1 numbering (by first callout): Figure 4 = `make_f5_soft_kernel.py`,
+Figure 5 = `make_f4_classification.py`. Supplement: S4 = `make_fig01.py`,
+S5 = `make_fig02.py`, S6–S7 = `make_supp.py` (LST checks), S8 = `make_fig05.py`;
+the old v5 transport-plane supplement figure is no longer referenced.
 
 Each script prints a manifest (outputs + the exact list of what was removed/moved/kept) and
 writes `out/<name>.pdf` (vector) + `out/<name>.png` (600 dpi). Rendering is deterministic

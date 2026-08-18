@@ -1,0 +1,83 @@
+# source: curated traceability index for Manuscript v6.1 (Gate-5/Gate-6 audit)
+# method: every numerical claim in the manuscript mapped to the committed data
+# file and the script that produces it; "literature" rows point to the
+# digitized-literature CSVs; test-locked values are additionally guarded by the
+# named test module
+# units: as stated per row
+# provenance: derived (audit index)
+value,units,description,manuscript_location,source_script,source_data_file
+9.5283,W/mK,kappa(300 K) SCPH-coupled 8x8x8,Abstract; Sec.1; Sec.3(i); Sec.4.3; Fig.3,src/fekappa/alamode_io.py,data/processed/sto_alamode/kappa_rta_T.csv
+10.3084,W/mK,kappa(300 K) 12x12x12 convergence,Sec.1; Sec.3(i); Fig.S1,src/fekappa/alamode_io.py,data/processed/sto_alamode/mesh_convergence.csv
+8.2,percent,mesh-convergence shift 8^3->12^3,Sec.6(iii),src/fekappa/alamode_io.py,data/processed/sto_alamode/mesh_convergence.csv
+8.7,W/mK,published 12^3 first-principles kappa(300 K),Abstract; Sec.1; Sec.3(i); Fig.3,paper/figures/make_f3_kappa_decomposition.py,data/literature/STO/tadano_2015/kappa_total_T.csv
+11,W/mK,experimental kappa(300 K) approximate,Abstract; Sec.1; Sec.3(i); Fig.3,paper/figures/make_f3_kappa_decomposition.py,data/literature/STO/tachibana_2008/kappa_total_T.csv
+3.3439,W/mK,bare-RTA kappa(300 K) negative control,Abstract; Sec.4.3,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/bare_vs_scph_control.csv
+2.85,x,SCPH/bare kappa ratio at 300 K,Sec.4.3,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/bare_vs_scph_control.csv
+2.63-4.68,x,SCPH/bare kappa ratio range 50-1000 K,Abstract; Sec.1; Sec.4.3; Sec.7,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/bare_vs_scph_control.csv
+11/525,count,unstable modes bare harmonic surface,Abstract; Sec.1; Sec.4.1; Fig.1,src/fekappa/alamode_io.py; tests/test_alamode_io.py,data/processed/sto_alamode/omega_gamma_bare_T.csv
+0/525,count,unstable modes SCPH-coupled (all T),Abstract; Sec.1; Sec.4.1; Fig.1,src/fekappa/alamode_io.py; tests/test_alamode_io.py,data/processed/sto_alamode/omega_gamma_scph_T.csv
+6/35,count,irreducible q hosting bare instabilities,Sec.4.1,src/fekappa/alamode_io.py,data/processed/sto_alamode/omega_gamma_bare_T.csv
+0.102,dimensionless,zone-maximum eta over all T,Abstract; Sec.4.2,src/fekappa/damping_map.py,data/processed/sto_alamode/eta_validity_T.csv
+0.003-0.021,dimensionless,zone-median eta range 0-1000 K,Abstract; Sec.4.2,src/fekappa/damping_map.py,data/processed/sto_alamode/eta_validity_T.csv
+0,fraction,eta>0.5 fractions (count- and kappa-weighted) all T,Abstract; Sec.1; Sec.4.2; Sec.7; Fig.2,src/fekappa/damping_map.py; tests/test_damping_and_decomposition.py,data/processed/sto_alamode/eta_validity_T.csv
+0.0225,dimensionless,eta0(300 K) computed Omega0,Sec.4.2; Sec.5; Fig.5,src/fekappa/damping_map.py,data/processed/sto_alamode/eta_validity_T.csv
+0.0426,dimensionless,eta0(300 K) Vogt-anchored,Sec.4.2,src/fekappa/damping_map.py,data/processed/sto_alamode/eta_validity_T.csv
+0.109,dimensionless,literature eta_STO(300 K) Vogt,Sec.4.2; Sec.5; Fig.5,src/fekappa/eta.py; tests/test_eta.py,data/literature/STO/vogt_1995/{omega_T,gamma_T}.csv
+0.21,ratio,eta0 computed / literature 0.109,Sec.4.2,src/fekappa/damping_map.py; tests/test_damping_and_decomposition.py,data/processed/sto_alamode/eta_validity_T.csv
+0.126,dimensionless,literature eta_KTaO3(300 K),Sec.5; Fig.5,src/fekappa/eta.py; tests/test_eta.py,data/literature/KTO/vogt_1995/{omega_T,gamma_T}.csv
+2.27,dimensionless,literature eta_BaTiO3 (overdamped),Sec.5; Fig.5,paper/figures/make_f4_classification.py,data/literature/BTO/harada_axe_shirane_1971/mode_parameters.csv
+0.41-0.53,ratio,Vogt/computed Omega0 rescale ratios 150-300 K,Sec.4.2,src/fekappa/damping_map.py,data/processed/sto_alamode/eta_validity_sensitivity.csv
+0.07,dimensionless,zone-max eta after Omega rescaling (150-300 K),Sec.4.2,src/fekappa/damping_map.py,data/processed/sto_alamode/eta_validity_sensitivity.csv
+2.57,ratio,Vogt/computed Gamma0 HWHM ratio at 300 K (~2.6),Sec.4.2; Novelty,src/fekappa/damping_map.py; tests/test_damping_and_decomposition.py,data/processed/sto_alamode/eta_validity_sensitivity.csv
+0.15,dimensionless,zone-max eta under Gamma-side/combined rescaling,Sec.4.2,src/fekappa/damping_map.py,data/processed/sto_alamode/eta_validity_sensitivity.csv
+1.891,ratio,computed/Vogt Omega0 at 300 K (~1.9),Abstract; Sec.3(iii); Sec.6(ii),src/fekappa/damping_map.py,data/processed/sto_alamode/eta_validity_T.csv (1/vogt_over_computed)
+1.9-2.4,ratio,computed/Vogt Omega0 range below 300 K,Sec.6(ii); C8,src/fekappa/damping_map.py,data/processed/sto_alamode/eta_validity_T.csv
+167.148,cm^-1,computed Omega0(300 K),Sec.3(iii); Sec.4.1 context,src/fekappa/lambda_fit.py,data/processed/sto_alamode/lambda_sq_T.csv
+88.4,cm^-1,Vogt Omega0(300 K),Sec.3(iii),src/fekappa/damping_map.py,data/literature/STO/vogt_1995/omega_T.csv
+119.729,cm^-1,computed Omega0(0 K),Sec.4.1,src/fekappa/lambda_fit.py,data/processed/sto_alamode/lambda_sq_T.csv
+207.166,cm^-1,computed Omega0(1000 K) lowest optic triplet,Sec.4.1,src/fekappa/damping_map.py,data/processed/sto_alamode/eta_validity_T.csv
+1.47/-1.53,percent,deviation vs Tadano fixed-cell at 0/400 K digitized points,Sec.3(iii),src/fekappa/lambda_fit.py,data/processed/sto_alamode/tadano_fig5_match.csv
+5.49,percent,max deviation vs two-point chord (100 K),Sec.3(iii),src/fekappa/lambda_fit.py,data/processed/sto_alamode/tadano_fig5_match.csv
+24.5,percent,max deviation vs with-expansion Tadano curve,Sec.3(iii),src/fekappa/lambda_fit.py,data/processed/sto_alamode/tadano_fig5_match.csv
+167.131,cm^-1,TO1 transverse doublet at Gamma (300 K path),Sec.3 branch ID,src/fekappa/lambda_fit.py,data/processed/sto_alamode/dispersion_path_scph300.csv
+183.07,cm^-1,LO partner at Gamma along [100],Sec.3 branch ID,src/fekappa/lambda_fit.py,data/processed/sto_alamode/dispersion_path_scph300.csv
+-58.5,cm^-1,bare soft TO1 at Gamma (imaginary as -|omega|),Sec.4.1,src/fekappa/lambda_fit.py,data/processed/sto_alamode/dispersion_path_bare.csv
+1227.6,meV^2 Ang^2,Lambda^2(0 K),Sec.4.4,src/fekappa/lambda_fit.py,data/processed/sto_alamode/lambda_sq_T.csv
+689.8,meV^2 Ang^2,Lambda^2(400 K),Sec.4.4,src/fekappa/lambda_fit.py,data/processed/sto_alamode/lambda_sq_T.csv
+842.0,meV^2 Ang^2,Lambda^2(300 K),Sec.4.4,src/fekappa/lambda_fit.py; tests/test_lambda_fit.py,data/processed/sto_alamode/lambda_sq_T.csv
+889,meV^2 Ang^2,previous effective literature curvature,Sec.4.4,src/fekappa/kappa_kernel.py,data/processed/section4_eta_kappa_triples.csv
+0.999,R^2,Lambda^2 fit quality 0-400 K,Sec.3; Sec.4.4,src/fekappa/lambda_fit.py; tests/test_lambda_fit.py,data/processed/sto_alamode/lambda_sq_T.csv
+0.15,Ang^-1,Lambda^2 fit window q_max,Sec.3,src/fekappa/lambda_fit.py,data/processed/sto_alamode/lambda_sq_T.csv
+450,K,TO1-TO2 zone-center anticrossing temperature,Sec.3; Sec.4.1,src/fekappa/lambda_fit.py,data/processed/sto_alamode/lambda_sq_T.csv (header: 188.98 vs 189.65 cm^-1 at 450 K)
+61,points,band path points Gamma->(0.15 0 0) r.l.u.,Sec.3,src/fekappa/lambda_fit.py,data/processed/sto_alamode/lambda_sq_T.csv (header)
+0.090-17.541,ps,global lifetime envelope 300 K vs published 0.12-20,Sec.3(ii),src/fekappa/alamode_io.py,data/processed/alamode_crosscheck/alamode_sto_tau300K_bands_scph.csv
+16.19/17.54,ps,longest-lived TA pair lifetimes,Sec.3(ii),src/fekappa/alamode_io.py; tests/test_alamode_io.py,data/processed/sto_alamode/omega_gamma_scph_T.csv
+54.9,cm^-1,frequency of longest-lived TA pair,Sec.3(ii),src/fekappa/alamode_io.py; tests/test_alamode_io.py,data/processed/sto_alamode/omega_gamma_scph_T.csv
+0.3,percent,mode-sum closure vs solver kappa (max 0.27),Sec.4.3; Novelty,src/fekappa/kappa_decomposition.py; tests/test_damping_and_decomposition.py,data/processed/sto_alamode/mode_kappa_T.csv vs kappa_rta_T.csv
+23/5/68/3.6,percent,300 K sector shares acoustic/soft/hard/coherence,Sec.4.3,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/kappa_five_way_T.csv
+0.526->2.486,W/mK,soft-optic sector under 175->200 cm^-1 boundary,Sec.4.3,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/kappa_five_way_T.csv
+175,cm^-1,central soft/hard partition boundary,Sec.4.3; Fig.3,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/kappa_five_way_T.csv
+0.361,W/mK,kappa_C(300 K) direct Wigner coherence,Sec.4.3 context,src/fekappa/alamode_io.py; tests/test_alamode_io.py,data/processed/sto_alamode/kappa_rta_T.csv
+0.77,percent,kappa_C share at 100 K (~0.8),Abstract; Sec.4.3,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/kappa_five_way_T.csv
+5.5,percent,kappa_C share at 1000 K,Abstract; Sec.4.3; Sec.7,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/kappa_five_way_T.csv
+3.87-8.56,x,band-median lifetime ratio SCPH/bare below 200 cm^-1 (3-9x),Sec.4.3,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/bare_vs_scph_control.csv
+1.11-1.31,x,band-median lifetime ratio above 500 cm^-1 (1.1-1.3),Sec.4.3,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/bare_vs_scph_control.csv
+0.322,W/mK,soft kernel computed inputs Debye cutoff 300 K,Sec.4.4; Fig.4,src/fekappa/soft_kernel_fp.py; tests/test_damping_and_decomposition.py,data/processed/sto_alamode/soft_kernel_T.csv
+0.209-0.428,W/mK,computed-kernel Lambda^2 +/-30% bracket 300 K,Sec.4.4; Fig.4,src/fekappa/soft_kernel_fp.py,data/processed/sto_alamode/soft_kernel_T.csv
+0.338,W/mK,Vogt-anchored kernel 300 K,Sec.4.4; Fig.4,src/fekappa/soft_kernel_fp.py; tests/test_damping_and_decomposition.py,data/processed/sto_alamode/soft_kernel_T.csv
+0.137,W/mK,previous literature-only kernel ~300 K,Sec.4.4; Fig.4,src/fekappa/kappa_kernel.py; tests/test_kappa_kernel.py,data/processed/section4_eta_kappa_triples.csv
+0.102-0.167,W/mK,literature-only kernel envelope,Sec.4.4; Fig.4,src/fekappa/kappa_kernel.py,data/processed/section4_eta_kappa_triples.csv
+2.3,factor,computed/previous kernel ratio,Sec.4.4,src/fekappa/soft_kernel_fp.py,data/processed/sto_alamode/soft_kernel_T.csv vs section4_eta_kappa_triples.csv
+3,percent,kernel share of kappa_total 300 K (~3.4),Sec.4.4,src/fekappa/soft_kernel_fp.py,data/processed/sto_alamode/{soft_kernel_T,kappa_rta_T}.csv
+3.938/3.893/3.905,Angstrom,relaxed cells PBE/PBEsol vs experiment,Sec.3,companion QE pipeline (imported summary),data/processed/sto_alamode/harmonic_reference.csv
+137.8,cm^-1,own-QE bare soft TO1 magnitude at Gamma (PBE),Sec.3,companion QE pipeline (imported summary),data/processed/sto_alamode/harmonic_reference.csv
+5.3,percent,max sound-velocity deviation vs ultrasonic (PBE; 5.27),Sec.3,companion QE pipeline (imported summary),data/processed/sto_alamode/harmonic_reference.csv
+7.9,percent,unstable-BZ q fraction SrTiO3 PBEsol,Sec.3; Sec.5,companion QE pipeline (imported summary),data/processed/sto_alamode/harmonic_reference.csv
+61-68,percent,unstable-BZ q fraction BaTiO3 (PBEsol-PBE),Sec.5,companion QE pipeline (imported summary),data/processed/sto_alamode/harmonic_reference.csv
+7.363,bohr,run cell lattice constant (ALAMODE example),Sec.3,src/fekappa/kappa_decomposition.py (V_CELL),data/raw/alamode_sto/IMPORT_NOTE.md (regenerable inputs)
+10-20,percent,four-phonon reduction of kappa(300 K) (literature),Sec.6(iii),n/a (literature claim),Ref. Wang Zeng Chen PRB 104 235205 (2021)
+10,percent,residual vs published 12^3 kappa,Sec.6(iii),src/fekappa/alamode_io.py,data/processed/sto_alamode/kappa_rta_T.csv vs data/literature/STO/tadano_2015/kappa_total_T.csv
+0.998/0.993,R^2,LST consistency SrTiO3/KTaO3 (literature),Figs. S6-S7 captions,paper/figures/make_supp.py,data/literature/STO/verdi_2023 + KTO/ranalli_2023 inverse_dielectric_T.csv
+5,x,BaTiO3 soft-branch curvature anisotropy (literature),Fig. S8 caption,paper/figures/make_fig05.py,data/literature/BTO/harada_axe_shirane_1971/Lambda_sq.csv
+2806,percent,hybrid-dataset residual at 400 K (Appendix B),Appendix B,archive/scph_calibration + notebooks/09,data/raw/BTO/phonon_modes_*.csv + data/literature/BTO/ehsan_2021/anchors.csv
+0.514,dimensionless,hybrid dataset eta crossing at 400 K (Appendix B),Appendix B,notebooks/09_BTO_hybrid_appendix.ipynb,data/raw/BTO/phonon_modes_400K.csv
