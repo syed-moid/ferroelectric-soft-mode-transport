@@ -1,9 +1,9 @@
 # source: eta_map_T.csv inputs; Vogt 1995 cubic-F1u Omega(T)
-# method: soft-optic-sector Omega rescaled by r = Omega_Vogt/Omega_0_computed (zone-center ratio) -> eta/r for soft modes only; kappa_P weights held fixed; quantifies the downward eta bias of the fixed-cell SCPH Omega overestimate (METHODS_AND_CAVEATS.md C8) on the validity fractions
+# method: soft-optic-sector modes rescaled to the Vogt anchors, kappa_P weights held fixed: Omega-side (eta/r_omega, r_omega = Omega_Vogt(T)/Omega_0_computed(T)); Gamma-side (r_gamma*eta, r_gamma = Vogt/computed zone-center HWHM ratio at 300 K, FWHM->HWHM /2 applied once here); combined (r_gamma*eta/r_omega, strictest). Quantifies the eta biases of the fixed-cell SCPH Omega overestimate and the disclosed Gamma_0 underestimate (METHODS_AND_CAVEATS.md C8)
 # units: dimensionless
 # provenance: derived (ext-FP-alamode + literature anchor)
-T_K,rescale_ratio,n_soft_modes,frac_eta_gt_0p5_count_computed,frac_eta_gt_1_count_computed,frac_eta_gt_0p5_kappa_computed,frac_eta_gt_1_kappa_computed,frac_eta_gt_0p5_count_rescaled,frac_eta_gt_1_count_rescaled,frac_eta_gt_0p5_kappa_rescaled,frac_eta_gt_1_kappa_rescaled,eta_max_rescaled
-150.0,0.41350892208898515,50,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.04097228546877908
-200.0,0.468005129250667,45,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.040883285622030086
-250.0,0.502762704552212,33,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.06813497139822838
-300.0,0.5289163494504312,29,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.06691219965218213
+T_K,rescale_ratio,gamma_ratio_300K,n_soft_modes,frac_eta_gt_0p5_count_computed,frac_eta_gt_1_count_computed,frac_eta_gt_0p5_kappa_computed,frac_eta_gt_1_kappa_computed,frac_eta_gt_0p5_count_rescaled,frac_eta_gt_1_count_rescaled,frac_eta_gt_0p5_kappa_rescaled,frac_eta_gt_1_kappa_rescaled,eta_max_rescaled,frac_eta_gt_0p5_count_gamma,frac_eta_gt_0p5_kappa_gamma,eta_max_gamma_rescaled,frac_eta_gt_0p5_count_both,frac_eta_gt_0p5_kappa_both,eta_max_both_rescaled
+150.0,0.41350892208898515,2.569591223938767,50,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.04097228546877908,0.0,0.0,0.04097228546877908,0.0,0.0,0.07444849635315971
+200.0,0.468005129250667,2.569591223938767,45,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.040883285622030086,0.0,0.0,0.040883285622030086,0.0,0.0,0.08048355209561057
+250.0,0.502762704552212,2.569591223938767,33,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.06813497139822838,0.0,0.0,0.06813497139822838,0.0,0.0,0.11422916186088664
+300.0,0.5289163494504312,2.569591223938767,29,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.06691219965218213,0.0,0.0,0.07787538328524142,0.0,0.0,0.14723572709778698

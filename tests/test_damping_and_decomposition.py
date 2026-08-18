@@ -106,13 +106,25 @@ def test_zone_center_eta_dual_reporting() -> None:
 
 
 def test_eta_sensitivity_conclusions_robust() -> None:
-    """Vogt-rescaled soft-branch eta moves no mode across 0.5 (150-300 K)."""
+    """Vogt-rescaled soft-branch eta moves no mode across 0.5 (150-300 K).
+
+    Covers all three rescalings: Omega-side (eta/r_omega), Gamma-side
+    (r_gamma*eta with the ~2.6x 300 K HWHM ratio), and both combined.
+    """
     s = _read("eta_validity_sensitivity.csv")
     assert list(s["T_K"]) == [150.0, 200.0, 250.0, 300.0]
-    assert (s["rescale_ratio"] < 1).all()  # rescaling can only RAISE soft eta
+    assert (s["rescale_ratio"] < 1).all()  # Omega rescaling can only RAISE soft eta
     assert (s["frac_eta_gt_0p5_count_rescaled"] == 0).all()
     assert (s["frac_eta_gt_1_kappa_rescaled"] == 0).all()
     assert (s["eta_max_rescaled"] < 0.15).all()
+    # Gamma-side: disclosed Gamma_0 underestimate is ~2.6x vs Vogt at 300 K.
+    assert s["gamma_ratio_300K"].iloc[0] == pytest.approx(2.57, abs=0.02)
+    assert (s["frac_eta_gt_0p5_count_gamma"] == 0).all()
+    assert (s["frac_eta_gt_0p5_kappa_gamma"] == 0).all()
+    # Combined (strictest): still nowhere near the narrow-width boundary.
+    assert (s["frac_eta_gt_0p5_count_both"] == 0).all()
+    assert (s["frac_eta_gt_0p5_kappa_both"] == 0).all()
+    assert (s["eta_max_both_rescaled"] < 0.2).all()
 
 
 # --- soft kernel -------------------------------------------------------------

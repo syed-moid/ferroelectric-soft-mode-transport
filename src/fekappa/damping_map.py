@@ -11,9 +11,10 @@ sector labels, and the per-mode kappa_P contributions) and emits:
   zone-center soft-mode value reported BOTH ways (computed-Omega and
   Vogt-anchored) where Vogt's cubic data overlaps;
 * ``eta_validity_sensitivity.csv`` -- the same validity fractions after
-  rescaling the soft-branch Omega by the Vogt/computed zone-center ratio at
-  each overlapping temperature (eta -> eta / r). kappa_P weights are kept
-  fixed (first-order sensitivity of the classification metric only).
+  rescaling the soft manifold to the Vogt anchors: Omega-side (eta/r_omega),
+  Gamma-side (r_gamma*eta, with r_gamma the 300 K zone-center HWHM ratio),
+  and combined (strictest). kappa_P weights are kept fixed (first-order
+  sensitivity of the classification metric only).
 
 Conventions: eta = Gamma_HWHM / Omega (both in cm^-1, ratio dimensionless);
 eta < 0.5 narrow-width, eta > 1 overdamped, in between "beyond the
@@ -121,13 +122,38 @@ def validity_table(df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows).sort_values("T_K").reset_index(drop=True)
 
 
-def sensitivity_table(df: pd.DataFrame) -> pd.DataFrame:
-    """Validity fractions with soft-branch Omega rescaled to the Vogt anchor.
+def vogt_gamma0_over_computed_300K(df: pd.DataFrame) -> float:
+    """Vogt/computed zone-center HWHM ratio at 300 K (the Gamma-side scale).
 
-    At each temperature where Vogt's cubic data exists, soft-optic-sector modes
-    get Omega -> r * Omega with r = Omega_Vogt / Omega_0_computed (zone-center
-    ratio), i.e. eta -> eta / r; acoustic and hard-optic modes are untouched.
+    Vogt's damping constant is a FWHM; the /2 is applied HERE, once (the
+    literature CSV stores gamma as plotted). Computed Gamma_0 is the
+    zone-center TO1 triplet mean of the SCPH-coupled dataset.
     """
+    from fekappa import literature_io as lit
+
+    g = lit.load_vogt1995_sto_gamma_T()
+    g = g[g["phase_mode"] == "cubic_F1u"].sort_values("T_K")
+    gamma_vogt_hwhm_meV = float(np.interp(300.0, g["T_K"], g["gamma_meV"])) / 2.0
+    df300 = df[df["T_K"] == 300.0]
+    _, gamma0_cm1 = zone_center_soft(df300)
+    return gamma_vogt_hwhm_meV / (gamma0_cm1 * CM1_TO_MEV)
+
+
+def sensitivity_table(df: pd.DataFrame) -> pd.DataFrame:
+    """Validity fractions with the soft manifold rescaled to the Vogt anchors.
+
+    Three rescalings of the soft-optic-sector modes, at each temperature where
+    Vogt's cubic data exists (acoustic and hard-optic modes untouched):
+
+    * Omega-side: Omega -> r_omega * Omega with r_omega =
+      Omega_Vogt(T)/Omega_0_computed(T) (zone-center ratio), i.e.
+      eta -> eta / r_omega;
+    * Gamma-side: Gamma -> r_gamma * Gamma with r_gamma the Vogt/computed
+      zone-center HWHM ratio at 300 K (~2.6), i.e. eta -> r_gamma * eta;
+    * combined: both at once (eta -> r_gamma * eta / r_omega), the strictest
+      variant.
+    """
+    r_gamma = vogt_gamma0_over_computed_300K(df)
     rows = []
     for t, df_t in df.groupby("T_K"):
         omega0, _ = zone_center_soft(df_t)
@@ -138,17 +164,28 @@ def sensitivity_table(df: pd.DataFrame) -> pd.DataFrame:
         soft = (df_t["sector"] == "soft_optic").to_numpy()
         eta = df_t["eta"].to_numpy().copy()
         eta_rescaled = np.where(soft, eta / r, eta)
+        eta_gamma = np.where(soft, r_gamma * eta, eta)
+        eta_both = np.where(soft, r_gamma * eta / r, eta)
         weight = df_t["kappa_weight"].to_numpy()
         base = _validity_fractions(eta, weight)
         resc = _validity_fractions(eta_rescaled, weight)
+        gam = _validity_fractions(eta_gamma, weight)
+        both = _validity_fractions(eta_both, weight)
         rows.append(
             {
                 "T_K": t,
                 "rescale_ratio": r,
+                "gamma_ratio_300K": r_gamma,
                 "n_soft_modes": int(soft.sum()),
                 **{f"{k}_computed": v for k, v in base.items()},
                 **{f"{k}_rescaled": v for k, v in resc.items()},
                 "eta_max_rescaled": float(eta_rescaled.max()),
+                "frac_eta_gt_0p5_count_gamma": gam["frac_eta_gt_0p5_count"],
+                "frac_eta_gt_0p5_kappa_gamma": gam["frac_eta_gt_0p5_kappa"],
+                "eta_max_gamma_rescaled": float(eta_gamma.max()),
+                "frac_eta_gt_0p5_count_both": both["frac_eta_gt_0p5_count"],
+                "frac_eta_gt_0p5_kappa_both": both["frac_eta_gt_0p5_kappa"],
+                "eta_max_both_rescaled": float(eta_both.max()),
             }
         )
     return pd.DataFrame(rows).sort_values("T_K").reset_index(drop=True)
@@ -178,10 +215,12 @@ _HEADER_VALIDITY = (
 
 _HEADER_SENSITIVITY = (
     "# source: eta_map_T.csv inputs; Vogt 1995 cubic-F1u Omega(T)\n"
-    "# method: soft-optic-sector Omega rescaled by r = Omega_Vogt/Omega_0_computed "
-    "(zone-center ratio) -> eta/r for soft modes only; kappa_P weights held fixed; "
-    "quantifies the downward eta bias of the fixed-cell SCPH Omega overestimate "
-    "(METHODS_AND_CAVEATS.md C8) on the validity fractions\n"
+    "# method: soft-optic-sector modes rescaled to the Vogt anchors, kappa_P weights "
+    "held fixed: Omega-side (eta/r_omega, r_omega = Omega_Vogt(T)/Omega_0_computed(T)); "
+    "Gamma-side (r_gamma*eta, r_gamma = Vogt/computed zone-center HWHM ratio at 300 K, "
+    "FWHM->HWHM /2 applied once here); combined (r_gamma*eta/r_omega, strictest). "
+    "Quantifies the eta biases of the fixed-cell SCPH Omega overestimate and the "
+    "disclosed Gamma_0 underestimate (METHODS_AND_CAVEATS.md C8)\n"
     "# units: dimensionless\n"
     "# provenance: derived (ext-FP-alamode + literature anchor)\n"
 )
