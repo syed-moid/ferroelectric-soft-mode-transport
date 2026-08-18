@@ -1,3 +1,42 @@
+# Ferroelectric-Kappa-SCPH — Reproducibility Package (v2.0.0, in preparation)
+
+Revision release accompanying the resubmission of the manuscript as a computational study
+of SrTiO₃ (SCPH-coupled anharmonic lattice dynamics; BaTiO₃/KTaO₃ as literature-benchmarked
+context). Will be archived as a **new version of the existing Zenodo record**
+(concept DOI lineage 10.5281/zenodo.20559513) so the version history stays linked.
+
+## New in v2
+
+- Computed SrTiO₃ dataset: SCPH-coupled RTA at 0–1000 K (21 temperatures, 8×8×8 mesh,
+  525 modes each), with the Wigner coherence channel computed directly
+  (`data/processed/sto_alamode/`, provenance headers on every table).
+- Zone-resolved damping map η_qs(T) with count- and κ-weighted validity fractions and a
+  Vogt-rescaling sensitivity table (`eta_map_T.csv`, `eta_validity_T.csv`,
+  `eta_validity_sensitivity.csv`).
+- Mode-resolved κ_P (closure vs the solver κ ≤ 0.3 %) and the five-way decomposition with
+  partition-boundary sensitivity (`mode_kappa_T.csv`, `kappa_five_way_T.csv`).
+- Bare-RTA vs SCPH-coupled negative-control table (`bare_vs_scph_control.csv`).
+- Small-q Λ²(T) fits from per-temperature renormalized force constants
+  (`lambda_sq_T.csv`), full-path dispersions (`dispersion_path_*.csv`), and the
+  Tadano-variant match table (`tadano_fig5_match.csv`).
+- Recomputed soft-mode kernel, computed and Vogt-anchored variants (`soft_kernel_T.csv`).
+- Mesh-convergence table 8³ vs 12³ at 300 K (`mesh_convergence.csv`).
+- New analysis modules (`alamode_io`, `damping_map`, `kappa_decomposition`, `lambda_fit`,
+  `soft_kernel_fp`) with tests; suite now **297 passed / 2 skipped**.
+- New figure scripts `make_f1_dispersion.py` … `make_f5_soft_kernel.py`,
+  `make_fsupp_sto.py` (each figure regenerates from committed processed tables only).
+- Literature layer: κ benchmark anchors added (Tadano 2015 digitized 300 K point;
+  Tachibana 2008 experimental anchor); new standing caveat C8 (fixed-cell SCPH Ω₀
+  systematic) in `METHODS_AND_CAVEATS.md`.
+- Reference list of the manuscript audited against publisher records; several v5 entries
+  corrected (Fauqué, Verdi, Ranalli, Ehsan, Meier, Masuki, Kim, Hlinka, Tachibana,
+  Schmidt–Spaldin).
+
+Raw solver outputs (`data/raw/alamode_sto/`) are local-only and regenerable from the
+documented inputs and logs (`IMPORT_NOTE.md`, `PROVENANCE.md`).
+
+---
+
 # Ferroelectric-Kappa-SCPH — Reproducibility Package (v1.0.0)
 
 Initial release of the code, convention-harmonized literature data, and figure pipeline

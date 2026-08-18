@@ -8,10 +8,20 @@ resolved, what was retired, and what is assumed or deferred*. It is written for 
 referee or a future maintainer who needs the audit trail without re-reading every
 notebook.
 
-**Closing state.** `origin/main = b5699d2`. Test suite **261 passed / 3 skipped**
-(`fekappa.eta` 9/9, `fekappa.kappa_kernel` 17/17); `ruff` clean. All notebook gates
-PASS. No publisher PDFs tracked; all figures gitignored (regenerate from notebooks);
-the one curated notebook-stage interface (`section4_eta_kappa_triples.csv`) is tracked.
+**Closing state (v1, literature-only analysis).** `origin/main = b5699d2`. Test suite
+**261 passed / 3 skipped** (`fekappa.eta` 9/9, `fekappa.kappa_kernel` 17/17); `ruff` clean.
+All notebook gates PASS. No publisher PDFs tracked; all figures gitignored (regenerate from
+notebooks); the one curated notebook-stage interface (`section4_eta_kappa_triples.csv`) is
+tracked.
+
+**Revision state (v2, computed SrTiO₃ core, 2026-08-18).** Test suite **297 passed /
+2 skipped**; `ruff` clean (`src`, `tests`). New gates all PASS: tidy-table row counts and
+locked benchmark numbers (κ(300 K) = 9.5283 W/mK; 0/525 vs 11/525 unstable; τ = 16.19/17.54
+ps at 54.9 cm⁻¹); mode-sum closure vs the solver κ ≤ 0.3 % at all 21 temperatures; five-way
+partition exact; Λ² fits R² ≥ 0.999 (0–400 K); kernel reduces to the v1 literature path when
+fed literature inputs; HWHM-once regression extended to the computed dataset. The 300 K
+production run regenerates bit-for-bit after a toolchain rebuild. Standing caveat C8 (below)
+records the fixed-cell SCPH Ω₀ systematic and its handling.
 
 ---
 
