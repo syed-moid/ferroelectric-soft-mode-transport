@@ -59,6 +59,7 @@ notebooks/.ipynb_checkpoints/
 # tidy ALAMODE-derived CSVs (small, provenance-headed, inputs to figures/tests).
 data/processed/*
 !data/processed/section4_eta_kappa_triples.csv
+!data/processed/manuscript_numbers.csv
 !data/processed/alamode_crosscheck/
 !data/processed/sto_alamode/
 

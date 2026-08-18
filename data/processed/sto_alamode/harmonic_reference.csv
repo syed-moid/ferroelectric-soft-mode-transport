@@ -1,0 +1,21 @@
+# source: author's own Quantum ESPRESSO DFPT pipeline in the companion
+# lattice-dynamics repository (values copied 2026-08-18 from its committed
+# outputs: dft/qe/{SrTiO3,BaTiO3}/relax*/vc_relax.out, harmonic_gamma/,
+# data/processed/{unstable_bz_fraction.csv,sound_velocities.csv})
+# method: vc-relax cubic cells; DFPT Gamma phonons; matdyn dispersions on an
+# 11x11x11 mesh; unstable = omega < -1 cm^-1 (q_fraction = BZ fraction of
+# q-points hosting at least one unstable mode); sound velocities from acoustic
+# slopes vs Bell & Rupprecht, Phys. Rev. 129, 90 (1963) (SrTiO3)
+# units: lattice constants in Angstrom; frequencies in cm^-1; fractions and
+# percentages dimensionless
+# provenance: own-QE (imported summary; full outputs remain in the companion
+# repository)
+quantity,material,functional,value,units
+lattice_constant,SrTiO3,pbe,3.9383,Angstrom
+lattice_constant,SrTiO3,pbesol,3.8930,Angstrom
+lattice_constant_exp,SrTiO3,experiment,3.905,Angstrom
+soft_TO1_abs_omega_Gamma,SrTiO3,pbe,137.8,cm^-1
+sound_velocity_max_abs_dev,SrTiO3,pbe,5.27,percent
+unstable_q_fraction,SrTiO3,pbesol,0.0789,fraction
+unstable_q_fraction,BaTiO3,pbesol,0.6153,fraction
+unstable_q_fraction,BaTiO3,pbe,0.6754,fraction
