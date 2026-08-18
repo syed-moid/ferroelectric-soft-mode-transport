@@ -1,0 +1,9 @@
+# source: eta_map_T.csv inputs; Vogt 1995 cubic-F1u Omega(T)
+# method: soft-optic-sector Omega rescaled by r = Omega_Vogt/Omega_0_computed (zone-center ratio) -> eta/r for soft modes only; kappa_P weights held fixed; quantifies the downward eta bias of the fixed-cell SCPH Omega overestimate (METHODS_AND_CAVEATS.md C8) on the validity fractions
+# units: dimensionless
+# provenance: derived (ext-FP-alamode + literature anchor)
+T_K,rescale_ratio,n_soft_modes,frac_eta_gt_0p5_count_computed,frac_eta_gt_1_count_computed,frac_eta_gt_0p5_kappa_computed,frac_eta_gt_1_kappa_computed,frac_eta_gt_0p5_count_rescaled,frac_eta_gt_1_count_rescaled,frac_eta_gt_0p5_kappa_rescaled,frac_eta_gt_1_kappa_rescaled,eta_max_rescaled
+150.0,0.41350892208898515,50,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.04097228546877908
+200.0,0.468005129250667,45,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.040883285622030086
+250.0,0.502762704552212,33,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.06813497139822838
+300.0,0.5289163494504312,29,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.06691219965218213

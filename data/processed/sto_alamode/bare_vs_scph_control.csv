@@ -1,0 +1,33 @@
+# source: data/raw/alamode_sto/STO_RTA_production.kl (bare-RTA) vs STO_RTA_scph_*K.kl (SCPH-coupled); tau bands from data/processed/alamode_crosscheck/alamode_sto_tau300K_bands_{bare,scph}.csv
+# method: controlled negative result -- identical anharmonic (scattering) force constants, identical mesh; the ONLY difference is the harmonic part (bare STO_anharm.xml fc2 vs dfc2-renormalized fc2 per T). record='kappa_T' rows compare kappa(T); record='tau_band_300K' rows compare band-median tau(300 K) (the 2-85x low-omega failure of the bare surface)
+# units: kappa in W m^-1 K^-1; tau in ps; bands in cm^-1
+# provenance: ext-FP-alamode (see data/raw/alamode_sto/IMPORT_NOTE.md)
+record,T_K,bare,scph,scph_over_bare,band_lo_cm1,band_hi_cm1
+kappa_T,0.0,0.0,0.0,,,
+kappa_T,50.0,7.7908,22.6357,2.905439749448067,,
+kappa_T,100.0,6.4007,17.0639,2.6659427875076167,,
+kappa_T,150.0,5.4453,14.3412,2.633684094540246,,
+kappa_T,200.0,4.5711,12.188899999999999,2.6665135306600156,,
+kappa_T,250.0,3.8779,10.5938,2.73183939761211,,
+kappa_T,300.0,3.3439,9.5283,2.849457220610664,,
+kappa_T,350.0,2.9289,8.7029,2.9713885759158725,,
+kappa_T,400.0,2.6004,8.0557,3.097869558529457,,
+kappa_T,450.0,2.3353,7.4218,3.1780927503960945,,
+kappa_T,500.0,2.1176,6.8993,3.2580751794484324,,
+kappa_T,550.0,1.936,6.4831,3.3487086776859507,,
+kappa_T,600.0,1.7824,6.1429,3.446420556552962,,
+kappa_T,650.0,1.651,5.8541,3.5457904300423984,,
+kappa_T,700.0,1.5373,5.5599,3.6166655825147984,,
+kappa_T,750.0,1.438,5.3768,3.739082058414465,,
+kappa_T,800.0,1.3506,5.1513,3.8140826299422477,,
+kappa_T,850.0,1.2731,5.1871,4.0743853585735605,,
+kappa_T,900.0,1.2039,5.1334,4.263975413240303,,
+kappa_T,950.0,1.1418,5.0965,4.463566298826414,,
+kappa_T,1000.0,1.0857,5.0791,4.678179976052316,,
+tau_band_300K,,0.4003,3.4249,8.555833125156134,50.0,100.0
+tau_band_300K,,0.7216,2.7891,3.8651607538802657,100.0,150.0
+tau_band_300K,,0.1915,1.2527,6.5415143603133155,150.0,200.0
+tau_band_300K,,0.2557,0.7312,2.8596010950332422,200.0,450.0
+tau_band_300K,,0.1228,1.0232,8.332247557003258,460.0,490.0
+tau_band_300K,,0.216,0.2833,1.311574074074074,500.0,550.0
+tau_band_300K,,0.224,0.2477,1.1058035714285714,730.0,830.0

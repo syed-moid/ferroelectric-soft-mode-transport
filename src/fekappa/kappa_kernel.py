@@ -116,6 +116,7 @@ def K_soft(
     n_q: int = 512,
     overdamped_threshold: float = 0.5,
     warn: bool = True,
+    q_max_ang1: float | None = None,
 ):
     """Particle-like soft-mode thermal conductivity ``kappa_soft(T)`` [W/(m K)].
 
@@ -133,6 +134,8 @@ def K_soft(
         n_q: Radial quadrature points on ``[0, q_max]``.
         overdamped_threshold: ``eta`` above which the K_P picture is flagged invalid.
         warn: Emit overdamped / skipped-row warnings (set ``False`` to silence).
+        q_max_ang1: Optional radial cutoff [1/Ang] replacing the Debye-sphere
+            ``q_max`` (used for the small-q kernel's q_c envelope).
 
     Returns:
         ``kappa_soft`` [W/(m K)] -- scalar if ``T_K`` is scalar, else an array over ``T``.
@@ -161,7 +164,7 @@ def K_soft(
             stacklevel=2,
         )
 
-    qmax = debye_qmax(V_cell_ang3)
+    qmax = debye_qmax(V_cell_ang3) if q_max_ang1 is None else float(q_max_ang1)
     q = np.linspace(0.0, qmax, n_q)                       # [1/Ang]
     O2_safe = np.where(unstable, np.nan, O2)
 
