@@ -40,11 +40,11 @@ def _read_tidy(name: str) -> pd.DataFrame:
 
 # --- committed tidy CSVs ----------------------------------------------------
 def test_scph_csv_row_counts() -> None:
-    """SCPH table: 35 irreducible q x 15 branches = 525 modes at each of 7 T."""
+    """SCPH table: 35 irreducible q x 15 branches = 525 modes at each of 21 T."""
     df = _read_tidy("omega_gamma_scph_T.csv")
     assert sorted(df["T_K"].unique()) == list(SCPH_TEMPS_K)
     assert df.groupby("T_K").size().eq(525).all()
-    assert len(df) == 525 * 7
+    assert len(df) == 525 * 21
 
 
 def test_bare_csv_row_counts() -> None:
@@ -59,8 +59,11 @@ def test_bare_csv_row_counts() -> None:
 def test_kappa_300K_locked_value() -> None:
     """kappa(300 K) from the SCPH .kl files is the locked 9.5283 W/mK."""
     kappa = _read_tidy("kappa_rta_T.csv")
-    k300 = kappa.loc[kappa["T_K"] == 300.0, "kappa_W_mK"].item()
-    assert k300 == pytest.approx(9.5283, abs=1e-4)
+    assert len(kappa) == 21
+    row300 = kappa[kappa["T_K"] == 300.0].iloc[0]
+    assert row300["kappa_W_mK"] == pytest.approx(9.5283, abs=1e-4)
+    # Direct Wigner coherent channel from KAPPA_COHERENT (not a bound).
+    assert row300["kappa_coherent_W_mK"] == pytest.approx(0.3610, abs=1e-4)
 
 
 def test_unstable_mode_counts_scph_vs_bare() -> None:

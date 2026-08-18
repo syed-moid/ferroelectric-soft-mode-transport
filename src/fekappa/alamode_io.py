@@ -262,7 +262,7 @@ def kappa_isotropic(kl: pd.DataFrame, rtol: float = 1e-6) -> pd.DataFrame:
 # ---------------------------------------------------------------------------
 # Tidy-CSV emission (data/raw/alamode_sto -> data/processed/sto_alamode)
 # ---------------------------------------------------------------------------
-SCPH_TEMPS_K: tuple[int, ...] = (100, 150, 200, 250, 300, 350, 400)
+SCPH_TEMPS_K: tuple[int, ...] = tuple(range(0, 1001, 50))
 
 _HEADER_COMMON = (
     "# method: ALAMODE 1.5.0 anphon MODE=RTA, 8x8x8 mesh "
@@ -275,10 +275,10 @@ _HEADER_COMMON = (
 )
 
 _HEADER_SCPH = (
-    "# source: data/raw/alamode_sto/STO_RTA_scph_{100..400}K.result "
+    "# source: data/raw/alamode_sto/STO_RTA_scph_{0..1000}K.result "
     "(SCPH-coupled: FC2XML = dfc2-renormalized fc2 per T, "
     "FCSXML = STO_anharm.xml)\n" + _HEADER_COMMON +
-    "# T-grid: 100-400 K step 50 (7 temperatures, one run each)\n"
+    "# T-grid: 0-1000 K step 50 (21 temperatures, one run each)\n"
 )
 
 _HEADER_BARE = (
@@ -293,14 +293,15 @@ _HEADER_BARE = (
 )
 
 _HEADER_KAPPA = (
-    "# source: data/raw/alamode_sto/STO_RTA_scph_{100..400}K.kl "
-    "(SCPH-coupled anphon RTA)\n"
+    "# source: data/raw/alamode_sto/STO_RTA_scph_{0..1000}K.kl and "
+    ".kl_coherent (SCPH-coupled anphon RTA, KAPPA_COHERENT = 2)\n"
     "# method: ALAMODE 1.5.0 anphon MODE=RTA, 8x8x8 mesh; kappa tensor "
-    "verified diagonal and isotropic before collapsing\n"
-    "# units: kappa_W_mK in W m^-1 K^-1\n"
+    "verified diagonal and isotropic before collapsing; kappa_coherent is "
+    "the Wigner coherent (interbranch) part\n"
+    "# units: kappa_W_mK and kappa_coherent_W_mK in W m^-1 K^-1\n"
     "# provenance: ext-FP-alamode (ALAMODE tutorial force constants -- see "
     "data/raw/alamode_sto/IMPORT_NOTE.md)\n"
-    "# T-grid: 100-400 K step 50 (7 temperatures)\n"
+    "# T-grid: 0-1000 K step 50 (21 temperatures)\n"
 )
 
 
@@ -328,13 +329,13 @@ def emit_tidy_csvs(raw_dir: Path, out_dir: Path) -> dict[str, Path]:
         ignore_index=True,
     )
     bare = read_result(raw_dir / "STO_RTA_production.result")
-    kappa = pd.concat(
-        [
-            kappa_isotropic(read_kl(raw_dir / f"STO_RTA_scph_{t}K.kl"))
-            for t in SCPH_TEMPS_K
-        ],
-        ignore_index=True,
-    )
+    kappa_parts = []
+    for t in SCPH_TEMPS_K:
+        part = kappa_isotropic(read_kl(raw_dir / f"STO_RTA_scph_{t}K.kl"))
+        kl_c = read_kl_coherent(raw_dir / f"STO_RTA_scph_{t}K.kl_coherent")
+        part["kappa_coherent_W_mK"] = kl_c[["k_xx", "k_yy", "k_zz"]].mean(axis=1)
+        kappa_parts.append(part)
+    kappa = pd.concat(kappa_parts, ignore_index=True)
 
     paths = {
         "scph": out_dir / "omega_gamma_scph_T.csv",
@@ -347,11 +348,70 @@ def emit_tidy_csvs(raw_dir: Path, out_dir: Path) -> dict[str, Path]:
     return paths
 
 
+_HEADER_MESH = (
+    "# source: data/raw/alamode_sto/STO_RTA_scph_300K{,_mesh12}.{result,kl,kl_coherent} "
+    "(SCPH-coupled anphon RTA at 300 K, 8x8x8 vs 12x12x12 q-mesh)\n"
+    "# method: kappa from .kl (isotropic collapse); kappa_C from .kl_coherent; "
+    "eta = gamma_hwhm_cm1 / omega_cm1 per mode, fractions unweighted by kappa\n"
+    "# units: kappa in W m^-1 K^-1; eta dimensionless\n"
+    "# provenance: ext-FP-alamode (ALAMODE tutorial force constants -- see "
+    "data/raw/alamode_sto/IMPORT_NOTE.md)\n"
+    "# T-grid: 300 K only (convergence check)\n"
+)
+
+
+def read_kl_coherent(path: Path) -> pd.DataFrame:
+    """Parse an ``anphon`` ``.kl_coherent`` file to ``[T_K, k_xx, k_yy, k_zz]``."""
+    df = pd.read_csv(
+        path, sep=r"\s+", comment="#", header=None, names=["T_K", "k_xx", "k_yy", "k_zz"]
+    )
+    return df.astype(float)
+
+
+def _eta_summary(df: pd.DataFrame) -> dict[str, float]:
+    """Damping-ratio summary of one .result table (positive-frequency modes)."""
+    stable = df[df["omega_cm1"] > 0]
+    eta = stable["gamma_hwhm_cm1"] / stable["omega_cm1"]
+    return {
+        "n_modes": len(df),
+        "frac_eta_gt_0p5": float((eta > 0.5).mean()),
+        "frac_eta_gt_1": float((eta > 1.0).mean()),
+        "median_eta": float(eta.median()),
+        "max_eta": float(eta.max()),
+    }
+
+
+def emit_mesh_convergence_csv(raw_dir: Path, out_path: Path) -> pd.DataFrame:
+    """Write the 8x8x8-vs-12x12x12 SCPH-coupled 300 K convergence table."""
+    raw_dir, out_path = Path(raw_dir), Path(out_path)
+    rows = []
+    for mesh, stem in (("8x8x8", "STO_RTA_scph_300K"), ("12x12x12", "STO_RTA_scph_300K_mesh12")):
+        kappa = kappa_isotropic(read_kl(raw_dir / f"{stem}.kl"))["kappa_W_mK"].item()
+        kl_c = read_kl_coherent(raw_dir / f"{stem}.kl_coherent")
+        kappa_c = float(kl_c[["k_xx", "k_yy", "k_zz"]].mean(axis=1).item())
+        rows.append(
+            {
+                "mesh": mesh,
+                "T_K": 300.0,
+                "kappa_W_mK": kappa,
+                "kappa_coherent_W_mK": kappa_c,
+                **_eta_summary(read_result(raw_dir / f"{stem}.result")),
+            }
+        )
+    df = pd.DataFrame(rows)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_path, "w") as fh:
+        fh.write(_HEADER_MESH)
+        df.to_csv(fh, index=False)
+    return df
+
+
 if __name__ == "__main__":
     repo_root = Path(__file__).resolve().parents[2]
-    written = emit_tidy_csvs(
-        repo_root / "data" / "raw" / "alamode_sto",
-        repo_root / "data" / "processed" / "sto_alamode",
-    )
+    raw = repo_root / "data" / "raw" / "alamode_sto"
+    processed = repo_root / "data" / "processed" / "sto_alamode"
+    written = emit_tidy_csvs(raw, processed)
     for name, out_path in written.items():
         print(f"{name}: {out_path.relative_to(repo_root)}")
+    emit_mesh_convergence_csv(raw, processed / "mesh_convergence.csv")
+    print(f"mesh: {(processed / 'mesh_convergence.csv').relative_to(repo_root)}")

@@ -1,0 +1,8 @@
+# source: data/raw/alamode_sto/STO_RTA_scph_300K{,_mesh12}.{result,kl,kl_coherent} (SCPH-coupled anphon RTA at 300 K, 8x8x8 vs 12x12x12 q-mesh)
+# method: kappa from .kl (isotropic collapse); kappa_C from .kl_coherent; eta = gamma_hwhm_cm1 / omega_cm1 per mode, fractions unweighted by kappa
+# units: kappa in W m^-1 K^-1; eta dimensionless
+# provenance: ext-FP-alamode (ALAMODE tutorial force constants -- see data/raw/alamode_sto/IMPORT_NOTE.md)
+# T-grid: 300 K only (convergence check)
+mesh,T_K,kappa_W_mK,kappa_coherent_W_mK,n_modes,frac_eta_gt_0p5,frac_eta_gt_1,median_eta,max_eta
+8x8x8,300.0,9.5283,0.361,525,0.0,0.0,0.010852232069616696,0.06691219965218213
+12x12x12,300.0,10.3084,0.3117,1260,0.0,0.0,0.010955478425996647,0.08002027357722241
