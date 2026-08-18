@@ -169,8 +169,16 @@ def test_load_tadano2015_scph_convergence_300K() -> None:
 
 def test_load_tadano2015_kappa_total_T() -> None:
     df = lit.load_tadano2015_kappa_total_T()
-    assert df.empty  # template only; not digitized
+    assert len(df) == 1  # single digitized 300 K benchmark point
+    assert float(df["kappa_W_per_m_K"].iloc[0]) == 8.7
     assert "Tadano2015" in df.attrs["provenance"]
+
+
+def test_load_tachibana2008_kappa_total_T() -> None:
+    df = lit.load_tachibana2008_kappa_total_T()
+    assert len(df) == 1  # approximate experimental 300 K anchor
+    assert float(df["kappa_W_per_m_K"].iloc[0]) == 11.0
+    assert "Tachibana2008" in df.attrs["provenance"]
 
 
 # ---------------------------------------------------------------------------

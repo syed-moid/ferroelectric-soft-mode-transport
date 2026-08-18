@@ -93,6 +93,8 @@ _SCHEMAS: dict[str, list[str]] = {
          "method", "source_figure"],
     "STO/tadano_2015/kappa_total_T.csv":
         ["T_K", "kappa_W_per_m_K", "kappa_uncertainty", "method", "source"],
+    "STO/tachibana_2008/kappa_total_T.csv":
+        ["T_K", "kappa_W_per_m_K", "kappa_uncertainty", "method", "source"],
     # STO Verdi 2023
     "STO/verdi_2023/sscha_omega_T.csv":
         ["T_K", "Omega_meV", "Omega_sq_meV2", "method", "shift_meV",
@@ -429,12 +431,23 @@ def load_tadano2015_scph_convergence_300K() -> pd.DataFrame:
 
 
 def load_tadano2015_kappa_total_T() -> pd.DataFrame:
-    """STO Tadano 2015 Fig. 7 κ(T) placeholder (template only; not digitized).
+    """STO Tadano 2015 κ(T): the digitized 300 K value (8.7 W/mK, 12×12×12 mesh).
 
-    **Scale-overlay only** if filled. Turn 4 explicit non-goal.
+    Scale-overlay / benchmark-marker use only (single digitized point; the
+    full curve remains undigitized).
     """
     return _load_csv("STO/tadano_2015/kappa_total_T.csv",
-                     _provenance("Tadano2015", "Fig. 7 (pending; scale-overlay)"))
+                     _provenance("Tadano2015", "κ(T) figure, 300 K point"))
+
+
+def load_tachibana2008_kappa_total_T() -> pd.DataFrame:
+    """STO Tachibana 2008 (APL 93, 092902) experimental κ(300 K) ≈ 11 W/mK.
+
+    Approximate anchor as recorded in the data inventory; benchmark-marker
+    use only.
+    """
+    return _load_csv("STO/tachibana_2008/kappa_total_T.csv",
+                     _provenance("Tachibana2008", "κ(T), 300 K anchor"))
 
 
 # ===========================================================================

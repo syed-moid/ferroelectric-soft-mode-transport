@@ -11,9 +11,24 @@ Figure captions live in the manuscript, not in the images.
 
 ```bash
 source ../../.venv/bin/activate      # repo venv with `pip install -e ".[dev]"`
-python make_fig01.py                 # ... make_fig02 ... make_fig06
-python make_supp.py                  # S1–S3
+python make_f1_dispersion.py         # ... make_f2 ... make_f5 (revised manuscript)
+python make_fsupp_sto.py             # revised supplementary S1-S3
+python make_fig01.py                 # ... make_fig06 (v5 set; some survive as appendix figures)
+python make_supp.py                  # v5 supplementary
 ```
+
+## Revised-manuscript figures (computed SrTiO3 core)
+
+All read committed `data/processed/` (+ `data/literature/`) only — never `data/raw/`.
+
+| Script | Figure | Data dependency |
+| --- | --- | --- |
+| `make_f1_dispersion.py` | F1 — SCPH vs bare dispersion; stabilization | `sto_alamode/dispersion_path_*.csv`, `mode_kappa_T.csv`, `eta_validity_T.csv`, Tadano Fig. 5 |
+| `make_f2_eta_map.py` | F2 — zone-resolved damping map η(Ω, T) | `sto_alamode/eta_map_T.csv`, `eta_validity_T.csv`, `eta_validity_sensitivity.csv` |
+| `make_f3_kappa_decomposition.py` | F3 — κ(T) five-way stack + negative control | `sto_alamode/kappa_five_way_T.csv`, `bare_vs_scph_control.csv`, κ literature anchors |
+| `make_f4_classification.py` | F4 — damping-axis classification (+ computed STO) | `fekappa.eta`, HAS Table I, `sto_alamode/eta_validity_T.csv` |
+| `make_f5_soft_kernel.py` | F5 — soft kernel: computed vs literature-input | `sto_alamode/soft_kernel_T.csv`, `kappa_five_way_T.csv`, `section4_eta_kappa_triples.csv` |
+| `make_fsupp_sto.py` | S1–S3 — mesh convergence; Λ² fit; τ validation | `sto_alamode/*`, `alamode_crosscheck/*` |
 
 Each script prints a manifest (outputs + the exact list of what was removed/moved/kept) and
 writes `out/<name>.pdf` (vector) + `out/<name>.png` (600 dpi). Rendering is deterministic

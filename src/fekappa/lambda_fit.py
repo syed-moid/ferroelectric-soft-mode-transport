@@ -199,3 +199,47 @@ def emit_lambda_sq_csv(
         fh.write(_HEADER_LAMBDA)
         df.to_csv(fh, index=False)
     return df
+
+
+_HEADER_DISPERSION = (
+    "# source: data/raw/alamode_sto/STO_path_{bare,scph300}.bands "
+    "(anphon MODE=phonons along G-X-M-G-R, 51 points per segment, "
+    "NONANALYTIC=3; bare = STO_anharm.xml harmonic part, scph300 = "
+    "dfc2-renormalized fc2 at 300 K)\n"
+    "# method: k-axis converted bohr^-1 -> Angstrom^-1 once; negative "
+    "branch_* values mark unstable (imaginary-frequency) modes as written "
+    "by anphon\n"
+    "# units: q_ang1 in Angstrom^-1; branch_1..branch_15 in cm^-1\n"
+    "# provenance: ext-FP-alamode (see data/raw/alamode_sto/IMPORT_NOTE.md)\n"
+)
+
+
+def emit_dispersion_csvs(raw_dir: Path, out_dir: Path) -> dict[str, Path]:
+    """Emit the committed full-path dispersion tables (bare vs SCPH 300 K).
+
+    The high-symmetry breakpoints (G, X, M, G, R) are appended to the header
+    from each ``.bands`` file's own second comment line.
+    """
+    raw_dir, out_dir = Path(raw_dir), Path(out_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    paths = {}
+    for tag in ("bare", "scph300"):
+        src = raw_dir / f"STO_path_{tag}.bands"
+        with open(src) as fh:
+            labels = fh.readline().lstrip("#").split()
+            breaks_bohr1 = [float(v) for v in fh.readline().lstrip("#").split()]
+        breaks_ang1 = [b * BOHR1_TO_ANG1 for b in breaks_bohr1]
+        q, omega = read_bands(src)
+        df = pd.DataFrame(
+            omega, columns=[f"branch_{i + 1}" for i in range(omega.shape[1])]
+        )
+        df.insert(0, "q_ang1", q)
+        out = out_dir / f"dispersion_path_{tag}.csv"
+        breaks_line = "# path breakpoints (Angstrom^-1): " + ", ".join(
+            f"{lab}={b:.4f}" for lab, b in zip(labels, breaks_ang1)
+        )
+        with open(out, "w") as fh:
+            fh.write(_HEADER_DISPERSION + breaks_line + "\n")
+            df.to_csv(fh, index=False)
+        paths[tag] = out
+    return paths
