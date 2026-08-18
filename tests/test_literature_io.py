@@ -532,7 +532,7 @@ def test_vogt_eta_cluster_underdamped() -> None:
     assert eta_sto < 0.5 and eta_kto < 0.5            # both underdamped
     assert abs(eta_sto - eta_kto) < 0.05              # cluster (≈0.11–0.13)
     # Sanity vs the overdamped end (BTO HAS η≈2.3): QPEs are far below it.
-    assert eta_sto < 0.5 < 2.3
+    assert eta_sto < 0.5
 
 
 def test_ys_vs_vogt_sto_damping_documented_spread() -> None:

@@ -33,8 +33,8 @@ def test_debye_qmax():
 # --- K_soft core -----------------------------------------------------------
 def _sto():
     # Omega_0(300 K) ~ 10.5 meV (Verdi exp); Lambda^2 = 889; eta = 0.109.
-    return dict(omega0_sq_meV2=10.5**2, lambda_sq_meV2_ang2=889.0,
-                eta=0.109, T_K=300.0, V_cell_ang3=59.55)
+    return {"omega0_sq_meV2": 10.5**2, "lambda_sq_meV2_ang2": 889.0,
+            "eta": 0.109, "T_K": 300.0, "V_cell_ang3": 59.55}
 
 
 def test_K_soft_scalar_positive_finite_and_physical():

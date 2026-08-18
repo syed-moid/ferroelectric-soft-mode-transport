@@ -32,14 +32,14 @@ def test_gamma_convention_rejects_unknown():
 
 # --- primary eta_fit on the committed Vogt sources -------------------------
 def test_eta_sto_vogt_reproduces_0p109():
-    T, e = eta.eta_sto_vogt()
+    _T, e = eta.eta_sto_vogt()
     # ~300 K endpoint is the locked value (dense marker-center, ±0.02).
     assert e[-1] == pytest.approx(0.109, abs=0.02)
     assert eta.eta_underdamped(e)
 
 
 def test_eta_kto_vogt_reproduces_0p126():
-    T, e = eta.eta_kto_vogt()
+    _T, e = eta.eta_kto_vogt()
     assert e[-1] == pytest.approx(0.126, abs=0.02)
     assert eta.eta_underdamped(e)
 
@@ -79,7 +79,7 @@ def test_ys_gamma_is_hwhm_direct():
 
     yo = lit.load_yamada_shirane_omega_T()
     yg = lit.load_yamada_shirane_gamma_T()
-    T, e = eta.eta_fit(yo["T_K"], yo["omega_meV"], yg["T_K"], yg["gamma_meV"],
+    _T, e = eta.eta_fit(yo["T_K"], yo["omega_meV"], yg["T_K"], yg["gamma_meV"],
                        gamma_convention="HWHM")
     # YS is underdamped and the value must be the raw gamma/Omega (no /2 baked in):
     # halving it (wrong convention) would shift every point by exactly 2x.
