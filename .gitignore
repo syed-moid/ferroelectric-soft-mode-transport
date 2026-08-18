@@ -55,9 +55,16 @@ notebooks/.ipynb_checkpoints/
 # Project data and figures
 # ---------------------------------------------------------------------------
 # Processed/derived data is gitignored EXCEPT curated notebook-stage interfaces
-# (diffable, low-volume, the data of record handed between notebooks).
+# (diffable, low-volume, the data of record handed between notebooks) and the
+# tidy ALAMODE-derived CSVs (small, provenance-headed, inputs to figures/tests).
 data/processed/*
 !data/processed/section4_eta_kappa_triples.csv
+!data/processed/alamode_crosscheck/
+!data/processed/sto_alamode/
+
+# Raw imported ALAMODE dataset (large .result files; local-only, provenance in
+# data/raw/alamode_sto/IMPORT_NOTE.md; tidy extracts live in data/processed/).
+data/raw/alamode_sto/
 # Generated figures regenerate from the notebooks on run -> NOT tracked (any format).
 # Anchored to repo root so it does not also swallow paper/figures/ (whose scripts
 # are tracked; only paper/figures/out/ binaries are ignored, below).
@@ -75,6 +82,14 @@ data/processed/*
 # Working memory (declares itself not-checked-in; contains unpublished notes)
 # ---------------------------------------------------------------------------
 session_log.md
+planning/
+
+# ---------------------------------------------------------------------------
+# Manuscript working files (Word/LaTeX drafts, referee material). Only the
+# placeholder is tracked.
+# ---------------------------------------------------------------------------
+manuscript/*
+!manuscript/.gitkeep
 
 # ---------------------------------------------------------------------------
 # Source publication PDFs (copyrighted; kept local for digitization workflow)
@@ -82,6 +97,7 @@ session_log.md
 # ---------------------------------------------------------------------------
 data/*.pdf
 data/**/*.pdf
+*.pdf
 
 # ---------------------------------------------------------------------------
 # OS / editor cruft
