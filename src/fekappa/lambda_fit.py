@@ -124,6 +124,59 @@ _HEADER_LAMBDA = (
 LAMBDA_TEMPS_K: tuple[int, ...] = tuple(range(0, 401, 50))
 
 
+_HEADER_TADANO_MATCH = (
+    "# source: data/processed/sto_alamode/lambda_sq_T.csv (computed Omega_0(T)) vs "
+    "data/literature/STO/tadano_2015/scph_omega_T.csv (digitized Fig. 5 TO1 curves)\n"
+    "# method: reference curves interpolated linearly in Omega^2 (not Omega) onto the "
+    "computed T-grid; dev_pct = (computed - reference)/reference in Omega\n"
+    "# note: the SCPH_without_PM digitization holds only two points (0 and 400 K), so "
+    "mid-range references are a single chord of a concave Omega^2(T) curve -- "
+    "endpoint deviations are the digitization-limited comparison\n"
+    "# units: Omega_0 in meV; dev_pct in percent\n"
+    "# provenance: derived (computed ext-FP-alamode vs literature)\n"
+)
+
+
+def emit_tadano_match_csv(
+    lambda_csv: Path, tadano_csv: Path, out_path: Path
+) -> pd.DataFrame:
+    """Match table: computed Omega_0(T) vs both digitized Tadano Fig. 5 TO1 curves.
+
+    Identifies which published SCPH variant the tutorial-FC dataset reproduces
+    (fixed-cell ``SCPH_without_PM`` vs thermal-expansion-corrected
+    ``SCPH_with_PM``); the identified variant is stated in Methods.
+    """
+    lam = pd.read_csv(lambda_csv, comment="#")
+    tad = pd.read_csv(tadano_csv)
+    rows = []
+    for variant in ("SCPH_without_PM", "SCPH_with_PM"):
+        curve = (
+            tad[(tad["mode"] == "TO1") & (tad["method"] == variant)].sort_values("T_K")
+        )
+        for _, r in lam.iterrows():
+            if not curve["T_K"].min() <= r["T_K"] <= curve["T_K"].max():
+                continue
+            omega_ref = float(
+                np.sqrt(np.interp(r["T_K"], curve["T_K"], curve["Omega_sq_meV2"]))
+            )
+            rows.append(
+                {
+                    "variant": variant,
+                    "T_K": r["T_K"],
+                    "Omega0_computed_meV": r["Omega0_meV"],
+                    "Omega0_tadano_meV": omega_ref,
+                    "dev_pct": (r["Omega0_meV"] - omega_ref) / omega_ref * 100.0,
+                }
+            )
+    df = pd.DataFrame(rows)
+    out_path = Path(out_path)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_path, "w") as fh:
+        fh.write(_HEADER_TADANO_MATCH)
+        df.to_csv(fh, index=False)
+    return df
+
+
 def emit_lambda_sq_csv(
     band_dir: Path,
     out_path: Path,

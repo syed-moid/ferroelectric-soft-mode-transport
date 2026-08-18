@@ -82,6 +82,25 @@ the one curated notebook-stage interface (`section4_eta_kappa_triples.csv`) is t
   `convention="FWHM"`. Guarded by a regression test.
 - **C7 — Two-variant γ schema is intentional** (STO 4-col with `phase_mode`, KTaO₃
   3-col) — not to be reconciled.
+- **C8 — Ω₀ fixed-cell SCPH systematic (computed STO dataset).** The SCPH-coupled
+  ALAMODE dataset (`data/processed/sto_alamode/`) carries the known fixed-volume
+  SCPH overestimate of the SrTiO₃ soft mode: computed Ω₀(300 K) = 167.1 cm⁻¹ vs
+  Vogt's hyper-Raman 88.4 cm⁻¹ (ratio 1.89, growing toward low T; ratios tabulated,
+  never tuned away). The dataset reproduces the fixed-cell ("without PM") SCPH curve
+  of Tadano & Tsuneyuki, Phys. Rev. B **92**, 054301 (2015) — ≤1.5% at the digitized
+  0/400 K points (`tadano_fig5_match.csv`); the gap to experiment is discussed in
+  that paper itself and in Verdi *et al.*, Phys. Rev. Materials **7**, L030801
+  (2023) and Schmidt & Spaldin, arXiv:2508.10735. Closing it requires the
+  cubic-bubble real-part shift, thermal expansion, and/or an SSCHA-grade treatment
+  — out of scope here. Consequences handled as follows: (i) the zone-wide η map
+  stays on computed inputs, with the caveat that the soft-branch Ω overestimate
+  biases η *downward* there (narrow-width conclusions optimistic for the soft
+  sector); a sensitivity table rescaling soft-branch Ω by the Vogt/computed ratio
+  is emitted (`eta_validity_sensitivity.csv`); (ii) the soft kernel is evaluated
+  both fully computed and literature-anchored (Vogt/Verdi Ω₀(T) with computed Γ₀,
+  Λ²); (iii) κ(T) validation is **unaffected** — κ is acoustic-dominated and the
+  9.53 vs 8.7 W/mK (300 K) agreement stands independently of the soft-mode Ω₀
+  systematic.
 
 ---
 
