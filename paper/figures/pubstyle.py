@@ -41,6 +41,22 @@ def panel_label(ax, letter: str):
                 annotation_clip=False)
 
 
+T_CUBIC_TETRA_K = 105.0
+
+
+def mark_phase_boundary(ax, label: bool = False):
+    """Light vertical line at the ~105 K cubic-tetragonal boundary.
+
+    Below it the computed cubic surface is a fixed-structure computational
+    reference (real SrTiO3 is tetragonal/AFD)."""
+    ax.axvline(T_CUBIC_TETRA_K, color="0.75", lw=0.8, ls="-", zorder=0)
+    if label:
+        ax.annotate("cubic\u2013tetragonal\n~105 K", xy=(T_CUBIC_TETRA_K, 1.0),
+                    xycoords=("data", "axes fraction"), xytext=(3, -3),
+                    textcoords="offset points", fontsize=6.5, color="0.45",
+                    ha="left", va="top")
+
+
 def save(fig, name: str):
     """Write ``out/<name>.pdf`` (vector) and ``out/<name>.png`` (600 dpi). Returns paths.
     Uses ``bbox_inches='tight'`` exactly as the original notebook saves did."""

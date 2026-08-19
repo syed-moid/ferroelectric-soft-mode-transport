@@ -64,6 +64,7 @@ ax_b.plot(val["T_K"], val["eta0_vogt_anchored"], "v--", ms=4, color="tab:red",
 ax_b.plot(sens["T_K"], sens["eta_max_rescaled"], "x:", ms=5, color="0.35",
           label=r"zone max, soft branch Vogt-rescaled")
 ax_b.axhline(0.5, ls="--", color="tab:red", lw=1)
+pubstyle.mark_phase_boundary(ax_b)
 ax_b.set_yscale("log")
 ax_b.set_ylim(1e-4, 1.0)
 ax_b.set_xlabel("$T$ (K)")

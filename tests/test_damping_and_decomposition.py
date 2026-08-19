@@ -163,6 +163,31 @@ def test_soft_kernel_qc_envelope_ordering() -> None:
         assert by_q["0.10"] < by_q["0.15"] < by_q["0.20"] <= by_q["debye"]
 
 
+# --- coherence pair-sector blocks -------------------------------------------
+def test_coherence_blocks_closure_and_shares() -> None:
+    """Pair-sector blocks sum to the solver kappa_C (0.3% class, all T > 0).
+
+    Also locks the 300 K block values and the finding that non-soft-involved
+    coherence dominates (>=10% everywhere), which fixes the manuscript's
+    3+6 presentation of the decomposition.
+    """
+    df = _read("kappa_coherence_blocks_T.csv")
+    assert len(df) == 21
+    blocks = [c for c in df.columns if c.startswith("kappa_C_") and
+              c not in ("kappa_C_pairsum", "kappa_C_solver")]
+    assert len(blocks) == 6
+    nz = df[df["T_K"] > 0]
+    assert np.allclose(nz[blocks].sum(axis=1), nz["kappa_C_pairsum"], rtol=1e-9)
+    assert np.allclose(nz["kappa_C_pairsum"], nz["kappa_C_solver"], rtol=3e-3)
+    r300 = df[df["T_K"] == 300.0].iloc[0]
+    assert r300["kappa_C_hard_hard"] == pytest.approx(0.2143, abs=2e-3)
+    assert r300["kappa_C_A_soft"] == pytest.approx(0.0886, abs=2e-3)
+    assert r300["kappa_C_soft_soft"] == pytest.approx(0.0411, abs=2e-3)
+    nonsoft = (nz["kappa_C_A_A"] + nz["kappa_C_A_hard"] +
+               nz["kappa_C_hard_hard"]) / nz["kappa_C_pairsum"]
+    assert (nonsoft > 0.10).all()  # the B1(c) presentation decision
+
+
 # --- bare-vs-SCPH negative control ------------------------------------------
 def test_bare_vs_scph_control_table() -> None:
     df = _read("bare_vs_scph_control.csv")

@@ -54,6 +54,7 @@ ax.plot(five["T_K"], five["kappa_soft_optic_P"], "^:", ms=4, color="tab:orange",
         label=r"soft-optic sector, zone sum (this work)")
 ax.plot(kappa_tot["T_K"], kappa_tot["kappa_W_mK"], "-", color="0.4", lw=1.2,
         label=r"$\kappa_{\rm total}$ (scale)")
+pubstyle.mark_phase_boundary(ax)
 ax.set_yscale("log")
 ax.set_xlim(0, 1000)
 ax.set_ylim(3e-2, 40)

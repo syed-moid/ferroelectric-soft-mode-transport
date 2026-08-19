@@ -1,13 +1,15 @@
-"""Figure F3 -- kappa(T): five-way decomposition, negative control, benchmarks.
+"""Figure 3 -- kappa(T): 3+6 decomposition, negative control, benchmarks.
 
-Stacked areas: particle-like sectors (acoustic / soft-optic / hard-optic,
-boundary 175 cm^-1) + the directly computed Wigner coherence channel kappa_C.
-Dashed: bare-RTA kappa (negative control -- same anharmonic FCs, harmonic part
-not renormalized). Markers at 300 K: Tadano 2015 first-principles 8.7 W/mK
-(12x12x12) and Tachibana 2008 experiment ~11 W/mK.
+Panel (a): stacked particle sectors (acoustic / soft-optic / hard-optic,
+boundary 175 cm^-1) + the directly computed Wigner coherence channel kappa_C
+(sum of the six pair-sector blocks); dashed bare-RTA negative control; 300 K
+benchmark markers. Panel (b): the six coherence blocks kappa^C_{sigma sigma'}
+versus temperature. The light vertical line marks the ~105 K cubic-tetragonal
+boundary (fixed-structure cubic reference below it).
 
-Data: data/processed/sto_alamode/{kappa_five_way_T,bare_vs_scph_control}.csv +
-data/literature/STO/{tadano_2015,tachibana_2008}/kappa_total_T.csv.
+Data: data/processed/sto_alamode/{kappa_five_way_T,kappa_coherence_blocks_T,
+bare_vs_scph_control}.csv + data/literature/STO/{tadano_2015,tachibana_2008}/
+kappa_total_T.csv.
 """
 
 from __future__ import annotations
@@ -33,7 +35,12 @@ bare = control[control["record"] == "kappa_T"].sort_values("T_K")
 tadano = pd.read_csv(LIT / "tadano_2015" / "kappa_total_T.csv")
 tachibana = pd.read_csv(LIT / "tachibana_2008" / "kappa_total_T.csv")
 
-fig, ax = plt.subplots(figsize=(6.4, 4.2))
+blocks = pd.read_csv(TIDY / "kappa_coherence_blocks_T.csv", comment="#")
+blocks = blocks[blocks["T_K"] > 0].sort_values("T_K")
+
+fig, (ax, ax_b) = plt.subplots(
+    1, 2, figsize=(9.8, 4.0), gridspec_kw={"width_ratios": [1.35, 1.0]}
+)
 ax.stackplot(
     five["T_K"],
     five["kappa_acoustic_P"], five["kappa_soft_optic_P"],
@@ -59,11 +66,33 @@ ax.errorbar(
     fmt="*", ms=11, color="k", zorder=5, capsize=3,
     label=r"Tachibana 2008 (exp., $\approx$)",
 )
+pubstyle.mark_phase_boundary(ax)
 ax.set_xlim(0, 1000)
 ax.set_ylim(0, 24)
 ax.set_xlabel("$T$ (K)")
 ax.set_ylabel(r"$\kappa$ (W m$^{-1}$ K$^{-1}$)")
-ax.legend(fontsize=8.5, loc="upper right")
+ax.legend(fontsize=8, loc="upper right")
+pubstyle.panel_label(ax, "a")
+
+BLOCK_STYLE = [
+    ("kappa_C_hard_hard", "hard/hard", "#55a868", "-"),
+    ("kappa_C_A_soft", "ac/soft", "#dd8452", "-"),
+    ("kappa_C_soft_soft", "soft/soft", "#c44e52", "-"),
+    ("kappa_C_A_A", "ac/ac", "#4c72b0", "-"),
+    ("kappa_C_A_hard", "ac/hard", "#8172b3", "--"),
+    ("kappa_C_hard_soft", "hard/soft", "0.4", ":"),
+]
+for col, label, color, ls in BLOCK_STYLE:
+    ax_b.plot(blocks["T_K"], blocks[col], ls, color=color, lw=1.3,
+              marker="o", ms=2.5, label=label)
+pubstyle.mark_phase_boundary(ax_b, label=True)
+ax_b.set_yscale("log")
+ax_b.set_ylim(1e-4, 1.0)
+ax_b.set_xlim(0, 1000)
+ax_b.set_xlabel("$T$ (K)")
+ax_b.set_ylabel(r"$\kappa^{C}_{\sigma\sigma'}$ (W m$^{-1}$ K$^{-1}$)")
+ax_b.legend(fontsize=7.5, loc="lower right", ncols=2)
+pubstyle.panel_label(ax_b, "b")
 
 fig.tight_layout()
 paths = pubstyle.save(fig, "f3_kappa_decomposition")

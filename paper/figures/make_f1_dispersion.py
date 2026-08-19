@@ -92,6 +92,7 @@ styles = {
 for method, (fmt, color, label) in styles.items():
     c = tad[(tad["mode"] == "TO1") & (tad["method"] == method)].sort_values("T_K")
     ax_b.plot(c["T_K"], c["Omega_sq_meV2"], fmt, ms=4, color=color, lw=1, label=label)
+pubstyle.mark_phase_boundary(ax_b)
 ax_b.set_xlabel("$T$ (K)")
 ax_b.set_ylabel(r"$\Omega_0^2$ (meV$^2$)")
 ax_b.set_xlim(0, 1000)

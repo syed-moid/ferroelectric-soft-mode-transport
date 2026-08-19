@@ -269,6 +269,102 @@ def emit_bare_vs_scph_csv(
     return df
 
 
+# ---------------------------------------------------------------------------
+# Coherence pair-sector blocks (KAPPA_COHERENT = 2 mode-pair output)
+# ---------------------------------------------------------------------------
+KC_ELEM_COLUMNS: tuple[str, ...] = (
+    "T_K", "i", "j", "ibranch", "jbranch", "ik",
+    "omega1_cm1", "omega2_cm1", "kc_real", "kc_imag",
+)
+
+COHERENCE_BLOCKS: tuple[str, ...] = (
+    "A/A", "A/hard", "A/soft", "hard/hard", "hard/soft", "soft/soft",
+)
+
+
+def read_kc_elem(path: Path) -> pd.DataFrame:
+    """Parse a ``.kc_elem`` file (mode-pair coherence elements).
+
+    Values are as written by anphon: SI-converted but WITHOUT the 1/N_k mesh
+    normalization (the code divides by nk only for the ``.kl_coherent``
+    total), and tabulated for the three diagonal Cartesian components.
+    """
+    df = pd.read_csv(
+        path, sep=r"\s+", comment="#", header=None, names=KC_ELEM_COLUMNS
+    )
+    return df
+
+
+def _short_sector(labels) -> np.ndarray:
+    return np.char.replace(
+        np.char.replace(np.asarray(labels, dtype=str), "_optic", ""),
+        "acoustic", "A",
+    )
+
+
+def coherence_blocks_row(
+    kc_path: Path,
+    *,
+    boundary_cm1: float = SECTOR_BOUNDARY_CM1,
+    nk: int = NK_MESH,
+) -> dict[str, float]:
+    """Six pair-sector coherence blocks (isotropic, W/mK) for one temperature.
+
+    Pairs (s, s') are classified by the same sector assignment as the particle
+    channels (each mode by its own branch index and frequency); blocks are
+    unordered sector pairs. ``kappa_C_pairsum`` is the closure quantity
+    (sum of all blocks = solver kappa_C).
+    """
+    df = read_kc_elem(kc_path)
+    d = df[(df["i"] == df["j"]) & (df["ibranch"] != df["jbranch"])]
+    if d.empty:  # T = 0: anphon writes no coherence elements
+        out = {f"kappa_C_{b.replace('/', '_')}": 0.0 for b in COHERENCE_BLOCKS}
+        out["kappa_C_pairsum"] = 0.0
+        return out
+    s1 = _short_sector(classify_sector(d["ibranch"], d["omega1_cm1"], boundary_cm1))
+    s2 = _short_sector(classify_sector(d["jbranch"], d["omega2_cm1"], boundary_cm1))
+    block = ["/".join(sorted(pair)) for pair in zip(s1, s2)]
+    sums = (
+        d.assign(block=block).groupby("block")["kc_real"].sum() / 3.0 / nk
+    )
+    out = {f"kappa_C_{b.replace('/', '_')}": float(sums.get(b, 0.0))
+           for b in COHERENCE_BLOCKS}
+    out["kappa_C_pairsum"] = float(d["kc_real"].sum() / 3.0 / nk)
+    return out
+
+
+_HEADER_KC_BLOCKS = (
+    "# source: data/raw/alamode_sto/STO_RTA_scph_*K.kc_elem "
+    "(KAPPA_COHERENT = 2 mode-pair coherence elements) + .kl_coherent "
+    "(solver total)\n"
+    "# method: each (s, s') pair classified by the particle-channel sector "
+    "assignment (acoustic = branches 1-3; soft/hard optic split at 175 cm^-1); "
+    "blocks are unordered sector pairs; isotropic diagonal average; pair sum "
+    "= solver kappa_C (closure tested to the 0.3% class)\n"
+    "# units: all kappa in W m^-1 K^-1\n"
+    "# provenance: ext-FP-alamode (see data/raw/alamode_sto/IMPORT_NOTE.md)\n"
+)
+
+
+def emit_coherence_blocks_csv(raw_dir: Path, out_path: Path) -> pd.DataFrame:
+    """Emit ``kappa_coherence_blocks_T.csv`` for the full temperature grid."""
+    raw_dir, out_path = Path(raw_dir), Path(out_path)
+    rows = []
+    for t in SCPH_TEMPS_K:
+        row = {"T_K": float(t)}
+        row.update(coherence_blocks_row(raw_dir / f"STO_RTA_scph_{t}K.kc_elem"))
+        kl_c = read_kl_coherent(raw_dir / f"STO_RTA_scph_{t}K.kl_coherent")
+        row["kappa_C_solver"] = float(
+            kl_c[["k_xx", "k_yy", "k_zz"]].mean(axis=1).item()
+        )
+        rows.append(row)
+    df = pd.DataFrame(rows)
+    with open(out_path, "w") as fh:
+        fh.write(_HEADER_KC_BLOCKS)
+        df.to_csv(fh, index=False)
+    return df
+
+
 if __name__ == "__main__":
     repo_root = Path(__file__).resolve().parents[2]
     written = emit_decomposition_csvs(
@@ -284,3 +380,6 @@ if __name__ == "__main__":
         control_path,
     )
     print(f"control: {control_path.relative_to(repo_root)}")
+    blocks_path = repo_root / "data" / "processed" / "sto_alamode" / "kappa_coherence_blocks_T.csv"
+    emit_coherence_blocks_csv(repo_root / "data" / "raw" / "alamode_sto", blocks_path)
+    print(f"coherence blocks: {blocks_path.relative_to(repo_root)}")
