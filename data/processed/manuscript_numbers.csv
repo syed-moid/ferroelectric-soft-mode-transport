@@ -1,4 +1,7 @@
-# source: curated traceability index for Manuscript v6.1 (Gate-5/Gate-6 audit)
+# source: curated traceability index for Manuscript v7.3 (Gate-5/Gate-6 audit)
+# rounding: percentages are quoted to one decimal, rounded half-up from the
+# unrounded pipeline value; a derived value is quoted with a single canonical
+# string everywhere it appears (e.g. the 300 K coherence share is 3.7%)
 # method: every numerical claim in the manuscript mapped to the committed data
 # file and the script that produces it; "literature" rows point to the
 # digitized-literature CSVs; test-locked values are additionally guarded by the
