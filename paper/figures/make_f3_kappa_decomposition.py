@@ -1,7 +1,7 @@
 """Figure 3 -- kappa(T): 3+6 decomposition, negative control, benchmarks.
 
 Panel (a): stacked particle sectors (acoustic / soft-optic / hard-optic,
-boundary 175 cm^-1) + the directly computed Wigner coherence channel kappa_C
+boundary 175 cm^-1) + the directly computed ALAMODE coherence channel kappa_C
 (sum of the six pair-sector blocks); dashed bare-RTA negative control; 300 K
 benchmark markers. Panel (b): the six coherence blocks kappa^C_{sigma sigma'}
 versus temperature. The light vertical line marks the ~105 K cubic-tetragonal
@@ -49,7 +49,7 @@ ax.stackplot(
         r"$\kappa_{\mathrm{ac}}^{P}$ (acoustic)",
         r"$\kappa_{\mathrm{soft}}^{P}$ (soft optic, $\Omega<175$ cm$^{-1}$)",
         r"$\kappa_{\mathrm{hard}}^{P}$ (hard optic)",
-        r"$\kappa_{C}$ (Wigner coherence, direct)",
+        r"$\kappa_{C}$ (ALAMODE coherence, direct)",
     ],
     colors=["#4c72b0", "#dd8452", "#55a868", "#c44e52"],
     alpha=0.85,

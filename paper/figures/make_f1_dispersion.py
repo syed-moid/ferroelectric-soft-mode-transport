@@ -7,7 +7,7 @@ HWHM) at the on-path 8x8x8 mesh modes of the Gamma-X segment.
 
 Panel (b): zone-center soft-mode hardening Omega_0^2(T) -- computed (this
 dataset) vs the digitized Tadano 2015 Fig. 5 SCPH curves (with/without
-lattice-expansion correction) and experimental references; annotation records
+polarization mixing, PM) and experimental references; annotation records
 the stabilization count 11/525 -> 0/525 at 300 K.
 
 Data: data/processed/sto_alamode/{dispersion_path_bare,dispersion_path_scph300,
@@ -85,8 +85,8 @@ ax_b.plot(val["T_K"], omega0_sq, "o-", ms=3.5, color="tab:blue",
 
 tad = pd.read_csv(ROOT / "data" / "literature" / "STO" / "tadano_2015" / "scph_omega_T.csv")
 styles = {
-    "SCPH_without_PM": ("s--", "tab:purple", "Tadano SCPH (fixed cell)"),
-    "SCPH_with_PM": ("^--", "tab:green", "Tadano SCPH (+ expansion)"),
+    "SCPH_without_PM": ("s--", "tab:purple", "Tadano SCPH(-PM)"),
+    "SCPH_with_PM": ("^--", "tab:green", "Tadano SCPH(+PM)"),
     "exp_Servoin": ("v:", "0.35", "exp. (Servoin)"),
 }
 for method, (fmt, color, label) in styles.items():

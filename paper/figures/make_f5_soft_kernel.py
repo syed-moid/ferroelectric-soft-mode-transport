@@ -3,7 +3,7 @@
 kappa_soft^P(T) from the recomputed kernel (computed Omega_0, Gamma_0,
 Lambda^2; Debye cutoff with the Lambda^2 +/-30% band), the Vogt-anchored
 labeled variant (literature Omega_0(T), computed Gamma_0 and Lambda^2), the
-OLD fully-literature-input value (0.137 [0.102, 0.167] W/mK at ~300 K,
+literature-only value (0.137 [0.102, 0.167] W/mK at ~300 K,
 committed in section4_eta_kappa_triples.csv), the direct soft-optic sector
 sum from the zone decomposition, and kappa_total for scale (log axis).
 
@@ -48,7 +48,7 @@ ax.errorbar(
     yerr=[[old["kappa_soft_W_m_K"] - old["kappa_soft_lo"]],
           [old["kappa_soft_hi"] - old["kappa_soft_W_m_K"]]],
     fmt="D", ms=7, color="tab:red", capsize=4, zorder=5,
-    label="old kernel, literature-only inputs (v5)",
+    label="literature-only kernel",
 )
 ax.plot(five["T_K"], five["kappa_soft_optic_P"], "^:", ms=4, color="tab:orange",
         label=r"soft-optic sector, zone sum (this work)")

@@ -4,7 +4,7 @@ Based on the v5 Fig. 4 cluster strip (make_fig04.py). The literature-based STO
 point remains PRIMARY (apples-to-apples with the KTO/BTO literature points);
 the computed zone-center eta_0(300 K) from the SCPH-coupled dataset is added
 alongside as an open marker with a connector. The offset follows the verified
-chain: computed ~ Tadano fixed-cell SCPH > Tadano +expansion > experiment
+chain: computed ~ Tadano SCPH(-PM) > Tadano SCPH(+PM) > experiment
 (METHODS_AND_CAVEATS.md C8).
 
 Data: fekappa.eta (Vogt literature values), HAS Table I (BTO), and
