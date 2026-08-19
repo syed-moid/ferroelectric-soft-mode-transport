@@ -84,6 +84,7 @@ revised, computation-centered version being prepared for resubmission.
 | `src/fekappa/plots.py` | publication matplotlib style |
 | `notebooks/` | 01–09 (+05b, 07b): inventory → benchmarks → kernel |
 | `paper/figures/` | manuscript figure scripts (`out/` renders gitignored) |
+| `archive/scph_calibration/` | preserved legacy BTO calibration code (negative-result illustration only) |
 | `tests/` | regression suite (unit conversions, parsers, committed-table locks) |
 
 ## Installation
