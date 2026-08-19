@@ -79,5 +79,10 @@ value,units,description,manuscript_location,source_script,source_data_file
 10,percent,residual vs published 12^3 kappa,Sec.6(iii),src/fekappa/alamode_io.py,data/processed/sto_alamode/kappa_rta_T.csv vs data/literature/STO/tadano_2015/kappa_total_T.csv
 0.998/0.993,R^2,LST consistency SrTiO3/KTaO3 (literature),Figs. S6-S7 captions,paper/figures/make_supp.py,data/literature/STO/verdi_2023 + KTO/ranalli_2023 inverse_dielectric_T.csv
 5,x,BaTiO3 soft-branch curvature anisotropy (literature),Fig. S8 caption,paper/figures/make_fig05.py,data/literature/BTO/harada_axe_shirane_1971/Lambda_sq.csv
-2806,percent,hybrid-dataset residual at 400 K (Appendix B),Appendix B,archive/scph_calibration + notebooks/09,data/raw/BTO/phonon_modes_*.csv + data/literature/BTO/ehsan_2021/anchors.csv
-0.514,dimensionless,hybrid dataset eta crossing at 400 K (Appendix B),Appendix B,notebooks/09_BTO_hybrid_appendix.ipynb,data/raw/BTO/phonon_modes_400K.csv
+2800,percent,hybrid-dataset residual at 400 K (order of magnitude),Supplemental Note S1,archive/scph_calibration + notebooks/09,data/raw/BTO/phonon_modes_*.csv + data/literature/BTO/ehsan_2021/anchors.csv
+0.3610,W/mK,kappa_C(300 K) reproduced by pair-sum of the implemented formula,Sec.2.2 (Eq. 13 proof); Sec.4.3,src/fekappa/kappa_decomposition.py; tests/test_damping_and_decomposition.py,data/processed/sto_alamode/kappa_coherence_blocks_T.csv
+0.3,percent,kappa_C pair-sum closure tolerance (max 0.203),Sec.2.2; Sec.4.3,src/fekappa/kappa_decomposition.py; tests,data/processed/sto_alamode/kappa_coherence_blocks_T.csv
+0.2143,W/mK,hard/hard coherence block at 300 K,Sec.4.3; Fig.3(b),src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/kappa_coherence_blocks_T.csv
+59-89,percent,hard/hard share of kappa_C above 100 K,Sec.4.3; Novelty,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/kappa_coherence_blocks_T.csv
+36,percent,ac/soft + soft/soft share of kappa_C at 300 K peak,Sec.4.3,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/kappa_coherence_blocks_T.csv
+105,K,cubic-tetragonal boundary (fixed-structure reference below),Abstract; Sec.3; Figs.1-4,paper/figures/pubstyle.py (mark_phase_boundary),literature (structural transition; context)
