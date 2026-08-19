@@ -86,11 +86,10 @@ session_log.md
 planning/
 
 # ---------------------------------------------------------------------------
-# Manuscript working files (Word/LaTeX drafts, referee material). Only the
-# placeholder is tracked.
+# Manuscript working files (Word/LaTeX drafts, referee material). Nothing in
+# this folder is tracked.
 # ---------------------------------------------------------------------------
 manuscript/*
-!manuscript/.gitkeep
 
 # ---------------------------------------------------------------------------
 # Source publication PDFs (copyrighted; kept local for digitization workflow)

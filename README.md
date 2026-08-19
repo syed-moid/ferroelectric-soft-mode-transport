@@ -3,8 +3,9 @@
 This is a computational study of SrTiO₃ based on self-consistent-phonon (SCPH)-coupled
 anharmonic lattice dynamics, with BaTiO₃ and KTaO₃ retained as literature-benchmarked
 context materials. The repository computes, validates, and releases: the SCPH-renormalized
-frequencies Ω_qs(T) and anharmonic linewidths Γ_qs(T) of all 525 mesh modes at 0–1000 K;
-the zone-resolved damping map η_qs = Γ/Ω with a quantitative validity boundary for the
+frequencies $\Omega_{\mathbf{q}s}(T)$ and anharmonic linewidths $\Gamma_{\mathbf{q}s}(T)$
+of all 525 mesh modes at 0–1000 K; the zone-resolved damping map
+$\eta_{\mathbf{q}s} = \Gamma/\Omega$ with a quantitative validity boundary for the
 phonon quasiparticle picture (count- and κ-weighted); the mode-resolved thermal
 conductivity and its five-way decomposition (acoustic / soft-optic / hard-optic particle
 channels + the directly computed Wigner coherence channel); a controlled bare-RTA vs
@@ -25,7 +26,7 @@ three-material damping-axis classification is anchored at SrTiO₃ by first-prin
 - **κ(300 K) = 9.53 W m⁻¹ K⁻¹** on the 8×8×8 mesh (10.31 on 12×12×12), vs 8.7 published
   first-principles (12³) and ≈ 11 experimental; mode-resolved particle sum closes on the
   solver κ to ≤ 0.3 % at every temperature.
-- **Wigner coherence channel computed directly:** κ_C/κ grows from 0.8 % (100 K) to
+- **Wigner coherence channel computed directly:** $\kappa_C/\kappa$ grows from 0.8 % (100 K) to
   5.5 % (1000 K); mode-pair-resolved elements released.
 - **Controlled negative result:** identical anharmonic force constants without SCPH
   coupling → 11/525 unstable modes, κ low by 2.6–4.7×, low-frequency band lifetimes up to
@@ -56,37 +57,34 @@ revised, computation-centered version being prepared for resubmission.
 
 ## Repository structure
 
-```
-ferroelectric-soft-mode-transport/
-├── README.md
-├── pyproject.toml
-├── .python-version                  # 3.11
-├── METHODS_AND_CAVEATS.md            # consolidated audit trail (checks/caveats/deferred)
-├── data/
-│   ├── raw/                         # BTO/STO IR + BTO hybrid CSVs; alamode_sto/ is local-only
-│   ├── literature/                  # digitized published data: BTO/, STO/, KTO/
-│   └── processed/                   # gitignored, except the curated interfaces:
-│       ├── section4_eta_kappa_triples.csv
-│       ├── alamode_crosscheck/      # band-resolved τ(300 K) validation tables
-│       └── sto_alamode/             # tidy computed SrTiO₃ tables (Ω, Γ, η, κ, Λ², kernel)
-├── src/fekappa/
-│   ├── io.py / literature_io.py     # raw + literature data loaders (with provenance)
-│   ├── alamode_io.py                # ALAMODE RTA parsers + tidy-table emitters
-│   ├── damping_map.py               # η map, validity fractions, sensitivity tables
-│   ├── kappa_decomposition.py       # mode-resolved κ_P + five-way sector decomposition
-│   ├── lambda_fit.py                # small-q Λ²(T) fits, dispersion tables
-│   ├── soft_kernel_fp.py            # recomputed soft-mode kernel (computed + anchored)
-│   ├── scph.py                      # SCPH fits, soft-mode renormalization
-│   ├── selfenergy.py                # 3-/4-phonon damping (self-energy) decomposition
-│   ├── eta.py                       # damping ratio η = Γ_HWHM/Ω (convention-harmonized)
-│   ├── kappa_kernel.py              # reduced long-wavelength soft-mode transport kernel K_soft
-│   ├── kappa.py                     # Boltzmann/Wigner/total integrators (in progress)
-│   └── plots.py                     # publication matplotlib style
-├── notebooks/                       # 01–09 (+05b, 07b): inventory → benchmarks → kernel
-├── paper/figures/                   # manuscript figure scripts (out/ renders gitignored)
-├── manuscript/                      # manuscript working files (gitignored)
-└── tests/
-```
+| Path | Contents |
+| --- | --- |
+| `README.md`, `pyproject.toml`, `uv.lock`, `.python-version` | project metadata; Python 3.11 with a locked environment |
+| `METHODS_AND_CAVEATS.md` | consolidated audit trail (checks, caveats, deferred items) |
+| `RELEASE_NOTES.md` | version history |
+| `LICENSE`, `DATA_LICENSE.md` | MIT (code) and CC BY 4.0 (data and docs) |
+| `data/raw/` | BTO/STO IR + BTO hybrid CSVs; `alamode_sto/` inputs are local-only (gitignored) |
+| `data/literature/` | digitized published data with per-source provenance: `BTO/`, `STO/`, `KTO/` |
+| `data/processed/` | gitignored except the curated interfaces below |
+| `data/processed/manuscript_numbers.csv` | traceability index: every manuscript number → source script + data file |
+| `data/processed/section4_eta_kappa_triples.csv` | three-material $(\eta, \kappa)$ classification triples |
+| `data/processed/alamode_crosscheck/` | band-resolved τ(300 K) validation tables (bare and SCPH) |
+| `data/processed/sto_alamode/` | 17 tidy computed SrTiO₃ tables: $\Omega_{\mathbf{q}s}(T)$/$\Gamma_{\mathbf{q}s}(T)$ (SCPH and bare), $\eta$ map + validity + sensitivity, mode-resolved κ and RTA totals, five-way decomposition, six-block coherence elements, mesh convergence (incl. isotope), $\Lambda^2(T)$ fits, dispersion paths, soft kernel, bare-vs-SCPH control, harmonic reference, Tadano Fig. 5 match |
+| `src/fekappa/io.py`, `literature_io.py` | raw + literature data loaders (with provenance) |
+| `src/fekappa/alamode_io.py` | ALAMODE RTA/coherence parsers + tidy-table emitters |
+| `src/fekappa/damping_map.py` | $\eta$ map, validity fractions, sensitivity tables |
+| `src/fekappa/kappa_decomposition.py` | mode-resolved $\kappa_P$, five-way sector decomposition, coherence blocks |
+| `src/fekappa/lambda_fit.py` | small-q $\Lambda^2(T)$ fits, dispersion tables |
+| `src/fekappa/soft_kernel_fp.py` | recomputed soft-mode kernel (computed + anchored variants) |
+| `src/fekappa/scph.py` | SCPH fits, soft-mode renormalization |
+| `src/fekappa/selfenergy.py` | 3-/4-phonon damping (self-energy) decomposition |
+| `src/fekappa/eta.py` | damping ratio $\eta = \Gamma_{\mathrm{HWHM}}/\Omega$ (convention-harmonized) |
+| `src/fekappa/kappa_kernel.py` | reduced long-wavelength soft-mode transport kernel $K_{\mathrm{soft}}$ |
+| `src/fekappa/kappa.py` | Boltzmann/Wigner/total integrators (in progress) |
+| `src/fekappa/plots.py` | publication matplotlib style |
+| `notebooks/` | 01–09 (+05b, 07b): inventory → benchmarks → kernel |
+| `paper/figures/` | manuscript figure scripts (`out/` renders gitignored) |
+| `tests/` | regression suite (unit conversions, parsers, committed-table locks) |
 
 ## Installation
 
