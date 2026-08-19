@@ -6,12 +6,12 @@
 # units: as stated per row
 # provenance: derived (audit index)
 value,units,description,manuscript_location,source_script,source_data_file
-9.5283,W/mK,kappa(300 K) SCPH-coupled 8x8x8,Abstract; Sec.1; Sec.3(i); Sec.4.3; Fig.3,src/fekappa/alamode_io.py,data/processed/sto_alamode/kappa_rta_T.csv
-10.3084,W/mK,kappa(300 K) 12x12x12 convergence,Sec.1; Sec.3(i); Fig.S1,src/fekappa/alamode_io.py,data/processed/sto_alamode/mesh_convergence.csv
-8.2,percent,mesh-convergence shift 8^3->12^3,Sec.6(iii),src/fekappa/alamode_io.py,data/processed/sto_alamode/mesh_convergence.csv
-8.7,W/mK,published 12^3 first-principles kappa(300 K),Abstract; Sec.1; Sec.3(i); Fig.3,paper/figures/make_f3_kappa_decomposition.py,data/literature/STO/tadano_2015/kappa_total_T.csv
-11,W/mK,experimental kappa(300 K) approximate,Abstract; Sec.1; Sec.3(i); Fig.3,paper/figures/make_f3_kappa_decomposition.py,data/literature/STO/tachibana_2008/kappa_total_T.csv
-3.3439,W/mK,bare-RTA kappa(300 K) negative control,Abstract; Sec.4.3,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/bare_vs_scph_control.csv
+9.5283,W/mK,kappa_P(300 K) SCPH-coupled 8x8x8 (particle channel; .kl is particle-only),Abstract; Sec.1; Sec.3(i); Sec.4.3; Fig.3,src/fekappa/alamode_io.py,data/processed/sto_alamode/kappa_rta_T.csv
+10.3084,W/mK,kappa_P(300 K) 12x12x12 convergence (particle channel),Sec.1; Sec.3(i); Fig.S1,src/fekappa/alamode_io.py,data/processed/sto_alamode/mesh_convergence.csv
+8.2,percent,mesh-convergence shift 8^3->12^3 in kappa_P,Sec.6(iii),src/fekappa/alamode_io.py,data/processed/sto_alamode/mesh_convergence.csv
+8.7,W/mK,published 12^3 three-phonon BTE-RTA kappa (particle-only; compare kappa_P),Abstract; Sec.1; Sec.3(i); Fig.3,paper/figures/make_f3_kappa_decomposition.py,data/literature/STO/tadano_2015/kappa_total_T.csv
+11,W/mK,experimental kappa(300 K) approximate (compare kappa_total),Abstract; Sec.1; Sec.3(i); Fig.3,paper/figures/make_f3_kappa_decomposition.py,data/literature/STO/tachibana_2008/kappa_total_T.csv
+3.3439,W/mK,bare-RTA kappa_P(300 K) negative control (particle-channel comparison),Abstract; Sec.4.3,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/bare_vs_scph_control.csv
 2.85,x,SCPH/bare kappa ratio at 300 K,Sec.4.3,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/bare_vs_scph_control.csv
 2.63-4.68,x,SCPH/bare kappa ratio range 50-1000 K,Abstract; Sec.1; Sec.4.3; Sec.7,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/bare_vs_scph_control.csv
 11/525,count,unstable modes bare harmonic surface,Abstract; Sec.1; Sec.4.1; Fig.1,src/fekappa/alamode_io.py; tests/test_alamode_io.py,data/processed/sto_alamode/omega_gamma_bare_T.csv
@@ -54,7 +54,7 @@ value,units,description,manuscript_location,source_script,source_data_file
 16.19/17.54,ps,longest-lived TA pair lifetimes,Sec.3(ii),src/fekappa/alamode_io.py; tests/test_alamode_io.py,data/processed/sto_alamode/omega_gamma_scph_T.csv
 54.9,cm^-1,frequency of longest-lived TA pair,Sec.3(ii),src/fekappa/alamode_io.py; tests/test_alamode_io.py,data/processed/sto_alamode/omega_gamma_scph_T.csv
 0.3,percent,mode-sum closure vs solver kappa (max 0.27),Sec.4.3; Novelty,src/fekappa/kappa_decomposition.py; tests/test_damping_and_decomposition.py,data/processed/sto_alamode/mode_kappa_T.csv vs kappa_rta_T.csv
-23/5/68/3.6,percent,300 K sector shares acoustic/soft/hard/coherence,Sec.4.3,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/kappa_five_way_T.csv
+23/5/68/3.7,percent,300 K shares of kappa_total (particle sectors + coherence remainder),Sec.4.3,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/kappa_five_way_T.csv
 0.526->2.486,W/mK,soft-optic sector under 175->200 cm^-1 boundary,Sec.4.3,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/kappa_five_way_T.csv
 175,cm^-1,central soft/hard partition boundary,Sec.4.3; Fig.3,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/kappa_five_way_T.csv
 0.361,W/mK,kappa_C(300 K) direct Wigner coherence,Sec.4.3 context,src/fekappa/alamode_io.py; tests/test_alamode_io.py,data/processed/sto_alamode/kappa_rta_T.csv
@@ -86,3 +86,9 @@ value,units,description,manuscript_location,source_script,source_data_file
 59-89,percent,hard/hard share of kappa_C above 100 K,Sec.4.3; Novelty,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/kappa_coherence_blocks_T.csv
 36,percent,ac/soft + soft/soft share of kappa_C at 300 K peak,Sec.4.3,src/fekappa/kappa_decomposition.py,data/processed/sto_alamode/kappa_coherence_blocks_T.csv
 105,K,cubic-tetragonal boundary (fixed-structure reference below),Abstract; Sec.3; Figs.1-4,paper/figures/pubstyle.py (mark_phase_boundary),literature (structural transition; context)
+9.8893,W/mK,kappa_total(300 K) 8x8x8 = kappa_P + kappa_C,Abstract; Sec.1; Sec.4.3; Sec.7,src/fekappa/alamode_io.py,data/processed/sto_alamode/kappa_rta_T.csv (sum of columns)
+10.6201,W/mK,kappa_total(300 K) 12x12x12,QA lock table; Sec.6(iii) via +7.4%,src/fekappa/alamode_io.py,data/processed/sto_alamode/mesh_convergence.csv (sum of columns)
+7.4,percent,mesh-convergence shift 8^3->12^3 in kappa_total,Sec.6(iii),src/fekappa/alamode_io.py,data/processed/sto_alamode/mesh_convergence.csv
+18.5,percent,12^3 kappa_P vs published particle-only 8.7 (like-for-like),Sec.3(ii); Sec.6(iii),src/fekappa/alamode_io.py,data/processed/sto_alamode/mesh_convergence.csv vs data/literature/STO/tadano_2015/kappa_total_T.csv
+9.5,percent,8^3 kappa_P vs published 8.7 (partly fortuitous per mesh trend),Sec.3(ii),src/fekappa/alamode_io.py,data/processed/sto_alamode/kappa_rta_T.csv vs data/literature/STO/tadano_2015/kappa_total_T.csv
+0.9,percent,12^3 kappa_P reduction from natural-abundance isotope scattering (10.3084 -> 10.2205),Sec.3(ii),local anphon run (ISOTOPE=1; inputs archived),data/processed/sto_alamode/mesh_convergence.csv (isotope row)
