@@ -69,7 +69,7 @@ revised, computation-centered version being prepared for resubmission.
 | `data/processed/manuscript_numbers.csv` | traceability index: every manuscript number → source script + data file |
 | `data/processed/section4_eta_kappa_triples.csv` | three-material $(\eta, \kappa)$ classification triples |
 | `data/processed/alamode_crosscheck/` | band-resolved τ(300 K) validation tables (bare and SCPH) |
-| `data/processed/sto_alamode/` | 17 tidy computed SrTiO₃ tables: $\Omega_{\mathbf{q}s}(T)$/$\Gamma_{\mathbf{q}s}(T)$ (SCPH and bare), $\eta$ map + validity + sensitivity, mode-resolved κ and RTA totals, five-way decomposition, six-block coherence elements, mesh convergence (incl. isotope), $\Lambda^2(T)$ fits, dispersion paths, soft kernel, bare-vs-SCPH control, harmonic reference, Tadano Fig. 5 match |
+| `data/processed/sto_alamode/` | 17 tidy computed SrTiO₃ tables: $\Omega_{\mathbf{q}s}(T)/\Gamma_{\mathbf{q}s}(T)$ (SCPH and bare), $\eta$ map + validity + sensitivity, mode-resolved κ and RTA totals, five-way decomposition, six-block coherence elements, mesh convergence (incl. isotope), $\Lambda^2(T)$ fits, dispersion paths, soft kernel, bare-vs-SCPH control, harmonic reference, Tadano Fig. 5 match |
 | `src/fekappa/io.py`, `literature_io.py` | raw + literature data loaders (with provenance) |
 | `src/fekappa/alamode_io.py` | ALAMODE RTA/coherence parsers + tidy-table emitters |
 | `src/fekappa/damping_map.py` | $\eta$ map, validity fractions, sensitivity tables |
