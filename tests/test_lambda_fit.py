@@ -74,7 +74,8 @@ def test_lambda_sq_monotonic_hardening() -> None:
 def test_mesh_convergence_table() -> None:
     """mesh_convergence.csv holds both meshes with the locked 8x8x8 kappa."""
     df = pd.read_csv(TIDY_DIR / "mesh_convergence.csv", comment="#")
-    assert sorted(df["mesh"]) == ["12x12x12", "8x8x8"]
+    assert {"12x12x12", "8x8x8"} <= set(df["mesh"])
+    assert set(df["mesh"]) <= {"12x12x12", "8x8x8", "12x12x12_iso"}
     k8 = df.loc[df["mesh"] == "8x8x8", "kappa_W_mK"].item()
     assert k8 == pytest.approx(9.5283, abs=1e-4)
     # Coherent channel is present, positive, and small relative to kappa_P.

@@ -59,12 +59,12 @@ ax.plot(bare["T_K"], bare["bare"], "--", color="0.25", lw=1.4,
 ax.errorbar(
     tadano["T_K"], tadano["kappa_W_per_m_K"], yerr=tadano["kappa_uncertainty"],
     fmt="D", ms=6, color="tab:purple", zorder=5, capsize=3,
-    label=r"Tadano 2015 (FP, $12^3$)",
+    label=r"Tadano 2015 ($\kappa_P$, RTA $12^3$)",
 )
 ax.errorbar(
     tachibana["T_K"], tachibana["kappa_W_per_m_K"], yerr=tachibana["kappa_uncertainty"],
     fmt="*", ms=11, color="k", zorder=5, capsize=3,
-    label=r"Tachibana 2008 (exp., $\approx$)",
+    label=r"Tachibana 2008 (exp. total, $\approx$)",
 )
 pubstyle.mark_phase_boundary(ax)
 ax.set_xlim(0, 1000)

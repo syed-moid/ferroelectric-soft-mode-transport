@@ -349,8 +349,9 @@ def emit_tidy_csvs(raw_dir: Path, out_dir: Path) -> dict[str, Path]:
 
 
 _HEADER_MESH = (
-    "# source: data/raw/alamode_sto/STO_RTA_scph_300K{,_mesh12}.{result,kl,kl_coherent} "
-    "(SCPH-coupled anphon RTA at 300 K, 8x8x8 vs 12x12x12 q-mesh)\n"
+    "# source: data/raw/alamode_sto/STO_RTA_scph_300K{,_mesh12,_mesh12_iso}."
+    "{result,kl,kl_coherent} (SCPH-coupled anphon RTA at 300 K, 8x8x8 vs "
+    "12x12x12 q-mesh; _iso adds ISOTOPE=1 natural-abundance scattering)\n"
     "# method: kappa from .kl (isotropic collapse); kappa_C from .kl_coherent; "
     "eta = gamma_hwhm_cm1 / omega_cm1 per mode, fractions unweighted by kappa\n"
     "# units: kappa in W m^-1 K^-1; eta dimensionless\n"
@@ -385,7 +386,11 @@ def emit_mesh_convergence_csv(raw_dir: Path, out_path: Path) -> pd.DataFrame:
     """Write the 8x8x8-vs-12x12x12 SCPH-coupled 300 K convergence table."""
     raw_dir, out_path = Path(raw_dir), Path(out_path)
     rows = []
-    for mesh, stem in (("8x8x8", "STO_RTA_scph_300K"), ("12x12x12", "STO_RTA_scph_300K_mesh12")):
+    stems = [("8x8x8", "STO_RTA_scph_300K"), ("12x12x12", "STO_RTA_scph_300K_mesh12")]
+    if (raw_dir / "STO_RTA_scph_300K_mesh12_iso.kl").exists():
+        # optional isotope-scattering check (ISOTOPE = 1, natural abundances)
+        stems.append(("12x12x12_iso", "STO_RTA_scph_300K_mesh12_iso"))
+    for mesh, stem in stems:
         kappa = kappa_isotropic(read_kl(raw_dir / f"{stem}.kl"))["kappa_W_mK"].item()
         kl_c = read_kl_coherent(raw_dir / f"{stem}.kl_coherent")
         kappa_c = float(kl_c[["k_xx", "k_yy", "k_zz"]].mean(axis=1).item())
