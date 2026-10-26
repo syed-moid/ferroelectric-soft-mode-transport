@@ -1,11 +1,11 @@
 # Methods, checks, and caveats
 
-**Scope.** Turn 4B built the literature-benchmark data stack and the reduced
+**Scope.** The first release (v1) built the literature-benchmark data stack and the reduced
 soft-mode transport kernel for the three target materials — SrTiO₃ (STO),
 KTaO₃ (KTO), BaTiO₃ (BTO) — from digitized published data. This document is the
 single record of *what was checked, what passed, what fired and how it was
 resolved, what was retired, and what is assumed or deferred*. It is written for a
-referee or a future maintainer who needs the audit trail without re-reading every
+reader or a future maintainer who needs the audit trail without re-reading every
 notebook.
 
 **Closing state (v1, literature-only analysis).** `origin/main = b5699d2`. Test suite
@@ -23,13 +23,27 @@ fed literature inputs; HWHM-once regression extended to the computed dataset. Th
 production run regenerates bit-for-bit after a toolchain rebuild. Standing caveat C8 (below)
 records the fixed-cell SCPH Ω₀ systematic and its handling.
 
+**Revision state (v3, production dataset of the revised manuscript, 2026-10-24).**
+- Data: own SCPH on q₁ = 12³ with polarization mixing, 300–1000 K. All 170 jobs are in
+  `data/provenance/manifest_final.json`.
+- Tests: **311 passed / 2 skipped** with the raw outputs present; 305 passed / 8 skipped in a clean checkout.
+- New checks, all passing:
+  - production-table closure: κ_P + κ_C = κ_total; sector and mode sums against the solver within the recorded
+    closure; six coherence blocks summing to the pair sum; the three character projections summing to one;
+  - the independent count of the four-phonon excluded set, which reproduces the audit-build counters at 4³;
+  - the queue unit tests;
+  - provenance headers on every revision table.
+- Regeneration: every main-text number and Figs. 1–4 and S1–S8 regenerate from tracked tables. The figures are
+  pixel-identical to the manuscript build.
+- Caveats C9–C14 below are specific to v3. C8's statement on κ(T) refers to the v2 dataset; for v3, see C10.
+
 ---
 
 ## 1. Flags that FIRED and were RESOLVED
 
 | # | Flag | Where | Resolution | Status |
 |---|------|-------|------------|--------|
-| F1 | **BTO Λ² movement > 10% gate** | NB 06 | Cubic-phase refit gave Λ²[100]=818 vs locked paper-text A(100)=972 (−15.8%, tripped the 10% gate). Resolved **by sign-off**: keep **972 central**; 818 corroborates *within* the ±20% envelope [778, 1166]. | Resolved (sign-off) |
+| F1 | **BTO Λ² movement > 10% gate** | NB 06 | Cubic-phase refit gave Λ²[100]=818 vs locked paper-text A(100)=972 (−15.8%, tripped the 10% gate). Resolved: keep **972 central**; 818 corroborates *within* the ±20% envelope [778, 1166]. | Resolved |
 | F2 | **KTaO₃ Ω-source / shift tie-break** | NB 07b | Ranalli MLFF+SSCHA plotted −34.71 cm⁻¹ (−4.30 meV) shifted → 9.05 meV @300 K vs Vogt 10.15 / Meier 10.86. Resolved **by Vogt case-a**: Vogt-exp 10.15 **and** Ranalli-*expt* 10.29 agree (Δ=0.14 meV) — two independent experiments — against the over-shifted MLFF; shift over-applied above ~150 K. | Resolved (data) |
 | F3 | **γ-convention (FWHM vs HWHM)** | Vogt wave | DHO line-shape + magnitudes → Vogt plotted γ is **FWHM**. Locked: Γ_HWHM = γ/2, applied **once at the consumption layer** (`eta.py`); CSV stores γ as-plotted; YS γ used directly as HWHM. Regression-tested against double-application. | Resolved (locked) |
 | F4 | **HAS Table I °K/°C misprint** | Wave 2 | Table-I "°K" header is a misprint (figures say °C); rows initially mis-tagged ortho/rhombo at 150/250 → re-verified against figures as **all cubic at 423/523/723 K**. | Resolved (vs figures) |
@@ -110,7 +124,36 @@ records the fixed-cell SCPH Ω₀ systematic and its handling.
   both fully computed and literature-anchored (Vogt/Verdi Ω₀(T) with computed Γ₀,
   Λ²); (iii) κ(T) validation is **unaffected** — κ is acoustic-dominated and the
   9.53 vs 8.7 W/mK (300 K) agreement stands independently of the soft-mode Ω₀
-  systematic.
+  systematic. *(v2 statement. In v3 the coarse SCPH grid of the distributed example is shown to raise κ_P; see C10.)*
+- **C9 — Four-phonon diagnostics are selected-mode implementation checks.**
+  - What is computed: diagram (c) of ALAMODE c5b015c on 4³–8³ meshes with Lorentzian broadening ε, excluding the
+    identically degenerate quartets (enlarged set, tolerance 1e-9 Ry; `tools/alamode_patches/`).
+  - What is checked: the omitted sum, strict against enlarged exclusion, and the tolerance, where widening to
+    1e-6 Ry changes Γ₄ by at most 1.9 %. Relative residuals of the checks are up to 4 × 10⁻⁶.
+  - The inequality Γ₄,max ≤ ½(0.5Ω − Γ₃) holds with the enlarged exclusion over the tested settings (6³ at
+    ε = 2, 5, 10 cm⁻¹; 8³ at ε = 5 cm⁻¹). Γ₄,max is a maximum over those settings, not an upper bound.
+  - Not established: the joint mesh/broadening limit, a converged four-phonon κ, and a whole-zone bound.
+- **C10 — Benchmark against Tadano & Tsuneyuki (2015).**
+  - At the published settings κ_P(300 K) = 9.24 W m⁻¹ K⁻¹ (+6 %). The q₁ = 2³ grid of the distributed example
+    raises κ_P by 16–18 % relative to q₁ = 8³.
+  - The R-point mode is 22–26 % softer than the published table at q₁ ≥ 8³. The cause is not resolved here.
+  - Agreement in conductivity is not a reproduction of the 2015 calculation.
+- **C11 — κ_C convergence is slower than κ_P's.**
+  - At 300 K, κ_C spans 0.44–0.54 W m⁻¹ K⁻¹ over the meshes from 15³ to 24³. This is an observed range, not an
+    error bar.
+  - Where the κ_C-weighted median r ≥ 0.88, the 16³→20³ change is at most 2.3 % for the pairs tested. r is an
+    empirical diagnostic, not a convergence proof.
+- **C12 — Low-temperature limit.** No converged cubic SCPH solution was obtained below 250 K under the recorded
+  criteria. 250 K fails the q₁ rule (`docs/recorded_rules.md`, R1), so the principal range is 300–1000 K.
+- **C13 — Mode labels are reference-character labels.** They come from projection onto fixed Γ subspaces, not
+  from branch tracking. Exactly degenerate subspaces are labelled as a whole (`docs/recorded_rules.md`, R10); per-eigenvector labels are
+  kept for comparison (`sector_char_eig`).
+- **C14 — Pair counts.**
+  - Ordered pairs are counted as irreducible-wave-vector records and, where stated, star-weighted over the full
+    zone.
+  - The bookkeeping count 210 N_k includes the 78 ordered Γ pairs that involve a translation. Their stored
+    contributions are exactly zero; removing them gives 860082 pairs on 16³.
+  - A fraction of pair counts is not the fraction of κ_C those pairs carry.
 
 ---
 

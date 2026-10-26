@@ -1,59 +1,49 @@
 # Zone-resolved soft-mode damping and the thermal-conductivity decomposition of SrTiO₃
 
-This is a computational study of SrTiO₃ based on self-consistent-phonon (SCPH)-coupled
-anharmonic lattice dynamics, with BaTiO₃ and KTaO₃ retained as literature-benchmarked
-context materials. The repository computes, validates, and releases: the SCPH-renormalized
-frequencies $\Omega_{\mathbf{q}s}(T)$ and anharmonic linewidths $\Gamma_{\mathbf{q}s}(T)$
-of all 525 mesh modes at 0–1000 K; the zone-resolved damping map
-$\eta_{\mathbf{q}s} = \Gamma/\Omega$ with a quantitative validity boundary for the
-phonon quasiparticle picture (count- and κ-weighted); the mode-resolved thermal
-conductivity and its five-way decomposition (acoustic / soft-optic / hard-optic particle
-channels + the directly computed Wigner coherence channel); a controlled bare-RTA vs
-SCPH-coupled negative result; the small-q soft-branch stiffness Λ²(T); and the recomputed
-soft-mode transport kernel with both computed and experiment-anchored input variants.
+Computational study of cubic SrTiO₃ from 300 to 1000 K: self-consistent phonon (SCPH) renormalization of the
+force constants distributed with the ALAMODE SrTiO₃ example, three-phonon linewidths, a mode-resolved damping map
+η = Γ/Ω across the Brillouin zone, and the thermal conductivity split into particle (κ_P) and coherence (κ_C)
+contributions. Both contributions are grouped by reference character under two mode-labelling rules. BaTiO₃ and
+KTaO₃ appear only as literature context from the earlier releases.
 
-The earlier literature-only analysis (convention-harmonized damping classification and
-reduced kernel for BaTiO₃/SrTiO₃/KTaO₃) is retained: its provenance-gated literature
-dataset now serves as the benchmark layer for the computed SrTiO₃ results, and its
-three-material damping-axis classification is anchored at SrTiO₃ by first-principles data.
+Version 3.0.0 holds the calculations, tables and scripts of the revised manuscript. It also holds the
+four-phonon diagnostics with the ALAMODE patches they used, the job manifest of every calculation, and the
+rules and predictions recorded before the runs. The raw solver outputs are archived on Zenodo, in the same
+record as this release.
 
-## Key results
+## Key results (v3.0.0, revised manuscript)
 
-- **Quasiparticle validity, zone-wide:** no SrTiO₃ mode exceeds η = 0.5 at any
-  temperature 0–1000 K (zone max η ≈ 0.10; median 0.003–0.021), by mode count or by
-  κ-weight — robust against the disclosed fixed-cell SCPH soft-mode frequency systematic
-  (explicit rescaling sensitivity test included).
-- **κ(300 K) = 9.53 W m⁻¹ K⁻¹** on the 8×8×8 mesh (10.31 on 12×12×12), vs 8.7 published
-  first-principles (12³) and ≈ 11 experimental; mode-resolved particle sum closes on the
-  solver κ to ≤ 0.3 % at every temperature.
-- **Wigner coherence channel computed directly:** $\kappa_C/\kappa$ grows from 0.8 % (100 K) to
-  5.5 % (1000 K); mode-pair-resolved elements released.
-- **Controlled negative result:** identical anharmonic force constants without SCPH
-  coupling → 11/525 unstable modes, κ low by 2.6–4.7×, low-frequency band lifetimes up to
-  ~9× short while stiff optic bands are unaffected.
-- **Λ²(T) computed:** 1228 → 690 meV² Å² over 0–400 K (R² ≥ 0.999); the 300 K value
-  (842) validates the previous effective literature curvature (889). Above ≈ 450 K the
-  TO1–TO2 zone-center anticrossing ends the single-branch fit regime (documented).
-- **Soft-mode kernel recomputed:** 0.32 [0.21, 0.43] W m⁻¹ K⁻¹ at 300 K vs 0.137
-  [0.102, 0.167] literature-only; computed and Vogt-anchored variants nearly coincide,
-  quantifying how the fixed-cell SCPH systematic propagates (largely cancels) in transport.
-- **Damping-axis classification retained and anchored:** SrTiO₃/KTaO₃ underdamped cluster
-  (η ≈ 0.109/0.126, literature) vs overdamped BaTiO₃ (η ≈ 2.27), with the computed SrTiO₃
-  zone-center point (η₀ = 0.0225) shown alongside and the offset attributed (fixed-cell
-  SCPH Ω₀ provenance).
+All values are for this model: fixed-cell cubic SCPH on the inherited force constants, three-phonon scattering, and
+the relaxation-time approximation for κ_P.
 
-Provenance note: the anharmonic force constants underlying the SrTiO₃ dataset are the
-published, validated ALAMODE example set (disclosed in Methods and in
-`data/raw/alamode_sto/IMPORT_NOTE.md`); every derived quantity is benchmarked against
-independent published references, and regeneration from an in-house PBEsol pipeline is
-flagged as future work. The known fixed-cell SCPH overestimate of the soft-mode frequency
-(1.9–2.4× the hyper-Raman values below 300 K) is disclosed, benchmarked, and propagated
-through sensitivity analyses — never adjusted away (`METHODS_AND_CAVEATS.md`, C8).
+- **Damping.** Most of κ_P is carried by weakly damped modes. The largest three-phonon damping ratio on the tested
+  meshes is η₃ = 0.184, for the antiferrodistortive R-point mode near room temperature. Modes with η₃ > 0.1 carry at
+  most 0.14 % of κ_P at any temperature.
+- **Particle conductivity.** κ_P(300 K) = 8.89 W m⁻¹ K⁻¹ on the 16³ reference mesh.
+- **Coherence conductivity.** κ_C converges more slowly than κ_P. At 300 K it spans 0.44–0.54 W m⁻¹ K⁻¹ across
+  the meshes from 15³ to 24³. This is an observed range, not an error bar.
+- **Sectors.** Pairs assigned to the hard-optic reference sector carry most of κ_C under both labelling rules:
+  65–73 % (character rule) and 74–88 % (frequency rule) on meshes from 15³ up, 300–1000 K. Under the character rule
+  this comes mainly from the number of pairs.
+- **Benchmark.** At the published settings κ_P(300 K) is 9.24 W m⁻¹ K⁻¹. The coarse SCPH grid of the distributed
+  example (q₁ = 2³) gives a κ_P 16–18 % higher than q₁ = 8³; production uses q₁ = 12³ (`docs/recorded_rules.md (R1)`). The
+  R-point mode remains 22–26 % softer than the published table at q₁ ≥ 8³, for a reason not resolved here.
+- **Low-temperature limit.** No converged cubic SCPH solution was obtained below 250 K under the stated criteria.
+  250 K fails the q₁ rule, so the principal range starts at 300 K.
+- **Four-phonon diagnostics.** These are selected-mode diagram-(c) calculations with a stated regularization and
+  exclusion; the implementation checks are in SI Sec. S7. They are not a converged four-phonon conductivity or a
+  whole-zone bound.
+
+The earlier analyses are kept and documented in `RELEASE_NOTES.md`:
+- v2.0.0: the distributed ALAMODE example outputs, in `data/processed/sto_alamode/`;
+- v1.0.0: the literature-only damping classification and kernel.
+
+The revised manuscript supersedes their SrTiO₃ conclusions where the two differ.
 
 ## Status
 
-In revision — an earlier version was reviewed at a journal; this repository holds the
-revised, computation-centered version being prepared for resubmission.
+v3.0.0 accompanies the revised manuscript. Standing caveats and checks are in
+`METHODS_AND_CAVEATS.md`.
 
 ## Repository structure
 
@@ -63,10 +53,10 @@ revised, computation-centered version being prepared for resubmission.
 | `METHODS_AND_CAVEATS.md` | consolidated audit trail (checks, caveats, deferred items) |
 | `RELEASE_NOTES.md` | version history |
 | `LICENSE`, `DATA_LICENSE.md` | MIT (code) and CC BY 4.0 (data and docs) |
-| `data/raw/` | BTO/STO IR + BTO hybrid CSVs; `alamode_sto/` inputs are local-only (gitignored) |
+| `data/raw/` | BTO/STO IR + BTO hybrid CSVs; `alamode_sto/` raw solver outputs are local (gitignored) and archived on Zenodo |
 | `data/literature/` | digitized published data with per-source provenance: `BTO/`, `STO/`, `KTO/` |
 | `data/processed/` | gitignored except the curated interfaces below |
-| `data/processed/manuscript_numbers.csv` | traceability index: every manuscript number → source script + data file |
+| `data/processed/manuscript_numbers.csv` | traceability index of the v2 manuscript: every number → source script + data file |
 | `data/processed/section4_eta_kappa_triples.csv` | three-material $(\eta, \kappa)$ classification triples |
 | `data/processed/alamode_crosscheck/` | band-resolved τ(300 K) validation tables (bare and SCPH) |
 | `data/processed/sto_alamode/` | 17 tidy computed SrTiO₃ tables: $\Omega_{\mathbf{q}s}(T)/\Gamma_{\mathbf{q}s}(T)$ (SCPH and bare), $\eta$ map + validity + sensitivity, mode-resolved κ and RTA totals, five-way decomposition, six-block coherence elements, mesh convergence (incl. isotope), $\Lambda^2(T)$ fits, dispersion paths, soft kernel, bare-vs-SCPH control, harmonic reference, Tadano Fig. 5 match |
@@ -84,8 +74,18 @@ revised, computation-centered version being prepared for resubmission.
 | `src/fekappa/plots.py` | publication matplotlib style |
 | `notebooks/` | 01–09 (+05b, 07b): inventory → benchmarks → kernel |
 | `paper/figures/` | manuscript figure scripts (`out/` renders gitignored) |
+| `scripts/revision/` | revision analysis scripts: raw outputs → tables → manuscript numbers (`scripts/revision/README.md`) |
+| `data/processed/sto_production/` | production tables (q₁ = 12³, polarization mixing): κ per T and mesh, mode table, damping map, sectors, coherence blocks |
+| `data/processed/revision/` | revision tables with provenance headers (benchmark, convergence, labels, pair factors, four-phonon diagnostics) |
+| `data/processed/si_v4/` | the tables of the Supplementary Information |
+| `data/processed/manuscript_numbers_v8.csv` | every number of the revised main text, with its source table |
+| `data/provenance/` | scrubbed job manifest of all 170 calculations (inputs, outputs, sha256, build ids) |
+| `docs/recorded_rules.md` | dated rules and predictions with their outcomes |
+| `queue/` | the checkpointed job runner, job specs and tests |
+| `tools/alamode_patches/` | ALAMODE c5b015c patches, build notes and binary hashes (`BUILD.md`), one-quartet trace (`TRACE.md`) |
+| `tools/zenodo/` | builder of the raw-output archives |
 | `archive/scph_calibration/` | preserved legacy BTO calibration code (negative-result illustration only) |
-| `tests/` | regression suite (unit conversions, parsers, committed-table locks) |
+| `tests/` | regression suite (unit conversions, parsers, committed-table locks, production-table closure, four-phonon identity count, queue) |
 
 ## Installation
 
@@ -99,7 +99,13 @@ pip install -e ".[dev]"
 
 ## Data
 
-Inputs are digitized, convention-harmonized literature data under `data/literature/`
+**Revision calculations (v3).** The raw outputs of every job are in the Zenodo record of this release, one archive
+per variant. Unpack them under `data/raw/alamode_sto/revision/` to rerun `scripts/revision/`. The job manifest
+`data/provenance/manifest_final.json` gives the sha256 of every input and output file and the build id of the binary
+that produced it. The runs made before the job queue existed are in the archive `prequeue_runs`; set
+`FEKAPPA_RUNS` to the unpacked directory. Zenodo: concept DOI 10.5281/zenodo.20559513 (all versions).
+
+**Literature layer.** Inputs are digitized, convention-harmonized literature data under `data/literature/`
 (BaTiO₃, SrTiO₃, KTaO₃), loaded through `fekappa.literature_io` with per-source provenance.
 Soft-mode frequencies Ω(T), linewidths Γ(T), dispersions, and inverse-permittivity data are
 drawn from independent experimental and first-principles sources (e.g. Vogt hyper-Raman,
@@ -115,7 +121,19 @@ first-principles self-energy framework); the preserved calibration code lives un
 
 ## Reproducing the figures
 
-Analysis notebooks live in `notebooks/` (data inventory and pre-flight gate → per-material
+Revised manuscript and SI (from tracked tables only):
+
+```bash
+pip install -e ".[dev]"
+python scripts/revision/build_manuscript_numbers_v8.py   # data/processed/manuscript_numbers_v8.csv
+(cd paper/figures && python make_v8_figures.py && python make_si_v4_figures.py)   # Figs. 1–4, S1–S8 in out/
+pytest
+```
+
+The tables themselves regenerate from the raw outputs with the scripts in `scripts/revision/` (order and inputs in
+its README).
+
+Earlier releases: analysis notebooks live in `notebooks/` (data inventory and pre-flight gate → per-material
 soft-mode benchmarks → the damping-ratio and transport-kernel synthesis). The
 manuscript-ready figures are re-plotted from committed data / kernel outputs by standalone
 scripts in `paper/figures/` — see `paper/figures/README.md`. Rendered images are written to
