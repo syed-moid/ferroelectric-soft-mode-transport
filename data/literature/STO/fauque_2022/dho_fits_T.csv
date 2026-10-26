@@ -12,11 +12,12 @@ T_K,q_label,q_point_rlu,mode,omega_meV,omega_uncertainty_meV,gamma_meV,gamma_unc
 1400,Gamma,"(2,0,0)",TO,17.3,0.0,NaN,NaN,experimental,Fig_1d
 4,R,"(1.5,0.5,0.5)",AFD,1.8,0.0,NaN,NaN,experimental,Fig_1d
 105,R,"(1.5,0.5,0.5)",AFD,0.0,0.0,NaN,NaN,experimental,Fig_1d
-200,R,"(1.5,0.5,0.5)",AFD,3.5,0.0,NaN,NaN,experimental,Fig_1d
-300,R,"(1.5,0.5,0.5)",AFD,5.5,0.0,NaN,NaN,experimental,Fig_1d
+200,R,"(1.5,0.5,0.5)",AFD,4.69,0.0,NaN,NaN,experimental,Fig_1d
+300,R,"(1.5,0.5,0.5)",AFD,6.61,0.0,NaN,NaN,experimental,Fig_1d
 300,R,"(1.5,0.5,0.5)",AFD,5.5,0.0,NaN,NaN,TDEP,Fig_1d
+600,R,"(1.5,0.5,0.5)",AFD,9.85,0.0,NaN,NaN,experimental,Fig_1d
 650,R,"(1.5,0.5,0.5)",AFD,9.8,0.0,NaN,NaN,TDEP,Fig_1d
-1000,R,"(1.5,0.5,0.5)",AFD,11.7,0.0,NaN,NaN,experimental,Fig_1d
+1000,R,"(1.5,0.5,0.5)",AFD,11.6,0.0,NaN,NaN,experimental,Fig_1d
 1000,R,"(1.5,0.5,0.5)",AFD,12.6,0.0,NaN,NaN,TDEP,Fig_1d
 1400,R,"(1.5,0.5,0.5)",AFD,13.2,0.0,NaN,NaN,experimental,Fig_1d
 4,M,"(1.5,0.5,0)",M_mode,9.0,0.0,NaN,NaN,experimental,Fig_1d

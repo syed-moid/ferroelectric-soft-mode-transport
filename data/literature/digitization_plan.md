@@ -1,6 +1,6 @@
-# Literature digitization plan — Turn 4A
+# Literature digitization plan — v1
 
-For each source below, the user will:
+For each source below, the steps are:
 
 1. Open the PDF in `data/<filename>.pdf`
 2. Navigate to the figure(s) listed
@@ -33,13 +33,13 @@ explaining why.
   `extraction_log.md` for full note.) The `scp_omega_T.csv` template
   remains as an empty optional placeholder.
 - **Fig. 5 — free energies F_cubic(T) and F_tetra(T)** [optional, added
-  Turn 4A extension]
+  v1 extension]
   - CSV: `data/literature/BTO/ehsan_2021/free_energy_T.csv`
   - Schema: `{T_K, F_cubic_meV, F_tetra_meV, source_figure}`
   - Purpose: second independent F(T) crossing for cubic-tetragonal T_c,
     parallel to Tadano 2022 Fig. 4.
 - **Table I — structural properties (cubic + tetragonal, PBEsol)** [added
-  Turn 4A extension]
+  v1 extension]
   - CSV: `data/literature/BTO/ehsan_2021/structural_properties.csv`
   - Schema: `{phase, a_angstrom, c_angstrom, c_over_a, V_cell_A3, atom,
     Wyckoff_x, Wyckoff_y, Wyckoff_z, source}`
@@ -47,7 +47,7 @@ explaining why.
     against Ehsan's PBEsol native cell; quantify the lattice gap that
     Tadano 2022's `dT_c/da ≈ 8500 K/Å` rescaling applies to.
 - **Fig. 2 — cubic phonon band structure, nonthermalized (0 K) vs
-  thermalized (500 K)** [added Turn 4A extension]
+  thermalized (500 K)** [added v1 extension]
   - CSV: `data/literature/BTO/ehsan_2021/cubic_dispersion.csv`
   - Schema: `{T_K, condition, branch_label, q_label, q_inv_angstrom,
     omega_cm_inv}`
@@ -77,7 +77,7 @@ explaining why.
   - CSV: `data/literature/BTO/tadano_2022/scp_dispersion_plus1pct.csv`
   - Schema: `{T_K, branch_label, q_label, omega_cm_inv}`
   - Purpose: lattice-corrected cross-validation only.
-  - **NOTE: at +1% lattice — must be flagged in all downstream uses.**
+  - **NOTE: at +1% lattice — must be noted in all downstream uses.**
   - Extract specifically the Γ-point soft-mode value at each T. Other
     branches optional.
 - **Table I** — transition temperatures
@@ -91,11 +91,11 @@ explaining why.
   - Schema: `{T_K, kappa_W_per_m_K, kappa_uncertainty, method, source}`
   - `method` ∈ {`Tadano_calc`, `exp_Muta`, `exp_Popuri`, ...}.
   - **Use as scale-overlay only**, not as a κ-validation target
-    (Turn 4 explicit non-goal).
+    (v1 explicit non-goal).
 
 ### BTO-3. Shirane et al 1970 (Phys. Rev. B 2, 3651)
 
-- Already partially extracted from Turn 1 into `data/raw/` as
+- Already partially extracted from v1 into `data/raw/` as
   `ShiraneFig4a.csv` and `ShiraneFig4b.csv` (energy-loss spectra at two
   (q, e) configurations, 295 K, single domain).
 - **Phase caveat:** Shirane 1970 measurements are all at 295 K, which is
@@ -103,7 +103,7 @@ explaining why.
   for the cubic-phase soft mode in the manuscript inherit this
   approximation; flag in any downstream notebook.
 - **Fig. 3 (e‖[110]) + Fig. 6 (e‖[100]) — soft-TO dispersions** [added
-  Turn 4A extension; supersedes earlier placeholder
+  v1 extension; supersedes earlier placeholder
   `polar_TO_dispersion_295K.csv`, which was empty and has been removed]
   - CSV: `data/literature/BTO/shirane_1970/cubic_dispersion.csv`
   - Schema: `{q_label, q_inv_angstrom, omega_meV, omega_uncertainty_meV,
@@ -133,14 +133,14 @@ explaining why.
   Γ₁₅) with SCPH±PM, TDEP, and Servoin/Yamada-Shirane experimental
   overlays
   - CSV: `data/literature/STO/tadano_2015/scph_omega_T.csv`
-  - Schema (extended Turn 4A): `{T_K, mode, method, Omega_meV,
+  - Schema (extended v1): `{T_K, mode, method, Omega_meV,
     Omega_sq_meV2, source_figure}`
   - `mode` ∈ {`TO1`, `TO2`}; `method` ∈ {`SCPH_with_PM`,
     `SCPH_without_PM`, `TDEP`, `exp_Servoin`, `exp_YamadaShirane`}.
 - **Fig. 4 — Cubic STO dispersion at 300 K** (SCPH + harmonic +
   experimental)
   - CSV: `data/literature/STO/tadano_2015/scph_dispersion.csv`
-  - Schema (extended Turn 4A): `{T_K, q_label, q_inv_angstrom, omega_meV,
+  - Schema (extended v1): `{T_K, q_label, q_inv_angstrom, omega_meV,
     branch, method, source_figure}`
   - `method` ∈ {`SCPH`, `harmonic`, `experimental`}.
   - Primary purpose: constrain Λ²_STO from the soft-TO dispersion near Γ.
@@ -150,12 +150,12 @@ explaining why.
     source_figure}` (`branch` packs mode + grid; e.g.
     `FE_8x8x8`, `AFD_4x4x4`, `M3_harmonic`).
 - **Fig. 7 — total κ(T) for c-STO + Muta/Popuri experimental** [optional,
-  scale-overlay only per Turn 4 brief]
+  scale overlay only; not a validation target]
   - CSV: `data/literature/STO/tadano_2015/kappa_total_T.csv`
   - Schema: `{T_K, kappa_W_per_m_K, kappa_uncertainty, method, source}`
   - `method` ∈ {`Tadano_calc`, `exp_Muta`, `exp_Popuri`}.
   - **Use as scale-overlay only**, not as a quantitative κ validation
-    target (Turn 4 explicit non-goal).
+    target (v1 explicit non-goal).
 - Skip Fig. 2 (LASSO IFC magnitudes), Fig. 3 (AIMD vs LASSO scatter), and
   Fig. 6 (R₂₅ AFD mode T-dep) — method internals or non-FE soft mode.
 
@@ -165,7 +165,7 @@ explaining why.
 - **Fig. 4(a) — TO1 Γ-point Ω(T)** (MLFF+SSCHA shifted-by-39.8 cm⁻¹ +
   INS [Ref. 39] + √-fit)
   - CSV: `data/literature/STO/verdi_2023/sscha_omega_T.csv`
-  - Schema (extended Turn 4A): `{T_K, Omega_meV, Omega_sq_meV2, method,
+  - Schema (extended v1): `{T_K, Omega_meV, Omega_sq_meV2, method,
     shift_meV, source_figure}`
   - `method` ∈ {`MLFF_SSCHA`, `DFT_SSCHA`, `INS_Ref39`, `sqrt_fit`}.
   - **Critical caveat:** the Fig. 4(a) MLFF+SSCHA curve is shifted DOWN
@@ -190,7 +190,7 @@ explaining why.
   landscape vs O displacement — defer to a future turn if the manuscript
   ever discusses the anharmonic potential shape).
 
-### STO-3. Fauqué et al. 2022 — *Mesoscopic tunneling in SrTiO₃* (arXiv:2203.15495)
+### STO-3. Fauqué et al. 2022 — *Mesoscopic fluctuating domains in strontium titanate* (Phys. Rev. B 106, L140301; arXiv:2203.15495)
 
 - File: `data/Fauque_STO.pdf`. **HIGHEST-impact STO source.**
 - **Fig. 1(d) — DHO ω(T) at Γ, R, M, 4–1400 K** [HIGH]
@@ -321,7 +321,7 @@ explaining why.
 
 ### STO-6. Yamada-Shirane 1969 (J. Phys. Soc. Jpn. 26, 396)
 
-- **PDF OBTAINED (Turn 4B): `data/Shirane_1969_STO.PDF`.** The original
+- **PDF OBTAINED: `data/Shirane_1969_STO.PDF`.** The original
   paper supersedes the Shirane 1970 Fig. 1 fallback.
 - **Table II — q=0 soft-mode Ω(T), 4.5–293 K [PRE-FILLED, no
   digitization].** The 19 (T, ℏω, ±) values are tabulated in the paper
@@ -331,7 +331,7 @@ explaining why.
   the **gold-standard experimental STO FE soft-mode Ω(T)** and is the
   primary INS validation curve for the STO benchmark notebook.
   - Schema: `{material, condition_direction, q_inv_angstrom, T_K,
-    omega_meV, omega_uncertainty_meV}` (unchanged from Turn 4A).
+    omega_meV, omega_uncertainty_meV}` (unchanged from v1).
 - **Fig. 6 — intrinsic width Γ(T) of the soft mode at q=0 [HIGH; DIGITIZE].**
   - CSV: `data/literature/STO/yamada_shirane_1969/gamma_T.csv`
   - Schema: `{T_K, gamma_meV, gamma_uncertainty_meV}`
@@ -352,11 +352,11 @@ explaining why.
 
 ---
 
-## BTO sources (Turn 4B library acquisitions)
+## BTO sources (v1 library acquisitions)
 
 ### BTO-4. Harada, Axe, Shirane 1971 — *Soft Modes in Cubic BaTiO₃* (Phys. Rev. B 4, 155)
 
-- **PDF OBTAINED (Turn 4B): `data/Shirane_1971_BTO.PDF`.** This is the
+- **PDF OBTAINED: `data/Shirane_1971_BTO.PDF`.** This is the
   **cubic-phase (T > T_c ≈ 403 K)** counterpart to the tetragonal-phase
   Shirane 1970 (295 K). It removes the tetragonal-phase caveat currently
   attached to the BTO cubic soft mode. **Verify the measurement
@@ -400,7 +400,7 @@ explaining why.
 
 ---
 
-## Reviewed-and-skipped (Turn 4B)
+## Reviewed-and-skipped
 
 ### STO-7. Maity et al. 2025 — *Soft phonon and the central peak at the cubic-to-tetragonal transition in SrTiO₃* (PRL)
 
@@ -417,7 +417,7 @@ explaining why.
   defect-engineered samples (EFG, VER) + pristine STO [Ref 21]. κ overlays
   are a Turn-4 **non-goal** (scale-overlay, not a validation target), and
   these are defect samples rather than pristine. **No file created pending
-  user decision.** If wanted, suggested schema parallel to the existing
+  open.** If wanted, suggested schema parallel to the existing
   `kappa_total_T.csv` files: `{T_K, kappa_W_per_m_K, kappa_uncertainty,
   sample, method, source}` with `sample` ∈ {`EFG`, `VER`, `pristine_Ref21`}.
 

@@ -1,4 +1,4 @@
-# Literature extraction log — Turn 4A
+# Literature extraction log — v1
 
 Updated as sources are digitized. Each entry records what was extracted,
 which figure(s), how many points, any anomalies, and the WebPlotDigitizer
@@ -49,13 +49,13 @@ template stays in place as an empty optional CSV.
   ω = −166 cm⁻¹ (imaginary, matches the bare 166i lock); 500 K
   thermalized ω = +170 cm⁻¹ (matches the 21.08 meV anchor).
 - Soft-mode at X: 0 K = −130 cm⁻¹, 500 K = +160 cm⁻¹.
-- **Turn 4B unit conversion (applied):** the `q_inv_angstrom` column was
+- **v1 unit conversion (applied):** the `q_inv_angstrom` column was
   originally populated with reduced-coordinate magnitudes (0, 0.5, 0.707,
   0.866 = |Γ|, |X|, |M|, |R| in r.l.u.). Detected by NB 05b pre-flight
   gate. Converted in-place by multiplying with `2π/a ≈ 1.5657 Å⁻¹` using
   the Ehsan Table I cubic `a = 4.013 Å`; the column now genuinely holds
   Å⁻¹ values: Γ=0, X=0.7829, M=1.1070, R=1.3559.
-- **Turn 4B methodological decision:** these finite-q points are at the
+- **v1 methodological decision:** these finite-q points are at the
   **zone boundary** (X, M, R), well outside the small-q regime where the
   long-wavelength expansion `Ω²(q) = Ω₀² + Λ²q²` holds. They are
   therefore **NOT used for the BTO Λ² refit** in NB 06. The apparent
@@ -99,7 +99,7 @@ template stays in place as an empty optional CSV.
 - 28 rows: Tadano calculated curve (200-800 K, monotonically decreasing
   ~10.3 → 5.4 W/m·K) plus Popuri and Muta experimental data (with
   uncertainties on the experimental points).
-- **Use as scale-overlay only**, not as κ-validation target (Turn 4
+- **Use as scale-overlay only**, not as κ-validation target (v1
   explicit non-goal).
 
 ---
@@ -129,7 +129,7 @@ chat fit (no uncertainty stored).
 - **CSV-quoting note (resolved):** `q_label` values like `[0,0.1,0]`
   contain commas and were quoted with the standard csv module so the
   schema's 11 columns parse correctly.
-- **Action for Turn 4B:** fit Λ² separately from the Fig. 3 and Fig. 6 TO
+- **Action for v1:** fit Λ² separately from the Fig. 3 and Fig. 6 TO
   branches; if the two values agree within uncertainty, fold into a
   single Λ² with that uncertainty; if they disagree (Λ²_∥ vs Λ²_⊥),
   report both in `Lambda_sq.csv` with `reference_q_range` annotations.
@@ -148,7 +148,7 @@ optional, still pending.
 - TO1 exp_YamadaShirane spans 15-250 K (2.23 → 9.67 meV); exp_Servoin
   spans 300-920 K (10.91 → 18.60 meV). These two experimental sets cover
   STO complementary T ranges — together they bracket the SCPH curve.
-- Schema extended Turn 4A to `{T_K, mode, method, Omega_meV,
+- Schema extended v1 to `{T_K, mode, method, Omega_meV,
   Omega_sq_meV2, source_figure}`.
 
 **Fig. 4 — Cubic STO dispersion at 300 K (`scph_dispersion.csv`):**
@@ -157,7 +157,7 @@ optional, still pending.
   R-point = 6.2 meV SCPH (vs -11.2 meV harmonic, i.e., imaginary harmonic
   R₂₅ mode stabilized by SCPH).
 - Methods covered: SCPH, harmonic, experimental.
-- Schema extended Turn 4A to add `method` and `source_figure` columns.
+- Schema extended v1 to add `method` and `source_figure` columns.
 
 **Table I — Soft-mode convergence at 300 K (`scph_convergence_300K.csv`):**
 - 21 rows: FE (Γ), AFD (R), M₃ (M) soft modes at q₁ grids 2×2×2 through
@@ -172,7 +172,7 @@ optional, still pending.
 **Fig. 7 — total κ(T) and Muta/Popuri exp (`kappa_total_T.csv`):**
 - PENDING (optional). Schema `{T_K, kappa_W_per_m_K, kappa_uncertainty,
   method, source}`. **Use as scale-overlay only**, not as a κ-validation
-  target (Turn 4 explicit non-goal).
+  target (v1 explicit non-goal).
 
 ---
 
@@ -189,7 +189,7 @@ optional, still pending.
     MLFF shift since it's a fit through the shifted MLFF curve).
 - At 300 K: MLFF (shifted) 8.93 meV vs INS 10.17 meV vs sqrt_fit (shifted)
   9.17 meV. Disagreements stay within the shift magnitude.
-- Schema extended Turn 4A to add `shift_meV` column for traceability.
+- Schema extended v1 to add `shift_meV` column for traceability.
   Unshifted MLFF+SSCHA values live in Verdi Fig. S1; not yet captured.
 
 **Figs. 3 + 5 — phonon dispersion (`dispersion.csv`):**
@@ -212,9 +212,9 @@ optional, still pending.
 
 ---
 
-## STO-3. Fauqué et al. 2022 — Mesoscopic tunneling in STO (arXiv:2203.15495)
+## STO-3. Fauqué et al. 2022 — Mesoscopic fluctuating domains in strontium titanate (Phys. Rev. B 106, L140301; arXiv:2203.15495)
 
-**Status:** PENDING (templates created Turn 4B). **HIGHEST-impact STO source.**
+**Status:** PENDING (templates created v1). **HIGHEST-impact STO source.**
 
 - `dho_fits_T.csv` — TODO. Target ≥ 15 (T, ω) points at Γ across 4–1400 K
   plus the R and M points from Fig. 1(d). Merge in Figs. 2(c) and 3(d)
@@ -231,7 +231,7 @@ optional, still pending.
 
 ## STO-4. Schmidt & Spaldin 2025 — STO ¹⁶O + ¹⁸O SSCHA (arXiv:2508.10735)
 
-**Status:** PENDING (templates created Turn 4B).
+**Status:** PENDING (templates created v1).
 
 - `sscha_omega_T.csv` — TODO. Target ≥ 8 (T, ω) points per isotope across
   the plotted T range, plus any experimental points from Ref [50] with
@@ -244,7 +244,7 @@ optional, still pending.
 
 ## KTO-1. Meier et al. 2022 — KTaO₃ SSCHA+MLIP (arXiv:2206.08296)
 
-**Status:** PENDING (templates created Turn 4B). **New material** —
+**Status:** PENDING (templates created v1). **New material** —
 Section 4 parametric κ_soft/κ₀ fit third pillar (alongside BTO + STO).
 
 - `omega_T.csv` — TODO. Target ≥ 10 (T, ω²) points from Fig. 3(a),
@@ -288,7 +288,7 @@ digitize it).
 
 ---
 
-## Turn 4B library acquisitions (Yamada-Shirane 1969, Harada-Axe-Shirane 1971, Maity 2025)
+## v1 library acquisitions (Yamada-Shirane 1969, Harada-Axe-Shirane 1971, Maity 2025)
 
 ### STO-6. Yamada-Shirane 1969 (`data/Shirane_1969_STO.PDF`)
 
@@ -330,11 +330,11 @@ peak at the ~105 K cubic→tetragonal transition — NOT the ferroelectric Γ
 soft mode (same non-FE class skipped in Tadano 2015 Fig. 6). No soft-mode
 CSVs created. Only Fig. 1(e) κ(T) (defect EFG/VER + pristine [21]) is
 marginally relevant, and κ overlays are a Turn-4 non-goal — optional
-`kappa_defect_T.csv` deferred pending user decision.
+`kappa_defect_T.csv` deferred.
 
 ---
 
-## Turn 4B Wave 2 — library-source verification (HAS 1971 + YS 1969)
+## v1 Wave 2 — library-source verification (HAS 1971 + YS 1969)
 
 Verified against the rendered PDF figures (poppler), not the CSV alone.
 
@@ -379,7 +379,7 @@ Verified against the rendered PDF figures (poppler), not the CSV alone.
   Canonical low-T experimental STO soft-mode linewidth → lets `eta.eta_fit`
   exist alongside `eta.eta_bracket` (NB 08). STO is strongly **underdamped**:
   η = Γ/Ω ≈ 0.087 at 250 K (Γ=0.84, Ω=9.6 from Table II) — contrast cubic
-  BTO η≈2.3. Table II q=0 Ω(T) (pre-filled Turn 4B) verified consistent.
+  BTO η≈2.3. Table II q=0 Ω(T) (pre-filled v1) verified consistent.
 
 ### Γ sanity-range bound finalized
 
@@ -407,7 +407,7 @@ kernel untouched (parallel data-verification wave). Both CSVs digitized by user.
   anchors AGREE across sources (Ranalli expt 300 K = 10.29 vs Meier Shirane
   10.70 meV, Δ=0.41). The computed curves carry a ~1.8 meV spread (Ranalli
   shifted MLFF 9.05 vs Meier Calc 10.86 @300 K; low-T plateau Ranalli 2.48 vs
-  Meier 3.33) — a genuine inter-source shift-convention/method spread, **flagged
+  Meier 3.33) — a genuine inter-source shift-convention/method spread, **noted
   not asserted-equal**. QPE low-T plateau confirmed (Ω(5 K)=Ω(20 K)=2.48 meV).
 - **Λ² HELD:** Fig. 3 is a full calculated dispersion (Γ-X-M-Γ-R, cm⁻¹) — a
   potential near-Γ Λ² source, but Γ-point-only in the digitized data like
@@ -430,7 +430,7 @@ lowercase **γ** (standard DHO damping constant), distinct from the theoretical
 Eq. (13) self-energy **Γ** (which is HWHM). Reading γ as the standard DHO constant
 ⇒ **γ = FWHM ⇒ Γ_HWHM = γ/2**. Confirmed by the numbers (STO 300 K: Ω=10.54,
 γ=3.04 → η=0.144 on the FWHM basis; the HWHM reading would give 0.288). **Residual
-factor-of-2 systematic FLAGGED** (if Vogt's fit used his Eq.-13 Γ=HWHM, use γ
+factor-of-2 systematic NOTED** (if Vogt's fit used his Eq.-13 Γ=HWHM, use γ
 directly and η doubles); Refs 29-30 (PRB 34,410 (1986); 41,1184 (1990)) — not in
 repo — would settle it. Both readings keep STO & KTaO₃ underdamped (η<0.5) and
 clustered; only the absolute η calibration carries the factor. `eta.py` will apply
@@ -467,7 +467,7 @@ clustered; only the absolute η calibration carries the factor. `eta.py` will ap
 - **STO tetragonal A₂ᵤ/E_u γ:** Vogt fit the sub-105 K split with the SAME γ
   (p.8051), but the digitized A₂ᵤ/E_u γ rows differ (e.g. 0.12 vs 0.08 at 10 K).
   Sub-105 K is discussion-only (cubic η uses `cubic_F1u` ≥110 K), so low-impact;
-  flagged for optional re-digitization, not changed.
+  marked for optional re-digitization, not changed.
 - `KTO/vogt_1995/model_params.md` is METADATA (Barrett-fit description), no loader.
 
 ---
@@ -485,7 +485,7 @@ now resolved**; uncertainty convention settled.
 - **140–170 K SMOOTHING (noted):** Fig. 5 shows *genuine scatter* there
   (~±1–1.5 cm⁻¹); the corrected CSV is monotonic (13.1/13.6/14.2 cm⁻¹). The
   smoothing is **sub-error-bar** (within the ±1 cm⁻¹ = 0.12 meV bar) but the raw
-  figure is not monotonic — flagged, not "fixed".
+  figure is not monotonic — noted, not "fixed".
 - **Uncertainty convention (settled, both QPEs):** ±1 cm⁻¹ ≈ **0.12 meV** base
   (stat) for T ≥ 60 K; **0.17 meV** for T < 60 K = quadrature stat⊕sys
   √(0.12² + 0.12²), the extra 0.12 meV (≈1 cm⁻¹) being the **defect-induced

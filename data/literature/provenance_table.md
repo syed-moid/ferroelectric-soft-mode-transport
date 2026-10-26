@@ -1,4 +1,4 @@
-# Literature provenance table — Turn 4A
+# Literature provenance table — v1
 
 Updated as CSVs are filled. `Status` values: `extracted` (filled and verified),
 `pre-filled` (filled using known values, no PDF digitization),
@@ -20,7 +20,7 @@ obtained or quantity absent from source).
 | Λ² | BTO | Shirane 1970 (prior fit) | Neutron INS | input | `BTO/shirane_1970/Lambda_sq.csv` | pre-filled |
 | ω(q) along Σ (e‖[110]) and Δ (e‖[100]) at 295 K | BTO | Shirane 1970 Figs. 3 & 6 | Neutron INS | (re)fit Λ² with two-direction comparison | `BTO/shirane_1970/cubic_dispersion.csv` | extracted (21 points; tetragonal-phase caveat) |
 | TA + soft-TO dispersion along [100] (+ low-lying dispersion) | BTO | Harada-Axe-Shirane 1971 Figs. 5 + 8 | Neutron INS | **cubic-phase** Λ² (removes tetragonal caveat) | `BTO/harada_axe_shirane_1971/cubic_dispersion.csv` | verified (Wave 2; cubic 423/503 K; soft-TO ζ≤0.3) |
-| Λ²_cubic (Fig. 5 (Ω_TO)²=(Ω_TO0)²+Aq² fit) | BTO | Harada-Axe-Shirane 1971 Fig. 5 / p.160 | Neutron INS | **soft [100] Λ²=972±20% CENTRAL** (kernel); anisotropic (stiff [110]/[111]=4750, ~5×≈Shirane 5100) | `BTO/harada_axe_shirane_1971/Lambda_sq.csv` | verified; NB 06 Λ² 10%-gate **resolved by sign-off**: keep paper-text 972±20%; NB-06 3-pt digitized refit (818, q=0/0.313/0.478 Å⁻¹@423K) corroborates within ±20% envelope [778,1166] (movement +15.8% but consistent, not a discrepancy — cf. 1988/1995 freq cross-check) |
+| Λ²_cubic (Fig. 5 (Ω_TO)²=(Ω_TO0)²+Aq² fit) | BTO | Harada-Axe-Shirane 1971 Fig. 5 / p.160 | Neutron INS | **soft [100] Λ²=972±20% CENTRAL** (kernel); anisotropic (stiff [110]/[111]=4750, ~5×≈Shirane 5100) | `BTO/harada_axe_shirane_1971/Lambda_sq.csv` | verified; NB 06 Λ² 10%-gate **resolved**: keep paper-text 972±20%; NB-06 3-pt digitized refit (818, q=0/0.313/0.478 Å⁻¹@423K) corroborates within ±20% envelope [778,1166] (movement +15.8% but consistent, not a discrepancy — cf. 1988/1995 freq cross-check) |
 | ω_TO, ω_TA, Γ_TO, Γ_TA, coupling vs q | BTO | Harada-Axe-Shirane 1971 Table I | Neutron INS | cubic soft-TO damping Γ; **overdamped η≈2.3** (BTO methodological note) | `BTO/harada_axe_shirane_1971/mode_parameters.csv` | verified (Wave 2; phase→cubic + T °C→K corrected) |
 | soft-TO anisotropy near q=0 (Ω²(angle)) | BTO | Harada-Axe-Shirane 1971 Fig. 7 | Neutron INS | directional Λ²_∥/Λ²_⊥ anisotropy ([111]–[100]–[110] arc) | `BTO/harada_axe_shirane_1971/anisotropy.csv` | verified (Wave 2; signed angles −54.74° to +45°) |
 | Ω(T) for TO1 + TO2 (SCPH±PM, TDEP, exp) | STO | Tadano 2015 Fig. 5 | First-principles SCPH + INS exp | **primary STO benchmark** | `STO/tadano_2015/scph_omega_T.csv` | extracted (30 rows) |
@@ -32,8 +32,8 @@ obtained or quantity absent from source).
 | 1/ε(T) (SSCHA + Curie-Weiss) | STO | Verdi 2023 Fig. 4(b) | SSCHA + classical fit | LST consistency check on Ω_TO1(T) | `STO/verdi_2023/inverse_dielectric_T.csv` | extracted (26 rows) |
 | Ω_soft(q=0, T) + ω(q) dispersion | STO | Yamada-Shirane 1969 Table II (+ Figs. 2/3) | Neutron INS | **gold-standard exp STO Ω(T)** 4.5–293 K | `STO/yamada_shirane_1969/omega_T.csv` | extracted (Table II pre-filled: 19 q=0 points + 4.5 K dispersion) |
 | Γ_soft(T) at q=0 | STO | Yamada-Shirane 1969 Fig. 6 | Neutron INS | **experimental STO Γ(T)** (enables eta_fit, NB 08); underdamped η≈0.09 | `STO/yamada_shirane_1969/gamma_T.csv` | verified (Wave 2; 0.24→0.84 meV 20–250 K, matches Fig. 6) |
-| DHO ω(T) at Γ, R, M, 4-1400 K + DHO Γ(T) if available | STO | Fauqué 2022 Fig. 1(d), 2(c), 3(d) | INS DHO fits + TDEP | **central STO Γ(T) source if DHO Γ reported**; Ω(T) extension to 1400 K | `STO/fauque_2022/dho_fits_T.csv` | extracted (28 rows; Γ/R/M; q_point_rlu re-quoted) |
-| TDEP dispersion at 300 K (M-Γ-R) | STO | Fauqué 2022 Fig. 1(c) | TDEP | independent Λ²_STO at 300 K | `STO/fauque_2022/tdep_dispersion_300K.csv` | extracted (14 rows) |
+| DHO ω(T) at Γ, R, M, 4-1400 K + DHO Γ(T) if available | STO | Fauqué 2022 (PRB 106, L140301) Fig. 1(d), 2(c), 3(d) | INS DHO fits + TDEP | **central STO Γ(T) source if DHO Γ reported**; Ω(T) extension to 1400 K | `STO/fauque_2022/dho_fits_T.csv` | extracted (28 rows; Γ/R/M; q_point_rlu re-quoted) |
+| TDEP dispersion at 300 K (M-Γ-R) | STO | Fauqué 2022 (PRB 106, L140301) Fig. 1(c) | TDEP | independent Λ²_STO at 300 K | `STO/fauque_2022/tdep_dispersion_300K.csv` | extracted (14 rows) |
 | Ω_Eu(T) for ST¹⁶O + ST¹⁸O + experimental | STO | Schmidt-Spaldin 2025 Fig. 3 top-left | SSCHA+MLIP + INS exp [Ref 50] | third independent SSCHA Ω(T) for STO; isotope cross-check | `STO/schmidt_2025/sscha_omega_T.csv` | extracted (24 rows) |
 | SSCHA energy vs polarization (0 K, 16O + 18O) | STO | Schmidt-Spaldin 2025 Fig. 2 | SSCHA + RPA-MLIP | anharmonic-potential illustration §3.3 | `STO/schmidt_2025/energy_polarization.csv` | extracted (25 rows) |
 | Ω²_TO(T): SSCHA + Shirane exp | KTO | Meier 2022 Fig. 3(a) | SSCHA+MLIP + Shirane INS exp | **primary KTaO₃ benchmark** (Section 4 third material) | `KTO/meier_2022/omega_T.csv` | extracted (18 rows) |
@@ -48,5 +48,5 @@ obtained or quantity absent from source).
 | Vogt γ/Ω uncertainty convention | STO+KTO | Vogt 1995 p.8051 | — | ±1 cm⁻¹≈0.12 meV (stat, T≥60 K); 0.17 meV=√(0.12²+0.12²) stat⊕sys for T<60 K (defect-induced floor; "below about 60 K"). 1988 Table III pt keeps ±0.37. | all 4 Vogt files | locked (recorded; applied consistently) |
 | AOM/Barrett fit params | KTO | Vogt 1995 Fig. 5 caption | metadata | §3.3 Barrett/T₁ discussion only — **NOT data** | `KTO/vogt_1995/model_params.md` | metadata (no loader; no rows reconstructed) |
 | Akimov 2000 STO film E-field Raman | STO | Akimov 2000 | thin-film + E-field Raman | **not used** (thin-film, bulk reference already in Tadano Fig. 5) | — | n/a (reviewed and skipped) |
-| Maity 2025 AFD R-point soft mode + central peak | STO | Maity 2025 (PRL) | Neutron INS + Cp + κ | **not used** (AFD R₂₅ octahedral-rotation mode, not the FE Γ soft mode; same class skipped in Tadano 2015 Fig. 6). Fig. 1(e) κ(T) optional scale-overlay only | — | n/a (reviewed and skipped; optional κ overlay pending user decision) |
-| Ω(T), Γ(T) | BTO | Old hybrid CSVs | Phenomenological reconstruction | internal consistency check only | `data/raw/BTO/phonon_modes_*K.csv` | already extracted (Turn 1) |
+| Maity 2025 AFD R-point soft mode + central peak | STO | Maity 2025 (PRL) | Neutron INS + Cp + κ | **not used** (AFD R₂₅ octahedral-rotation mode, not the FE Γ soft mode; same class skipped in Tadano 2015 Fig. 6). Fig. 1(e) κ(T) optional scale-overlay only | — | n/a (reviewed and skipped; optional κ overlay not done) |
+| Ω(T), Γ(T) | BTO | Old hybrid CSVs | Phenomenological reconstruction | internal consistency check only | `data/raw/BTO/phonon_modes_*K.csv` | already extracted |
