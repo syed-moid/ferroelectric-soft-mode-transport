@@ -1,0 +1,84 @@
+[
+ {
+  "id": "scph_pm_q16",
+  "kind": "scph",
+  "priority": 120,
+  "deps": [],
+  "params": {
+   "q1": 16,
+   "pm": true,
+   "tmin": 0,
+   "tmax": 1000,
+   "dt": 50
+  },
+  "est_s": 21600
+ },
+ {
+  "id": "rta_pm_q16_T250_m12",
+  "kind": "rta",
+  "priority": 121,
+  "deps": [
+   "scph_pm_q16"
+  ],
+  "params": {
+   "q1": 16,
+   "pm": true,
+   "T": 250,
+   "mesh": 12,
+   "variant": "pm_q16",
+   "extra": {}
+  },
+  "est_s": 1600
+ },
+ {
+  "id": "rta_pm_q16_T300_m12",
+  "kind": "rta",
+  "priority": 121,
+  "deps": [
+   "scph_pm_q16"
+  ],
+  "params": {
+   "q1": 16,
+   "pm": true,
+   "T": 300,
+   "mesh": 12,
+   "variant": "pm_q16",
+   "extra": {}
+  },
+  "est_s": 1600
+ },
+ {
+  "id": "rta_pm_q16_T500_m12",
+  "kind": "rta",
+  "priority": 121,
+  "deps": [
+   "scph_pm_q16"
+  ],
+  "params": {
+   "q1": 16,
+   "pm": true,
+   "T": 500,
+   "mesh": 12,
+   "variant": "pm_q16",
+   "extra": {}
+  },
+  "est_s": 1600
+ },
+ {
+  "id": "rta_pm_q16_T800_m12",
+  "kind": "rta",
+  "priority": 121,
+  "deps": [
+   "scph_pm_q16"
+  ],
+  "params": {
+   "q1": 16,
+   "pm": true,
+   "T": 800,
+   "mesh": 12,
+   "variant": "pm_q16",
+   "extra": {}
+  },
+  "est_s": 1600
+ }
+]

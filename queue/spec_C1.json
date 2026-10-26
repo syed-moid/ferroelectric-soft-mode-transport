@@ -1,0 +1,68 @@
+[
+ {
+  "id": "rta_pm_q12_T400_m20",
+  "kind": "rta",
+  "priority": 150,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "T": 400,
+   "mesh": 20,
+   "variant": "pm_q12",
+   "extra": {}
+  },
+  "est_s": 16000
+ },
+ {
+  "id": "evec_pm_q12_T400_m20",
+  "kind": "evec",
+  "priority": 149,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "T": 400,
+   "mesh": 20,
+   "variant": "pm_q12"
+  },
+  "est_s": 60
+ },
+ {
+  "id": "rta_pm_q12_T650_m20",
+  "kind": "rta",
+  "priority": 151,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "T": 650,
+   "mesh": 20,
+   "variant": "pm_q12",
+   "extra": {}
+  },
+  "est_s": 16000
+ },
+ {
+  "id": "evec_pm_q12_T650_m20",
+  "kind": "evec",
+  "priority": 149,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "T": 650,
+   "mesh": 20,
+   "variant": "pm_q12"
+  },
+  "est_s": 60
+ }
+]

@@ -1,0 +1,319 @@
+[
+ {
+  "id": "m4ph_trace_q12_T300_m4_e5",
+  "kind": "mode4ph",
+  "priority": 140,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "est_s": 400,
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "variant": "pm_q12_4ph_trace",
+   "T_fc2": 300,
+   "tmin": 300,
+   "tmax": 300,
+   "dt": 50,
+   "mesh": 4,
+   "epsilon": 5,
+   "modes": [
+    [
+     0,
+     0,
+     0,
+     4
+    ]
+   ],
+   "mpi_np": 16,
+   "anphon_tree": "alamode_4ph_trace"
+  }
+ },
+ {
+  "id": "m4ph_v3dump_q12_T300_m6_e5",
+  "kind": "mode4ph",
+  "priority": 141,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "est_s": 2600,
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "variant": "pm_q12_4ph_v3dump",
+   "T_fc2": 300,
+   "tmin": 300,
+   "tmax": 300,
+   "dt": 50,
+   "mesh": 6,
+   "epsilon": 5,
+   "modes": [
+    [
+     0,
+     0,
+     0,
+     4
+    ],
+    [
+     0.5,
+     0.5,
+     0.5,
+     1
+    ]
+   ],
+   "mpi_np": 16,
+   "anphon_tree": "alamode_4ph_v3dump"
+  }
+ },
+ {
+  "id": "m4ph_v1omit_q12_T300_m6_e5",
+  "kind": "mode4ph",
+  "priority": 142,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "est_s": 3900,
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "variant": "pm_q12_4ph_v1omit",
+   "T_fc2": 300,
+   "tmin": 300,
+   "tmax": 300,
+   "dt": 50,
+   "mesh": 6,
+   "epsilon": 5,
+   "modes": [
+    [
+     0,
+     0,
+     0,
+     4
+    ],
+    [
+     0.5,
+     0.5,
+     0.5,
+     1
+    ],
+    [
+     0.5,
+     0.5,
+     0,
+     1
+    ]
+   ],
+   "mpi_np": 16,
+   "anphon_tree": "alamode_4ph_v1omit"
+  }
+ },
+ {
+  "id": "m4ph_pm_q12_T300_m6_e5",
+  "kind": "mode4ph",
+  "priority": 143,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "est_s": 3900,
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "variant": "pm_q12",
+   "T_fc2": 300,
+   "tmin": 300,
+   "tmax": 300,
+   "dt": 50,
+   "mesh": 6,
+   "epsilon": 5,
+   "modes": [
+    [
+     0,
+     0,
+     0,
+     4
+    ],
+    [
+     0.5,
+     0.5,
+     0.5,
+     1
+    ],
+    [
+     0.5,
+     0.5,
+     0,
+     1
+    ]
+   ],
+   "mpi_np": 16
+  }
+ },
+ {
+  "id": "m4ph_v2strict_q12_T300_m6_e5",
+  "kind": "mode4ph",
+  "priority": 144,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "est_s": 3900,
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "variant": "pm_q12_4ph_v2strict",
+   "T_fc2": 300,
+   "tmin": 300,
+   "tmax": 300,
+   "dt": 50,
+   "mesh": 6,
+   "epsilon": 5,
+   "modes": [
+    [
+     0,
+     0,
+     0,
+     4
+    ],
+    [
+     0.5,
+     0.5,
+     0.5,
+     1
+    ],
+    [
+     0.5,
+     0.5,
+     0,
+     1
+    ]
+   ],
+   "mpi_np": 16,
+   "anphon_tree": "alamode_4ph_v2strict"
+  }
+ },
+ {
+  "id": "m4ph_v2strict_q12_T300_m6_e2",
+  "kind": "mode4ph",
+  "priority": 145,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "est_s": 3900,
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "variant": "pm_q12_4ph_v2strict",
+   "T_fc2": 300,
+   "tmin": 300,
+   "tmax": 300,
+   "dt": 50,
+   "mesh": 6,
+   "epsilon": 2,
+   "modes": [
+    [
+     0,
+     0,
+     0,
+     4
+    ],
+    [
+     0.5,
+     0.5,
+     0.5,
+     1
+    ],
+    [
+     0.5,
+     0.5,
+     0,
+     1
+    ]
+   ],
+   "mpi_np": 16,
+   "anphon_tree": "alamode_4ph_v2strict"
+  }
+ },
+ {
+  "id": "m4ph_v2strict_q12_T300_m6_e10",
+  "kind": "mode4ph",
+  "priority": 146,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "est_s": 3900,
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "variant": "pm_q12_4ph_v2strict",
+   "T_fc2": 300,
+   "tmin": 300,
+   "tmax": 300,
+   "dt": 50,
+   "mesh": 6,
+   "epsilon": 10,
+   "modes": [
+    [
+     0,
+     0,
+     0,
+     4
+    ],
+    [
+     0.5,
+     0.5,
+     0.5,
+     1
+    ],
+    [
+     0.5,
+     0.5,
+     0,
+     1
+    ]
+   ],
+   "mpi_np": 16,
+   "anphon_tree": "alamode_4ph_v2strict"
+  }
+ },
+ {
+  "id": "m4ph_v2strict_q12_T300_m8_e5",
+  "kind": "mode4ph",
+  "priority": 147,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "est_s": 21600,
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "variant": "pm_q12_4ph_v2strict",
+   "T_fc2": 300,
+   "tmin": 300,
+   "tmax": 300,
+   "dt": 50,
+   "mesh": 8,
+   "epsilon": 5,
+   "modes": [
+    [
+     0,
+     0,
+     0,
+     4
+    ],
+    [
+     0.5,
+     0.5,
+     0.5,
+     1
+    ],
+    [
+     0.5,
+     0.5,
+     0,
+     1
+    ]
+   ],
+   "mpi_np": 16,
+   "anphon_tree": "alamode_4ph_v2strict"
+  }
+ }
+]

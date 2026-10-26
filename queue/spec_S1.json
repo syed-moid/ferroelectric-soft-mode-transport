@@ -1,0 +1,18 @@
+[
+ {
+  "id": "scph_pm_q8_mix0p1",
+  "kind": "scph",
+  "priority": 175,
+  "deps": [],
+  "params": {
+   "q1": 8,
+   "pm": true,
+   "tmin": 300,
+   "tmax": 1000,
+   "dt": 50,
+   "mixalpha": 0.1,
+   "variant": "pm_q8_mix0p1"
+  },
+  "est_s": 3000
+ }
+]

@@ -1,0 +1,6 @@
+[
+ {"id": "m4ph_probe_q8_m4", "kind": "mode4ph", "priority": 3.5, "deps": ["scph_pm_q8"], "est_s": 1800,
+  "params": {"q1": 8, "pm": true, "variant": "pm_q8", "T_fc2": 300, "tmin": 300, "tmax": 300, "dt": 50,
+             "mesh": 4, "epsilon": 5, "modes": [[0, 0, 0, 4], [0.5, 0.5, 0.5, 1]],
+             "purpose": "timing probe for the D5 pilot design (not a reported result)"}}
+]

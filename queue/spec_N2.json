@@ -1,0 +1,36 @@
+[
+ {
+  "id": "rta_pm_q12_T300_m15",
+  "kind": "rta",
+  "priority": 110,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "T": 300,
+   "mesh": 15,
+   "variant": "pm_q12",
+   "extra": {}
+  },
+  "est_s": 4500
+ },
+ {
+  "id": "rta_pm_q12_T300_m17",
+  "kind": "rta",
+  "priority": 111,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "T": 300,
+   "mesh": 17,
+   "variant": "pm_q12",
+   "extra": {}
+  },
+  "est_s": 9500
+ }
+]

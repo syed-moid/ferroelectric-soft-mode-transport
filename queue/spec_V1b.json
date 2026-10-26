@@ -1,0 +1,32 @@
+[
+ {
+  "id": "m4ph_v3dump_q12_T300_m6_e5_M",
+  "kind": "mode4ph",
+  "priority": 148,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "est_s": 1300,
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "variant": "pm_q12_4ph_v3dump",
+   "T_fc2": 300,
+   "tmin": 300,
+   "tmax": 300,
+   "dt": 50,
+   "mesh": 6,
+   "epsilon": 5,
+   "modes": [
+    [
+     0.5,
+     0.5,
+     0,
+     1
+    ]
+   ],
+   "mpi_np": 16,
+   "anphon_tree": "alamode_4ph_v3dump"
+  }
+ }
+]

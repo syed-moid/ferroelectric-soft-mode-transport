@@ -1,0 +1,21 @@
+[
+ {
+  "id": "rta_pm_q12_T300_m24",
+  "kind": "rta",
+  "priority": 190,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "T": 300,
+   "mesh": 24,
+   "variant": "pm_q12",
+   "extra": {},
+   "measure_mem": true,
+   "rss_kill_gb": 40
+  },
+  "est_s": 43000
+ }
+]

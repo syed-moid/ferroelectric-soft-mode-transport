@@ -1,0 +1,50 @@
+[
+ {
+  "id": "evec_pm_q12_T300_m15",
+  "kind": "evec",
+  "priority": 149,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "T": 300,
+   "mesh": 15,
+   "variant": "pm_q12"
+  },
+  "est_s": 120
+ },
+ {
+  "id": "evec_pm_q12_T300_m17",
+  "kind": "evec",
+  "priority": 149,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "T": 300,
+   "mesh": 17,
+   "variant": "pm_q12"
+  },
+  "est_s": 200
+ },
+ {
+  "id": "evec_pm_q12_T500_m20",
+  "kind": "evec",
+  "priority": 149,
+  "deps": [
+   "scph_pm_q12"
+  ],
+  "params": {
+   "q1": 12,
+   "pm": true,
+   "T": 500,
+   "mesh": 20,
+   "variant": "pm_q12"
+  },
+  "est_s": 300
+ }
+]
