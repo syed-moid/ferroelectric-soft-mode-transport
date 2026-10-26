@@ -1,14 +1,8 @@
-# ---------------------------------------------------------------------------
-# Byte-compiled / optimized / DLL files
-# ---------------------------------------------------------------------------
+# Python bytecode and packaging
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
-
-# ---------------------------------------------------------------------------
-# Distribution / packaging
-# ---------------------------------------------------------------------------
 build/
 develop-eggs/
 dist/
@@ -25,9 +19,7 @@ wheels/
 .installed.cfg
 *.egg
 
-# ---------------------------------------------------------------------------
-# Unit test / coverage reports
-# ---------------------------------------------------------------------------
+# Test and lint caches
 .pytest_cache/
 .coverage
 .coverage.*
@@ -36,78 +28,77 @@ htmlcov/
 .mypy_cache/
 .ruff_cache/
 
-# ---------------------------------------------------------------------------
 # Virtual environments
-# ---------------------------------------------------------------------------
 .venv/
 venv/
 .uv/
 env/
 ENV/
 
-# ---------------------------------------------------------------------------
-# Jupyter
-# ---------------------------------------------------------------------------
-notebooks/.ipynb_checkpoints/
+# Jupyter checkpoints
 .ipynb_checkpoints/
 
-# ---------------------------------------------------------------------------
-# Project data and figures
-# ---------------------------------------------------------------------------
-# Processed/derived data is gitignored EXCEPT curated notebook-stage interfaces
-# (diffable, low-volume, the data of record handed between notebooks) and the
-# tidy ALAMODE-derived CSVs (small, provenance-headed, inputs to figures/tests).
+# Derived data: only the curated tables listed here are tracked
 data/processed/*
 !data/processed/section4_eta_kappa_triples.csv
 !data/processed/manuscript_numbers.csv
 !data/processed/alamode_crosscheck/
 !data/processed/sto_alamode/
+!data/processed/sto_production/
+!data/processed/revision/
+!data/processed/si_v4/
+!data/processed/manuscript_numbers_v8.csv
 
-# Raw imported ALAMODE dataset (large .result files; local-only, provenance in
-# data/raw/alamode_sto/IMPORT_NOTE.md; tidy extracts live in data/processed/).
-data/raw/alamode_sto/
-# Generated figures regenerate from the notebooks on run -> NOT tracked (any format).
-# Anchored to repo root so it does not also swallow paper/figures/ (whose scripts
-# are tracked; only paper/figures/out/ binaries are ignored, below).
+# Raw solver outputs (archived on Zenodo; see data/raw/alamode_sto/IMPORT_NOTE.md)
+data/raw/alamode_sto/*
+!data/raw/alamode_sto/IMPORT_NOTE.md
+
+# Generated figures (regenerate with the scripts in paper/figures/ and notebooks/)
 /figures/
+paper/figures/out/
+paper/**/*.png
+paper/**/*.pdf
 
-# ---------------------------------------------------------------------------
-# LaTeX build artifacts
-# ---------------------------------------------------------------------------
+# LaTeX build files
 *.aux
 *.log
 *.out
 *.synctex.gz
 
-# ---------------------------------------------------------------------------
-# Working memory (declares itself not-checked-in; contains unpublished notes)
-# ---------------------------------------------------------------------------
-session_log.md
-planning/
-
-# ---------------------------------------------------------------------------
-# Manuscript working files (Word/LaTeX drafts, referee material). Nothing in
-# this folder is tracked.
-# ---------------------------------------------------------------------------
-manuscript/*
-
-# ---------------------------------------------------------------------------
-# Source publication PDFs (copyrighted; kept local for digitization workflow)
-# Provenance recorded in data/literature/digitization_plan.md.
-# ---------------------------------------------------------------------------
-data/*.pdf
-data/**/*.pdf
+# PDFs
 *.pdf
 
-# ---------------------------------------------------------------------------
-# OS / editor cruft
-# ---------------------------------------------------------------------------
-.DS_Store
+# Credentials
+.env
+.env.*
+*.pem
+*.key
+*credentials*
+*secret*
 
-# ---------------------------------------------------------------------------
-# Manuscript figure pipeline: track the scripts, gitignore the rendered binaries
-# (paper/figures/out/). Figures regenerate from paper/figures/make_*.py.
-# ---------------------------------------------------------------------------
-paper/figures/out/
-paper/**/*.png
-paper/**/*.pdf
+# Large electronic-structure and phonon output formats
+*.UPF
+*.upf
+*.wfc*
+*.save/
+*.modes
+*.dyn*
+*.fc
+*.mesh.evec
+*.kc_elem
+*.out.tar.gz
+
+# Compute-queue runtime files (created by queue/run_queue.py)
+queue/manifest.json
+queue/manifest.json.tmp
+queue/manifest.lock
+queue/locks/
+queue/runner.pid
+queue/runner*.log
+queue/status.md
+queue/STOP
+queue/STOP_NOW
+queue/q1_decision.md
+
+# OS files
+.DS_Store
