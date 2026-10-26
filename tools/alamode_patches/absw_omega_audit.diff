@@ -1,0 +1,16 @@
+diff --git a/anphon/dynamical.cpp b/anphon/dynamical.cpp
+index 1585bf74..4266c6d3 100644
+--- a/anphon/dynamical.cpp
++++ b/anphon/dynamical.cpp
+@@ -1554,9 +1554,8 @@ double Dynamical::freq(const double x) const
+     // Special treatment to avoid the divergence of computation.
+     if (std::abs(x) < eps) return eps15;
+ 
+-    if (x > 0.0) return std::sqrt(x);
+-
+-    return -std::sqrt(-x);
++    // AUDIT VARIANT (C2): |omega| substitution for omega^2 < 0
++    return std::sqrt(std::abs(x));
+ }
+ 
+ void Dynamical::calc_participation_ratio_all(const unsigned int nk_in,

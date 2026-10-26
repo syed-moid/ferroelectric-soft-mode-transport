@@ -1,0 +1,43 @@
+diff --git a/anphon/selfenergy.cpp b/anphon/selfenergy.cpp
+index 0673f3f9..ae0ad6f6 100644
+--- a/anphon/selfenergy.cpp
++++ b/anphon/selfenergy.cpp
+@@ -8,6 +8,7 @@
+  or http://opensource.org/licenses/mit-license.php for information.
+ */
+ 
++#include <iomanip>
+ #include "mpi_common.h"
+ #include "selfenergy.h"
+ #include "constants.h"
+@@ -384,6 +385,30 @@ void Selfenergy::selfenergy_c(const unsigned int N,
+                                              + (n31 + n23 + n3 - n12) * omega_sum[1]
+                                              + (n12 + n31 + n1 - n23) * omega_sum[2]
+                                              + (n23 + n12 + n2 - n31) * omega_sum[3]);
++
++                            // TRACE BUILD (not upstream ALAMODE): print one fixed quartet; the sum is unchanged.
++                            if (ik1 == 5 && ik2 == 22 && is1 == 4 && is2 == 9 && is3 == 13) {
++                                const auto v4c = anharmonic_core->V4(arr_quartic);
++                                std::cout << std::setprecision(17) << std::scientific
++                                          << "  AUDIT 4ph(c) identity set: TRACE no exclusion; T = " << T_tmp
++                                          << " knum = " << knum << " snum = " << snum
++                                          << " ik1 = " << ik1 << " ik2 = " << ik2 << " ik3 = " << ik3
++                                          << " is1 = " << is1 << " is2 = " << is2 << " is3 = " << is3
++                                          << " omega = " << omega << " omega1 = " << omega1
++                                          << " omega2 = " << omega2 << " omega3 = " << omega3
++                                          << " epsilon = " << epsilon
++                                          << " V4re = " << v4c.real() << " V4im = " << v4c.imag()
++                                          << " v4_tmp = " << v4_tmp
++                                          << " n1 = " << n1 << " n2 = " << n2 << " n3 = " << n3
++                                          << " S0 = " << omega_sum[0].real() << " " << omega_sum[0].imag()
++                                          << " S1 = " << omega_sum[1].real() << " " << omega_sum[1].imag()
++                                          << " S2 = " << omega_sum[2].real() << " " << omega_sum[2].imag()
++                                          << " S3 = " << omega_sum[3].real() << " " << omega_sum[3].imag()
++                                          << " factor = " << -1.0 / (std::pow(static_cast<double>(nk), 2) * std::pow(2.0, 5) * 3.0)
++                                          << " Ry_to_kayser = " << Hz_to_kayser / time_ry
++                                          << " kB_over_Ry = " << k_Boltzmann / Ryd
++                                          << std::endl;
++                            }
+                         }
+                     }
+                 }

@@ -1,0 +1,200 @@
+diff --git a/anphon/selfenergy.cpp b/anphon/selfenergy.cpp
+index 0673f3f9..2d62042b 100644
+--- a/anphon/selfenergy.cpp
++++ b/anphon/selfenergy.cpp
+@@ -8,6 +8,10 @@
+  or http://opensource.org/licenses/mit-license.php for information.
+ */
+ 
++#include <algorithm>
++#include <fstream>
++#include <iomanip>
++#include <string>
+ #include "mpi_common.h"
+ #include "selfenergy.h"
+ #include "constants.h"
+@@ -304,11 +308,16 @@ void Selfenergy::selfenergy_c(const unsigned int N,
+                               std::complex<double> *ret) const
+ {
+     /*
+-
+-    Diagram (c)
+-    Matrix elements that appear : V4^2
+-    Computational cost          : O(N_k^2 * N^3) <-- about N_k * N times that of Diagram (a)
+-
++    Diagram (c), VALIDATION BUILD full-precision-dump (not upstream ALAMODE).
++    Same loop, vertex, thermal coefficients, frequency sums and prefactor as c5b015c. Predicates (1e-9 Ry):
++      enlarged : one leg i has k_i = q and omega_i = omega (external mode or an exactly degenerate partner)
++                 and the other two legs (at k and -k) have equal frequencies  [the audit build's set]
++      strict   : one leg i has k_i = q and the external branch index, and the other two legs are the same
++                 branch index at k and -k
++    Excluded here: the enlarged set. Accumulators (all with the same prefactor, reduced over ranks):
++      ret   : kept terms (the printed Gamma4 = 2 Im ret, FWHM, as upstream)
++      omit  : the excluded terms
++      extra : enlarged-but-not-strict terms (kept in the strict build; zero otherwise)
+     */
+ 
+     unsigned int i;
+@@ -319,16 +328,42 @@ void Selfenergy::selfenergy_c(const unsigned int N,
+     double xk_tmp[3];
+ 
+     std::complex<double> omega_sum[4];
+-    std::complex<double> *ret_mpi;
++    std::complex<double> *ret_mpi, *omit_mpi, *extra_mpi, *term;
+ 
+     allocate(ret_mpi, N);
++    allocate(omit_mpi, N);
++    allocate(extra_mpi, N);
++    allocate(term, N);
+ 
+     std::complex<double> omega_shift = omega + im * epsilon;
+ 
+-    for (i = 0; i < N; ++i) ret_mpi[i] = std::complex<double>(0.0, 0.0);
++    for (i = 0; i < N; ++i) {
++        ret_mpi[i] = std::complex<double>(0.0, 0.0);
++        omit_mpi[i] = std::complex<double>(0.0, 0.0);
++        extra_mpi[i] = std::complex<double>(0.0, 0.0);
++    }
+ 
+     arr_quartic[0] = ns * kmesh_in->kindex_minus_xk[knum] + snum;
+ 
++    const double TOL_DEG = 1.0e-9; // Ry
++    const bool strict_build = false;
++    // cnt: 0 enlarged; 1 enlarged with the external branch on the leg; 2 exact-zero resonant denominators;
++    //      3 near-misses kept (TOL_DEG <= min denominator < 1e-6 Ry, not enlarged); 4 strict; 5 strict, not enlarged
++    double cnt[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
++    std::ofstream ofs_dump;
++    {
++        const std::string fname = "AUDITDUMP_k" + std::to_string(knum) + "_s" + std::to_string(snum)
++                                  + "_r" + std::to_string(mympi->my_rank) + ".txt";
++        ofs_dump.open(fname.c_str(), std::ios::out);
++        ofs_dump << std::setprecision(17) << std::scientific;
++        if (mympi->my_rank == 0) {
++            ofs_dump << "# kpoints ik x y z (fractional)\n";
++            for (unsigned int ik = 0; ik < nk; ++ik)
++                ofs_dump << "K " << ik << " " << xk[ik][0] << " " << xk[ik][1] << " " << xk[ik][2] << "\n";
++        }
++        ofs_dump << "# kind ik1 ik2 ik3 is1 is2 is3 omega omega1 omega2 omega3 d1 d2 d3 e1 e2 e3 s1 s2 s3 (Ry)\n";
++    }
++
+     for (unsigned int ik1 = mympi->my_rank; ik1 < nk; ik1 += mympi->nprocs) {
+         for (unsigned int ik2 = 0; ik2 < nk; ++ik2) {
+ 
+@@ -353,6 +388,36 @@ void Selfenergy::selfenergy_c(const unsigned int N,
+                         arr_quartic[3] = ns * ik3 + is3;
+                         double omega3 = eval_in[ik3][is3];
+ 
++                        const double d1 = std::abs(omega - omega1 - omega2 + omega3);
++                        const double d2 = std::abs(omega + omega1 - omega2 - omega3);
++                        const double d3 = std::abs(omega - omega1 + omega2 - omega3);
++                        const double dmin = std::min({d1, d2, d3});
++                        if (dmin < TOL_DEG) cnt[2] += 1.0;
++                        const bool e1 = ik1 == knum && std::abs(omega1 - omega) < TOL_DEG
++                                        && std::abs(omega2 - omega3) < TOL_DEG;
++                        const bool e2 = ik2 == knum && std::abs(omega2 - omega) < TOL_DEG
++                                        && std::abs(omega1 - omega3) < TOL_DEG;
++                        const bool e3 = ik3 == knum && std::abs(omega3 - omega) < TOL_DEG
++                                        && std::abs(omega1 - omega2) < TOL_DEG;
++                        const bool enlarged = e1 || e2 || e3;
++                        const bool s1 = ik1 == knum && is1 == snum && is2 == is3;
++                        const bool s2 = ik2 == knum && is2 == snum && is1 == is3;
++                        const bool s3 = ik3 == knum && is3 == snum && is1 == is2;
++                        const bool strict = s1 || s2 || s3;
++                        if (enlarged) cnt[0] += 1.0;
++                        if ((e1 && is1 == snum) || (e2 && is2 == snum) || (e3 && is3 == snum)) cnt[1] += 1.0;
++                        if (strict) cnt[4] += 1.0;
++                        if (strict && !enlarged) cnt[5] += 1.0;
++                        if (!enlarged && dmin >= TOL_DEG && dmin < 1.0e-6) cnt[3] += 1.0;
++                        if (enlarged || strict || dmin < 1.0e-6) {
++                            ofs_dump << (enlarged ? "X " : "N ") << ik1 << " " << ik2 << " " << ik3 << " "
++                                     << is1 << " " << is2 << " " << is3 << " " << omega << " " << omega1 << " "
++                                     << omega2 << " " << omega3 << " " << d1 << " " << d2 << " " << d3 << " "
++                                     << e1 << " " << e2 << " " << e3 << " " << s1 << " " << s2 << " " << s3 << "\n";
++                        }
++
++                        const bool excluded = strict_build ? strict : enlarged;
++
+                         double v4_tmp = std::norm(anharmonic_core->V4(arr_quartic));
+ 
+                         omega_sum[0]
+@@ -379,24 +444,74 @@ void Selfenergy::selfenergy_c(const unsigned int N,
+                             double n23 = n2 * n3;
+                             double n31 = n3 * n1;
+ 
+-                            ret_mpi[i] += v4_tmp
+-                                          * ((n12 + n23 + n31 + n1 + n2 + n3 + 1.0) * omega_sum[0]
+-                                             + (n31 + n23 + n3 - n12) * omega_sum[1]
+-                                             + (n12 + n31 + n1 - n23) * omega_sum[2]
+-                                             + (n23 + n12 + n2 - n31) * omega_sum[3]);
++                            term[i] = v4_tmp
++                                      * ((n12 + n23 + n31 + n1 + n2 + n3 + 1.0) * omega_sum[0]
++                                         + (n31 + n23 + n3 - n12) * omega_sum[1]
++                                         + (n12 + n31 + n1 - n23) * omega_sum[2]
++                                         + (n23 + n12 + n2 - n31) * omega_sum[3]);
++                        }
++                        if (excluded) {
++                            for (i = 0; i < N; ++i) omit_mpi[i] += term[i];
++                            continue;
+                         }
++                        if (enlarged) { // strict build only: enlarged-but-not-strict, kept
++                            for (i = 0; i < N; ++i) extra_mpi[i] += term[i];
++                        }
++                        for (i = 0; i < N; ++i) ret_mpi[i] += term[i];
+                     }
+                 }
+             }
+         }
+     }
++    ofs_dump.close();
+ 
+     double factor = -1.0 / (std::pow(static_cast<double>(nk), 2) * std::pow(2.0, 5) * 3.0);
+-    for (i = 0; i < N; ++i) ret_mpi[i] *= factor;
++    for (i = 0; i < N; ++i) {
++        ret_mpi[i] *= factor;
++        omit_mpi[i] *= factor;
++        extra_mpi[i] *= factor;
++    }
+ 
+     mpi_reduce_complex(N, ret_mpi, ret);
+ 
++    std::complex<double> *omit, *extra;
++    allocate(omit, N);
++    allocate(extra, N);
++    mpi_reduce_complex(N, omit_mpi, omit);
++    mpi_reduce_complex(N, extra_mpi, extra);
++
++    {
++        std::complex<double> cnt_c[6], cnt_sum[6];
++        for (i = 0; i < 6; ++i) cnt_c[i] = std::complex<double>(cnt[i], 0.0);
++        mpi_reduce_complex(6, cnt_c, cnt_sum);
++        if (mympi->my_rank == 0) {
++            const double to_cm = Hz_to_kayser / time_ry; // Ry -> cm^-1, as Writes::in_kayser
++            std::cout << "  AUDIT 4ph(c) identity set: nk = " << nk
++                      << ", excluded = " << static_cast<long long>(cnt_sum[0].real() + 0.5)
++                      << " (external mode itself on the leg: " << static_cast<long long>(cnt_sum[1].real() + 0.5)
++                      << "), denominator check = " << static_cast<long long>(cnt_sum[2].real() + 0.5)
++                      << ", near-misses kept (< 1e-6 Ry) = " << static_cast<long long>(cnt_sum[3].real() + 0.5)
++                      << "; VARIANT full-precision-dump: strict = " << static_cast<long long>(cnt_sum[4].real() + 0.5)
++                      << ", strict-not-enlarged = " << static_cast<long long>(cnt_sum[5].real() + 0.5)
++                      << std::setprecision(12) << std::scientific;
++            for (i = 0; i < N; ++i) {
++                std::cout << "; T = " << T[i]
++                          << " ImKept_cm1 = " << ret[i].imag() * to_cm
++                          << " ImOmitted_cm1 = " << omit[i].imag() * to_cm
++                          << " ImEnlargedNotStrict_cm1 = " << extra[i].imag() * to_cm
++                          << " ReKept_cm1 = " << ret[i].real() * to_cm
++                          << " ReOmitted_cm1 = " << omit[i].real() * to_cm;
++            }
++            std::cout << std::defaultfloat << std::endl;
++        }
++    }
++
+     deallocate(ret_mpi);
++    deallocate(omit_mpi);
++    deallocate(extra_mpi);
++    deallocate(term);
++    deallocate(omit);
++    deallocate(extra);
+ }
+ 
+ void Selfenergy::selfenergy_d(const unsigned int N,
