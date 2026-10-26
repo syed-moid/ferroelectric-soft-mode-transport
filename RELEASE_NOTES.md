@@ -1,8 +1,71 @@
-# Ferroelectric-Kappa-SCPH — Reproducibility Package (v2.0.0, in preparation)
+# Ferroelectric-Kappa-SCPH — Reproducibility Package (v3.0.0)
+
+Release for the revised manuscript on zone-resolved soft-mode damping and the particle/coherence decomposition of
+the thermal conductivity of cubic SrTiO₃ (300–1000 K). Code, tables and the raw outputs (Zenodo archives) form one
+new version of the Zenodo record (concept DOI 10.5281/zenodo.20559513), so the paper cites one version DOI.
+
+## Summary
+
+- **Production dataset.** Own SCPH on q₁ = 12³ with polarization mixing, on the force constants of the ALAMODE
+  SrTiO₃ example (commit c5b015c). Wigner-RTA transport on 8³, 12³ and 16³ from 300 to 1000 K in 50 K steps, plus 15³,
+  17³, 20³ and 24³ at selected temperatures. Every job is in the scrubbed manifest
+  `data/provenance/manifest_final.json`: 170 jobs, each file with its sha256 and each job with the build id of its
+  binary.
+- **Convergence.**
+  - Transport-mesh sweeps for κ_P and κ_C, and the mesh diagnostic r.
+  - Two κ_C predictions recorded before their runs: the 24³ prediction at 300 K failed, and the 20³ prediction at
+    1000 K held (R2, R8).
+  - The SCPH-grid check q₁ = 12³ against 16³ at 250, 300, 500 and 800 K (`n3_q1_16_check.csv`).
+- **Benchmark.**
+  - Matrix of SCPH grid × polarization mixing × transport mesh against the published calculation (SI S2).
+  - R-point mode comparison, with all benchmark percentages computed once from unrounded values (SI S7b).
+- **Mode labels.** Reference-character labels under two rules (character and frequency). Exactly degenerate
+  subspaces are labelled as a whole (R10). Pair counts are given per irreducible record and star-weighted
+  (`e1_pair_counts.csv`).
+- **Four-phonon diagnostics (diagram c, selected modes).**
+  - The identity-set exclusion patch against ALAMODE c5b015c and its 1e-6 Ry tolerance variant.
+  - The trace build and three validation builds: omitted sum, strict-index exclusion and full-precision dump.
+  - The worked single-quartet check (`tools/alamode_patches/TRACE.md`) and the build notes with full binary
+    hashes (`BUILD.md`).
+  - The full-precision printed inputs of SI Table S21 (`s21_tolerance_printed.txt`).
+  - These are implementation checks of a stated finite-mesh prescription, not a converged four-phonon conductivity.
+- **Recorded rules.** `docs/recorded_rules.md` gives each rule and prediction (R1–R11) with the UTC time it was
+  written, the runs it governs, its outcome and the SI section that reports it.
+- **Scripts and tables.** `scripts/revision/` regenerates every table from the raw outputs. Every table in
+  `data/processed/revision/` and `data/processed/si_v4/` carries a provenance header (`fekappa.provenance`). The
+  main-text numbers (`manuscript_numbers_v8.csv`) and Figs. 1–4 and S1–S8 regenerate from tracked tables alone.
+- **Compute queue.** `queue/` holds the checkpointed runner (stdlib only), the job specs and its unit tests.
+- **Package.**
+  - `fekappa.evec_io` (anphon eigenvector reader) and `fekappa.provenance` are new.
+  - Version 3.0.0; lock file refreshed.
+  - Tests: **311 passed / 2 skipped** with the raw outputs present; **305 passed / 8 skipped** in a clean checkout
+    (the raw-dataset tests skip).
+- **Literature corrections.** Fauqué et al. 2022: R-point rows re-read and the paper title corrected
+  (`data/literature/STO/fauque_2022/README.md`).
+- **Housekeeping.** Notebook outputs stripped.
+
+## Raw outputs (Zenodo archives of this version)
+
+| archive | contents |
+|---|---|
+| `scph_q12` | production SCPH solution (q₁ = 12³, mixing), its dispersion and the temperature-dependent FC2 |
+| `pm_q12_rta` | production RTA runs: κ_P, κ_C and the per-pair coherence elements at every T and mesh |
+| `pm_q12_evec` | eigenvectors on each transport mesh and temperature (sector labels) |
+| `scph_q16` | SCPH on q₁ = 16³ and the four RTA runs on it (250, 300, 500, 800 K) |
+| `pm_q8` | SCPH on q₁ = 8³ with its RTA runs, and the q₁ = 8³ run with reduced mixing |
+| `pm_q12_4ph_audit` | all per-mode four-phonon runs: unmodified pilot, rule, tolerance, trace and validation builds |
+| `prequeue_runs` | runs made before the queue: SCPH/RTA benchmark matrix, settings sweep, bare-harmonic and `|ω|` runs, eigenvector sets, harmonic cross-check |
+
+`SHA256SUMS` covers every file. The two timing probes of the four-phonon runs are not archived; they are listed
+in the manifest as excluded.
+
+---
+
+# Ferroelectric-Kappa-SCPH — Reproducibility Package (v2.0.0)
 
 Revision release accompanying the resubmission of the manuscript as a computational study
 of SrTiO₃ (SCPH-coupled anharmonic lattice dynamics; BaTiO₃/KTaO₃ as literature-benchmarked
-context). Will be archived as a **new version of the existing Zenodo record**
+context). Archived as a **new version of the existing Zenodo record**
 (concept DOI lineage 10.5281/zenodo.20559513) so the version history stays linked.
 
 ## New in v2
