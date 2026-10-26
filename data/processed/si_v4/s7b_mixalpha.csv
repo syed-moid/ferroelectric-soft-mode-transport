@@ -1,0 +1,20 @@
+# script: scripts/revision/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# R-point frequency (cm⁻¹), SCPH q₁ = 8³, PM, MIXALPHA 0.2 vs 0.1 (scph_bands of both runs)
+T_K,R_alpha0p2,R_alpha0p1,abs_diff_cm1
+300.0,28.9293,28.9294,0.0
+350.0,37.3306,37.3306,0.0
+400.0,44.637,44.637,0.0001
+450.0,50.9735,50.9734,0.0001
+500.0,56.5483,56.5482,0.0001
+550.0,61.5274,61.5274,0.0001
+600.0,66.0322,66.0321,0.0001
+650.0,70.1512,70.1511,0.0001
+700.0,73.9505,73.9504,0.0001
+750.0,77.4805,77.4804,0.0001
+800.0,80.7803,80.7802,0.0001
+850.0,83.8808,83.8807,0.0001
+900.0,86.807,86.8069,0.0001
+950.0,89.5793,89.5793,0.0001
+1000.0,92.2149,92.215,0.0001

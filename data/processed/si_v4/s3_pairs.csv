@@ -1,0 +1,12 @@
+# script: scripts/revision/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# κ_C change between meshes against r of the coarser mesh (d2_summary.csv; pair sums)
+T_K,pair,r_coarser,dkC_pct,registered
+300,16³→20³,0.41,-13.1,
+400,16³→20³,0.55,-13.5,
+300,20³→24³,0.59,22.5,prediction 1 (failed)
+500,16³→20³,0.7,-7.2,
+650,16³→20³,0.88,-2.2,
+800,16³→20³,1.0,0.2,
+1000,16³→20³,1.13,-2.3,prediction 2 (held)

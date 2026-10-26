@@ -1,0 +1,7 @@
+# script: scripts/revision/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# soft-sector linewidth rescaled to Vogt's zone-centre width at 300 K, 16³ (vogt_1995; mode_table_T.csv.gz)
+reading,gamma_exp_cm1,Gamma_exp_hwhm_cm1,Gamma_calc_hwhm_cm1,ratio,eta_max_rescaled,eta_max_rescaled_with_Omega
+"full width (γ = 2Γ), adopted",19.36,9.68,2.241,4.3,0.16,0.2
+"half width (γ = Γ), sensitivity",19.36,19.36,2.241,8.6,0.27,0.41

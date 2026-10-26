@@ -1,0 +1,16 @@
+# script: scripts/revision/wang_comparisons.py
+# inputs: data/provenance/manifest_final.json; data/processed/sto_production/mode_table_T.csv.gz
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+quantity,mesh,n_T,value,T_used
+alpha_300_800K,8,11,0.4191,300 350 400 450 500 550 600 650 700 750 800
+alpha_300_800K,12,11,0.5114,300 350 400 450 500 550 600 650 700 750 800
+alpha_300_800K,16,11,0.4974,300 350 400 450 500 550 600 650 700 750 800
+alpha_300_800K,20,5,0.5133,300 400 500 650 800
+share_lowest3_300K,12,1,0.2294,300
+share_lowest3_300K,15,1,0.2519,300
+share_lowest3_300K,16,1,0.2479,300
+share_lowest3_300K,17,1,0.2439,300
+share_lowest3_300K,20,1,0.2382,300
+share_lowest3_800K,12,1,0.2669,800
+share_lowest3_800K,16,1,0.2772,800
+share_lowest3_800K,20,1,0.2777,800

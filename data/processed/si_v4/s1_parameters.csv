@@ -1,0 +1,38 @@
+# script: scripts/revision/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# run parameters, read from the archived inputs and logs (pm_q12)
+parameter,value,applies_to,source
+inherited: DFT functional and code,"PBEsol, plane-wave cutoff 550 eV (example documentation, not in the distributed input files)",force constants,ALAMODE documentation sto_scph
+inherited: supercell,"2×2×2 (40 atoms), a = 14.726 bohr",force constants,example opt.in &cell
+inherited: fit,harmonic: least squares; cubic to sixth order: elastic net (L1 penalty 3.4548 × 10⁻⁶) on 40 displacement–force sets from molecular dynamics and random displacements; NBODY = 2 3 3 2 2,force constants,example opt.in
+inherited: interaction cutoffs,harmonic and cubic: none (all pairs in the supercell); fourth to sixth order: 12 bohr,force constants,example opt.in &cutoff
+inherited: Born charges and dielectric tensor,BORN file of the example (computation settings not documented),non-analytic term,example BORN
+code,"ALAMODE (anphon), commit c5b015c",all,build id
+source commit,c5b015caaf72c1a86a5250b6e34a86c0e09c7986,all,toolchain
+"anphon binary, production (unmodified c5b015c) (sha256, first 12)","23805d3b84c0 (HOME, 103 jobs)","SCPH, RTA",job manifest
+"anphon binary, production (unmodified c5b015c) (sha256, first 12)","266b507a02c2 (NODE, 27 jobs)","SCPH, RTA",job manifest
+"anphon binary, four-phonon rule: enlarged exclusion, tolerance 1e-9 Ry (sha256, first 12)","b6e7c732d04b (NODE, 26 jobs)",diagram (c),job manifest
+"anphon binary, tolerance sensitivity, 1e-6 Ry (sha256, first 12)","66c4bd619882 (NODE, 2 jobs)",diagram (c),job manifest
+"anphon binary, one-quartet debug trace (TRACE.md) (sha256, first 12)","b4064feb18fb (NODE, 1 jobs)",diagram (c),job manifest
+"anphon binary, validation (1): omitted-sum accumulator (sha256, first 12)","ba9db2de378d (NODE, 1 jobs)",diagram (c),job manifest
+"anphon binary, validation (2): strict-index exclusion (sha256, first 12)","9f899fc41967 (NODE, 4 jobs)",diagram (c),job manifest
+"anphon binary, validation (3): full-precision dump (sha256, first 12)","702793b11faa (NODE, 2 jobs)",diagram (c),job manifest
+checksums,"force constants STO_anharm.xml sha256 5e787b95eb59…, BORN e283fbf4a6d7…; patches, full hashes and per-job input/output sha256 in the build manifest of the release",all,build_manifest.csv
+inherited: force constants,STO_anharm.xml (to fourth order),all,scph.in
+inherited: lattice parameter,"7.363 bohr (cubic, fixed)",all,rta.in &cell
+non-analytic correction,NONANALYTIC = 3 (BORN),all,scph.in
+SCPH temperatures,0–1000 K in steps of 50 K,SCPH,scph.in
+SCPH grid q₁ (KMESH_SCPH),"12³ (production); 8³, 16³ (checks)",SCPH,scph.in
+SCPH interpolation grid (KMESH_INTERPOLATE),2×2×2,SCPH,scph.in
+polarization mixing (SELF_OFFDIAG),1,SCPH,scph.in
+SCPH mixing parameter (MIXALPHA),0.2,SCPH,scph.in
+SCPH maximum iterations (MAXITER),500,SCPH,scph.in
+SCPH tolerance (TOL_SCPH),1e-10,SCPH,scph.log
+transport,Wigner RTA: particle-like κ_P and coherence κ_C (KAPPA_COHERENT = 2),RTA,rta.in
+Brillouin-zone integration,"tetrahedron (ISMEAR = -1, default)",RTA,rta.in (keyword absent)
+isotope scattering,"none (ISOTOPE absent, default off)",RTA,rta.in (keyword absent)
+transport meshes,"8³, 12³, 16³ at every T; 20³ at 300, 400, 500, 650, 800, 1000 K; 15³, 17³, 24³ at 300 K",RTA,kappa_mesh_T.csv
+four-phonon self-energy,"QUARTIC = 2, SELF_ENERGY = 1 (diagram (c)); Lorentzian half-width ε = 2, 5, 10 cm⁻¹",diagram (c),audit input
+four-phonon meshes,"4³ (gate), 6³, 8³ (rule); external q on the mesh",diagram (c),audit input
+identity tolerance,|Δω| < 1e-9 Ry (sensitivity variant 1e-6 Ry),diagram (c),audit patch

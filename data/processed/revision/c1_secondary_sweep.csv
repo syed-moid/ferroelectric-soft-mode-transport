@@ -1,0 +1,11 @@
+# script: scripts/revision/stamp_transcribed_tables.py
+# inputs: $FEKAPPA_RUNS/rta_on_k8_m12/rta.log and $FEKAPPA_RUNS/sweep_{ismear1_eps5,ismear1_eps10,ismear0_eps10,classical,na0}/rta.log (zenodo:prequeue_runs.tar.gz); values collected by hand
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# C1 secondary sweep, 300 K, 12^3, base = own SCPH q1 8^3 with PM (rta_on_k8_m12); one setting changed per row; wall = 12 OpenMP threads
+variant,setting,kappa_P,dkappa_P_pct,kappa_C,wall_s
+base,ISMEAR=-1 (tetrahedron) CLASSICAL=0 NONANALYTIC=3,9.2384,0.0,0.2790,1561
+ismear1_eps5,ISMEAR=1 EPSILON=5 (Gaussian),9.2945,0.61,0.2793,42064
+ismear1_eps10,ISMEAR=1 EPSILON=10 (Gaussian),9.1678,-0.76,0.2790,42132
+ismear0_eps10,ISMEAR=0 EPSILON=10 (Lorentzian),9.1622,-0.82,0.2759,42112
+classical,CLASSICAL=1,9.5012,2.84,0.2887,1531
+na0,NONANALYTIC=0 in RTA (renormalized fc2 unchanged),10.1256,9.60,0.2961,1744

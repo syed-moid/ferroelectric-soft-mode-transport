@@ -1,0 +1,20 @@
+# script: scripts/revision/eta_max_outside_map.py
+# inputs: zenodo:pm_q12_rta.tar.gz (rta_pm_q12_T*_m8, rta_pm_q12_T300_m24 .result)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+mesh,T_K,job,eta_max
+8,1000,rta_pm_q12_T1000_m8,0.0712907
+8,300,rta_pm_q12_T300_m8,0.130063
+8,350,rta_pm_q12_T350_m8,0.0900673
+8,400,rta_pm_q12_T400_m8,0.0922665
+8,450,rta_pm_q12_T450_m8,0.0936897
+8,500,rta_pm_q12_T500_m8,0.139039
+8,550,rta_pm_q12_T550_m8,0.151035
+8,600,rta_pm_q12_T600_m8,0.124656
+8,650,rta_pm_q12_T650_m8,0.153629
+8,700,rta_pm_q12_T700_m8,0.128462
+8,750,rta_pm_q12_T750_m8,0.12447
+8,800,rta_pm_q12_T800_m8,0.0881616
+8,850,rta_pm_q12_T850_m8,0.0783999
+8,900,rta_pm_q12_T900_m8,0.0772579
+8,950,rta_pm_q12_T950_m8,0.0788264
+24,300,rta_pm_q12_T300_m24,0.16444

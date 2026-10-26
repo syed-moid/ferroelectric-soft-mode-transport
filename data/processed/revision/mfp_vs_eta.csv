@@ -1,0 +1,8 @@
+# script: scripts/revision/mfp_vs_eta.py
+# inputs: data/processed/sto_production/mode_table_T.csv.gz; data/processed/sto_production/kappa_mesh_T.csv
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+T_K,mesh,mfp_cut,frac_modes,kappaP_share,kappaP_sum_closure,eta_median,eta_max,frac_eta_gt_0p1,frac_eta_gt_0p5,omega_range_cm1,eta_max_all_modes
+300,16,2.8 A (Guo & Guo),0.1274,0.00103,0.0004178,0.02384,0.1639,0.0002555,0,26-831,0.1639
+300,16,d(Ti-O) = 1.948 A,0.09361,0.0005316,0.0004178,0.02879,0.1639,0.0003478,0,26-831,0.1639
+900,16,2.8 A (Guo & Guo),0.2417,0.00565,0.0003017,0.04074,0.09189,0,0,87-830,0.1162
+900,16,d(Ti-O) = 1.948 A,0.2106,0.004091,0.0003017,0.04188,0.09189,0,0,87-830,0.1162

@@ -1,0 +1,8 @@
+# script: scripts/revision/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# mean-field fit Ω_R² = A(T − T_c) over the converged 300–600 K points (r_point_check.csv)
+q1,n_T,A_cm2_per_K,Tc_K
+8,7,11.828,231
+12,7,12.267,245
+16,7,12.39,248

@@ -1,0 +1,16 @@
+# script: scripts/revision/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# anphon builds of every finished job (job manifest build ids), source patches (tools/alamode_patches) and input checksums; per-job input/output sha256 in data/provenance/manifest_final.json
+build,tree,anphon_sha256_12,host,jobs,patch,patch_sha256
+production (unmodified c5b015c),alamode,23805d3b84c0,HOME,103,,
+production (unmodified c5b015c),alamode,266b507a02c2,NODE,27,,
+"four-phonon rule: enlarged exclusion, tolerance 1e-9 Ry",alamode_4ph_audit,b6e7c732d04b,NODE,26,4ph_audit.diff,653a330f4929cfea42a260a68dedbf5207132898724ce56fb647747519b6fa9d
+"tolerance sensitivity, 1e-6 Ry",alamode_4ph_audit_tol1e6,66c4bd619882,NODE,2,4ph_audit_tol1e6.diff,a1d2ec7697b5cf70afc9cac4fec2ba89738a6c39f135aa71e6e901826e866e60
+one-quartet debug trace (TRACE.md),alamode_4ph_trace,b4064feb18fb,NODE,1,4ph_trace.diff,12bf571c7d22252f717592d3814d907759c2f9151575466201e5aa56a2014f15
+validation (1): omitted-sum accumulator,alamode_4ph_v1omit,ba9db2de378d,NODE,1,4ph_v1omit.diff,84e4dfae90afa66ee40684357dbec6b9a601a29a335266cba95dd8f691e66986
+validation (2): strict-index exclusion,alamode_4ph_v2strict,9f899fc41967,NODE,4,4ph_v2strict.diff,4112045c1bf5ea35bdc60783cb2153837651d0b69e62bf9666b2841f641d8998
+validation (3): full-precision dump,alamode_4ph_v3dump,702793b11faa,NODE,2,4ph_v3dump.diff,3460354aae45210ec67db804643d40947863a0087430c2ecf69a6bc715a53fe9
+source,ALAMODE,,,,commit c5b015caaf72c1a86a5250b6e34a86c0e09c7986,
+input,STO_anharm.xml (force constants),,,,,5e787b95eb59fdc2a5cd93a3fe298d976f71d3a83905dce568cc021d86e71b79
+input,"BORN (Born charges, dielectric tensor)",,,,,e283fbf4a6d75c7dbe00a8d8589c1a0a241ea9a4255bc1fc1b078e2c229a1bb9

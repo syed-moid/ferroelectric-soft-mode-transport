@@ -1,0 +1,24 @@
+# script: scripts/revision/a1_decision.py
+# inputs: data/provenance/manifest_final.json; data/processed/sto_production/mode_table_T.csv.gz
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+mode,mesh,eps,omega_cm1,Gamma3,Gamma4,G4_over_G3,Gamma3_prod16,Gamma3_calib_pct,eta3p4_probe,excluded,excluded_self,exact_zero_nonidentity,near_misses,build
+Gamma-TO1,6,2,175,1.536,4.477,2.915,1.966,-21.88,0.03681,33480,11170,0,114996,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+Gamma-TO1,6,5,175,1.536,4.393,2.86,1.966,-21.88,0.03633,33480,11170,0,114996,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+Gamma-TO1,6,10,175,1.536,4.244,2.764,1.966,-21.88,0.03548,33480,11170,0,114996,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+Gamma-TO1,8,5,175,2.107,4.071,1.932,1.966,7.188,0.03449,75132,25054,864,662256,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+M,6,2,116.3,5.1,5.866,1.15,4.901,4.054,0.0926,11176,11176,5700,130320,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+M,6,5,116.3,5.1,5.334,1.046,4.901,4.054,0.08802,11176,11176,5700,130320,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+M,6,10,116.3,5.1,5.036,0.9876,4.901,4.054,0.08546,11176,11176,5700,130320,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+M,8,5,116.3,4.179,5.389,1.289,4.901,-14.73,0.08849,25060,25060,11340,679920,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+R,6,2,92.15,6.144,5.598,0.9111,6.944,-11.51,0.1361,33480,11170,0,103536,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+R,6,5,92.15,6.144,5.314,0.8648,6.944,-11.51,0.133,33480,11170,0,103536,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+R,6,10,92.15,6.144,5.163,0.8403,6.944,-11.51,0.1314,33480,11170,0,103536,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+R,8,5,92.15,4.421,5.238,1.185,6.944,-36.33,0.1322,75132,25054,720,583344,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+R-b13,6,2,521.7,27.15,7.873,0.29,28.78,-5.682,0.07025,22340,11173,0,109620,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+R-b13,6,5,521.7,27.15,7.426,0.2736,28.78,-5.682,0.0694,22340,11173,0,109620,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+R-b13,6,10,521.7,27.15,6.812,0.2509,28.78,-5.682,0.06822,22340,11173,0,109620,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+R-b13,8,5,521.7,26.03,7.484,0.2875,28.78,-9.551,0.06951,50108,25057,576,617496,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+X-b7,6,2,250,14.26,9.075,0.6363,16.29,-12.47,0.1015,22340,11173,11232,148974,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+X-b7,6,5,250,14.26,8.567,0.6007,16.29,-12.47,0.09944,22340,11173,11232,148974,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+X-b7,6,10,250,14.26,8.078,0.5664,16.29,-12.47,0.09748,22340,11173,11232,148974,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+X-b7,8,5,250,13.7,8.772,0.6403,16.29,-15.92,0.1003,50108,25057,21936,791106,AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b

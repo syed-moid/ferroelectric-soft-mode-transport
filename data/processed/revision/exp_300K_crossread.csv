@@ -1,0 +1,17 @@
+# script: scripts/revision/exp_300K_crossread.py
+# inputs: data/processed/sto_production/kappa_mesh_T.csv; figure readings in the script (Muta 2005, Tachibana 2008, Popuri 2017)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+dataset,figure,T_K,kappa_W_mK,unc_W_mK,note,obtained
+Muta2005,Tadano 2015 Fig. 7 (arXiv v1),296.8,11.14,0.13,exp_datasets.py,read from figure
+Muta2005,Tadano 2015 Fig. 7 (arXiv v1),324.3,10.18,0.13,exp_datasets.py,read from figure
+Popuri2014,Tadano 2015 Fig. 7 (arXiv v1),321.3,9.81,0.1,exp_datasets.py; lowest T plotted,read from figure
+Muta2005,Wang 2021 Fig. 4,300.5,11.14,0.2,behind the 3ph square; hand-placed centroid,read from figure
+Muta2005,Wang 2021 Fig. 4,326.5,10.17,0.2,hand-placed centroid,read from figure
+Popuri2014,Wang 2021 Fig. 4,320.6,9.82,0.2,lowest T plotted; error bar not read,read from figure
+Suemune1965,Wang 2021 Fig. 4,293.4,10.57,0.2,sample form not established in files on hand,read from figure
+Buscaglia2014,Wang 2021 Fig. 4,290.3,11.67,0.2,La-doped ceramics (Buscaglia et al. 2014),read from figure
+Yu2008,Wang 2021 Fig. 4,288.7,11.14,0.2,oxygen-deficient (Yu et al. 2008),read from figure
+Yu2008,Wang 2021 Fig. 4,311.1,10.77,0.2,oxygen-deficient (Yu et al. 2008),read from figure
+Muta2005,Guo & Guo 2023 Fig. 10(c),300.0,11.14,0.32,colour-mask centroid,read from figure
+Muta2005,Guo & Guo 2023 Fig. 10(c),323.6,10.26,0.32,colour-mask centroid,read from figure
+Popuri2014,Guo & Guo 2023 Fig. 10(c),325.2,9.82,0.32,lowest T plotted,read from figure

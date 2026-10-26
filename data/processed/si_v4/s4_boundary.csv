@@ -1,0 +1,29 @@
+# script: scripts/revision/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# SCPH q₁ = 12³ vs 16³ at 250, 300, 500 and 800 K, transport on 12³; D0 rule (n3_q1_16_check.csv)
+T_K,quantity,q1_12,q1_16,shift_pct,D0_limit_pct,D0_met
+250,Ω Γ-TO1 (cm⁻¹),127.83,127.68,-0.11,,
+250,Ω M (cm⁻¹),77.166,76.738,-0.55,5.0,yes
+250,Ω R (cm⁻¹),14.645,11.872,-18.94,5.0,no
+250,Ω X (cm⁻¹),111.73,111.69,-0.04,,
+300,Ω Γ-TO1 (cm⁻¹),133.69,133.6,-0.07,,
+300,Ω M (cm⁻¹),79.855,79.6,-0.32,5.0,yes
+300,Ω R (cm⁻¹),25.824,24.929,-3.47,5.0,yes
+300,Ω X (cm⁻¹),112.5,112.48,-0.02,,
+500,Ω Γ-TO1 (cm⁻¹),152.27,152.26,-0.01,,
+500,Ω M (cm⁻¹),93.0,92.979,-0.02,5.0,yes
+500,Ω R (cm⁻¹),56.117,56.077,-0.07,5.0,yes
+500,Ω X (cm⁻¹),115.78,115.78,-0.0,,
+800,Ω Γ-TO1 (cm⁻¹),168.18,168.17,-0.0,,
+800,Ω M (cm⁻¹),108.23,108.22,-0.0,5.0,yes
+800,Ω R (cm⁻¹),80.672,80.664,-0.01,5.0,yes
+800,Ω X (cm⁻¹),119.95,119.94,-0.0,,
+250,"κ_P, 12³ mesh (W m⁻¹ K⁻¹)",9.7065,9.4084,-3.07,3.0,no
+250,"κ_C, 12³ mesh (W m⁻¹ K⁻¹)",0.2736,0.2805,2.52,,
+300,"κ_P, 12³ mesh (W m⁻¹ K⁻¹)",9.1112,9.0725,-0.42,3.0,yes
+300,"κ_C, 12³ mesh (W m⁻¹ K⁻¹)",0.2772,0.279,0.65,,
+500,"κ_P, 12³ mesh (W m⁻¹ K⁻¹)",7.073,7.07,-0.04,3.0,yes
+500,"κ_C, 12³ mesh (W m⁻¹ K⁻¹)",0.3624,0.3634,0.28,,
+800,"κ_P, 12³ mesh (W m⁻¹ K⁻¹)",5.5289,5.5276,-0.02,3.0,yes
+800,"κ_C, 12³ mesh (W m⁻¹ K⁻¹)",0.3996,0.3995,-0.03,,

@@ -1,0 +1,138 @@
+# SI Table S21 inputs: printed outputs of the four tolerance runs, verbatim (see the script docstring).
+# Each block: job id, identity tolerance, anphon build id, then the files as printed. Γ = Im Σ_code; the
+# files give 2Γ (FWHM) and the table gives Γ (HWHM).
+
+=== job m4ph_audit_q12_T300_m6_e2; identity tolerance 1e-9 Ry (rule); build AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+--- modes.txt
+3
+0 0 0 4
+0.5 0.5 0.5 1
+0.5 0.5 0 1
+--- rta.log, AUDIT lines
+  AUDIT 4ph(c) identity set: nk = 216, excluded = 33480 (external mode itself on the leg: 11170), denominator check = 33624, near-misses kept (< 1e-6 Ry) = 125988
+  AUDIT 4ph(c) identity set: nk = 216, excluded = 33480 (external mode itself on the leg: 11170), denominator check = 33480, near-misses kept (< 1e-6 Ry) = 83772
+  AUDIT 4ph(c) identity set: nk = 216, excluded = 11176 (external mode itself on the leg: 11176), denominator check = 17212, near-misses kept (< 1e-6 Ry) = 106632
+--- m4ph_audit_q12_T300_m6_e2.Gamma.1 (sha256 0d0b40f01a17, as in the manifest)
+# xk =               0              0              0
+# mode = 4
+# Frequency = 133.689
+## Temperature dependence of 2*Gamma (FWHM) for the given mode
+## T[K], 2*Gamma3 (cm^-1) (bubble), 2*Gamma4(cm^-1) <-- specific diagram only
+       300        5.18527        5.17455              0              0              0              0              0              0              0
+--- m4ph_audit_q12_T300_m6_e2.Gamma.2 (sha256 05c81ccf4997, as in the manifest)
+# xk =             0.5            0.5            0.5
+# mode = 1
+# Frequency = 25.8239
+## Temperature dependence of 2*Gamma (FWHM) for the given mode
+## T[K], 2*Gamma3 (cm^-1) (bubble), 2*Gamma4(cm^-1) <-- specific diagram only
+       300        8.37506        3.38377              0              0              0              0              0              0              0
+--- m4ph_audit_q12_T300_m6_e2.Gamma.3 (sha256 bc13f3a1f565, as in the manifest)
+# xk =             0.5            0.5              0
+# mode = 1
+# Frequency = 79.8553
+## Temperature dependence of 2*Gamma (FWHM) for the given mode
+## T[K], 2*Gamma3 (cm^-1) (bubble), 2*Gamma4(cm^-1) <-- specific diagram only
+       300        6.88162         3.5079              0              0              0              0              0              0              0
+
+=== job m4ph_audit_q12_T300_m6_e5; identity tolerance 1e-9 Ry (rule); build AUDIT:alamode_4ph_audit/anphon-sha256:b6e7c732d04b
+--- modes.txt
+3
+0 0 0 4
+0.5 0.5 0.5 1
+0.5 0.5 0 1
+--- rta.log, AUDIT lines
+  AUDIT 4ph(c) identity set: nk = 216, excluded = 33480 (external mode itself on the leg: 11170), denominator check = 33624, near-misses kept (< 1e-6 Ry) = 125988
+  AUDIT 4ph(c) identity set: nk = 216, excluded = 33480 (external mode itself on the leg: 11170), denominator check = 33480, near-misses kept (< 1e-6 Ry) = 83772
+  AUDIT 4ph(c) identity set: nk = 216, excluded = 11176 (external mode itself on the leg: 11176), denominator check = 17212, near-misses kept (< 1e-6 Ry) = 106632
+--- m4ph_audit_q12_T300_m6_e5.Gamma.1 (sha256 776dc18c6007, as in the manifest)
+# xk =               0              0              0
+# mode = 4
+# Frequency = 133.689
+## Temperature dependence of 2*Gamma (FWHM) for the given mode
+## T[K], 2*Gamma3 (cm^-1) (bubble), 2*Gamma4(cm^-1) <-- specific diagram only
+       300        5.18527         5.0076              0              0              0              0              0              0              0
+--- m4ph_audit_q12_T300_m6_e5.Gamma.2 (sha256 cd362d611067, as in the manifest)
+# xk =             0.5            0.5            0.5
+# mode = 1
+# Frequency = 25.8239
+## Temperature dependence of 2*Gamma (FWHM) for the given mode
+## T[K], 2*Gamma3 (cm^-1) (bubble), 2*Gamma4(cm^-1) <-- specific diagram only
+       300        8.37506        3.95805              0              0              0              0              0              0              0
+--- m4ph_audit_q12_T300_m6_e5.Gamma.3 (sha256 f7f2d8630d86, as in the manifest)
+# xk =             0.5            0.5              0
+# mode = 1
+# Frequency = 79.8553
+## Temperature dependence of 2*Gamma (FWHM) for the given mode
+## T[K], 2*Gamma3 (cm^-1) (bubble), 2*Gamma4(cm^-1) <-- specific diagram only
+       300        6.88162        4.20034              0              0              0              0              0              0              0
+
+=== job m4ph_audittol6_q12_T300_m6_e2; identity tolerance 1e-6 Ry (sensitivity); build AUDIT:alamode_4ph_audit_tol1e6/anphon-sha256:66c4bd619882
+--- modes.txt
+3
+0 0 0 4
+0.5 0.5 0.5 1
+0.5 0.5 0 1
+--- rta.log, AUDIT lines
+  AUDIT tolerance variant: TOL_ID = 1e-6 Ry (identity test), TOL_DEG = 1e-9 Ry (denominator check)
+  AUDIT 4ph(c) identity set: nk = 216, excluded = 33696 (external mode itself on the leg: 11242), denominator check = 33624, near-misses kept (< 1e-6 Ry) = 125772
+  AUDIT tolerance variant: TOL_ID = 1e-6 Ry (identity test), TOL_DEG = 1e-9 Ry (denominator check)
+  AUDIT 4ph(c) identity set: nk = 216, excluded = 33696 (external mode itself on the leg: 11242), denominator check = 33480, near-misses kept (< 1e-6 Ry) = 83556
+  AUDIT tolerance variant: TOL_ID = 1e-6 Ry (identity test), TOL_DEG = 1e-9 Ry (denominator check)
+  AUDIT 4ph(c) identity set: nk = 216, excluded = 11248 (external mode itself on the leg: 11248), denominator check = 17212, near-misses kept (< 1e-6 Ry) = 106560
+--- m4ph_audittol6_q12_T300_m6_e2.Gamma.1 (sha256 f6fcdee92849, as in the manifest)
+# xk =               0              0              0
+# mode = 4
+# Frequency = 133.689
+## Temperature dependence of 2*Gamma (FWHM) for the given mode
+## T[K], 2*Gamma3 (cm^-1) (bubble), 2*Gamma4(cm^-1) <-- specific diagram only
+       300        5.18527        5.17164              0              0              0              0              0              0              0
+--- m4ph_audittol6_q12_T300_m6_e2.Gamma.2 (sha256 67675b27cf80, as in the manifest)
+# xk =             0.5            0.5            0.5
+# mode = 1
+# Frequency = 25.8239
+## Temperature dependence of 2*Gamma (FWHM) for the given mode
+## T[K], 2*Gamma3 (cm^-1) (bubble), 2*Gamma4(cm^-1) <-- specific diagram only
+       300        8.37506        3.31876              0              0              0              0              0              0              0
+--- m4ph_audittol6_q12_T300_m6_e2.Gamma.3 (sha256 bc13f3a1f565, as in the manifest)
+# xk =             0.5            0.5              0
+# mode = 1
+# Frequency = 79.8553
+## Temperature dependence of 2*Gamma (FWHM) for the given mode
+## T[K], 2*Gamma3 (cm^-1) (bubble), 2*Gamma4(cm^-1) <-- specific diagram only
+       300        6.88162         3.5079              0              0              0              0              0              0              0
+
+=== job m4ph_audittol6_q12_T300_m6_e5; identity tolerance 1e-6 Ry (sensitivity); build AUDIT:alamode_4ph_audit_tol1e6/anphon-sha256:66c4bd619882
+--- modes.txt
+3
+0 0 0 4
+0.5 0.5 0.5 1
+0.5 0.5 0 1
+--- rta.log, AUDIT lines
+  AUDIT tolerance variant: TOL_ID = 1e-6 Ry (identity test), TOL_DEG = 1e-9 Ry (denominator check)
+  AUDIT 4ph(c) identity set: nk = 216, excluded = 33696 (external mode itself on the leg: 11242), denominator check = 33624, near-misses kept (< 1e-6 Ry) = 125772
+  AUDIT tolerance variant: TOL_ID = 1e-6 Ry (identity test), TOL_DEG = 1e-9 Ry (denominator check)
+  AUDIT 4ph(c) identity set: nk = 216, excluded = 33696 (external mode itself on the leg: 11242), denominator check = 33480, near-misses kept (< 1e-6 Ry) = 83556
+  AUDIT tolerance variant: TOL_ID = 1e-6 Ry (identity test), TOL_DEG = 1e-9 Ry (denominator check)
+  AUDIT 4ph(c) identity set: nk = 216, excluded = 11248 (external mode itself on the leg: 11248), denominator check = 17212, near-misses kept (< 1e-6 Ry) = 106560
+--- m4ph_audittol6_q12_T300_m6_e5.Gamma.1 (sha256 8e4b253743fb, as in the manifest)
+# xk =               0              0              0
+# mode = 4
+# Frequency = 133.689
+## Temperature dependence of 2*Gamma (FWHM) for the given mode
+## T[K], 2*Gamma3 (cm^-1) (bubble), 2*Gamma4(cm^-1) <-- specific diagram only
+       300        5.18527        5.00644              0              0              0              0              0              0              0
+--- m4ph_audittol6_q12_T300_m6_e5.Gamma.2 (sha256 5acddf09fc3b, as in the manifest)
+# xk =             0.5            0.5            0.5
+# mode = 1
+# Frequency = 25.8239
+## Temperature dependence of 2*Gamma (FWHM) for the given mode
+## T[K], 2*Gamma3 (cm^-1) (bubble), 2*Gamma4(cm^-1) <-- specific diagram only
+       300        8.37506         3.9322              0              0              0              0              0              0              0
+--- m4ph_audittol6_q12_T300_m6_e5.Gamma.3 (sha256 f7f2d8630d86, as in the manifest)
+# xk =             0.5            0.5              0
+# mode = 1
+# Frequency = 79.8553
+## Temperature dependence of 2*Gamma (FWHM) for the given mode
+## T[K], 2*Gamma3 (cm^-1) (bubble), 2*Gamma4(cm^-1) <-- specific diagram only
+       300        6.88162        4.20034              0              0              0              0              0              0              0
+

@@ -1,0 +1,13 @@
+# script: scripts/revision/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# temperatures with 'convergence achieved' in scph.log, per SCPH run (r_point_check.csv)
+PM,q1,T_min_converged,T_max_converged,n_converged,not_converged_K
+off,2,50,1000,20,0
+off,4,150,1000,18,"0, 50, 100"
+off,8,250,1000,16,"0, 50, 100, 150, 200"
+on,2,50,1000,20,0
+on,4,150,1000,18,"0, 50, 100"
+on,8,250,1000,16,"0, 50, 100, 150, 200"
+on,12,250,1000,16,"0, 50, 100, 150, 200"
+on,16,250,1000,16,"0, 50, 100, 150, 200"

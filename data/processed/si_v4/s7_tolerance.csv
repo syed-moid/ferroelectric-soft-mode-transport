@@ -1,0 +1,11 @@
+# script: scripts/revision/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# 6³, 300 K: identity tolerance 1e-9 Ry (rule) vs 1e-6 Ry (sensitivity) (manifest m4ph_audittol6_*, a1_per_mesh.csv)
+mode,eps,G4_tol1e9,G4_tol1e6,change_pct,excluded_tol1e9,excluded_tol1e6
+Gamma-TO1,2,2.58727,2.58582,-0.056,33480,33696
+Gamma-TO1,5,2.5038,2.50322,-0.023,33480,33696
+M,2,1.75395,1.75395,+0.000,11176,11248
+M,5,2.10017,2.10017,+0.000,11176,11248
+R,2,1.69189,1.65938,-1.921,33480,33696
+R,5,1.97903,1.9661,-0.653,33480,33696

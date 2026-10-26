@@ -1,0 +1,13 @@
+# script: scripts/revision/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# inequality Γ₄,max ≤ ½(0.5Ω − Γ₃) with Γ₃ the 16³ production width; Γ₄,max over the 6³ (ε = 2, 5, 10) and 8³ (ε = 5) runs; η₃ + η₄,max (s7_widths.csv)
+T_K,mode,omega,G3p,G4max,allowance_half,holds,eta34_max
+300,Gamma-TO1,133.7,2.241,2.587,32.3045,True,0.0361
+300,M,79.86,3.476,2.335,18.227,True,0.0728
+300,R,25.82,4.233,2.111,4.3385,True,0.2457
+1000,Gamma-TO1,175.0,1.966,4.477,42.767,True,0.0368
+1000,M,116.3,4.901,5.866,26.6245,True,0.0926
+1000,R,92.15,6.944,5.598,19.5655,True,0.1361
+1000,R-b13,521.7,28.78,7.873,116.035,True,0.0703
+1000,X-b7,250.0,16.29,9.075,54.355,True,0.1015

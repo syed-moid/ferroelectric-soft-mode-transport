@@ -1,0 +1,8 @@
+# script: scripts/revision/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# R-point lowest mode on 16³: eigenvector character weights and the label under each rule (mode_table_T.csv.gz)
+T_K,omega_cm1,c_A,c_soft,c_hard,sector_char,sector_freq
+300,25.824,0.131,0.4,0.469,hard,A
+650,69.962,0.131,0.301,0.568,hard,A
+1000,92.149,0.131,0.222,0.647,hard,A

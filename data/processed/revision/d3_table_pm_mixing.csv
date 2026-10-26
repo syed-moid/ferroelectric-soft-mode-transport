@@ -1,0 +1,7 @@
+# script: scripts/revision/d3_sampling_isolation.py
+# inputs: data/processed/revision/c1_benchmark_matrix.csv
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+kmesh_scph,kappa_P_83_off,kappa_P_83_on,kappa_P_123_off,kappa_P_123_on,dkappa_P_123_pct,Gamma_off_meV,Gamma_on_meV,dGamma_pct,dM_pct,dR_pct
+2,9.528,9.476,10.31,10.93,6.044,20.72,18,-13.15,0.5877,0.891
+4,8.394,8.231,9.365,9.722,3.802,19.97,16.91,-15.31,0.3575,1.25
+8,7.728,7.676,8.919,9.238,3.575,19.74,16.62,-15.82,0.657,4.023

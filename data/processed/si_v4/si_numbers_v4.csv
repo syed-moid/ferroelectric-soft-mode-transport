@@ -1,0 +1,51 @@
+# script: scripts/revision/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+placeholder,value,description,source
+dkC_1000_solver,-2.25,"Δκ_C(16³→20³, 1000 K) from the solver values",kappa_mesh_T.csv
+dkC_1000_pairsum,-2.27,"Δκ_C(16³→20³, 1000 K) from the pair sums (registered basis)",d2_summary.csv
+kC_1000_16_pairsum,0.51473,"κ_C(16³, 1000 K), pair sum",d2_summary.csv
+kC_1000_20_pairsum,0.50306,"κ_C(20³, 1000 K), pair sum",d2_summary.csv
+dkC_300_20_24,22.5,"Δκ_C(20³→24³, 300 K)",d2_summary.csv
+r_300_24,0.7,"κ_C-weighted median r at 24³, 300 K",d2_summary.csv
+r_1000_20,1.3,"κ_C-weighted median r at 20³, 1000 K",d2_summary.csv
+Omega_vogt_300,88.4,"Vogt 1995 cubic F1u frequency at 300 K (interpolated), cm⁻¹",vogt_1995/omega_T.csv
+Omega_to1_300,133.7,"our Γ-TO1 frequency, 300 K, 16³, cm⁻¹",mode_table_T.csv.gz
+g4_span_unpatched,3.7–5.0,max/min of unmodified Γ₄ over ε = 2–10 cm⁻¹ at 4³,s7_gate_4cubed.csv
+g4_span_patched,Gamma-TO1: 6%; R: 22%; M: 33%,range/mean of the audit-build Γ₄ over ε at 4³,s7_gate_4cubed.csv
+g4_unpatched_6_to1,4.293,"Γ₄ of Γ-TO1, unmodified code, 6³, ε = 5, 300 K",manifest m4ph_pm_q12_T300_m6_e5_timing
+g4_removed_6_to1,1.789,"excluded-set contribution at 6³ (Γ-TO1, ε = 5)",manifest; a1_per_mesh.csv
+off_sym_mode,517.7; 38.24,"(1/4,1/2,1/2) b13, 16³, 1000 K: Ω; Γ₃ (cm⁻¹)",mode_table_T.csv.gz
+n4_ratio_300,0.12–1.08,"Γ₄/Γ₃, all twelve modes, all ε, 300 K",n4_results.csv
+n4_ratio_800,0.15–1.11,"Γ₄/Γ₃, all twelve modes, 800 K",n4_results.csv
+n4_shorten_300,10–52,"lifetime shortening 1 − 1/(1+Γ₄/Γ₃), %, 300 K",n4_results.csv
+n4_shorten_800,13–53,"lifetime shortening, %, 800 K",n4_results.csv
+n4_eps_span,1.02–1.32,"6³ sample, 300 K: max/min Γ₄ over ε = 2, 5, 10 per mode",n4_results.csv
+n4_share_8,1.16,"share of κ_P (300 K) carried by the 8^3 sample, %",n4_selection.csv
+n4_share_6,1.32,"share of κ_P (300 K) carried by the 6^3 sample, %",n4_selection.csv
+bench_R2,-1.1; 1,"R at q1 = 2^3 with mixing: difference from Tadano 2015 Table I, %; same rounded to an integer ('about')",s7b_tadano.csv
+bench_R_q1,-8.8; -21.9; -26.2,"R difference at q1 = 4^3, 8^3, 12^3 with mixing, %",s7b_tadano.csv
+bench_R_ge8,22–26,"R softer than Tadano 2015 at q1 >= 8^3 with mixing, %, integer range",s7b_tadano.csv
+bench_G_max,1.5; 1.5,"largest |Gamma difference| at any q1 with mixing, %; same to the nearest 0.5 ('about')",s7b_tadano.csv
+bench_G_8,1.5,"|Gamma difference| at q1 = 8^3 with mixing, %",s7b_tadano.csv
+bench_M_max,6.1; 6,"largest |M difference| at any q1 with mixing, %; same to an integer",s7b_tadano.csv
+bench_G_off,16.1–17.1,"Gamma difference without mixing, %, range over q1",s7b_tadano.csv
+mix_maxdiff,0.0001,"largest |Ω_R(α=0.2) − Ω_R(α=0.1)| over 300–1000 K, cm⁻¹",s7b_mixalpha.csv
+eta_R_300_at_tadano,0.12,"η_R(300 K, 16³) with the same Γ at Tadano's converged Ω_R (direct factor only)",mode_table_T.csv.gz; tadano_2015
+eta_R_300,0.164,"η_R(300 K, 16³)",mode_table_T.csv.gz
+tadano_R12,35,"Tadano Table I, R25 at q₁ = 12³, 300 K, cm⁻¹ (rounded)",tadano_2015/scph_convergence_300K.csv
+q1_8_12_R_300,-10.7,"Ω_R(300 K), q₁ 8³ → 12³, %",d_q1_freq_shift.csv
+R250_q8,20.1,"Ω_R(250 K), q₁ = 8³, cm⁻¹",d_q1_freq_shift.csv
+R250_q12,14.6,"Ω_R(250 K), q₁ = 12³, cm⁻¹",n3_q1_16_check.csv
+R250_q16,11.9,"Ω_R(250 K), q₁ = 16³, cm⁻¹",n3_q1_16_check.csv
+harm_G,58.5,"harmonic frequency at Gamma, lowest branch, our force constants (cm⁻¹; imaginary shown as magnitude)",a2_harmonic_xcheck.csv
+harm_G_tad,58,"harmonic frequency at Gamma, Tadano Table I (meV × 8.0655, rounded)",tadano_2015/scph_convergence_300K.csv
+harm_R,76.4,"harmonic frequency at R, lowest branch, our force constants (cm⁻¹; imaginary shown as magnitude)",a2_harmonic_xcheck.csv
+harm_R_tad,76,"harmonic frequency at R, Tadano Table I (meV × 8.0655, rounded)",tadano_2015/scph_convergence_300K.csv
+harm_M,20.6,"harmonic frequency at M, lowest branch, our force constants (cm⁻¹; imaginary shown as magnitude)",a2_harmonic_xcheck.csv
+harm_M_tad,21,"harmonic frequency at M, Tadano Table I (meV × 8.0655, rounded)",tadano_2015/scph_convergence_300K.csv
+spike_G900,32.6,"Γ of q = (3/16, 1/2, 1/2) branch 7 on 16³ at 900 K, cm⁻¹",mode_table_T.csv.gz
+spike_G950,45.9,"Γ of q = (3/16, 1/2, 1/2) branch 7 on 16³ at 950 K, cm⁻¹",mode_table_T.csv.gz
+spike_G1000,20.3,"Γ of q = (3/16, 1/2, 1/2) branch 7 on 16³ at 1000 K, cm⁻¹",mode_table_T.csv.gz
+strict_diag_R,0.246; 0.483; 0.342; 95; 4.34; 8.226; 4.597,"R, 300 K: (Γ₃ + Γ₄)/Ω with the enlarged-set Γ₄,max; with the strict-set Γ₄ on 6³ at ε = 2 and 5 cm⁻¹; strict Γ₄ (ε = 2) as % of the allowance 0.5Ω − Γ₃; half the allowance (cm⁻¹); strict Γ₄ at ε = 2 and 5 (cm⁻¹)",v1_validation.csv; a1_decision.csv; a1_per_mesh.csv
+eta20_800_omega,289.2,"frequency (cm⁻¹) of the largest-η mode on 20³ at 800 K (q index 230, branch 7, hard)",eta_validity_T.csv

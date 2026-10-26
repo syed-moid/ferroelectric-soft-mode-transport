@@ -1,0 +1,21 @@
+# script: scripts/revision/stamp_transcribed_tables.py
+# inputs: Zhao et al., Phys. Rev. B 104, 224304 (2021), full text; values transcribed by hand
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+quantity,material,phase,T_K,value,unit,baseline,source_page,source_kind
+lattice_constant_PBE_optimized,SrTiO3,cubic,,3.94,Angstrom,GGA-PBE relaxation,4 (Table I),table
+lattice_constant_experimental_cited,SrTiO3,cubic,,3.91,Angstrom,Zhao ref. [64],4 (Table I),table
+eps_inf,SrTiO3,cubic,,6.33,,DFPT at PBE lattice,4 (Table I),table
+T_exponent_kSCP_3ph,SrTiO3,cubic,200-1000,-0.61,,power-law fit to points at T >= 200 K,4 (Table I),table
+T_exponent_kSCP_34ph,SrTiO3,cubic,200-1000,-0.79,,power-law fit to points at T >= 200 K,4 (Table I),table
+kSCP_3ph,SrTiO3,cubic,300,9.4,W m-1 K-1,PBE lattice; SCP q1 8^3; FourPhonon BTE 12^3 iterative 3ph,5 (Fig. 2(c)),read from figure
+kSCP_34ph,SrTiO3,cubic,300,7.0,W m-1 K-1,PBE lattice; as above + 4ph in SMRTA,5 (Fig. 2(c)),read from figure
+kSCP_3ph,SrTiO3,cubic,1000,4.6,W m-1 K-1,PBE lattice,5 (Fig. 2(c)),read from figure
+kSCP_34ph,SrTiO3,cubic,1000,2.6,W m-1 K-1,PBE lattice,5 (Fig. 2(c)),read from figure
+ratio_kSCP34_over_kSCP3,SrTiO3,cubic,300,0.75,,numerator kSCP_34ph / denominator kSCP_3ph (bar),7 (Fig. 3),read from figure
+ratio_kSCP34_over_kSCP3_from_curves,SrTiO3,cubic,300,0.74,,7.0 / 9.4 (Fig. 2(c) read values),5 (Fig. 2(c)),computed from read-from-figure values
+ratio_kSCP34_over_kSCP3_from_curves,SrTiO3,cubic,1000,0.55,,2.6 / 4.6 (Fig. 2(c) read values),5 (Fig. 2(c)),computed from read-from-figure values
+kSCP_3ph_exp_lattice,SrTiO3,cubic,300,11.6,W m-1 K-1,experimental lattice constant rerun,12 (Fig. 11(a)),read from figure
+kSCP_34ph_exp_lattice,SrTiO3,cubic,300,8.6,W m-1 K-1,experimental lattice constant rerun,12 (Fig. 11(a)),read from figure
+ratio_kSCP34_over_kSCP3_exp_lattice,SrTiO3,cubic,300,0.74,,8.6 / 11.6 (Fig. 11(a) read values),12 (Fig. 11(a)),computed from read-from-figure values
+kappa_el_estimate_WF,SrTiO3,cubic,300,0.732,W m-1 K-1,Wiedemann-Franz with sigma ~1e5 S/m from Muta (their ref. [76]),6 and 15 (App. C),text
+T_pt_linear_fit_omega2_R_AFD,SrTiO3,cubic,,180,K,linear fit of omega^2(T) of softest R mode (SCP); expt 105 K,7 and 15 (App. D); 5 (Fig. 2(c) label),text

@@ -1,0 +1,8 @@
+# script: scripts/revision/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# R-point frequency, experiment read from Fauqué et al. Fig. 1(d) (uncertainty = marker half-size 0.62 meV) against ours (q₁ = 12³, PM) (data/literature/STO/fauque_2022/dho_fits_T.csv; r_point_check.csv)
+T_K,R_exp_meV,R_exp_cm_read,R_exp_unc_cm,R_ours_cm,R_deficit_pct
+300,6.61,53.3,5.0,25.8,-51.6
+600,9.85,79.4,5.0,65.8,-17.1
+1000,11.6,93.6,5.0,92.2,-1.5

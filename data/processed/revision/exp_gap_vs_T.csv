@@ -1,0 +1,21 @@
+# script: scripts/revision/exp_datasets.py
+# inputs: data/literature/STO/; data/processed/sto_production/kappa_mesh_T.csv; data/processed/revision/r_point_check.csv
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# ours: kappa_mesh_T.csv, 16^3 (own SCPH q1 = 12^3, PM). exp: Muta / Popuri read from Tadano arXiv v1 Fig. 7, linear interpolation in T between read points, no extrapolation (blank outside the read range).
+# R: ours q1 = 12^3 PM (r_point_check.csv) vs Fauque Fig. 1(d) INS, read from figure (+-5.0 cm^-1). Correlation table only.
+T_K,kP_16,ktot_16,k_Muta2005,kP/k_Muta2005,ktot/k_Muta2005,k_Popuri2014,kP/k_Popuri2014,ktot/k_Popuri2014,k_Tadano2015_calc,R_ours_cm,R_exp_cm_read,R_deficit_pct
+300,8.8907,9.3988,11.025,0.806,0.853,,,,8.706,25.82,53.3,-51.6
+350,8.242,8.766,9.656,0.854,0.908,9.314,0.885,0.941,8.147,35.69,,
+400,7.7104,8.2571,8.731,0.883,0.946,8.516,0.905,0.97,7.584,43.67,,
+450,7.2733,7.8033,7.916,0.919,0.986,7.947,0.915,0.982,7.215,50.35,,
+500,6.892,7.4172,7.368,0.935,1.007,7.517,0.917,0.987,6.846,56.12,,
+550,6.5738,7.09,6.947,0.946,1.021,7.163,0.918,0.99,6.552,61.21,,
+600,6.2837,6.8035,6.613,0.95,1.029,6.824,0.921,0.997,6.257,65.79,79.4,-17.2
+650,6.0346,6.5602,6.338,0.952,1.035,6.513,0.927,1.007,6.022,69.96,,
+700,5.8257,6.3453,6.067,0.96,1.046,6.291,0.926,1.009,5.786,73.8,,
+750,5.6447,6.1617,5.802,0.973,1.062,6.009,0.939,1.025,5.588,77.35,,
+800,5.477,5.9939,,,,5.708,0.959,1.05,5.39,80.67,,
+850,5.3274,5.8458,,,,5.581,0.955,1.047,5.232,83.79,,
+900,5.1942,5.7158,,,,,,,5.074,86.72,,
+950,5.0808,5.6,,,,,,,4.931,89.51,,
+1000,4.9791,5.4938,,,,,,,,92.15,93.6,-1.5

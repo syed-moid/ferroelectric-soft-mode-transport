@@ -1,0 +1,9 @@
+# script: scripts/revision/a1_decision.py
+# inputs: data/provenance/manifest_final.json; data/processed/sto_production/mode_table_T.csv.gz
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+mode,Gamma4_thr_prereg,Gamma4_thr_recomputed,complete,G4_6_5,G4_8_5,S1_ratio_8_6,S2_scan_maxmin,S1,S2,Gamma4_max,outcome
+Gamma-TO1,85.6,85.56,True,4.393,4.071,0.9267,1.055,True,True,4.477,eta_3+4 < 0.5 with at least a factor-2 margin (diagram (c) included)
+M,53.2,53.24,True,5.334,5.389,1.01,1.165,True,True,5.866,eta_3+4 < 0.5 with at least a factor-2 margin (diagram (c) included)
+R,39.1,39.13,True,5.314,5.238,0.9858,1.084,True,True,5.598,eta_3+4 < 0.5 with at least a factor-2 margin (diagram (c) included) (in this model)
+X-b7,108.7,108.7,True,8.567,8.772,1.024,1.124,True,True,9.075,eta_3+4 < 0.5 with at least a factor-2 margin (diagram (c) included)
+R-b13,232.1,232.1,True,7.426,7.484,1.008,1.156,True,True,7.873,eta_3+4 < 0.5 with at least a factor-2 margin (diagram (c) included)

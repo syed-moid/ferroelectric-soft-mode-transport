@@ -1,0 +1,152 @@
+# script: scripts/revision/build_manuscript_numbers_v8.py
+# inputs: data/processed/sto_production/; data/processed/revision/; data/processed/si_v4/; data/provenance/manifest_final.json; data/literature/STO/
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# v8 placeholder values from production only (own SCPH q1 = 12^3, PM); 300-1000 K main text
+# status FINAL / CHOICE / PENDING
+placeholder,value,units,description,source,status
+T_min,300,K,lowest main-text temperature (q1 = 12^3 meets the D0 rule against 16^3 from 300 K),n3_q1_16_check.csv,FINAL
+q1_prod,12x12x12,,"SCPH q1 grid, production",docs/recorded_rules.md (R1),FINAL
+scph_tol,1e-10,,"TOL_SCPH (MAXITER 500, MIXALPHA 0.2)",docs/recorded_rules.md (R1) (scph.log),FINAL
+a_bohr,7.363,bohr,fixed cubic lattice parameter (3.8963 A),rta.in,FINAL
+kP_300_16_prod,8.891,W/mK,"kappa_P(300 K), 16^3",kappa_mesh_T.csv,FINAL
+kP_300_best,9.06 (observed spread 8.89-9.21 over 12^3-24^3),W/mK,"kappa_P(300 K) best estimate = mean of the >= 15^3 meshes (15,16,17,20,24)",kappa_mesh_T.csv,FINAL
+ktot_300_best,9.57,W/mK,"kappa_P + kappa_C, means of the >= 15^3 meshes at 300 K",kappa_mesh_T.csv,FINAL
+exp_gap_pct,-13.0,%,"kappa_total(300 K) vs 11 +- 1 W/mK (Tachibana 2008, single crystal, approx.)",data/literature/STO/tachibana_2008/kappa_total_T.csv,CHOICE
+dkP_sampling_pct,16 (without PM: 10.31 vs 8.92 W/mK); 18 (with PM: 10.93 vs 9.24 W/mK),%,"kappa_P(300 K, 12^3 mesh) raised by SCPH q1 2^3 relative to the dense-grid value at matched settings (base = q1 8^3; +15.6 / +18.3)","runs rta_on_k2_m12, rta_on_k8_m12, rta_off_k8_m12; AUDIT_REPORT_W1 (10.31)",FINAL
+dkP_PM_pct,3.6,%,"PM on vs off at q1 = 8^3, 12^3 mesh, 300 K","runs rta_on_k8_m12, rta_off_k8_m12",FINAL
+dkP_q1_8_12_pct,-1.4,%,"kappa_P(300 K, 12^3 mesh), SCPH q1 8^3 -> 12^3",docs/recorded_rules.md (R1),FINAL
+dkP_q1_12_16_pct,-0.4,%,"kappa_P(300 K, 12^3 mesh), SCPH q1 12^3 -> 16^3",n3_q1_16_check.csv,FINAL
+kP_mesh_spread_pct,3.6,%,"observed kappa_P(300 K) spread over 12^3-20^3, relative to 16^3",kappa_mesh_T.csv,FINAL
+R_2cubed,68.2,cm-1,"Omega_R(300 K), q1 = 2^3, PM",r_point_check.csv,FINAL
+R_8cubed,28.9,cm-1,"Omega_R(300 K), q1 = 8^3, PM",r_point_check.csv,FINAL
+dkP_12_16_pct,-2.4,%,kappa_P(300 K) 12^3 -> 16^3,kappa_mesh_T.csv,FINAL
+kC_seq_300,12^3: 0.277; 15^3: 0.530; 16^3: 0.508; 17^3: 0.526; 20^3: 0.442; 24^3: 0.541,W/mK,kappa_C(300 K) by mesh,kappa_mesh_T.csv,FINAL
+kC_300_range,"0.44-0.54 (mean 0.509, 5 meshes: 15^3, 16^3, 17^3, 20^3, 24^3)",W/mK,kappa_C(300 K) observed range over the >= 15^3 meshes,kappa_mesh_T.csv,FINAL
+ktot_300_range,9.40-9.65,W/mK,"kappa_total(300 K) observed spread, >= 15^3 meshes",kappa_mesh_T.csv,FINAL
+dkC_20_24_pct,22.5,%,300 K; pre-registered prediction failed (|D| >= 13.1 %),kappa_mesh_T.csv; docs/recorded_rules.md (R2),FINAL
+r_criterion,"r <= 0.6: 13-23 % (either sign); r = 0.70: 7.2 %; r >= 0.88: <= 2.3 % (650, 800, 1000 K)",,|kappa_C change| between successive meshes vs kappa_C-weighted median r of the coarser mesh,d2_summary.csv; kappa_mesh_T.csv,FINAL
+kC_settled_T,"650, 800 and 1000 K (tested on 20^3); 900-950 K by the criterion (r = 1.09-1.10 at 16^3)",K,kappa_C settled,d2_summary.csv; docs/recorded_rules.md (R8) (1000 K 20^3 outcome),FINAL
+r16_900_1000,900 K: 1.09; 950 K: 1.10; 1000 K: 1.13,,r(16^3) at 900-1000 K (1000 K tested on 20^3; 900/950 K by the criterion),d2_summary.csv,FINAL
+dkC_16_20_1000_pct,-2.27,%,"1000 K, pair sums (pre-registered |D| <= 2.5 %: holds); solver values give -2.25 %",d2_summary.csv; docs/recorded_rules.md (R8),FINAL
+top20_share_300,15^3: 0.42; 16^3: 0.36; 17^3: 0.35; 20^3: 0.18; 24^3: 0.18,,"share of kappa_C(300 K) in the top-20 (q, branch-pair) terms (SI descriptive)",d2_summary.csv,FINAL
+top20_range_300,18-42,%,"share of kappa_C(300 K) in the 20 largest pair terms, range over 15^3-24^3",d2_summary.csv,FINAL
+dkC_12_16_pct,83.3,%,300 K,kappa_mesh_T.csv,FINAL
+dkC_16_20_pct,-13.1,%,300 K,kappa_mesh_T.csv,FINAL
+eta_max_300,0.164,,"max Gamma3/Omega, 16^3, 300 K (R-point AFD mode)",eta_validity_T.csv,FINAL
+eta_max_1000,0.106,,"16^3, 1000 K",eta_validity_T.csv,FINAL
+q1_250_shift,Omega_R -19 %; kappa_P -3.1 %,,"250 K, SCPH q1 12^3 -> 16^3 (12^3 transport mesh): the D0 rule fails (kappa_P > 3 %, R > 5 %)",n3_q1_16_check.csv,FINAL
+most_damped_hard_cm,280; 510,cm-1,frequencies (rounded to 10 cm-1) of the most damped mode at 900-1000 K on 12^3 / 16^3 (hard optical),eta_validity_T.csv,FINAL
+eta_max_1000_range,0.09-0.11,,largest three-phonon Gamma/Omega at 1000 K on 12^3 and 16^3 (hard optical modes),eta_validity_T.csv,FINAL
+eta_max_global,"0.16-0.18 at 300 K (R mode; 16^3, 12^3, 20^3)",,"largest three-phonon Gamma/Omega over 300-1000 K, at 300 K on every production mesh with all T or 300 K (12^3: 0.181, 16^3: 0.164, 20^3: 0.184); 16^3 max over 300-1000 K: 0.164 at 300 K",eta_validity_T.csv,FINAL
+f005_300,0.91,%,"kappa-weighted fraction eta > 0.05, 300 K, 16^3",eta_validity_T.csv,FINAL
+f005_1000,3.68,%,"1000 K, 16^3",eta_validity_T.csv,FINAL
+T_eta01,eta_max > 0.1 at every T 300-1000 K on 16^3 (15/15),K,temperatures where some mode has eta > 0.1 (definition to confirm),eta_validity_T.csv,CHOICE
+most_damped_sector,R-point AFD mode (300-850 K); hard optic near 282 cm-1 above 850 K,,mode at eta_max; label 'A' (branch rule) / 'hard' (character rule),eta_validity_T.csv; kappa_mesh_T.csv,CHOICE
+gamma_ratio_hwhm_reading,8.6,,SI only: ratio if Vogt's DHO damping constant were read as a HWHM; largest rescaled ratio then 0.27 (Gamma side) / 0.41 (with Omega),vogt_1995/gamma_T.csv; mode_table_T.csv.gz,FINAL (SI only)
+gamma_ratio,4.3,,"convention: DHO damping constant gamma = FWHM = 2 Gamma_HWHM; Vogt 1995 cubic F1u damping {g_exp:.1f} cm-1 at ~298 K over our Gamma-TO1 HWHM {to1.gamma_hwhm_cm1:.3f} cm-1 (three-phonon, 16^3, 300 K)",vogt_1995/gamma_T.csv; mode_table_T.csv.gz,FINAL
+eta_max_rescaled,0.16; 0.20,,"FWHM / HWHM reading: 0.16 / 0.27 (Gamma side); 0.20 / 0.41 (Gamma and Omega side, Omega_Vogt/Omega_calc = 0.66). max eta over all modes after scaling soft-sector (character rule) eta by gamma_ratio (FWHM / HWHM reading), and additionally by Omega_calc/Omega_Vogt; 16^3, 300 K; FWHM reading (Gamma side; with Omega); all < 0.5",vogt_1995; mode_table_T.csv.gz,FINAL
+sh_A_300,18.5,%,"share of kappa_P(300 K, 16^3), char labels",kappa_sectors_T.csv,FINAL
+sh_H_300,77.7,%,"share of kappa_P(300 K, 16^3), char labels",kappa_sectors_T.csv,FINAL
+sh_S_300,3.8,%,"share of kappa_P(300 K, 16^3), char labels",kappa_sectors_T.csv,FINAL
+sh_A_300_freqrule,24.8,%,"share of kappa_P(300 K, 16^3), freq labels",kappa_sectors_T.csv,FINAL (SI robustness)
+sh_H_300_freqrule,58.2,%,"share of kappa_P(300 K, 16^3), freq labels",kappa_sectors_T.csv,FINAL (SI robustness)
+sh_S_300_freqrule,17.0,%,"share of kappa_P(300 K, 16^3), freq labels",kappa_sectors_T.csv,FINAL (SI robustness)
+kC_share_range,5.4-9.4,%,"kappa_C/kappa_total, 16^3, 300-1000 K",kappa_mesh_T.csv,FINAL
+hh_share_range,65-73,%,"hard/hard share of kappa_C, char labels, meshes >= 15^3 with eigenvectors, 300-1000 K (units: 23 (T, mesh); 24^3 has no eigenvector job, so it is not in this range)",coherence_blocks_T.csv,FINAL
+hh_share_range_freqrule,74-88,%,"hard/hard share of kappa_C, freq labels, meshes >= 15^3 with eigenvectors, 300-1000 K (units: 23 (T, mesh); 24^3 has no eigenvector job, so it is not in this range)",coherence_blocks_T.csv,FINAL
+n_hh_pairs,19614,,"hard/hard pairs (irreducible q, branch pair), 16^3, 300 K, char labels",e1_prod_block_factors.csv,FINAL
+eta34_TO1_300,0.033-0.036,,"eta_3+4 = (Gamma3 + Gamma4)/Omega at 300 K, Gamma-TO1: Gamma4 over the 6^3/8^3 audit jobs, Gamma3 over the production meshes 12/16/20^3 (2.060, 2.241, 2.112 cm-1); 16^3 Gamma3 alone: 0.034-0.036",a1_per_mesh.csv; mode_table_T.csv.gz; R4,FINAL
+a1_outcome_TO1,eta_3+4 < 0.5 with at least a factor-2 margin (diagram (c) included),,"pre-registered rule (R4) outcome, Gamma-TO1; Gamma4_max/Gamma4_thr = 0.040",a1_decision.csv,FINAL
+eta34_M_300,0.062-0.073,,"eta_3+4 = (Gamma3 + Gamma4)/Omega at 300 K, M: Gamma4 over the 6^3/8^3 audit jobs, Gamma3 over the production meshes 12/16/20^3 (3.253, 3.476, 3.332 cm-1); 16^3 Gamma3 alone: 0.064-0.073",a1_per_mesh.csv; mode_table_T.csv.gz; R4,FINAL
+a1_outcome_M,eta_3+4 < 0.5 with at least a factor-2 margin (diagram (c) included),,"pre-registered rule (R4) outcome, M; Gamma4_max/Gamma4_thr = 0.064",a1_decision.csv,FINAL
+eta34_R_300,0.23-0.27,,"eta_3+4 = (Gamma3 + Gamma4)/Omega at 300 K, R: Gamma4 over the 6^3/8^3 audit jobs, Gamma3 over the production meshes 12/16/20^3 (4.665, 4.233, 4.755 cm-1); 16^3 Gamma3 alone: 0.229-0.246 (in this model)",a1_per_mesh.csv; mode_table_T.csv.gz; R4,FINAL
+a1_outcome_R,eta_3+4 < 0.5 with at least a factor-2 margin (diagram (c) included) (in this model),,"pre-registered rule (R4) outcome, R; Gamma4_max/Gamma4_thr = 0.243",a1_decision.csv,FINAL
+g4g3_soft_300,0.4-1.0,,"Gamma4/Gamma3 at the same settings, soft modes (Gamma-TO1, M, R), 6^3/8^3 audit jobs, 300 K",a1_per_mesh.csv,FINAL
+g3_calib_range,-36 to +21,%,"Gamma3 on the 6^3/8^3 audit meshes relative to production 16^3: soft modes at 300 K, soft + X b7 / R b13 at 1000 K (300 K alone: -28 to +21)",a1_per_mesh.csv; a1_per_mesh_T1000.csv,FINAL
+eta3_max_any,0.184,,"largest three-phonon eta at >= 300 K on any production mesh (20^3, 300 K, R-point AFD mode)",eta_validity_T.csv,FINAL
+eta3_max_8_24,0.154; 0.164,,"largest three-phonon eta from the per-mode widths of the 8^3 (300-1000 K) and 24^3 (300 K) runs, which are not part of the damping map",eta_max_outside_map.csv,FINAL
+eta20_800_omega,289,cm-1,"largest-eta mode on 20^3 at 800 K (q index 230, branch 7, hard optic)",eta_validity_T.csv,FINAL
+strict_diag_R,0.246; 0.483; 0.342; 95; 4.34; 8.226; 4.597,,"R, 300 K: (Γ₃ + Γ₄)/Ω with the enlarged-set Γ₄,max; with the strict-set Γ₄ on 6³ at ε = 2 and 5 cm⁻¹; strict Γ₄ (ε = 2) as % of the allowance 0.5Ω − Γ₃; half the allowance (cm⁻¹); strict Γ₄ at ε = 2 and 5 (cm⁻¹)",si_numbers_v4.csv (v1_validation.csv; a1_decision.csv; a1_per_mesh.csv),FINAL
+bench_R2,-1.1; 1,%,"R at q1 = 2^3 with mixing: difference from Tadano 2015 Table I, %; same rounded to an integer ('about')",si_numbers_v4.csv (s7b_tadano.csv),FINAL
+bench_R_ge8,22–26,%,"R softer than Tadano 2015 at q1 >= 8^3 with mixing, %, integer range",si_numbers_v4.csv (s7b_tadano.csv),FINAL
+bench_G_max,1.5; 1.5,%,"largest |Gamma difference| at any q1 with mixing, %; same to the nearest 0.5 ('about')",si_numbers_v4.csv (s7b_tadano.csv),FINAL
+bench_G_8,1.5,%,"|Gamma difference| at q1 = 8^3 with mixing, %",si_numbers_v4.csv (s7b_tadano.csv),FINAL
+bench_M_max,6.1; 6,%,"largest |M difference| at any q1 with mixing, %; same to an integer",si_numbers_v4.csv (s7b_tadano.csv),FINAL
+g4g3_required,1.72,,Gamma4/Gamma3 a mode would need for eta_3+4 = 0.5: 0.5/eta3_max_any - 1 (ratio form; superseded in the main text by the additive eta4 form; SI supporting table only),eta_validity_T.csv,FINAL (SI only)
+g4g3_required_q129,3.7,,"same for q129 branch 7 at 1000 K (16^3 only; eta3 = 0.106), the 1000 K eta3 maximum (SI only)",mode_table_T.csv.gz,FINAL (SI only)
+g4g3_max_sampled,2.91,,"largest Gamma4/Gamma3 (same settings) over all sampled cases (Gamma-TO1, 1000 K, 6^3, eps 2); ratio statistic, SI only",eta4_margin_cases.csv,FINAL (SI only)
+tol_sens_max_pct,1.9,%,"largest |change| of Gamma4 when the identity tolerance is widened from 1e-9 to 1e-6 Ry (6^3, eps 2/5, soft modes; all changes are decreases)",data/provenance/manifest_final.json m4ph_audittol6_*; R7,FINAL
+eta34_TO1_1000,0.034-0.037,,"eta_3+4 at 1000 K, Gamma-TO1: Gamma4 over the 6^3/8^3 audit jobs, Gamma3 over production 12/16^3 (1.819, 1.966 cm-1)",a1_per_mesh_T1000.csv; mode_table_T.csv.gz; R5,FINAL
+eta34_M_1000,0.082-0.093,,"eta_3+4 at 1000 K, M: Gamma4 over the 6^3/8^3 audit jobs, Gamma3 over production 12/16^3 (4.529, 4.901 cm-1)",a1_per_mesh_T1000.csv; mode_table_T.csv.gz; R5,FINAL
+eta34_R_1000,0.127-0.136,,"eta_3+4 at 1000 K, R: Gamma4 over the 6^3/8^3 audit jobs, Gamma3 over production 12/16^3 (6.500, 6.944 cm-1) (in this model)",a1_per_mesh_T1000.csv; mode_table_T.csv.gz; R5,FINAL
+eta34_Xb7_1000,0.095-0.101,,"eta_3+4 at 1000 K, X-b7: Gamma4 over the 6^3/8^3 audit jobs, Gamma3 over production 12/16^3 (15.612, 16.294 cm-1)",a1_per_mesh_T1000.csv; mode_table_T.csv.gz; R5,FINAL
+eta34_Rb13_1000,0.067-0.070,,"eta_3+4 at 1000 K, R-b13: Gamma4 over the 6^3/8^3 audit jobs, Gamma3 over production 12/16^3 (28.102, 28.781 cm-1)",a1_per_mesh_T1000.csv; mode_table_T.csv.gz; R5,FINAL
+eta34_soft_1000,<= 0.14,,"largest eta_3+4 at 1000 K over Gamma-TO1, M, R, X b7, R b13 (R, in this model); all five in the first outcome class of R5",a1_per_mesh_T1000.csv; a1_decision_T1000.csv,FINAL
+g4g3_soft_1000,0.84-2.91,,"Gamma4/Gamma3 at the same settings, soft modes, 6^3/8^3, 1000 K (Gamma-TO1 largest)",a1_per_mesh_T1000.csv,FINAL
+g4g3_soft_300_2dp,0.40-1.00,,"as g4g3_soft_300, two decimals (soft-mode sentence)",a1_per_mesh.csv,FINAL
+g4g3_300,0.12-1.08,,"Gamma4/Gamma3 at the same settings, twelve N4 heat carriers, 300 K, all eps",n4_results.csv; R6,FINAL
+life_short_300,10-52,%,"lifetime shortening 1 - 1/(1 + Gamma4/Gamma3), N4, 300 K",n4_results.csv,FINAL
+g4g3_800,0.15-1.11,,"Gamma4/Gamma3 at the same settings, twelve N4 heat carriers, 800 K, all eps",n4_results.csv; R6,FINAL
+life_short_800,13-53,%,"lifetime shortening 1 - 1/(1 + Gamma4/Gamma3), N4, 800 K",n4_results.csv,FINAL
+n_pilot,"12 heat carriers (6 on 8^3, 6 on 6^3; plus 3 soft and 3 hard-optic modes)",,four-phonon sample size,n4_results.csv; R6,FINAL
+n4_kP_share,1.2-1.3,%,share of kappa_P carried by the N4 sample (12 modes; R6),n4_selection.csv; R6,FINAL (copied from R6)
+eta4_max,0.08,,"largest Gamma4/Omega over 33 mode-temperature combinations, 71 mesh/eps cases (R, 300 K, 8^3, eps 5: 0.0818; in this model)",eta4_margin_cases.csv,FINAL
+n_combos_4ph,33,,mode-temperature combinations with diagram (c) evaluated (71 mesh/eps cases on 6^3/8^3),eta4_margin_cases.csv,FINAL
+eta4_max_hc,0.024,,"largest Gamma4/Omega, heat carriers (800 K)",eta4_margin_cases.csv,FINAL
+eta4_needed_300,0.32,,"0.5 - largest production eta3 at 300 K (0.184, 20^3); 3.9x the largest sampled eta4",eta4_margin.csv,FINAL
+eta4_needed_800,0.37,,"0.5 - largest production eta3 at 800 K (0.134, 20^3); 4.5x the largest sampled eta4",eta4_margin.csv,FINAL
+eta4_needed_950,0.34,,"0.5 - largest production eta3 at 950 K (0.163, 16^3); 4.1x the largest sampled eta4",eta4_margin.csv,FINAL
+eta4_needed_1000,0.39,,"0.5 - largest production eta3 at 1000 K (0.106, 16^3); 4.8x the largest sampled eta4",eta4_margin.csv,FINAL
+Omega0_ratio,1.51,,Omega_TO1(300 K) ours 133.7 cm-1 / Vogt 1995 10.96 meV at 299.3 K (read from figure),r_point_check.csv; data/literature/STO/vogt_1995/omega_T.csv,FINAL
+bare_factor_range,2.25-4.26 (full set); 2.22-4.20 (character-matched); 2.72-5.10 (|w| substitution),,"SCPH/bare kappa_P, 300-1000 K",d4_bare_framings.csv,FINAL
+kP_pub,8.7,W/mK,"published SCPH kappa_P(300 K), read from figure (Tadano 2015 Fig. 7, +-0.11; the earlier +-0.3 has no recorded basis); Guo & Guo 2023 p.6 quote Tadano's value as 8.75 W/mK",SI Sec. S7b and Sec. 5.1 (exp_datasets.csv); SI Sec. S10 (prior_work_comparison.md),FINAL
+kP_pub_settings,9.24,W/mK,"ours at the published settings (q1 8^3, PM, 12^3 mesh), 300 K",run rta_on_k8_m12 / rta_pm_q8_T300_m12,FINAL
+kP_pub_settings_pct,+6,%,ours at published settings vs 8.7,,FINAL
+kP_vs_pub_pct,+4,%,best estimate vs 8.7,kappa_mesh_T.csv,FINAL
+exp_gap_range,12-16 %,%,"kappa_total(300 K) observed spread 9.40-9.65 below the single-crystal values (Muta 2005 11.03-11.14, read from three figures; Tachibana 2008 11); kappa_P 16-20 % below; with Tachibana's +-1: 3.5-22 %",exp_300K_crossread.csv; exp_gap_vs_T.csv; SI Sec. S7b and Sec. 5.1 (exp_datasets.csv),FINAL
+exp_gap_kP,16-20 %,%,"kappa_P(300 K), >= 15^3 meshes, below the same values",exp_300K_crossread.csv,FINAL
+exp_datasets_300,11.0-11.1,W/mK,"Muta 2005 at 300 K, 11.03-11.14, read from figure in Tadano Fig. 7, Wang Fig. 4 and Guo & Guo Fig. 10 (+-0.13-0.32; reduced/La-doped single crystal per its title); Tachibana 2008: 11 +- 1 (tracked CSV); Popuri 2014 has no point below 321 K (9.8 at 321-325 K)",exp_300K_crossread.csv; exp_datasets.csv,FINAL
+g4_lit_guo,35-37 % (300 K); 44-45 % (900 K),%,"kappa reduction by four-phonon scattering, computed from Guo & Guo's stated 3ph and 3+4ph values (ITA / RTA)",prior_work_comparison.md (Guo & Guo p.5),FINAL
+g4_lit_band,15-20; 35-45,%,literature band of the four-phonon kappa reduction,SI Sec. S10 (prior_work_comparison.md),FINAL
+mfp28_300,13 % of modes; 0.1 % of kappa_P; eta <= 0.16 (median 0.024),,"modes with MFP = |v| tau < 2.8 A, 16^3, 300 K",mfp_vs_eta.csv,FINAL
+mfp28_900,24 % of modes; 0.6 % of kappa_P; eta <= 0.09 (median 0.041),,"modes with MFP = |v| tau < 2.8 A, 16^3, 900 K",mfp_vs_eta.csv,FINAL
+alpha_300_800,0.50-0.51,,"kappa_P ~ T^-alpha, 300-800 K, meshes 12/16/20 (Muta read from figure: 0.69)",wang_comparisons.csv; SI Sec. S7b and Sec. 5.1 (exp_datasets.csv),FINAL
+Tc_R_fit,245,K,"mean-field fit Omega_R^2 = A(T - Tc), 300-600 K, q1 = 12^3",r_point_check.csv,FINAL
+kP_ref_16,8.89,W/mK,"designated reference kappa_P(300 K): 16^3, the only mesh >= 15^3 at every T",kappa_mesh_T.csv,FINAL
+kP_300_tested,8.89-9.21,W/mK,kappa_P(300 K) over the tested meshes 12^3-24^3,kappa_mesh_T.csv,FINAL
+kC_300_tested,0.442-0.541,W/mK,"kappa_C(300 K) over the tested meshes 15^3-24^3 (observed range, not an error bar)",kappa_mesh_T.csv,FINAL
+ktot_300_paired,9.40-9.65,W/mK,"kappa_P + kappa_C paired per mesh, 15^3-24^3, 300 K",kappa_mesh_T.csv,FINAL
+kP_ref_pub_pct,+2,%,"reference kappa_P(300 K, 16^3) vs published 8.7 (read from figure)",kappa_mesh_T.csv; kP_pub,FINAL
+kP_tested_pub_pct,+2 to +6,%,tested meshes 12^3-24^3 vs published 8.7,kappa_mesh_T.csv; kP_pub,FINAL
+ktot_ref_16,9.40,W/mK,"kappa_P + kappa_C at the reference 16^3 mesh, 300 K",kappa_mesh_T.csv,FINAL
+exp_gap_ref,15,%,reference total below the midpoint of 11.0-11.1 (14.6-15.3 %),kappa_mesh_T.csv; exp_datasets.csv,FINAL
+exp_gap_paired,12-15,%,paired totals below the 300 K single-crystal values 11.0-11.1 (smallest gap: max total vs 11.0; largest: min total vs 11.1),kappa_mesh_T.csv; exp_datasets.csv,FINAL
+hh_char_15up,65.0-73.5,%,"hard/hard share of kappa_C, char rule, every mesh >= 15^3, 300-1000 K (23 temperature-mesh units)",coherence_blocks_T.csv,FINAL
+hh_freq_15up,73.6-88.0,%,"hard/hard share of kappa_C, freq rule, every mesh >= 15^3, 300-1000 K (23 temperature-mesh units)",coherence_blocks_T.csv,FINAL
+vsum_ratio_hh_hs,6.56,,"ratio of summed velocity factors V, hard/hard : hard/soft, 16^3, 300 K, character rule",e1_prod_block_factors.csv,FINAL
+npairs_hh_hs,19614; 2636,,"ordered branch pairs s != s' at the 165 irreducible q of 16^3, hard/hard; hard/soft (300 K, character rule)",e1_prod_block_factors.csv,FINAL
+vpair_hh_hs,77.9; 88.4,W/mK/cm^-1,"summed V per ordered pair, hard/hard; hard/soft",e1_prod_block_factors.csv,FINAL
+H_hh_300_1000,1.73; 1.96,,"kappa-weighted mean H of hard/hard pairs, 300; 1000 K (H -> 2 in the classical limit)",e1_prod_block_factors.csv,FINAL
+ff_hh_none,0.350-0.383,W/mK,"hard/hard kappa_C, 16^3, character rule, 300-1000 K",e1_prod_factor_freezing.csv,FINAL
+ff_hh_1000,0.352; 0.298; 0.264; 0.399,W/mK,hard/hard at 1000 K: all factors at T; H; L; V held at 300 K,e1_prod_factor_freezing.csv,FINAL
+kC_16_20_highT_max,2.3,%,"largest |kappa_C(20^3)/kappa_C(16^3) - 1| at 650, 800, 1000 K",s3_pairs.csv,FINAL
+r_900_950,1.09; 1.10,,kappa_C-weighted median r on 16^3 at 900; 950 K (no finer mesh run),d2_summary.csv,FINAL
+f_eta01_kappa_max,0.14,%,"largest kappa-weighted fraction of modes with eta_3 > 0.1, any T 300-1000 K and mesh",eta_validity_T.csv,FINAL
+deg_mixed,6; 0.16; 0.6,%; %; pp,exactly degenerate subspaces whose members get different per-eigenvector labels (share); largest kappa_P share in them; largest change of the hard/hard share with subspace-summed labels,sector_degeneracy.csv,FINAL
+R_label_300,25.8; 0.13; 0.40; 0.47,cm-1; -; -; -,"R-point lowest mode on 16^3 at 300 K: frequency and projections c_A, c_soft, c_hard",s5_r_mode_label.csv,FINAL
+ovl_frac_hh_hs,4.9; 2.2,%,"pairs with |dw| < G1 + G2: hard/hard; hard/soft (16^3, 300 K, character rule)",e1_prod_block_factors.csv,FINAL
+kpair_hh_hs,1.79; 1.85,1e-5 W/mK,"block contribution per ordered pair, hard/hard; hard/soft (16^3, 300 K, character rule)",e1_prod_block_factors.csv,FINAL
+hh_pairs_char,57; 69; 1.2; 11.4,%; %; -; -,"hard/hard, 16^3, 300 K, char rule: share of ordered pairs; share of kappa_C; per-pair contribution relative to the all-pair mean; mean number of hard modes per irreducible q (of 15)",e1_pair_counts.csv; e1_sector_sizes.csv,FINAL
+hh_pairs_freq,49; 74; 1.5; 10.6,%; %; -; -,"hard/hard, 16^3, 300 K, freq rule: share of ordered pairs; share of kappa_C; per-pair contribution relative to the all-pair mean; mean number of hard modes per irreducible q (of 15)",e1_pair_counts.csv; e1_sector_sizes.csv,FINAL
+hh_pairs_w_char,57; 69; 1.2,%; %; -,"hard/hard, 16^3, 300 K, char rule, star-weighted: share of full-zone ordered pairs; share of kappa_C; per-pair contribution relative to the all-pair mean",e1_pair_counts.csv,FINAL
+hh_pairs_w_freq,52; 74; 1.4,%; %; -,"hard/hard, 16^3, 300 K, freq rule, star-weighted: share of full-zone ordered pairs; share of kappa_C; per-pair contribution relative to the all-pair mean",e1_pair_counts.csv,FINAL
+npairs_w_hh_hs,493482; 62694; 860160,,"full-zone ordered pairs (star-weighted), hard/hard; hard/soft; all (= 210 N_k), 16^3, 300 K, character rule",e1_pair_counts.csv,FINAL
+kpair_w_hh_hs,7.10; 7.77,1e-7 W/mK,"contribution per full-zone ordered pair, hard/hard; hard/soft (16^3, 300 K, character rule)",e1_pair_counts.csv,FINAL
+vpair_w_hh_hs,3.10; 3.72,W/mK/cm^-1,"summed V per full-zone ordered pair, hard/hard; hard/soft (16^3, 300 K, character rule)",e1_pair_counts.csv,FINAL
+ff_pairsets,19614; 17986; 16438; 1548,,"hard/hard ordered pairs on 16^3 (character rule) at 300 K; at 1000 K; at 1000 K and hard/hard at 300 K under the same (q, branch) indices; at 1000 K entering the sector only there",mode_table_T.csv.gz,FINAL
+n_hard_range,10.6-11.4,,"mean number of hard modes per irreducible q, 16^3, 300-1000 K, both rules",e1_sector_sizes.csv,FINAL
+hh_pairfrac_range,49-57,%,"hard/hard share of ordered pairs, 16^3, 300-1000 K, both rules",e1_pair_counts.csv,FINAL
+eta34_TO1_300_v,0.036,,"eta_3 (16^3 production) + eta_4,max, Gamma-TO1, 300 K (plain sum; Gamma_4,max over 6^3 and 8^3 runs)",s7_margin_inequality.csv,FINAL
+eta34_M_300_v,0.073,,"eta_3 (16^3 production) + eta_4,max, M, 300 K (plain sum; Gamma_4,max over 6^3 and 8^3 runs)",s7_margin_inequality.csv,FINAL
+eta34_R_300_v,0.246,,"eta_3 (16^3 production) + eta_4,max, R, 300 K (plain sum; Gamma_4,max over 6^3 and 8^3 runs)",s7_margin_inequality.csv,FINAL
+R_exp_deficit,51.6; 17.1; 1.5,%,"R-point frequency below experiment (read from Fauqué Fig. 1(d), tracked CSV) at 300; 600; 1000 K",s7b_experiment.csv,FINAL

@@ -1,0 +1,9 @@
+# script: scripts/revision/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# mean number of modes per irreducible q in each group, 16³, both rules (e1_sector_sizes.csv)
+T_K,mesh,labels,n_q,mean_n_A,mean_n_soft,mean_n_hard
+300,16,freq,165,3.0,1.37,10.63
+300,16,char,165,2.87,0.77,11.36
+1000,16,freq,165,3.0,0.66,11.34
+1000,16,char,165,2.08,2.03,10.88

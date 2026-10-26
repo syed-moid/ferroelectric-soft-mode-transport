@@ -1,0 +1,44 @@
+# script: scripts/revision/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# hard/hard share of κ_C under both labelling rules (coherence_blocks_T.csv; 24³ frequency rule from d2_summary.csv)
+T_K,mesh,hh_char_pct,hh_freq_pct
+300,12,63.0,78.7
+300,15,73.5,80.1
+300,16,69.0,73.6
+300,17,71.4,79.1
+300,20,65.0,78.8
+300,24,,80.1
+350,12,70.3,81.2
+350,16,70.7,76.0
+400,12,70.0,81.6
+400,16,70.1,76.2
+400,20,69.9,81.7
+450,12,69.3,80.5
+450,16,66.6,81.0
+500,12,61.7,76.1
+500,16,67.1,83.5
+500,20,69.9,83.9
+550,12,63.4,77.4
+550,16,68.1,86.6
+600,12,64.6,78.3
+600,16,68.3,86.3
+650,12,66.8,79.9
+650,16,68.1,85.9
+650,20,69.7,83.8
+700,12,68.2,81.3
+700,16,70.9,87.1
+750,12,74.7,84.8
+750,16,71.7,87.8
+800,12,71.8,86.2
+800,16,71.4,88.0
+800,20,69.3,84.1
+850,12,71.4,86.0
+850,16,70.7,87.7
+900,12,65.6,84.9
+900,16,70.1,87.1
+950,12,61.9,84.2
+950,16,67.9,86.8
+1000,12,63.6,86.6
+1000,16,68.4,86.7
+1000,20,68.9,85.0

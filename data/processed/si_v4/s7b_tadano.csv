@@ -1,0 +1,13 @@
+# script: scripts/revision/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# lowest SCPH frequencies at 300 K (cm⁻¹) against Tadano & Tsuneyuki 2015 Table I (meV × 8.0655, not rounded; differences from the unrounded values) (r_point_check.csv; data/literature/STO/tadano_2015/scph_convergence_300K.csv)
+q1,PM,Gamma_ours,Gamma_tadano,Gamma_diff_pct,R_ours,R_tadano,R_diff_pct,M_ours,M_tadano,M_diff_pct
+2,on,145.2,143.9692,0.8549,68.22,68.96,-1.0731,100.8,102.9964,-2.1325
+4,on,136.4,138.0007,-1.1599,41.95,45.9734,-8.7515,86.04,88.9625,-3.2851
+8,on,134.0,135.9843,-1.4592,28.93,37.0206,-21.8544,80.82,85.0104,-4.9292
+12,on,133.7,135.0165,-0.975,25.82,35.0043,-26.2376,79.86,85.0104,-6.0585
+16,on,133.6,,,24.93,,,79.6,,
+2,off,167.1,143.9692,16.0665,67.62,68.96,-1.9432,100.2,102.9964,-2.7151
+4,off,161.1,138.0007,16.7385,41.44,45.9734,-9.8608,85.73,88.9625,-3.6335
+8,off,159.2,135.9843,17.0723,27.81,37.0206,-24.8798,80.29,85.0104,-5.5527

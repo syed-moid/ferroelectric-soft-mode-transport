@@ -1,0 +1,17 @@
+# script: scripts/revision/c1_collect.py
+# inputs: data/processed/revision/c1_scph_softmodes.csv; data/raw/alamode_sto (distributed example outputs; IMPORT_NOTE.md); $FEKAPPA_RUNS/rta_{on,off}_k*_m* (zenodo:prequeue_runs.tar.gz)
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# C1 300 K benchmark matrix; PM = SELF_OFFDIAG=1; kmesh_scph = KMESH_SCPH (KMESH_INTERPOLATE 2x2x2 fixed); reference kappa_P = 8.7 W/mK (Tadano & Tsuneyuki 2015, 12^3 BTE, 8^3 SCPH, PM implied)
+config,PM,kmesh_scph,transport_mesh,source,kappa_P,kappa_C,kappa_total,kappa_P_vs_tadano_pct,Omega_Gamma_TO1_meV,Omega_M_meV,Omega_R_meV
+off_k2,False,2,8,submitted (distributed dfc2),9.5283,0.361,9.8893,9.5207,20.722,12.422,8.384
+off_k2,False,2,12,submitted (distributed dfc2),10.308,0.3117,10.62,18.487,20.722,12.422,8.384
+on_k2,True,2,8,own MODE=SCPH,9.4761,0.2829,9.759,8.9207,17.997,12.495,8.4587
+on_k2,True,2,12,own MODE=SCPH,10.931,0.3321,11.263,25.639,17.997,12.495,8.4587
+off_k4,False,4,8,own MODE=SCPH,8.3939,0.3135,8.7074,-3.5184,19.971,10.63,5.1374
+off_k4,False,4,12,own MODE=SCPH,9.3654,0.366,9.7314,7.6483,19.971,10.63,5.1374
+on_k4,True,4,8,own MODE=SCPH,8.2307,0.4003,8.631,-5.3943,16.914,10.668,5.2016
+on_k4,True,4,12,own MODE=SCPH,9.7215,0.2675,9.989,11.741,16.914,10.668,5.2016
+off_k8,False,8,8,own MODE=SCPH,7.7279,0.3553,8.0832,-11.174,19.742,9.9546,3.4481
+off_k8,False,8,12,own MODE=SCPH,8.9195,0.3742,9.2937,2.523,19.742,9.9546,3.4481
+on_k8,True,8,8,own MODE=SCPH,7.6761,0.3641,8.0402,-11.769,16.619,10.02,3.5868
+on_k8,True,8,12,own MODE=SCPH,9.2384,0.279,9.5174,6.1885,16.619,10.02,3.5868

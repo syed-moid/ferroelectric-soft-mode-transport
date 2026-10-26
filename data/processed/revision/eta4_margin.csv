@@ -1,0 +1,9 @@
+# script: scripts/revision/eta4_margin.py
+# inputs: data/provenance/manifest_final.json; data/processed/sto_production/eta_validity_T.csv; data/processed/revision/n4_results.csv
+# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# eta4 needed for eta_3+4 = 0.5 against the largest sampled eta4 = 0.0818 (R, 300 K, 8^3, eps 5); built by scripts/eta4_margin.py
+T_K,eta3_max,eta3_max_mesh,eta3_max_q_index,eta3_max_branch,eta4_needed,needed_over_eta4_max,eta4_max_sampled_at_T
+300,0.1841,20,286,1,0.3159,3.864,0.08176
+800,0.134,20,230,7,0.366,4.476,0.02449
+950,0.163,16,130,7,0.337,4.122,
+1000,0.1063,16,129,7,0.3937,4.816,0.06075
