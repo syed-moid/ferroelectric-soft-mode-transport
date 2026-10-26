@@ -1,13 +1,13 @@
-"""Validation tests for the Turn 4A literature CSV templates.
+"""Validation tests for the v1 literature CSV templates.
 
-These tests are designed to be run *after* the user digitizes data into the
+These tests are designed to be run *after* the data are digitized into the
 empty templates under ``data/literature/``. Several of them are expected to
 fail until the corresponding CSVs are filled; that is by design -- they
 serve as a checklist for the digitization pass.
 
 Pre-filled CSVs (Ehsan 2021 anchors, Shirane Lambda_sq central value) and
 the existence/schema tests pass immediately. The remaining tests pass as the
-user populates the user-required CSVs.
+required CSVs are populated.
 """
 
 from __future__ import annotations
@@ -74,7 +74,7 @@ EXPECTED_SCHEMAS: dict[str, list[str]] = {
     "BTO/harada_axe_shirane_1971/Lambda_sq.csv":
         ["Lambda_sq_meV2_A2", "Lambda_sq_uncertainty_meV2_A2", "T_K",
          "reference_q_range"],
-    # --- STO Tadano 2015 (schemas extended Turn 4A: mode + method on
+    # --- STO Tadano 2015 (schemas extended v1: mode + method on
     #     scph_omega_T; method + source_figure on scph_dispersion) ---
     "STO/tadano_2015/scph_omega_T.csv":
         ["T_K", "mode", "method", "Omega_meV", "Omega_sq_meV2",
@@ -90,7 +90,7 @@ EXPECTED_SCHEMAS: dict[str, list[str]] = {
     "STO/tachibana_2008/kappa_total_T.csv":
         ["T_K", "kappa_W_per_m_K", "kappa_uncertainty", "method", "source"],
     # --- STO Verdi 2023 (sscha_omega_T extended with shift_meV column;
-    #     dispersion and inverse_dielectric_T are new Turn 4A additions) ---
+    #     dispersion and inverse_dielectric_T are new v1 additions) ---
     "STO/verdi_2023/sscha_omega_T.csv":
         ["T_K", "Omega_meV", "Omega_sq_meV2", "method", "shift_meV",
          "source_figure"],
@@ -106,7 +106,7 @@ EXPECTED_SCHEMAS: dict[str, list[str]] = {
          "omega_meV", "omega_uncertainty_meV"],
     "STO/yamada_shirane_1969/gamma_T.csv":
         ["T_K", "gamma_meV", "gamma_uncertainty_meV"],
-    # --- STO Fauque 2022 (Turn 4B HIGHEST-impact STO source: multi-T DHO
+    # --- STO Fauque 2022 (v1 HIGHEST-impact STO source: multi-T DHO
     #     fits at Γ, R, M over 4-1400 K) ---
     "STO/fauque_2022/dho_fits_T.csv":
         ["T_K", "q_label", "q_point_rlu", "mode",
@@ -160,45 +160,45 @@ EXPECTED_SCHEMAS: dict[str, list[str]] = {
         ["T_K", "gamma_meV", "gamma_uncertainty_meV", "phase_mode"],
 }
 
-# CSVs that MUST have at least one data row before Turn 4B can start.
-# Pre-filled and user-required CSVs are both in here. CSVs not listed here
+# CSVs that MUST have at least one data row before v1 can start.
+# Pre-filled and to-be-digitized CSVs are both in here. CSVs not listed here
 # are optional and may stay empty as long as a note is added to the
 # extraction log.
 REQUIRED_NONEMPTY: set[str] = {
     # Pre-filled
     "BTO/ehsan_2021/anchors.csv",
     "BTO/shirane_1970/Lambda_sq.csv",
-    # Turn 4A-extracted (Ehsan high/medium priority)
+    # v1-extracted (Ehsan high/medium priority)
     "BTO/ehsan_2021/free_energy_T.csv",
     "BTO/ehsan_2021/structural_properties.csv",
     "BTO/ehsan_2021/cubic_dispersion.csv",
     "BTO/ehsan_2021/born_charges_epsilon_infty.csv",
-    # Turn 4A-extracted (Tadano 2022)
+    # v1-extracted (Tadano 2022)
     "BTO/tadano_2022/free_energy_T.csv",
     "BTO/tadano_2022/scp_dispersion_plus1pct.csv",
     "BTO/tadano_2022/transition_temperatures.csv",
     "BTO/tadano_2022/kappa_total_T.csv",
-    # Turn 4A-extracted (Shirane 1970 Fig. 3 + Fig. 6)
+    # v1-extracted (Shirane 1970 Fig. 3 + Fig. 6)
     "BTO/shirane_1970/cubic_dispersion.csv",
-    # Turn 4B-extracted (Yamada-Shirane 1969 Table II pre-filled: q=0 Ω(T))
+    # v1-extracted (Yamada-Shirane 1969 Table II pre-filled: q=0 Ω(T))
     "STO/yamada_shirane_1969/omega_T.csv",
-    # Turn 4A-extracted (STO Tadano 2015 high + medium priority)
+    # v1-extracted (STO Tadano 2015 high + medium priority)
     "STO/tadano_2015/scph_omega_T.csv",         # Fig. 5
     "STO/tadano_2015/scph_dispersion.csv",      # Fig. 4
     "STO/tadano_2015/scph_convergence_300K.csv", # Table I
-    # Turn 4A-extracted (STO Verdi 2023 high + medium priority)
+    # v1-extracted (STO Verdi 2023 high + medium priority)
     "STO/verdi_2023/sscha_omega_T.csv",         # Fig. 4(a)
     "STO/verdi_2023/dispersion.csv",            # Figs. 3 + 5
     "STO/verdi_2023/inverse_dielectric_T.csv",  # Fig. 4(b)
-    # Turn 4B HIGH-priority TODOs (templates created; awaiting digitization)
+    # v1 HIGH-priority TODOs (templates created; awaiting digitization)
     "STO/fauque_2022/dho_fits_T.csv",           # Fig. 1(d) Γ/R/M + Figs. 2-3 TA
     "STO/schmidt_2025/sscha_omega_T.csv",       # Fig. 3 top left (16O + 18O)
     "KTO/meier_2022/omega_T.csv",               # Fig. 3(a) KTaO3 Ω²(T)
-    # Turn 4B HIGH-priority TODOs (new library acquisitions)
+    # v1 HIGH-priority TODOs (new library acquisitions)
     "STO/yamada_shirane_1969/gamma_T.csv",      # Fig. 6 experimental STO Γ(T)
     "BTO/harada_axe_shirane_1971/cubic_dispersion.csv",  # Fig. 5 + Fig. 8 cubic Λ²
     "BTO/harada_axe_shirane_1971/mode_parameters.csv",   # Table I ω + Γ (cubic)
-    # Turn 4C HIGH TODO: second KTaO3 source (template; awaiting digitization)
+    # v1 HIGH TODO: second KTaO3 source (template; awaiting digitization)
     "KTO/ranalli_2023/omega_T.csv",             # Fig. 4(a) TO1 Ω(T), 0-300 K
     # Vogt wave: experimental Ω(T)+γ(T), primary η source for both QPEs
     "KTO/vogt_1995/omega_T.csv",                # Fig. 5 KTaO3 Ω(T)
@@ -256,7 +256,7 @@ UNIT_RANGES: dict[str, tuple[float, float]] = {
     "omega_uncertainty_meV": (0.0, 100.0),
     "Omega_uncertainty_meV": (0.0, 100.0),  # Vogt omega files (capital Ω)
     "gamma_uncertainty_meV": (0.0, 20.0),
-    # Structural / electronic properties (Turn 4A extensions)
+    # Structural / electronic properties (v1 extensions)
     "a_angstrom": (3.0, 6.0),
     "c_angstrom": (3.0, 6.0),
     "c_over_a": (0.9, 1.2),
@@ -275,12 +275,12 @@ UNIT_RANGES: dict[str, tuple[float, float]] = {
     "inverse_epsilon": (0.0, 0.1),
     "kappa_W_per_m_K": (0.0, 1000.0),
     "kappa_uncertainty": (0.0, 1000.0),
-    # Turn 4B Schmidt 2025 extensions (polarization axis is µC/cm² per
+    # v1 Schmidt 2025 extensions (polarization axis is µC/cm² per
     # Schmidt Fig. 2, user-confirmed 2026-05-31; column renamed from the
     # original _C_per_m2 to keep the unit-suffix-in-name invariant correct)
     "polarization_uC_per_cm2": (-2.0, 2.0),
     "E_meV_per_fu": (-200.0, 200.0),
-    # Turn 4B Harada-Axe-Shirane 1971 extension (Fig. 7 soft-TO anisotropy
+    # v1 Harada-Axe-Shirane 1971 extension (Fig. 7 soft-TO anisotropy
     # arc): the abscissa is a *signed* angular orientation of q measured from
     # a reference symmetry axis ([100]=0°, [111]≈-54.7°, [110]=+45°).
     "angle_deg": (-90.0, 90.0),
@@ -306,7 +306,7 @@ def test_all_required_csvs_exist(rel_path: str) -> None:
     """Every CSV path declared in digitization_plan.md exists (even empty)."""
     assert (LIT / rel_path).exists(), (
         f"Missing template CSV: data/literature/{rel_path}. "
-        "Re-run Turn 4A scaffolding."
+        "Re-run v1 scaffolding."
     )
 
 
@@ -330,7 +330,7 @@ def test_csv_schemas_match_plan(rel_path: str) -> None:
 def test_required_csv_has_data(rel_path: str) -> None:
     """Required CSVs must have >= 1 data row beyond the header.
 
-    Pre-filled CSVs pass immediately. User-required CSVs fail until digitized.
+    Pre-filled CSVs pass immediately. To-be-digitized CSVs fail until digitized.
     """
     _, rows = _read_rows(LIT / rel_path)
     assert rows, (
@@ -341,7 +341,7 @@ def test_required_csv_has_data(rel_path: str) -> None:
 
 
 # ---------------------------------------------------------------------------
-# 4. Monotonicity of Omega(T) where the brief requires it (STO SCPH/SSCHA)
+# 4. Monotonicity of Omega(T) where it is required (STO SCPH/SSCHA)
 # ---------------------------------------------------------------------------
 @pytest.mark.parametrize("rel_path", sorted(OMEGA_T_CSVS))
 def test_omega_T_curves_monotonicity(rel_path: str) -> None:

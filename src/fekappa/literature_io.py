@@ -1,4 +1,4 @@
-"""Literature CSV loaders for the Turn 4B reduced-kernel pipeline.
+"""Literature CSV loaders for the v1 reduced-kernel pipeline.
 
 One loader per CSV under ``data/literature/{BTO,STO}/``. Each loader:
 
@@ -233,7 +233,7 @@ def load_ehsan_cubic_dispersion() -> pd.DataFrame:
     """BTO Ehsan 2021 Fig. 2 cubic phonon band dispersion (0 K + 500 K).
 
     Notes:
-        ``q_inv_angstrom`` carries Å⁻¹ values after the Turn 4B pre-flight
+        ``q_inv_angstrom`` carries Å⁻¹ values after the v1 pre-flight
         unit fix (converted from r.l.u. via 2π/4.013, Ehsan Table I cubic a).
         Zone-boundary points (X, M, R) are *not* used for Λ² refits in
         NB 06 -- they lie outside the small-q regime where
@@ -273,7 +273,7 @@ def load_tadano2022_transition_temperatures() -> pd.DataFrame:
 def load_tadano2022_kappa_total_T() -> pd.DataFrame:
     """BTO Tadano 2022 Fig. 7 total κ(T) + Muta/Popuri experimental overlays.
 
-    **Scale-overlay only.** Turn 4 explicitly does not validate against total κ.
+    **Scale-overlay only.** v1 explicitly does not validate against total κ.
     """
     return _load_csv("BTO/tadano_2022/kappa_total_T.csv",
                      _provenance("Masuki-Tadano2022", "Fig. 7"))
@@ -679,8 +679,8 @@ def load_ranalli2023_inverse_dielectric_T() -> pd.DataFrame:
 # the intrinsic zone-center DHO damping (kernel-appropriate). The plotted symbol
 # is lowercase γ (the standard DHO damping constant), distinct from the
 # theoretical Eq. (13) self-energy Γ (which is HWHM). Reading γ as the standard
-# DHO constant => γ = FWHM => Γ_HWHM = γ/2. This matches the brief's §1 numbers
-# (STO 300 K: Ω=10.54, γ=3.04 → η=0.15 on the FWHM basis) and turns the raw
+# DHO constant => γ = FWHM => Γ_HWHM = γ/2. This matches the reference numbers
+# (STO 300 K: Ω=10.54, γ=3.04 → η=0.15 on the FWHM basis; METHODS_AND_CAVEATS.md C6) and turns the raw
 # YS-vs-Vogt 3.3× into a ~1.7× residual physical difference.
 # **Factor-of-2 systematic FLAG:** if Vogt's fit actually used his Eq.-13 Γ
 # (HWHM), use γ directly and η doubles (0.15→0.29). Refs. 29-30 (PRB 34,410

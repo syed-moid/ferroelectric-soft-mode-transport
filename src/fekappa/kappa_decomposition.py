@@ -11,7 +11,7 @@ closure is the units gate for everything downstream (C from
 :func:`fekappa.alamode_io.tau_ps_from_gamma_hwhm_cm1`, star velocities from the
 ``.result`` file).
 
-Sector split (stated per the brief): **omega-band partition with a branch-index
+Sector split: **omega-band partition with a branch-index
 acoustic tag** -- ``acoustic`` = the three lowest branches at each q,
 ``soft-optic`` = branches >= 4 with Omega below the boundary (default 175 cm^-1,
 the partition validated in the companion lattice-dynamics project),

@@ -1,4 +1,4 @@
-"""Soft-mode particle-like thermal-conductivity kernel ``K_soft`` (Turn 4B §9).
+"""Soft-mode particle-like thermal-conductivity kernel ``K_soft``.
 
 The diagonal (particle-like / populations) contribution of the single soft
 optical branch, in the relaxation-time approximation -- the ``K_P`` term of the
@@ -20,7 +20,7 @@ Collapsing the angular integral leaves a 1-D radial quadrature
 
     kappa_soft = (1 / 6 pi^2) integral_0^{q_max} q^2 C(Omega_q) v_q^2 tau_q dq .
 
-Per-factor units (the unit-check the brief asks for; SI unless noted):
+Per-factor units (SI unless noted; checked in tests/test_kappa_kernel.py):
 
     q           [1/m]    radial wavevector (quadrature done in 1/Ang, * 1e30 -> 1/m^3)
     C(Omega_q)  [J/K]    mode heat capacity  k_B x^2 e^x/(e^x-1)^2,  x = Omega/k_B T
@@ -132,7 +132,7 @@ def K_soft(
         T_K: Temperature(s) [K]. Vectorized.
         V_cell_ang3: Primitive-cell volume [Ang^3]; sets the Debye cutoff ``q_max``.
         n_q: Radial quadrature points on ``[0, q_max]``.
-        overdamped_threshold: ``eta`` above which the K_P picture is flagged invalid.
+        overdamped_threshold: ``eta`` above which the K_P picture is marked invalid.
         warn: Emit overdamped / skipped-row warnings (set ``False`` to silence).
         q_max_ang1: Optional radial cutoff [1/Ang] replacing the Debye-sphere
             ``q_max`` (used for the small-q kernel's q_c envelope).
@@ -210,7 +210,7 @@ def K_soft_sweep(
 
 
 # ---------------------------------------------------------------------------
-# Per-material registry (Turn 4B §9 locked inputs)
+# Per-material registry (v1 locked inputs)
 # ---------------------------------------------------------------------------
 #   lambda_sq        [meV^2 Ang^2]  soft-branch curvature
 #   lambda_sq_frac_unc             fractional 1-sigma envelope on Lambda^2

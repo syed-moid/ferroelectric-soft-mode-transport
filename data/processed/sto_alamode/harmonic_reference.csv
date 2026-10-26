@@ -1,4 +1,4 @@
-# source: author's own Quantum ESPRESSO DFPT pipeline in the companion
+# source: an independent Quantum ESPRESSO DFPT calculation in the companion
 # lattice-dynamics repository (values copied 2026-08-18 from its committed
 # outputs: dft/qe/{SrTiO3,BaTiO3}/relax*/vc_relax.out, harmonic_gamma/,
 # data/processed/{unstable_bz_fraction.csv,sound_velocities.csv})

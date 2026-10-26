@@ -1,4 +1,4 @@
-"""Soft-mode damping ratio eta = Gamma_HWHM / Omega (Turn 4B Amendment-2 §8).
+"""Soft-mode damping ratio eta = Gamma_HWHM / Omega.
 
 Canonical convention: ``eta = Gamma_HWHM / Omega``, underdamped threshold
 ``eta < 0.5`` (HWHM < Omega/2  <=>  FWHM < Omega).

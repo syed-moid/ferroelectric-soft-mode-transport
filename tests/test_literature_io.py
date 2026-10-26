@@ -1,8 +1,8 @@
-"""Tests for ``fekappa.literature_io`` loaders (Turn 4B §2.1).
+"""Tests for ``fekappa.literature_io`` loaders.
 
 One test per loader, verifying shape, expected columns (implicit -- the loader
 raises if columns disagree), and key sentinel values matching the headline
-assertions in ``notebooks/05b_data_review.ipynb`` (Turn 4B brief §1).
+assertions in ``notebooks/05b_data_review.ipynb``.
 """
 
 from __future__ import annotations
@@ -58,12 +58,12 @@ def test_load_ehsan_structural() -> None:
 
 def test_load_ehsan_cubic_dispersion() -> None:
     df = lit.load_ehsan_cubic_dispersion()
-    # Turn 4B unit fix: q_inv_angstrom is now Å^-1, X point should be ~0.78 Å^-1.
+    # v1 unit fix: q_inv_angstrom is now Å^-1, X point should be ~0.78 Å^-1.
     x_rows = df[df["q_label"] == "X"]
     assert not x_rows.empty
     q_X = float(x_rows["q_inv_angstrom"].iloc[0])
     assert math.isclose(q_X, 0.7829, abs_tol=0.001), (
-        "Ehsan cubic_dispersion q(X) should be 0.7829 Å^-1 after Turn 4B "
+        "Ehsan cubic_dispersion q(X) should be 0.7829 Å^-1 after v1 "
         f"unit fix; got {q_X}"
     )
     # Soft mode at Γ matches the anchors.
@@ -221,7 +221,7 @@ def test_load_verdi_inverse_dielectric_T() -> None:
 
 
 # ---------------------------------------------------------------------------
-# STO Yamada-Shirane 1969 (Table II q=0 Omega(T) pre-filled Turn 4B;
+# STO Yamada-Shirane 1969 (Table II q=0 Omega(T) pre-filled v1;
 # gamma_T still an empty placeholder pending Fig. 6 digitization)
 # ---------------------------------------------------------------------------
 def test_load_yamada_shirane_omega_T() -> None:

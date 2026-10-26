@@ -1,6 +1,6 @@
 """Tests for fekappa.eta -- the eta = Gamma_HWHM/Omega damping ratio module.
 
-Locks the Turn 4B Amendment-2 §8 results:
+Locks the v1 results:
   * eta_STO ~ 0.109 and eta_KTaO3 ~ 0.126 from the dense Vogt 1995 sources,
   * the two quantum-paraelectrics cluster (|delta| small, both << 0.5),
   * the Vogt FWHM->HWHM /2 is applied exactly once (regression vs double/none),

@@ -6,7 +6,7 @@ Cochran-like temperature dependence on either side of the transition. SCPH
 producing the temperature-dependent force constants; this module provides:
 
 * The phenomenological two-branch Cochran fit (:func:`fit_soft_mode_two_branch`).
-* An externally calibrated **scalar SCPH** iteration (Turn 4): the soft-mode
+* An externally calibrated **scalar SCPH** iteration: the soft-mode
   self-consistency loop reduced to a single mode whose quartic constant ``A``
   is fixed from two literature anchors (Ehsan *et al.* PRB 103, 094108 (2021)
   two-anchor scheme, option (b)). Section 3.3-3.7 of the manuscript.
@@ -20,7 +20,7 @@ from numpy.typing import ArrayLike
 from scipy.constants import physical_constants
 
 # Boltzmann constant in meV/K. T (K) -> kT (meV) is just KB_MEV_K * T;
-# the inverse 1 / KB_MEV_K = 11.604518 K/meV is the conversion the brief quotes.
+# the inverse 1 / KB_MEV_K = 11.604518 K/meV is the conversion used in the text.
 KB_MEV_K: float = 1e3 * physical_constants["Boltzmann constant in eV/K"][0]
 
 
@@ -113,7 +113,7 @@ def _bose_factor(E_meV: float, T_K: float) -> float:
     """Bose-Einstein occupation ``n_B(E, T)`` with ``E`` in meV, ``T`` in K.
 
     When ``E`` is negative (transient during SCPH iteration), the magnitude
-    ``|E|`` is used, per the brief. Returns 0 at ``T <= 0`` or for arguments
+    ``|E|`` is used. Returns 0 at ``T <= 0`` or for arguments
     that would overflow ``exp``.
     """
     if T_K <= 0.0:
@@ -143,7 +143,7 @@ def calibrate_A_from_ehsan(
         A = (E_anchor^2 - E_0^2) / (2 * n_B(E_anchor, T_anchor) + 1).
 
     Defaults reproduce the Ehsan *et al.* PRB 103, 094108 (2021) BaTiO3 anchors
-    (Lock 1 + Lock 2 of Turn 4): ``E_0^2 = -424`` meV^2 (166i cm^-1) and
+    (Lock 1 + Lock 2 of v1): ``E_0^2 = -424`` meV^2 (166i cm^-1) and
     ``hbar Omega(500 K) = 21.08`` meV.
 
     Args:
@@ -178,7 +178,7 @@ def scph_iterate(
         E_{m+1}^2 = (1 - alpha) * E_m^2 + alpha * [E_0^2 + A * (2 n_B(E_m, T) + 1)],
 
     starting from ``E_init_meV``. The Bose factor uses ``sqrt(|E^2|)`` when the
-    proposal becomes momentarily negative (per the Turn 4 brief). If the
+    proposal becomes momentarily negative. If the
     iteration converges to a negative ``E^2``, that value is returned as-is;
     the caller interprets the sign.
 

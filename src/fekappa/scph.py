@@ -11,8 +11,8 @@ A scalar-SCPH iteration with the Ehsan 2021 two-anchor calibration was drafted
 during a first Turn-4 attempt and aborted (the calibration disagreed with the
 hybrid BTO dataset by >2800% at T_c). That snapshot is preserved in
 ``archive/scph_calibration/scph_calibration_snapshot.py`` and is not part of
-the active package; the current Turn 4 instead works from literature-extracted
-benchmark curves loaded via :mod:`fekappa.literature_io` (added in Turn 4B).
+the active package; v1 instead works from literature-extracted
+benchmark curves loaded via :mod:`fekappa.literature_io` (added in v1).
 """
 
 from __future__ import annotations
@@ -116,8 +116,8 @@ def scph_iterate(*args, **kwargs):
 
     Note:
         A scalar-SCPH iteration calibrated from Ehsan 2021 anchors was drafted
-        and aborted in Turn 4 (snapshot kept under
-        ``archive/scph_calibration/``); the current Turn 4 takes a
+        and aborted in v1 (snapshot kept under
+        ``archive/scph_calibration/``); v1 takes a
         literature-benchmark approach instead. A full SCPH self-consistency
         loop will be implemented in a later turn against new first-principles
         force constants.

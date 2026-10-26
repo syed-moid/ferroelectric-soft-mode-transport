@@ -9,7 +9,7 @@ The raw inputs are:
 * ``ShiraneFig4a.csv`` / ``ShiraneFig4b.csv`` -- digitized inelastic-neutron
   energy-loss spectra of single-domain **BaTiO3** at 22 C (~295 K) from two
   different (q, e) configurations in Fig. 4 of Shirane, Axe, Harada & Linz,
-  Phys. Rev. B 2, 3651 (1970). (Note: corrected from SrTiO3 in Turn 1.)
+  Phys. Rev. B 2, 3651 (1970). (Note: corrected from SrTiO3 in v1.)
 """
 
 from __future__ import annotations
