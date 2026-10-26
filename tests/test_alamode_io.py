@@ -30,7 +30,8 @@ RAW_DIR = REPO / "data" / "raw" / "alamode_sto"
 TIDY_DIR = REPO / "data" / "processed" / "sto_alamode"
 
 needs_raw = pytest.mark.skipif(
-    not RAW_DIR.is_dir(), reason="raw ALAMODE dataset not present (local-only)"
+    not (RAW_DIR / "STO_RTA_production.result").is_file(),  # the directory itself holds the tracked IMPORT_NOTE.md
+    reason="raw ALAMODE dataset not present (local-only)"
 )
 
 
