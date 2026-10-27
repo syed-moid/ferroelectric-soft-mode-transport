@@ -115,6 +115,10 @@ def build_scrub(manifest: dict, toolchain: Path) -> tuple[list[tuple[re.Pattern,
     # repository, then any remaining home directory
     for path, token in ((toolchain.resolve() / "runs", "<runs>"), (toolchain.resolve(), "<toolchain>"), (ROOT, "<repo>")):
         rules.append((re.compile(re.escape(str(path))), token))
+        try:  # the same directory in its home-relative (tilde) form
+            rules.append((re.compile(re.escape(str(Path("~") / path.relative_to(Path.home())))), token))
+        except ValueError:
+            pass
     rules.append((re.compile(re.escape(HOME_PARENT) + r"/[^\s\"'<>]+"), "<home>"))
     for h in sorted(host_token, key=len, reverse=True):
         rules.append((re.compile(re.escape(h)), host_token[h]))
