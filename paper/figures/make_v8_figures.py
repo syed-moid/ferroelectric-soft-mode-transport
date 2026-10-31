@@ -2,8 +2,8 @@
 
 Fig. 1  convergence with transport mesh: kappa_P (a) and kappa_C (b) vs mesh at 300, 500, 800 K
 Fig. 2  damping ratio: eta vs Omega on 16^3 at 300, 650, 1000 K (a); kappa-weighted fractions eta > 0.05, > 0.1 vs T (b)
-Fig. 3  particle conductivity: kappa_P(T) on 16^3 with the published SCPH values and experiment, all literature
-        points read from figure (a); sector shares, eigenvector-character rule (b)
+Fig. 3  particle and total conductivity: kappa_P(T) and kappa_P + kappa_C on 16^3 with the published SCPH values and
+        the measured totals, all literature points read from figure (a); sector shares, eigenvector-character rule (b)
 Fig. 4  coherent conductivity: kappa_C(T) per mesh with the 300 K range over >= 15^3 (a); hard/hard block vs the
         other five coherence blocks, 16^3, character rule (b)
 
@@ -88,6 +88,9 @@ ex = rd(PJ / "exp_datasets.csv")
 fig, (a, b) = plt.subplots(1, 2, figsize=(8.8, 3.4))
 m16 = km[(km.mesh == 16) & MAIN].sort_values("T_K")
 a.plot(m16.T_K, m16.kappa_P, color=INK, lw=1.8, marker="o", ms=4, label=r"this work, $\kappa_\mathrm{P}$ ($16^3$, reference mesh)", zorder=4)
+# the measured values are totals: kappa_P + kappa_C from the same table (9.40 at 300 K)
+a.plot(m16.T_K, m16.kappa_P + m16.kappa_C, color=INK, lw=1.1, ls="-.", marker="o", ms=3.5, mfc="white",
+       label=r"this work, $\kappa_\mathrm{P}+\kappa_\mathrm{C}$ ($16^3$)", zorder=4)
 t = ex[ex.dataset == "Tadano2015_calc"]
 a.plot(t.T_K, t.kappa_W_mK, color=INK2, lw=1.4, ls="--", marker="^", ms=5, mfc="white",
        label="SCPH, Ref. [1] (read from figure)", zorder=3)
@@ -97,16 +100,13 @@ a.errorbar(mu.T_K, mu.kappa_W_mK, yerr=mu.unc_W_mK, fmt="D", ms=5, color=INK, mf
 po = ex[ex.dataset == "Popuri2014"]
 a.errorbar(po.T_K, po.kappa_W_mK, yerr=[po.kappa_W_mK - po.bar_lo, po.bar_hi - po.kappa_W_mK], fmt="o", ms=5,
            color=INK3, mfc="white", lw=0.8, capsize=2, label="Popuri et al. (read from figure)", zorder=5)
-tb = ex[ex.dataset == "Tachibana2008"]
-a.errorbar(tb.T_K, tb.kappa_W_mK, yerr=tb.unc_W_mK, fmt="s", ms=6, color=INK, lw=1.0, capsize=3,
-           label="Tachibana et al.", zorder=6)
 a.set_xlabel(r"$T$ (K)"); a.set_ylabel(r"$\kappa$ (W m$^{-1}$ K$^{-1}$)"); a.set_xlim(280, 1020)
 a.legend(frameon=False, fontsize=7.5); style(a); pubstyle.panel_label(a, "a")
 s = sec[(sec.mesh == 16) & (sec.labels == "char") & (sec.T_K >= 300)].sort_values("T_K")
-for col, name, ls in (("kappa_P_A", "acoustic", "-"), ("kappa_P_soft", "soft", "--"), ("kappa_P_hard", "hard", "-")):
+for col, grp, ls in (("kappa_P_A", "acoustic", "-"), ("kappa_P_soft", "soft", "--"), ("kappa_P_hard", "hard", "-")):
     y = 100 * s[col] / s.kappa_P
-    b.plot(s.T_K, y, color=SECTOR[name], lw=2, ls=ls, zorder=3)
-    b.annotate(f"{name} optical" if name != "acoustic" else name, xy=(s.T_K.iloc[-1], y.iloc[-1]),
+    b.plot(s.T_K, y, color=SECTOR[grp], lw=2, ls=ls, zorder=3)
+    b.annotate(f"{grp} optical" if grp != "acoustic" else grp, xy=(s.T_K.iloc[-1], y.iloc[-1]),
                xytext=(4, 0), textcoords="offset points", va="center", fontsize=8, color=INK)
 b.set_xlabel(r"$T$ (K)"); b.set_ylabel(r"share of $\kappa_\mathrm{P}$ (%)"); b.set_ylim(0, 100); b.set_xlim(280, 1150)
 b.set_xticks([300, 500, 700, 900])
