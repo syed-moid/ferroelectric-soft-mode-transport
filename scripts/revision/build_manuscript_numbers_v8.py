@@ -46,9 +46,6 @@ add("kP_300_best", f"{kP_best:.2f} (observed spread {km[(km.T_K == 300) & (km.me
     f"kappa_P(300 K) best estimate = mean of the >= 15^3 meshes ({','.join(str(m) for m in sorted(big.mesh))})", "kappa_mesh_T.csv")
 add("ktot_300_best", round(kP_best + kC_best, 2), "W/mK", "kappa_P + kappa_C, means of the >= 15^3 meshes at 300 K",
     "kappa_mesh_T.csv")
-add("exp_gap_pct", round(100 * ((kP_best + kC_best) / 11.0 - 1), 1), "%",
-    "kappa_total(300 K) vs 11 +- 1 W/mK (Tachibana 2008, single crystal, approx.)",
-    "data/literature/STO/tachibana_2008/kappa_total_T.csv", "CHOICE")
 add("dkP_sampling_pct", "16 (without PM: 10.31 vs 8.92 W/mK); 18 (with PM: 10.93 vs 9.24 W/mK)", "%",
     "kappa_P(300 K, 12^3 mesh) raised by SCPH q1 2^3 relative to the dense-grid value at matched settings "
     "(base = q1 8^3; +15.6 / +18.3)",
@@ -319,19 +316,18 @@ add("kP_vs_pub_pct", f"+{100 * (kP_best / KPUB - 1):.0f}", "%", "best estimate v
 xg = rd(PJ / "exp_gap_vs_T.csv")
 xr = rd(PJ / "exp_300K_crossread.csv")
 m300 = xr[(xr.dataset == "Muta2005") & xr.T_K.between(295, 305)].kappa_W_mK
-kmu = (min(float(xg[xg.T_K == 300]["k_Muta2005"].iloc[0]), m300.min()), max(m300.max(), 11.0))
-kmu = (round(kmu[0], 2), round(m300.max(), 2))
-gaps = [100 * (1 - t / ke) for ke in (11.0, *kmu) for t in (tot5.min(), tot5.max())]
-gP = [100 * (1 - t / ke) for ke in (11.0, *kmu) for t in (big5.kappa_P.min(), big5.kappa_P.max())]
+kmu = (round(min(float(xg[xg.T_K == 300]["k_Muta2005"].iloc[0]), m300.min()), 2), round(m300.max(), 2))
+gaps = [100 * (1 - t / ke) for ke in kmu for t in (tot5.min(), tot5.max())]
+gP = [100 * (1 - t / ke) for ke in kmu for t in (big5.kappa_P.min(), big5.kappa_P.max())]
 add("exp_gap_range", f"{min(gaps):.0f}-{max(gaps):.0f} %", "%",
     f"kappa_total(300 K) observed spread {tot5.min():.2f}-{tot5.max():.2f} below the single-crystal values (Muta 2005 "
-    f"{kmu[0]:.2f}-{kmu[1]:.2f}, read from three figures; Tachibana 2008 11); kappa_P {min(gP):.0f}-{max(gP):.0f} % below; "
-    "with Tachibana's +-1: 3.5-22 %", "exp_300K_crossread.csv; exp_gap_vs_T.csv; SI Sec. S7b and Sec. 5.1 (exp_datasets.csv)")
+    f"{kmu[0]:.2f}-{kmu[1]:.2f}, read from three figures); kappa_P {min(gP):.0f}-{max(gP):.0f} % below",
+    "exp_300K_crossread.csv; exp_gap_vs_T.csv; SI Sec. S7b and Sec. 5.1 (exp_datasets.csv)")
 add("exp_gap_kP", f"{min(gP):.0f}-{max(gP):.0f} %", "%", "kappa_P(300 K), >= 15^3 meshes, below the same values",
     "exp_300K_crossread.csv")
 add("exp_datasets_300", f"{kmu[0]:.1f}-{kmu[1]:.1f}", "W/mK",
     f"Muta 2005 at 300 K, {kmu[0]:.2f}-{kmu[1]:.2f}, read from figure in Tadano Fig. 7, Wang Fig. 4 and Guo & Guo "
-    "Fig. 10 (+-0.13-0.32; reduced/La-doped single crystal per its title); Tachibana 2008: 11 +- 1 (tracked CSV); "
+    "Fig. 10 (+-0.13-0.32; reduced/La-doped single crystal per its title); "
     "Popuri 2014 has no point below 321 K (9.8 at 321-325 K)",
     "exp_300K_crossread.csv; exp_datasets.csv")
 # Guo & Guo 2023 (prior_work_comparison.md; values stated on pp.5-6): four-phonon reduction computed from their stated values
@@ -358,10 +354,42 @@ dense = t300[t300.index >= 15]
 add("kP_ref_16", f"{k(300, 16, 'kappa_P'):.2f}", "W/mK", "designated reference kappa_P(300 K): 16^3, the only mesh >= 15^3 at every T",
     "kappa_mesh_T.csv")
 _kp = t300[t300.index >= 12].kappa_P
+add("kP_300_m8", f"{k(300, 8, 'kappa_P'):.2f}", "W/mK", "kappa_P(300 K) on the 8^3 mesh, excluded from the tested-mesh ranges "
+    "(Sec. 3.2)", "kappa_mesh_T.csv")
+add("kP_m8_ref_pct", f"{100 * (1 - k(300, 8, 'kappa_P') / k(300, 16, 'kappa_P')):.0f}", "%",
+    "kappa_P(300 K) on 8^3 below the 16^3 reference (7.5376 / 8.8907 - 1 = -15.2%)", "kappa_mesh_T.csv")
 add("kP_300_tested", f"{_kp.min():.2f}-{_kp.max():.2f}", "W/mK", "kappa_P(300 K) over the tested meshes 12^3-24^3",
     "kappa_mesh_T.csv")
 add("kC_300_tested", f"{dense.kappa_C.min():.3f}-{dense.kappa_C.max():.3f}", "W/mK",
     "kappa_C(300 K) over the tested meshes 15^3-24^3 (observed range, not an error bar)", "kappa_mesh_T.csv")
+add("kC_300_dense_spread_pct", f"{100 * (dense.kappa_C.max() - dense.kappa_C.min()) / k(300, 16, 'kappa_C'):.1f}", "%",
+    "kappa_C(300 K) spread (max - min) over 15^3-24^3 relative to 16^3 (observed range, not an uncertainty bound; "
+    "Table S4's 12^3-up spread includes 12^3)", "kappa_mesh_T.csv")
+# Manifest entries vs Table S1 builds; the 1000 K damping maximum; dfc2 control
+_kinds = [(j["kind"], str(j.get("build"))) for j in man.values()]
+add("n_manifest_entries", len(man), "", "entries of the job manifest (data/provenance/manifest_final.json)", "manifest_final.json")
+add("n_jobs_by_build", sum(b.startswith(("alamode@", "AUDIT:")) for _, b in _kinds), "",
+    "solver jobs with a recorded anphon build (the job counts of SI Table S1)", "manifest_final.json")
+add("n_jobs_imported", sum(b.startswith("imported:") for _, b in _kinds), "",
+    "solver results imported from the pre-queue runs (build field 'imported: ... same toolchain'; no build hash)",
+    "manifest_final.json")
+add("n_jobs_decision", sum(k == "decision" for k, _ in _kinds), "", "queue decision steps (no solver run)",
+    "manifest_final.json")
+_ev = rd(ROOT / "data/processed/sto_production/eta_validity_T.csv").set_index(["T_K", "mesh"]).loc[(1000, 16)]
+_mt16 = mt[mt.mesh == 16]
+_mx = _mt16[(_mt16.T_K == 1000) & (_mt16.q_index == int(_ev.eta_max_q_index)) & (_mt16.branch == int(_ev.eta_max_branch))]
+assert len(_mx) == 1 and abs(float(_mx.eta.iloc[0]) - float(_ev.eta_max)) < 1e-9
+add("etamax_1000_G", f"{float(_mx.gamma_hwhm_cm1.iloc[0]):.1f}", "cm-1",
+    f"Gamma of the eta-maximizing mode on 16^3 at 1000 K (q index {int(_ev.eta_max_q_index)} = "
+    f"({_mx.q_frac_x.iloc[0]:g}, {_mx.q_frac_y.iloc[0]:g}, {_mx.q_frac_z.iloc[0]:g}), branch {int(_ev.eta_max_branch)})",
+    "mode_table_T.csv.gz; eta_validity_T.csv")
+_d = rd(PJ / "dfc2_reproduction.csv")
+_d = _d[_d.T_K > 0]
+add("dfc2_dPhi_range", f"{_d.max_abs_dPhi_Ry_bohr2.min():.3f}-{_d.max_abs_dPhi_Ry_bohr2.max():.3f}", "Ry/bohr^2",
+    "largest |Delta Phi| per temperature block, 50-1000 K (distributed .scph_dfc2)", "dfc2_reproduction.csv")
+_m = rd(PJ / "mfp_vs_eta.csv")
+add("mfp28_300_eta_max", f"{_m[(_m.T_K == 300) & _m.mfp_cut.str.startswith('2.8')].eta_max.iloc[0]:.3f}", "",
+    "largest eta of the modes with |v| tau < 2.8 A, 16^3, 300 K (SI Table S31)", "mfp_vs_eta.csv")
 _tot = dense.kappa_P + dense.kappa_C
 add("ktot_300_paired", f"{_tot.min():.2f}-{_tot.max():.2f}", "W/mK", "kappa_P + kappa_C paired per mesh, 15^3-24^3, 300 K",
     "kappa_mesh_T.csv")

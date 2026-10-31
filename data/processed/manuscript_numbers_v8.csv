@@ -1,6 +1,6 @@
 # script: scripts/revision/build_manuscript_numbers_v8.py
 # inputs: data/processed/sto_production/; data/processed/revision/; data/processed/si_v4/; data/provenance/manifest_final.json; data/literature/STO/
-# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# generated: 2026-10-31; fekappa 3.1.0; manifest_final.json sha256 b9e3d32ab98b
 # v8 placeholder values from production only (own SCPH q1 = 12^3, PM); 300-1000 K main text
 # status FINAL / CHOICE / PENDING
 placeholder,value,units,description,source,status
@@ -11,7 +11,6 @@ a_bohr,7.363,bohr,fixed cubic lattice parameter (3.8963 A),rta.in,FINAL
 kP_300_16_prod,8.891,W/mK,"kappa_P(300 K), 16^3",kappa_mesh_T.csv,FINAL
 kP_300_best,9.06 (observed spread 8.89-9.21 over 12^3-24^3),W/mK,"kappa_P(300 K) best estimate = mean of the >= 15^3 meshes (15,16,17,20,24)",kappa_mesh_T.csv,FINAL
 ktot_300_best,9.57,W/mK,"kappa_P + kappa_C, means of the >= 15^3 meshes at 300 K",kappa_mesh_T.csv,FINAL
-exp_gap_pct,-13.0,%,"kappa_total(300 K) vs 11 +- 1 W/mK (Tachibana 2008, single crystal, approx.)",data/literature/STO/tachibana_2008/kappa_total_T.csv,CHOICE
 dkP_sampling_pct,16 (without PM: 10.31 vs 8.92 W/mK); 18 (with PM: 10.93 vs 9.24 W/mK),%,"kappa_P(300 K, 12^3 mesh) raised by SCPH q1 2^3 relative to the dense-grid value at matched settings (base = q1 8^3; +15.6 / +18.3)","runs rta_on_k2_m12, rta_on_k8_m12, rta_off_k8_m12; AUDIT_REPORT_W1 (10.31)",FINAL
 dkP_PM_pct,3.6,%,"PM on vs off at q1 = 8^3, 12^3 mesh, 300 K","runs rta_on_k8_m12, rta_off_k8_m12",FINAL
 dkP_q1_8_12_pct,-1.4,%,"kappa_P(300 K, 12^3 mesh), SCPH q1 8^3 -> 12^3",docs/recorded_rules.md (R1),FINAL
@@ -103,9 +102,9 @@ kP_pub,8.7,W/mK,"published SCPH kappa_P(300 K), read from figure (Tadano 2015 Fi
 kP_pub_settings,9.24,W/mK,"ours at the published settings (q1 8^3, PM, 12^3 mesh), 300 K",run rta_on_k8_m12 / rta_pm_q8_T300_m12,FINAL
 kP_pub_settings_pct,+6,%,ours at published settings vs 8.7,,FINAL
 kP_vs_pub_pct,+4,%,best estimate vs 8.7,kappa_mesh_T.csv,FINAL
-exp_gap_range,12-16 %,%,"kappa_total(300 K) observed spread 9.40-9.65 below the single-crystal values (Muta 2005 11.03-11.14, read from three figures; Tachibana 2008 11); kappa_P 16-20 % below; with Tachibana's +-1: 3.5-22 %",exp_300K_crossread.csv; exp_gap_vs_T.csv; SI Sec. S7b and Sec. 5.1 (exp_datasets.csv),FINAL
-exp_gap_kP,16-20 %,%,"kappa_P(300 K), >= 15^3 meshes, below the same values",exp_300K_crossread.csv,FINAL
-exp_datasets_300,11.0-11.1,W/mK,"Muta 2005 at 300 K, 11.03-11.14, read from figure in Tadano Fig. 7, Wang Fig. 4 and Guo & Guo Fig. 10 (+-0.13-0.32; reduced/La-doped single crystal per its title); Tachibana 2008: 11 +- 1 (tracked CSV); Popuri 2014 has no point below 321 K (9.8 at 321-325 K)",exp_300K_crossread.csv; exp_datasets.csv,FINAL
+exp_gap_range,13-16 %,%,"kappa_total(300 K) observed spread 9.40-9.65 below the single-crystal values (Muta 2005 11.03-11.14, read from three figures); kappa_P 17-20 % below",exp_300K_crossread.csv; exp_gap_vs_T.csv; SI Sec. S7b and Sec. 5.1 (exp_datasets.csv),FINAL
+exp_gap_kP,17-20 %,%,"kappa_P(300 K), >= 15^3 meshes, below the same values",exp_300K_crossread.csv,FINAL
+exp_datasets_300,11.0-11.1,W/mK,"Muta 2005 at 300 K, 11.03-11.14, read from figure in Tadano Fig. 7, Wang Fig. 4 and Guo & Guo Fig. 10 (+-0.13-0.32; reduced/La-doped single crystal per its title); Popuri 2014 has no point below 321 K (9.8 at 321-325 K)",exp_300K_crossread.csv; exp_datasets.csv,FINAL
 g4_lit_guo,35-37 % (300 K); 44-45 % (900 K),%,"kappa reduction by four-phonon scattering, computed from Guo & Guo's stated 3ph and 3+4ph values (ITA / RTA)",prior_work_comparison.md (Guo & Guo p.5),FINAL
 g4_lit_band,15-20; 35-45,%,literature band of the four-phonon kappa reduction,SI Sec. S10 (prior_work_comparison.md),FINAL
 mfp28_300,13 % of modes; 0.1 % of kappa_P; eta <= 0.16 (median 0.024),,"modes with MFP = |v| tau < 2.8 A, 16^3, 300 K",mfp_vs_eta.csv,FINAL
@@ -113,8 +112,18 @@ mfp28_900,24 % of modes; 0.6 % of kappa_P; eta <= 0.09 (median 0.041),,"modes wi
 alpha_300_800,0.50-0.51,,"kappa_P ~ T^-alpha, 300-800 K, meshes 12/16/20 (Muta read from figure: 0.69)",wang_comparisons.csv; SI Sec. S7b and Sec. 5.1 (exp_datasets.csv),FINAL
 Tc_R_fit,245,K,"mean-field fit Omega_R^2 = A(T - Tc), 300-600 K, q1 = 12^3",r_point_check.csv,FINAL
 kP_ref_16,8.89,W/mK,"designated reference kappa_P(300 K): 16^3, the only mesh >= 15^3 at every T",kappa_mesh_T.csv,FINAL
+kP_300_m8,7.54,W/mK,"kappa_P(300 K) on the 8^3 mesh, excluded from the tested-mesh ranges (Sec. 3.2)",kappa_mesh_T.csv,FINAL
+kP_m8_ref_pct,15,%,kappa_P(300 K) on 8^3 below the 16^3 reference (7.5376 / 8.8907 - 1 = -15.2%),kappa_mesh_T.csv,FINAL
 kP_300_tested,8.89-9.21,W/mK,kappa_P(300 K) over the tested meshes 12^3-24^3,kappa_mesh_T.csv,FINAL
 kC_300_tested,0.442-0.541,W/mK,"kappa_C(300 K) over the tested meshes 15^3-24^3 (observed range, not an error bar)",kappa_mesh_T.csv,FINAL
+kC_300_dense_spread_pct,19.6,%,"kappa_C(300 K) spread (max - min) over 15^3-24^3 relative to 16^3 (observed range, not an uncertainty bound; Table S4's 12^3-up spread includes 12^3)",kappa_mesh_T.csv,FINAL
+n_manifest_entries,170,,entries of the job manifest (data/provenance/manifest_final.json),manifest_final.json,FINAL
+n_jobs_by_build,166,,solver jobs with a recorded anphon build (the job counts of SI Table S1),manifest_final.json,FINAL
+n_jobs_imported,3,,solver results imported from the pre-queue runs (build field 'imported: ... same toolchain'; no build hash),manifest_final.json,FINAL
+n_jobs_decision,1,,queue decision steps (no solver run),manifest_final.json,FINAL
+etamax_1000_G,30.0,cm-1,"Gamma of the eta-maximizing mode on 16^3 at 1000 K (q index 129 = (0.1875, 0.4375, -0.5), branch 7)",mode_table_T.csv.gz; eta_validity_T.csv,FINAL
+dfc2_dPhi_range,0.019-0.074,Ry/bohr^2,"largest |Delta Phi| per temperature block, 50-1000 K (distributed .scph_dfc2)",dfc2_reproduction.csv,FINAL
+mfp28_300_eta_max,0.164,,"largest eta of the modes with |v| tau < 2.8 A, 16^3, 300 K (SI Table S31)",mfp_vs_eta.csv,FINAL
 ktot_300_paired,9.40-9.65,W/mK,"kappa_P + kappa_C paired per mesh, 15^3-24^3, 300 K",kappa_mesh_T.csv,FINAL
 kP_ref_pub_pct,+2,%,"reference kappa_P(300 K, 16^3) vs published 8.7 (read from figure)",kappa_mesh_T.csv; kP_pub,FINAL
 kP_tested_pub_pct,+2 to +6,%,tested meshes 12^3-24^3 vs published 8.7,kappa_mesh_T.csv; kP_pub,FINAL
