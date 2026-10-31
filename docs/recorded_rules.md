@@ -7,13 +7,13 @@ Widths Γ are half-widths (HWHM) in cm⁻¹.
 | id | subject | written (UTC) | relative to the runs | outcome | reported in |
 |---|---|---|---|---|---|
 | R1 | SCPH grid q₁: 8³ or 12³ | before 2026-10-09T21:31Z | before | criteria not met; q₁ = 12³ adopted | SI S1, S4 (Table S7) |
-| R2 | κ_C at 24³, 300 K | 2026-10-14T14:05Z | before | prediction failed | SI S3 (Table S5, Fig. S3) |
+| R2 | κ<sub>C</sub> at 24³, 300 K | 2026-10-14T14:05Z | before | prediction failed | SI S3 (Table S5, Fig. S3) |
 | R3 | acceptance tests of the four-phonon exclusion build | 2026-10-15T17:25Z | after the first 4³ results | both replacement tests passed | SI S7.10 (Table S22, Fig. S6) |
 | R4 | four-phonon rule, 300 K mesh sequence | 2026-10-15T17:25Z | before | all three soft modes in the first class | SI S7.11 (Tables S24, S25) |
 | R5 | four-phonon rule, 1000 K | 2026-10-16T16:16Z | before | all five modes in the first class | SI S7.11 (Tables S24, S25) |
 | R6 | heat-carrier sample | 2026-10-16T16:16Z | before | descriptive (no pass/fail) | SI S7.12 (Table S26) |
 | R7 | identity-tolerance sensitivity | 2026-10-16 | before | all changes ≤ 1.9 %; no further run triggered | SI S7.9 (Table S21) |
-| R8 | κ_C at 20³, 1000 K | 2026-10-18T23:04:44Z | before | prediction held | SI S3 (Table S5, Fig. S3) |
+| R8 | κ<sub>C</sub> at 20³, 1000 K | 2026-10-18T23:04:44Z | before | prediction held | SI S3 (Table S5, Fig. S3) |
 | R9 | additive form of the four-phonon margin | 2026-10-18 | after the results of R4–R6 | additive η₄ in the text; ratio form in the SI | §6.2; SI S7.11 |
 | R10 | labelling of exactly degenerate subspaces | 2026-10-22 | after the production labels | whole-subspace labels adopted | §2.4; SI S5 (Table S8) |
 | R11 | implementation checks of the exclusion | 2026-10-21/22 | after the results of R4–R7 | all checks passed | §6.2; SI S7.7 (Tables S18, S19) |
@@ -26,12 +26,12 @@ R1, R2 and R4–R8 were written before their runs. R3 and R9–R11 were written 
 `rta_pm_q12_T300_m12`. The rule was applied by the queue job `d0_decision` at 2026-10-10T01:29:58Z. The q₁ = 8³ SCPH
 run and two of these RTA runs were made before the queue started and were imported into it.
 
-> Adopt q1 = 8³ if, at both 250 K and 300 K, going 8³ → 12³ moves κ_P by < 3% AND the R and M frequencies by < 5%;
+> Adopt q1 = 8³ if, at both 250 K and 300 K, going 8³ → 12³ moves κ<sub>P</sub> by < 3% AND the R and M frequencies by < 5%;
 > otherwise adopt q1 = 12³. Transport mesh fixed at 12³; PM on; tetrahedron; NONANALYTIC = 3; KAPPA_COHERENT = 2.
 
 **Outcome.** Criteria not met at either temperature; q₁ = 12³ adopted.
 
-| T (K) | q₁ | κ_P | κ_C | Ω Γ-TO1 | Ω M | Ω R (cm⁻¹) |
+| T (K) | q₁ | κ<sub>P</sub> | κ<sub>C</sub> | Ω Γ-TO1 | Ω M | Ω R (cm⁻¹) |
 |---|---|---|---|---|---|---|
 | 250 | 8³ | 10.1181 | 0.2589 | 128.24 | 78.28 | 20.12 |
 | 250 | 12³ | 9.7065 | 0.2736 | 127.83 | 77.17 | 14.65 |
@@ -42,17 +42,17 @@ run and two of these RTA runs were made before the queue started and were import
 
 Tables: `data/processed/revision/d_q1_freq_shift.csv`, `data/processed/si_v4/s1_scph_convergence.csv`.
 
-## R2. κ_C at 24³, 300 K
+## R2. κ<sub>C</sub> at 24³, 300 K
 
 **Runs:** `rta_pm_q12_T300_m24` (started 2026-10-14T20:27Z).
 
-> At 24³ the κ_C-weighted median r is ≈ 0.7. |Δκ_C(20³ → 24³)| / κ_C(20³) is smaller than the 300 K 16³ → 20³
+> At 24³ the κ<sub>C</sub>-weighted median r is ≈ 0.7. |Δκ<sub>C</sub>(20³ → 24³)| / κ<sub>C</sub>(20³) is smaller than the 300 K 16³ → 20³
 > change (|−13.1%|) and of the order of the 500 K 16³ → 20³ change (−7.2%), i.e. 3–11% in magnitude.
 > Outcome rule: "holds" if |Δ| < 13.1%; "holds as stated" if 3% ≤ |Δ| ≤ 11%; "fails" if |Δ| ≥ 13.1%. The sign is not
 > predicted.
 
 **Outcome.** Failed.
-- Δκ_C(20³ → 24³) = (0.5411 − 0.4417)/0.4417 = +22.5 %.
+- Δκ<sub>C</sub>(20³ → 24³) = (0.5411 − 0.4417)/0.4417 = +22.5 %.
 - The median-r part held: r = 0.70 at 24³.
 - The 300 K sequence 0.508 (16³) → 0.442 (20³) → 0.541 (24³) is not monotonic.
 - The prediction compared r of the finer mesh at 300 K with r of the coarser mesh at 500 K. It fails under either
@@ -122,15 +122,15 @@ Tables: `data/processed/revision/a1_decision.csv`, `a1_per_mesh.csv`.
 
 **Runs:** `m4ph_n4_q12_T{300,800}_m{6,8}_e*` (started 2026-10-17T13:26Z).
 
-> Descriptive; no pass/fail; no κ_P recomputation from these modes. Two independent samples: q on the 8³ mesh,
-> ranked from the 16³ table, and q on the 6³ mesh, ranked from the 12³ table; per-mode κ_P contribution at 300 K;
+> Descriptive; no pass/fail; no κ<sub>P</sub> recomputation from these modes. Two independent samples: q on the 8³ mesh,
+> ranked from the 16³ table, and q on the 6³ mesh, ranked from the 12³ table; per-mode κ<sub>P</sub> contribution at 300 K;
 > classes by the character rule; the 2 largest per class, at most one mode per q-point, ties by lower q index then
 > branch. The modes are run unchanged at 800 K.
 
 **Outcome.**
 - Γ₄/Γ₃ = 0.12–1.08 at 300 K and 0.15–1.11 at 800 K.
 - Lifetime factor 1/(1 + Γ₄/Γ₃) = 0.48–0.90 at 300 K and 0.47–0.87 at 800 K.
-- The sample carries 1.2–1.3 % of κ_P.
+- The sample carries 1.2–1.3 % of κ<sub>P</sub>.
 
 Tables: `data/processed/revision/n4_selection.csv`, `n4_results.csv`.
 
@@ -146,15 +146,15 @@ Tables: `data/processed/revision/n4_selection.csv`, `n4_results.csv`.
 reached, so no 8³ run followed. Tables: `data/processed/si_v4/s7_tolerance.csv`; printed outputs in
 `data/processed/revision/s21_tolerance_printed.txt`.
 
-## R8. κ_C at 20³, 1000 K
+## R8. κ<sub>C</sub> at 20³, 1000 K
 
 **Runs:** `rta_pm_q12_T1000_m20`, `evec_pm_q12_T1000_m20` (started 2026-10-18T23:05Z).
 
-> |Δκ_C(16³→20³)| ≤ 2.5 % at 1000 K, with κ_C(16³, 1000 K) = 0.51473 W m⁻¹ K⁻¹. Holds if
-> 0.50186 ≤ κ_C(20³) ≤ 0.52760; fails otherwise. Basis: r(16³, 1000 K) = 1.13, above the r ≥ 0.88 range where
-> |Δκ_C(16³→20³)| ≤ 2.2%.
+> |Δκ<sub>C</sub>(16³→20³)| ≤ 2.5 % at 1000 K, with κ<sub>C</sub>(16³, 1000 K) = 0.51473 W m⁻¹ K⁻¹. Holds if
+> 0.50186 ≤ κ<sub>C</sub>(20³) ≤ 0.52760; fails otherwise. Basis: r(16³, 1000 K) = 1.13, above the r ≥ 0.88 range where
+> |Δκ<sub>C</sub>(16³→20³)| ≤ 2.2%.
 
-**Outcome.** Held: κ_C(20³, 1000 K) = 0.50306 W m⁻¹ K⁻¹, Δκ_C = −2.27 % (pair sums). Tables:
+**Outcome.** Held: κ<sub>C</sub>(20³, 1000 K) = 0.50306 W m⁻¹ K⁻¹, Δκ<sub>C</sub> = −2.27 % (pair sums). Tables:
 `data/processed/revision/d2_summary.csv`, `data/processed/sto_production/kappa_mesh_T.csv`.
 
 ## R9. Additive form of the four-phonon margin
@@ -174,7 +174,7 @@ depends on the basis returned by the diagonalizer.
 - Subspaces with |ΔΩ| < 10⁻³ cm⁻¹ are labelled as a whole, by their summed projections (`sector_char`).
 - The per-eigenvector label is kept as `sector_char_eig`.
 
-The change affects 6 % of such subspaces, carrying at most 0.16 % of κ_P, and moves the hard/hard share of κ_C by
+The change affects 6 % of such subspaces, carrying at most 0.16 % of κ<sub>P</sub>, and moves the hard/hard share of κ<sub>C</sub> by
 at most 0.6 percentage points. Table: `data/processed/revision/sector_degeneracy.csv`.
 
 ## R11. Implementation checks of the exclusion

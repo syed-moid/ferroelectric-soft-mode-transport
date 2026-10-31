@@ -18,7 +18,7 @@ raw outputs of every job are in the Zenodo record; the archive is named in each 
 | `build` | `alamode@c5b015ca/anphon-sha256:<12 hex>` for the production build, `AUDIT:<tree>/anphon-sha256:<12 hex>` for a patched build (full hashes in `tools/alamode_patches/BUILD.md`), or `imported:` for three runs made before the queue existed |
 | `start`, `end`, `duration_s`, `est_s` | wall-clock record |
 | `outputs` | sha256 of every archived file, recorded when the job passed validation |
-| `metrics` | values parsed from the outputs at validation (κ_P, κ_C, pair-sum closure, SCPH convergence, Γ₄ per mode, the `AUDIT` counters) |
+| `metrics` | values parsed from the outputs at validation (κ<sub>P</sub>, κ<sub>C</sub>, pair-sum closure, SCPH convergence, Γ₄ per mode, the `AUDIT` counters) |
 | `archive` | output directory in the working repository (`data/raw/alamode_sto/revision/<variant>/<id>`) |
 | `archive_file` | Zenodo archive with that directory |
 | `excluded` | set for the two timing probes; they are not part of any reported result |

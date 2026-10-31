@@ -1,7 +1,7 @@
 # Ferroelectric-Kappa-SCPH — Reproducibility Package (v3.1.0)
 
 Corrects a mis-attributed experimental value: the `tachibana_2008` entry (11 ± 1 W m⁻¹ K⁻¹ at 300 K) is removed,
-because Appl. Phys. Lett. 93, 092902 (2008) does not report SrTiO₃. Figure 3 now shows κP + κC on the 16³ mesh.
+because Appl. Phys. Lett. 93, 092902 (2008) does not report SrTiO₃. Figure 3 now shows κ<sub>P</sub> + κ<sub>C</sub> on the 16³ mesh.
 Adds the SCPH force-constant-correction reproduction check and the single-rounding check for the four-phonon ratio
 tables.
 
@@ -26,8 +26,8 @@ new version of the Zenodo record (concept DOI 10.5281/zenodo.20559513), so the p
   `data/provenance/manifest_final.json`: 170 jobs, each file with its sha256 and each job with the build id of its
   binary.
 - **Convergence.**
-  - Transport-mesh sweeps for κ_P and κ_C, and the mesh diagnostic r.
-  - Two κ_C predictions recorded before their runs: the 24³ prediction at 300 K failed, and the 20³ prediction at
+  - Transport-mesh sweeps for κ<sub>P</sub> and κ<sub>C</sub>, and the mesh diagnostic r.
+  - Two κ<sub>C</sub> predictions recorded before their runs: the 24³ prediction at 300 K failed, and the 20³ prediction at
     1000 K held (R2, R8).
   - The SCPH-grid check q₁ = 12³ against 16³ at 250, 300, 500 and 800 K (`n3_q1_16_check.csv`).
 - **Benchmark.**
@@ -63,7 +63,7 @@ new version of the Zenodo record (concept DOI 10.5281/zenodo.20559513), so the p
 | archive | contents |
 |---|---|
 | `scph_q12` | production SCPH solution (q₁ = 12³, mixing), its dispersion and the temperature-dependent FC2 |
-| `pm_q12_rta` | production RTA runs: κ_P, κ_C and the per-pair coherence elements at every T and mesh |
+| `pm_q12_rta` | production RTA runs: κ<sub>P</sub>, κ<sub>C</sub> and the per-pair coherence elements at every T and mesh |
 | `pm_q12_evec` | eigenvectors on each transport mesh and temperature (sector labels) |
 | `scph_q16` | SCPH on q₁ = 16³ and the four RTA runs on it (250, 300, 500, 800 K) |
 | `pm_q8` | SCPH on q₁ = 8³ with its RTA runs, and the q₁ = 8³ run with reduced mixing |
@@ -87,10 +87,10 @@ context). Archived as a **new version of the existing Zenodo record**
 - Computed SrTiO₃ dataset: SCPH-coupled RTA at 0–1000 K (21 temperatures, 8×8×8 mesh,
   525 modes each), with the Wigner coherence channel computed directly
   (`data/processed/sto_alamode/`, provenance headers on every table).
-- Zone-resolved damping map η_qs(T) with count- and κ-weighted validity fractions and a
+- Zone-resolved damping map η<sub>qs</sub>(T) with count- and κ-weighted validity fractions and a
   Vogt-rescaling sensitivity table (`eta_map_T.csv`, `eta_validity_T.csv`,
   `eta_validity_sensitivity.csv`).
-- Mode-resolved κ_P (closure vs the solver κ ≤ 0.3 %) and the five-way decomposition with
+- Mode-resolved κ<sub>P</sub> (closure vs the solver κ ≤ 0.3 %) and the five-way decomposition with
   partition-boundary sensitivity (`mode_kappa_T.csv`, `kappa_five_way_T.csv`).
 - Bare-RTA vs SCPH-coupled negative-control table (`bare_vs_scph_control.csv`).
 - Small-q Λ²(T) fits from per-temperature renormalized force constants
@@ -177,9 +177,9 @@ should be benchmarked.
 
 | # | Result | Value (source) |
 |---|--------|----------------|
-| 1 | Damping cluster — two underdamped QPE | η_STO ≈ 0.109, η_KTaO₃ ≈ 0.126 ( \|Δ\| ≈ 0.016 ), both < 0.5 (NB 08 / Fig 4) |
-| 2 | Overdamped ferroelectric | η_BaTiO₃ ≈ 2.27 (HAS 1971 cubic); η-axis interior (0.5–2.0) empty |
-| 3 | Soft-mode kernel ≪ total κ | κ_soft: STO ≈ 0.137 [0.102, 0.167], KTaO₃ ≈ 0.118 [0.065, 0.157] W m⁻¹ K⁻¹ (NB 08 / Fig 6) |
+| 1 | Damping cluster — two underdamped QPE | η<sub>STO</sub> ≈ 0.109, η<sub>KTaO3</sub> ≈ 0.126 ( \|Δ\| ≈ 0.016 ), both < 0.5 (NB 08 / Fig 4) |
+| 2 | Overdamped ferroelectric | η<sub>BaTiO3</sub> ≈ 2.27 (HAS 1971 cubic); η-axis interior (0.5–2.0) empty |
+| 3 | Soft-mode kernel ≪ total κ | κ<sub>soft</sub>: STO ≈ 0.137 [0.102, 0.167], KTaO₃ ≈ 0.118 [0.065, 0.157] W m⁻¹ K⁻¹ (NB 08 / Fig 6) |
 | 4 | BaTiO₃ kernel order-of-magnitude only | soft-[100] vs stiff bracket ≈ 0.005–0.019 W m⁻¹ K⁻¹ (overdamped; quasiparticle picture invalid) |
 | 5 | BaTiO₃ directional curvature | Λ²_soft[100] ≈ 972, Λ²_stiff[110]/[111] ≈ 4750 meV² Å² (anisotropy ≈ 5×) (NB 06 / Fig 5) |
 | 6 | SrTiO₃ effective curvature | Λ² ≈ 889 meV² Å² (Verdi Γ→X-TO1 effective branch curvature, ±30%; KTaO₃ STO-proxy ±50%) |

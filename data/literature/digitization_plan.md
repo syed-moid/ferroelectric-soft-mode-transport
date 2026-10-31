@@ -218,7 +218,7 @@ explaining why.
 ### STO-4. Schmidt & Spaldin 2025 — STO ¹⁶O + ¹⁸O SSCHA (arXiv:2508.10735)
 
 - File: `data/Schmidt_STO.pdf`.
-- **Fig. 3 top-left — Ω_Eu(T) for ST¹⁶O and ST¹⁸O + experimental** [HIGH]
+- **Fig. 3 top-left — Ω<sub>Eu</sub>(T) for ST¹⁶O and ST¹⁸O + experimental** [HIGH]
   - CSV: `data/literature/STO/schmidt_2025/sscha_omega_T.csv`
   - Schema: `{T_K, isotope, Omega_meV, Omega_sq_meV2, method, source_figure}`
   - `isotope` ∈ {`16O`, `18O`, `experimental`};
@@ -239,7 +239,7 @@ explaining why.
 ### KTO-1. Meier, Mingo, van Roekeghem 2022 — KTaO₃ SSCHA+MLIP (arXiv:2206.08296)
 
 - File: `data/Meier_KTO.pdf`. **New material** (KTaO₃). Strategic addition
-  for the Section 4 parametric κ_soft/κ₀ equation: parallels STO Verdi
+  for the Section 4 parametric κ<sub>soft</sub>/κ₀ equation: parallels STO Verdi
   2023 in scheme; together with Ranalli 2023 (on the reference shelf,
   not yet in `data/`) gives KTaO₃ two-source triangulation.
 - **Fig. 3(a) — Ω²_TO(T): SSCHA+MLIP vs Shirane [10] experimental** [HIGH]
@@ -363,7 +363,7 @@ explaining why.
   temperature/phase of each datum from the clean PDF** (the paper targets
   the cubic phase; record `phase` and `T_K` per row).
 - **Fig. 5 — TA + soft-TO dispersion along [100] [HIGH; DIGITIZE].** The
-  optic branch is given as quasiharmonic (Ω_TO)² = (Ω_TO0)² + A q² — the
+  optic branch is given as quasiharmonic (Ω<sub>TO</sub>)² = (Ω<sub>TO0</sub>)² + A q² — the
   `A` coefficient IS Λ²_cubic.
   - CSV: `data/literature/BTO/harada_axe_shirane_1971/cubic_dispersion.csv`
   - Schema (mirrors Shirane 1970): `{q_label, q_inv_angstrom, omega_meV,

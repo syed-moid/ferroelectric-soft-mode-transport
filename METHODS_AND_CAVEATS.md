@@ -29,7 +29,7 @@ records the fixed-cell SCPH Ω₀ systematic and its handling.
   selection rule (`d0_decision`).
 - Tests (v3.1.0): **306 passed / 2 skipped** with the raw outputs present; 300 passed / 8 skipped in a clean checkout.
 - New checks, all passing:
-  - production-table closure: κ_P + κ_C = κ_total; sector and mode sums against the solver within the recorded
+  - production-table closure: κ<sub>P</sub> + κ<sub>C</sub> = κ<sub>total</sub>; sector and mode sums against the solver within the recorded
     closure; six coherence blocks summing to the pair sum; the three character projections summing to one;
   - the independent count of the four-phonon excluded set, which reproduces the audit-build counters at 4³;
   - the queue unit tests;
@@ -46,12 +46,12 @@ records the fixed-cell SCPH Ω₀ systematic and its handling.
 |---|------|-------|------------|--------|
 | F1 | **BTO Λ² movement > 10% gate** | NB 06 | Cubic-phase refit gave Λ²[100]=818 vs locked paper-text A(100)=972 (−15.8%, tripped the 10% gate). Resolved: keep **972 central**; 818 corroborates *within* the ±20% envelope [778, 1166]. | Resolved |
 | F2 | **KTaO₃ Ω-source / shift tie-break** | NB 07b | Ranalli MLFF+SSCHA plotted −34.71 cm⁻¹ (−4.30 meV) shifted → 9.05 meV @300 K vs Vogt 10.15 / Meier 10.86. Resolved **by Vogt case-a**: Vogt-exp 10.15 **and** Ranalli-*expt* 10.29 agree (Δ=0.14 meV) — two independent experiments — against the over-shifted MLFF; shift over-applied above ~150 K. | Resolved (data) |
-| F3 | **γ-convention (FWHM vs HWHM)** | Vogt wave | DHO line-shape + magnitudes → Vogt plotted γ is **FWHM**. Locked: Γ_HWHM = γ/2, applied **once at the consumption layer** (`eta.py`); CSV stores γ as-plotted; YS γ used directly as HWHM. Regression-tested against double-application. | Resolved (locked) |
+| F3 | **γ-convention (FWHM vs HWHM)** | Vogt wave | DHO line-shape + magnitudes → Vogt plotted γ is **FWHM**. Locked: Γ<sub>HWHM</sub> = γ/2, applied **once at the consumption layer** (`eta.py`); CSV stores γ as-plotted; YS γ used directly as HWHM. Regression-tested against double-application. | Resolved (locked) |
 | F4 | **HAS Table I °K/°C misprint** | Wave 2 | Table-I "°K" header is a misprint (figures say °C); rows initially mis-tagged ortho/rhombo at 150/250 → re-verified against figures as **all cubic at 423/523/723 K**. | Resolved (vs figures) |
 | F5 | **CSV unquoted-comma column splits** | Wave 1 / 2 | Fauqué `dho_fits_T.csv` `q_point_rlu` (e.g. `(2,0,0)`) and HAS `cubic_dispersion.csv` `[0,0,0]` split across columns → re-quoted. | Resolved (fixed) |
-| F6 | **`gamma_meV` sanity bound too tight** | inputs tests | 20 → 60 → finalized **50 meV** (from HAS Table I Γ_TO=34±6). `angle_deg` (0,180)→(−90,90). | Resolved (bound set) |
+| F6 | **`gamma_meV` sanity bound too tight** | inputs tests | 20 → 60 → finalized **50 meV** (from HAS Table I Γ<sub>TO</sub>=34±6). `angle_deg` (0,180)→(−90,90). | Resolved (bound set) |
 | F7 | **STO dense Vogt cross-assignment** | STO dense | 3 sub-105 K Ω points mis-tagged `cubic_F1u` → re-tagged `transition_merged` (cubic_F1u ≥110 K, matching γ); uncertainty boundary 53.7→60 K; column-order swap fixed; Flag-2 rewritten as a single shared-γ sub-105 K branch. | Resolved (corrected) |
-| F8 | **STO γ-scale third read** | STO dense | @300 K: dense WPD 19.4 / eye ~21–22±2 / round 24.5 cm⁻¹. Decided **keep dense (marker-center)**, *not* corrected toward the round hand value → η_STO=0.109 (see caveat C1). | Resolved (kept dense) |
+| F8 | **STO γ-scale third read** | STO dense | @300 K: dense WPD 19.4 / eye ~21–22±2 / round 24.5 cm⁻¹. Decided **keep dense (marker-center)**, *not* corrected toward the round hand value → η<sub>STO</sub>=0.109 (see caveat C1). | Resolved (kept dense) |
 
 ---
 
@@ -61,7 +61,7 @@ records the fixed-cell SCPH Ω₀ systematic and its handling.
 |--------------|---------------|
 | **KTaO₃-Γ-absent** — Amendment-1 case-a/b/c *bracket* framing (no KTaO₃ experimental Ω(T)) | Vogt 1995 experimental hyper-Raman Ω(T)+γ(T) acquired → Vogt case-a (F2) |
 | **γ-convention-unconfirmed** — "factor-of-2 unresolved" placeholder | F3 FWHM verdict locked |
-| **η as a *span*** (η_STO…η_BTO continuum) | η as a **cluster**: two underdamped QPE (≈0.11–0.13) + one overdamped FE (≈2.3), empty interior |
+| **η as a *span*** (η<sub>STO</sub>…η<sub>BTO</sub> continuum) | η as a **cluster**: two underdamped QPE (≈0.11–0.13) + one overdamped FE (≈2.3), empty interior |
 | **BTO Λ² from digitized 859 / scalar Λ²** | HAS 1971 cubic-phase **directional** Λ² (soft [100]=972, stiff [110]/[111]=4750) |
 
 ---
@@ -72,18 +72,18 @@ records the fixed-cell SCPH Ω₀ systematic and its handling.
 |-------------------|------|-------------|
 | NB 05b pre-flight | 22/22 | full CSV inventory + schema cross-check |
 | NB 06 BTO | PASS | directional Λ² anisotropy ~4.9× (972 vs 4750); overdamping η=2.24–2.39 (mean 2.29) |
-| NB 07 STO | PASS | 6-paper/7-curve Ω_TO1(T) triangulation; cross-method q=0 anchors agree **15.4% ≤ 30%**; LST R²=**0.9978**; η_STO=**0.109** |
-| NB 07b KTaO₃ | PASS | Meier+Ranalli+Vogt triangulation; η_KTO=**0.126** (<0.5); LST (Ranalli internal) R²=**0.9934**; Λ² bracketed |
-| NB 08 cluster | 9/9 | cluster \|Δη\|=**0.016**; interior (0.5,2.0) empty; κ_soft ≪ total (~0.1 vs ~10) |
+| NB 07 STO | PASS | 6-paper/7-curve Ω<sub>TO1</sub>(T) triangulation; cross-method q=0 anchors agree **15.4% ≤ 30%**; LST R²=**0.9978**; η<sub>STO</sub>=**0.109** |
+| NB 07b KTaO₃ | PASS | Meier+Ranalli+Vogt triangulation; η<sub>KTO</sub>=**0.126** (<0.5); LST (Ranalli internal) R²=**0.9934**; Λ² bracketed |
+| NB 08 cluster | 9/9 | cluster \|Δη\|=**0.016**; interior (0.5,2.0) empty; κ<sub>soft</sub> ≪ total (~0.1 vs ~10) |
 | NB 09 appendix | 7/7 | negative result reproduced (δ=**+2806%** @400 K) + fully disclaimed |
-| `fekappa.eta` | 9/9 | η_STO=0.1096, η_KTO=0.1257, cluster, γ/2-applied-once regression, YS-direct-HWHM |
+| `fekappa.eta` | 9/9 | η<sub>STO</sub>=0.1096, η<sub>KTO</sub>=0.1257, cluster, γ/2-applied-once regression, YS-direct-HWHM |
 | `fekappa.kappa_kernel` | 17/17 | K_soft units, n_B/C limits, Debye q_max, κ∝1/η, overdamped guard, Ω²<0 skip, dict bracket |
 
 ---
 
 ## 4. Standing CAVEATS (carry forward)
 
-- **C1 — η_STO = 0.109 ± 0.02** (reading uncertainty). Dense marker-center value;
+- **C1 — η<sub>STO</sub> = 0.109 ± 0.02** (reading uncertainty). Dense marker-center value;
   an eye-read upper bound is ~0.125. Both keep STO firmly underdamped and within the
   QPE cluster. *(See F8.)*
 - **C2 — Λ²_STO = 889 meV²Å² is an EFFECTIVE branch curvature, not a small-q fit.**
@@ -97,8 +97,8 @@ records the fixed-cell SCPH Ω₀ systematic and its handling.
   (0.5 < η < 2.0) is empty: the dataset is two underdamped QPE + one overdamped FE.
   Any Section-4 relation through that interior is interpolation between disjoint
   regimes, not data-anchored.
-- **C5 — BTO κ_soft is ORDER-OF-MAGNITUDE ONLY (overdamped).** η_BTO≈2.27 (HAS,
-  verified) ⇒ the K_P quasiparticle picture (well-defined v_q, τ_q) fails; the kernel
+- **C5 — BTO κ<sub>soft</sub> is ORDER-OF-MAGNITUDE ONLY (overdamped).** η<sub>BTO</sub>≈2.27 (HAS,
+  verified) ⇒ the K<sub>P</sub> quasiparticle picture (well-defined v<sub>q</sub>, τ<sub>q</sub>) fails; the kernel
   emits `OverdampedModeWarning`. BTO Ω₀ is taken from the HAS cubic TO at the
   nearest-Γ point (q≈0.313 Å⁻¹) — disclosed, negligible against the order-of-magnitude
   framing. The real BTO value needs the Wigner-coherent term (deferred, see §5).
@@ -125,7 +125,7 @@ records the fixed-cell SCPH Ω₀ systematic and its handling.
   both fully computed and literature-anchored (Vogt/Verdi Ω₀(T) with computed Γ₀,
   Λ²); (iii) κ(T) validation is **unaffected** — κ is acoustic-dominated and the
   9.53 vs 8.7 W/mK (300 K) agreement stands independently of the soft-mode Ω₀
-  systematic. *(v2 statement. In v3 the coarse SCPH grid of the distributed example is shown to raise κ_P; see C10.)*
+  systematic. *(v2 statement. In v3 the coarse SCPH grid of the distributed example is shown to raise κ<sub>P</sub>; see C10.)*
 - **C9 — Four-phonon diagnostics are selected-mode implementation checks.**
   - What is computed: diagram (c) of ALAMODE c5b015c on 4³–8³ meshes with Lorentzian broadening ε, excluding the
     identically degenerate quartets (enlarged set, tolerance 1e-9 Ry; `tools/alamode_patches/`).
@@ -135,14 +135,14 @@ records the fixed-cell SCPH Ω₀ systematic and its handling.
     ε = 2, 5, 10 cm⁻¹; 8³ at ε = 5 cm⁻¹). Γ₄,max is a maximum over those settings, not an upper bound.
   - Not established: the joint mesh/broadening limit, a converged four-phonon κ, and a whole-zone bound.
 - **C10 — Benchmark against Tadano & Tsuneyuki (2015).**
-  - At the published settings κ_P(300 K) = 9.24 W m⁻¹ K⁻¹ (+6 %). The q₁ = 2³ grid of the distributed example
-    raises κ_P by 16–18 % relative to q₁ = 8³.
+  - At the published settings κ<sub>P</sub>(300 K) = 9.24 W m⁻¹ K⁻¹ (+6 %). The q₁ = 2³ grid of the distributed example
+    raises κ<sub>P</sub> by 16–18 % relative to q₁ = 8³.
   - The R-point mode is 22–26 % softer than the published table at q₁ ≥ 8³. The cause is not resolved here.
   - Agreement in conductivity is not a reproduction of the 2015 calculation.
-- **C11 — κ_C convergence is slower than κ_P's.**
-  - At 300 K, κ_C spans 0.44–0.54 W m⁻¹ K⁻¹ over the meshes from 15³ to 24³. This is an observed range, not an
+- **C11 — κ<sub>C</sub> convergence is slower than κ<sub>P</sub>'s.**
+  - At 300 K, κ<sub>C</sub> spans 0.44–0.54 W m⁻¹ K⁻¹ over the meshes from 15³ to 24³. This is an observed range, not an
     error bar.
-  - Where the κ_C-weighted median r ≥ 0.88, the 16³→20³ change is at most 2.3 % for the pairs tested. r is an
+  - Where the κ<sub>C</sub>-weighted median r ≥ 0.88, the 16³→20³ change is at most 2.3 % for the pairs tested. r is an
     empirical diagnostic, not a convergence proof.
 - **C12 — Low-temperature limit.** No converged cubic SCPH solution was obtained below 250 K under the recorded
   criteria. 250 K fails the q₁ rule (`docs/recorded_rules.md`, R1), so the principal range is 300–1000 K.
@@ -154,20 +154,20 @@ records the fixed-cell SCPH Ω₀ systematic and its handling.
     zone.
   - The bookkeeping count 210 N_k includes the 78 ordered Γ pairs that involve a translation. Their stored
     contributions are exactly zero; removing them gives 860082 pairs on 16³.
-  - A fraction of pair counts is not the fraction of κ_C those pairs carry.
+  - A fraction of pair counts is not the fraction of κ<sub>C</sub> those pairs carry.
 
 ---
 
 ## 5. DEFERRED (future work)
 
-- **Wigner coherent κ_C** — the wave-like term, required for the overdamped BTO soft
+- **Wigner coherent κ<sub>C</sub>** — the wave-like term, required for the overdamped BTO soft
   mode (where K_P is invalid) and for interband-spacing-comparable-to-linewidth cases.
 - **Full SCPH self-consistency loop** — `fekappa.scph.scph_iterate` is a stub; the
   aborted scalar-SCPH attempt is preserved under `archive/scph_calibration/`
   (and is what NB 09 reproduces). A real loop awaits new first-principles force constants.
 - **The Section-4 fit itself** — this work produced only the **anchor triples**
   (`data/processed/section4_eta_kappa_triples.csv`); fitting the κ(η) relation is future work.
-- **κ_bte_rta / κ_total integrators** (`fekappa.kappa`) — still stubs.
+- **κ<sub>bte</sub>_rta / κ<sub>total</sub> integrators** (`fekappa.kappa`) — still stubs.
 
 ---
 

@@ -25,7 +25,7 @@ extracted; `scp_omega_T.csv` confirmed n/a.
 - This is the BTO analog of Tadano 2022 Fig. 4; the two crossings can be
   compared as an independent cross-validation of the calculated T_c.
 
-**`scp_omega_T.csv` — n/a:** Ehsan 2021 contains no Ω_soft(T) curve.
+**`scp_omega_T.csv` — n/a:** Ehsan 2021 contains no Ω<sub>soft</sub>(T) curve.
 Fig. 4 = vibrational U(T) and TS(T); Fig. 5 = free energies F_cubic(T)
 and F_tetra(T). Soft-mode frequency information from this paper is
 exhausted by the two anchor points already captured in `anchors.csv`. The
@@ -83,8 +83,8 @@ template stays in place as an empty optional CSV.
 
 **Fig. 15 — SCP dispersion at +1% lattice (`scp_dispersion_plus1pct.csv`):**
 - 28 rows: Highest Optical + Soft Optical + Acoustic TA/LA at 200, 600,
-  1000 K, mostly at Γ, X, M, R, and a Γ_mid sampling point.
-- **Soft optical at Γ_mid:** 40 cm⁻¹ (200 K), 140 cm⁻¹ (600 K), 175 cm⁻¹
+  1000 K, mostly at Γ, X, M, R, and a Γ<sub>mid</sub> sampling point.
+- **Soft optical at Γ<sub>mid</sub>:** 40 cm⁻¹ (200 K), 140 cm⁻¹ (600 K), 175 cm⁻¹
   (1000 K). In meV: 5.0 / 17.4 / 21.7. **Critical caveat: at +1% lattice.**
   Without rescaling via `dT_c/da ≈ 8500 K/Å` these are NOT directly
   comparable to Ehsan's native-lattice 500 K anchor.
@@ -153,7 +153,7 @@ optional, still pending.
 
 **Fig. 4 — Cubic STO dispersion at 300 K (`scph_dispersion.csv`):**
 - 14 rows at 300 K: Highest_Optical (~99 meV at Γ and M, ~92 meV at X),
-  Soft_Optical at Γ_mid = 12.4 meV (SCPH; matches exp), Structural soft
+  Soft_Optical at Γ<sub>mid</sub> = 12.4 meV (SCPH; matches exp), Structural soft
   R-point = 6.2 meV SCPH (vs -11.2 meV harmonic, i.e., imaginary harmonic
   R₂₅ mode stabilized by SCPH).
 - Methods covered: SCPH, harmonic, experimental.
@@ -245,7 +245,7 @@ optional, still pending.
 ## KTO-1. Meier et al. 2022 — KTaO₃ SSCHA+MLIP (arXiv:2206.08296)
 
 **Status:** PENDING (templates created v1). **New material** —
-Section 4 parametric κ_soft/κ₀ fit third pillar (alongside BTO + STO).
+Section 4 parametric κ<sub>soft</sub>/κ₀ fit third pillar (alongside BTO + STO).
 
 - `omega_T.csv` — TODO. Target ≥ 10 (T, ω²) points from Fig. 3(a),
   separated by `method` (SSCHA_MLIP calc vs Shirane exp).
@@ -315,7 +315,7 @@ Shirane 1970 (295 K) soft mode. VERIFY per-row phase/T from the clean PDF.
 
 - **Fig. 5 + Fig. 8 → `cubic_dispersion.csv`** (TODO HIGH): soft-TO + TA
   dispersion along [100] (Fig. 5) and full low-lying dispersion (Fig. 8).
-  Optic branch is quasiharmonic (Ω_TO)² = (Ω_TO0)² + A q²; `A` = Λ²_cubic.
+  Optic branch is quasiharmonic (Ω<sub>TO</sub>)² = (Ω<sub>TO0</sub>)² + A q²; `A` = Λ²_cubic.
 - **Table I → `mode_parameters.csv`** (TODO HIGH): long format, mode ∈
   {TO, TA}; gives cubic-phase soft-TO damping Γ + ω + coupling vs q.
 - **Lambda_sq.csv** (optional): fill from Fig. 5 `A` or refit
@@ -341,11 +341,11 @@ Verified against the rendered PDF figures (poppler), not the CSV alone.
 ### HAS 1971 (cubic BaTiO3) — physics review
 
 - **Soft TO is OVERDAMPED (paper finding, verified).** Table I (image) +
-  p.159 text: the DHO mode-damping Γ_TO (Eq. 2, the renormalized/
+  p.159 text: the DHO mode-damping Γ<sub>TO</sub> (Eq. 2, the renormalized/
   quasiharmonic damping — NOT a FWHM/HWHM or column artifact) satisfies the
-  overdamping condition Γ_TO ≳ 2 Ω_TO at every (q, T). Empirical
-  η = Γ_TO/Ω_TO ≈ 2.3 (neutron, finite q); cited 4–6 at q=0 (optical) and 9
-  at q=0.08 a*. Example (q=0.2 a*, 450 °C): Ω_TO = 15±3, Γ_TO = 34±6 meV →
+  overdamping condition Γ<sub>TO</sub> ≳ 2 Ω<sub>TO</sub> at every (q, T). Empirical
+  η = Γ<sub>TO</sub>/Ω<sub>TO</sub> ≈ 2.3 (neutron, finite q); cited 4–6 at q=0 (optical) and 9
+  at q=0.08 a*. Example (q=0.2 a*, 450 °C): Ω<sub>TO</sub> = 15±3, Γ<sub>TO</sub> = 34±6 meV →
   η = 2.27. **Direct evidence cubic BTO is overdamped; the underdamped
   soft-mode framing is STO-specific** (→ NB 06 BTO methodological note,
   alongside the Hlinka 2008 two-mode complication).
@@ -384,7 +384,7 @@ Verified against the rendered PDF figures (poppler), not the CSV alone.
 ### Γ sanity-range bound finalized
 
 `gamma_meV` upper bound set to **50 meV** (was the reactive 60): HAS Table I
-max Γ_TO=34±6 (→40); optical Γ/Ω=9 at q=0.08 a* with Ω₀≈3 implies ~44 meV at
+max Γ<sub>TO</sub>=34±6 (→40); optical Γ/Ω=9 at q=0.08 a* with Ω₀≈3 implies ~44 meV at
 small q. 50 brackets the overdamped cubic-BTO regime with margin.
 
 ---
@@ -428,13 +428,13 @@ Vogt's Fig. 5/6 fit (Sec. III) = "a damped harmonic oscillator response **and a
 the intrinsic zone-center DHO damping (kernel-appropriate). The plotted symbol is
 lowercase **γ** (standard DHO damping constant), distinct from the theoretical
 Eq. (13) self-energy **Γ** (which is HWHM). Reading γ as the standard DHO constant
-⇒ **γ = FWHM ⇒ Γ_HWHM = γ/2**. Confirmed by the numbers (STO 300 K: Ω=10.54,
+⇒ **γ = FWHM ⇒ Γ<sub>HWHM</sub> = γ/2**. Confirmed by the numbers (STO 300 K: Ω=10.54,
 γ=3.04 → η=0.144 on the FWHM basis; the HWHM reading would give 0.288). **Residual
 factor-of-2 systematic NOTED** (if Vogt's fit used his Eq.-13 Γ=HWHM, use γ
 directly and η doubles); Refs 29-30 (PRB 34,410 (1986); 41,1184 (1990)) — not in
 repo — would settle it. Both readings keep STO & KTaO₃ underdamped (η<0.5) and
 clustered; only the absolute η calibration carries the factor. `eta.py` will apply
-Γ_HWHM = γ/2 by default (later wave); loaders return plotted γ as-is.
+Γ<sub>HWHM</sub> = γ/2 by default (later wave); loaders return plotted γ as-is.
 
 ### Schema normalization (to the Amendment-2 §3 locked schema)
 - KTO omega: method `experimental_KTaO3`→`exp_HyperRaman_Vogt1995`;
@@ -461,7 +461,7 @@ clustered; only the absolute η calibration carries the factor. `eta.py` will ap
 ### Flags / open items
 - **SPOT-CHECK (KTaO₃ Fig. 5 damping):** digitized high-T γ reads slightly HIGH —
   295 K γ=3.10 meV=25 cm⁻¹ vs the Fig. 5 right axis ~20-22 cm⁻¹ (152 K point also
-  non-monotonic, likely scatter). Impact: η_KTO ≈ 0.24 (figure) vs 0.30 (CSV);
+  non-monotonic, likely scatter). Impact: η<sub>KTO</sub> ≈ 0.24 (figure) vs 0.30 (CSV);
   **clustering unaffected**. NOT auto-adjusted (experimental values; re-digitization
   of the KTaO₃ damping tail recommended as a focused follow-up).
 - **STO tetragonal A₂ᵤ/E_u γ:** Vogt fit the sub-105 K split with the SAME γ
@@ -501,8 +501,8 @@ now resolved**; uncertainty convention settled.
   filters to 1995 rows.)
 - **Flag-2 RESOLVED:** STO sub-105 K A₂ᵤ/E_u γ now share one value at each T
   (10 K both 0.10, 50 K 0.28, 100 K 0.62), per Vogt's same-damping fit (p.8051).
-- **η impact:** η_KTO(300 K) = (γ/2)/Ω = (2.60/2)/10.48 = **0.124** (was 0.148);
-  still clusters with η_STO = 0.144 (|Δ| = 0.020 < 0.05). Convention applied at
+- **η impact:** η<sub>KTO</sub>(300 K) = (γ/2)/Ω = (2.60/2)/10.48 = **0.124** (was 0.148);
+  still clusters with η<sub>STO</sub> = 0.144 (|Δ| = 0.020 < 0.05). Convention applied at
   the consumption layer (Figure J / eta.py), **NOT baked into the CSV** (CSV
   stores the plotted FWHM γ as digitized).
 
@@ -536,8 +536,8 @@ Re-verified against Fig. 5 (rendered):
   ±1 cm⁻¹ defect floor, Vogt p.8051 "below about 60 K"); ≥60 K = 0.12; applied
   to all dense Vogt files (55.62/56.56 K both < 60 → 0.17). 1988 point keeps
   ±0.37 (1995-only convention).
-- **η (dense):** η_KTO = (γ/2)/Ω = (2.57/2)/10.15 = **0.127** (HWHM basis),
-  still clusters with η_STO = 0.144 (|Δ| = 0.018). Convention applied at the
+- **η (dense):** η<sub>KTO</sub> = (γ/2)/Ω = (2.57/2)/10.15 = **0.127** (HWHM basis),
+  still clusters with η<sub>STO</sub> = 0.144 (|Δ| = 0.018). Convention applied at the
   consumption layer (Figure J / eta.py), not in the CSV.
 - STO Vogt files unchanged (round-T): A₂ᵤ/E_u share one γ (Flag-2), sub-60 K
   0.17. NB 05b gate PASS 22/22.
@@ -567,10 +567,10 @@ round-number STO Vogt version. Four corrections applied + re-verified vs Fig. 6:
 4. **Non-monotonic γ points** (223.89→1.80, 248.63→2.05 meV): confirmed real
    plotted scatter in Fig. 6 (~±1 cm⁻¹, within the 0.12 meV bar) → kept.
 
-**η_STO (LOCKED) = 0.109** (HWHM basis, Γ_HWHM=γ/2 over Ω), **central; carry
+**η<sub>STO</sub> (LOCKED) = 0.109** (HWHM basis, Γ<sub>HWHM</sub>=γ/2 over Ω), **central; carry
 ~±0.02 reading uncertainty** (0.109 dense central → ~0.125 eye-read upper; dense
 adopted as marker-center-accurate). **Cluster is robust across the whole range:**
-η_STO ≈ 0.11–0.13 vs η_KTO ≈ 0.127, both ≪ 0.5 (underdamped), BTO ≈ 2.3 alone.
+η<sub>STO</sub> ≈ 0.11–0.13 vs η<sub>KTO</sub> ≈ 0.127, both ≪ 0.5 (underdamped), BTO ≈ 2.3 alone.
 
 Knock-ons: (a) **YS-vs-Vogt STO damping spread shrank to ~2.4× raw** (was ~3.3×
 on the round γ; ~1.2× residual after FWHM→HWHM /2) — qualitative point unchanged

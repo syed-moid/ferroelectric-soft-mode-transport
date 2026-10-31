@@ -2,7 +2,7 @@
 
 Computational study of cubic SrTiO₃ from 300 to 1000 K: self-consistent phonon (SCPH) renormalization of the
 force constants distributed with the ALAMODE SrTiO₃ example, three-phonon linewidths, a mode-resolved damping map
-η = Γ/Ω across the Brillouin zone, and the thermal conductivity split into particle (κ_P) and coherence (κ_C)
+η = Γ/Ω across the Brillouin zone, and the thermal conductivity split into particle (κ<sub>P</sub>) and coherence (κ<sub>C</sub>)
 contributions. Both contributions are grouped by reference character under two mode-labelling rules. BaTiO₃ and
 KTaO₃ appear only as literature context from the earlier releases.
 
@@ -14,19 +14,19 @@ record as this release.
 ## Key results (v3.1.0, revised manuscript)
 
 All values are for this model: fixed-cell cubic SCPH on the inherited force constants, three-phonon scattering, and
-the relaxation-time approximation for κ_P.
+the relaxation-time approximation for κ<sub>P</sub>.
 
-- **Damping.** Most of κ_P is carried by weakly damped modes. The largest three-phonon damping ratio on the tested
+- **Damping.** Most of κ<sub>P</sub> is carried by weakly damped modes. The largest three-phonon damping ratio on the tested
   meshes is η₃ = 0.184, for the antiferrodistortive R-point mode near room temperature. Modes with η₃ > 0.1 carry at
-  most 0.14 % of κ_P at any temperature.
-- **Particle conductivity.** κ_P(300 K) = 8.89 W m⁻¹ K⁻¹ on the 16³ reference mesh.
-- **Coherence conductivity.** κ_C converges more slowly than κ_P. At 300 K it spans 0.44–0.54 W m⁻¹ K⁻¹ across
+  most 0.14 % of κ<sub>P</sub> at any temperature.
+- **Particle conductivity.** κ<sub>P</sub>(300 K) = 8.89 W m⁻¹ K⁻¹ on the 16³ reference mesh.
+- **Coherence conductivity.** κ<sub>C</sub> converges more slowly than κ<sub>P</sub>. At 300 K it spans 0.44–0.54 W m⁻¹ K⁻¹ across
   the meshes from 15³ to 24³. This is an observed range, not an error bar.
-- **Sectors.** Pairs assigned to the hard-optic reference sector carry most of κ_C under both labelling rules:
+- **Sectors.** Pairs assigned to the hard-optic reference sector carry most of κ<sub>C</sub> under both labelling rules:
   65–73 % (character rule) and 74–88 % (frequency rule) on meshes from 15³ up, 300–1000 K. Under the character rule
   this comes mainly from the number of pairs.
-- **Benchmark.** At the published settings κ_P(300 K) is 9.24 W m⁻¹ K⁻¹. The coarse SCPH grid of the distributed
-  example (q₁ = 2³) gives a κ_P 16–18 % higher than q₁ = 8³; production uses q₁ = 12³ (`docs/recorded_rules.md (R1)`). The
+- **Benchmark.** At the published settings κ<sub>P</sub>(300 K) is 9.24 W m⁻¹ K⁻¹. The coarse SCPH grid of the distributed
+  example (q₁ = 2³) gives a κ<sub>P</sub> 16–18 % higher than q₁ = 8³; production uses q₁ = 12³ (`docs/recorded_rules.md (R1)`). The
   R-point mode remains 22–26 % softer than the published table at q₁ ≥ 8³, for a reason not resolved here.
 - **Low-temperature limit.** No converged cubic SCPH solution was obtained below 250 K under the stated criteria.
   250 K fails the q₁ rule, so the principal range starts at 300 K.

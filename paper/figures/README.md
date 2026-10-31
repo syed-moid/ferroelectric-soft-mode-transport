@@ -57,7 +57,7 @@ writes `out/<name>.pdf` (vector) + `out/<name>.png` (600 dpi). Rendering is dete
 | `make_fig03.py` | Fig 3 — BTO hybrid negative result (Ω²/δ, η) | NB 09 | `data/raw/BTO/phonon_modes_*K.csv` + `archive/scph_calibration` |
 | `make_fig04.py` | Fig 4 — damping-axis classification (main) | NB 08 | `fekappa.eta` + HAS Table I |
 | `make_fig05.py` | Fig 5 — cubic BTO directional Λ² | NB 06 | HAS 1971 dispersion + Λ² loaders |
-| `make_fig06.py` | Fig 6 — soft-mode kernel κ_soft(T) | NB 08 | `fekappa.kappa_kernel` + Vogt Ω(T) |
+| `make_fig06.py` | Fig 6 — soft-mode kernel κ<sub>soft</sub>(T) | NB 08 | `fekappa.kappa_kernel` + Vogt Ω(T) |
 | `make_supp.py` | S1–S3 — STO/KTaO₃ LST, η–κ plane | NB 07 / 07b / 08 | LST loaders + `data/processed/section4_eta_kappa_triples.csv` |
 | `pubstyle.py` | — | — | thin helpers: path shim, margin panel label, dual PDF+PNG saver |
 

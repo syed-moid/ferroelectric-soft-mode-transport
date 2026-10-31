@@ -71,7 +71,7 @@ denominators in the opposite order) follows the same convention.
 **Units.**
 
 - `in_kayser(x) = x · Ry_to_kayser`, with Ry_to_kayser = Hz_to_kayser/time_ry ≈ 109737.3. This is an angular
-  frequency (in Ry, ħ = 1) expressed in cm⁻¹ as Γ̂ = Γ_angular/(2πc).
+  frequency (in Ry, ħ = 1) expressed in cm⁻¹ as Γ̂ = Γ<sub>angular</sub>/(2πc).
 - The input ε is given in cm⁻¹ and converted with the inverse factor (`integration.cpp`, line 65). It is the
   half-width of the Lorentzian that replaces each δ function: Im[1/(x + iε)] = −ε/(x² + ε²).
 
