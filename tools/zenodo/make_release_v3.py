@@ -100,8 +100,8 @@ def readme(files: list[dict], sw: dict) -> str:
                       for b in sw["builds"])
     return f"""# Zone-resolved soft-mode damping and the thermal-conductivity decomposition of SrTiO₃: release {TAG}
 
-Code, derived tables and raw calculation outputs of the revised manuscript (J. Phys.: Condens. Matter, submission
-JPCM-126876), archived together as one version of the record {CONCEPT_DOI} (all versions). The code archive is the
+Code, derived tables and raw calculation outputs of the revised manuscript, archived together as one version of the
+record {CONCEPT_DOI} (all versions). The code archive is the
 tagged release {REPO}/releases/tag/{TAG}.
 
 ## Files
@@ -220,7 +220,6 @@ def main():
             "related_identifiers": [
                 {"relation": "isSupplementTo", "identifier": f"{REPO}/tree/{TAG}", "resource_type": "software"},
                 {"relation": "isVersionOf", "identifier": CONCEPT_DOI, "scheme": "doi"}],
-            "notes": "Supplement to the manuscript JPCM-126876 (J. Phys.: Condens. Matter, under review).",
             "keywords": ["SrTiO3", "thermal conductivity", "self-consistent phonon", "Wigner transport",
                          "phonon damping", "ALAMODE", "four-phonon scattering"],
             "description_markdown": notes}

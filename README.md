@@ -6,12 +6,12 @@ force constants distributed with the ALAMODE SrTiO₃ example, three-phonon line
 contributions. Both contributions are grouped by reference character under two mode-labelling rules. BaTiO₃ and
 KTaO₃ appear only as literature context from the earlier releases.
 
-Version 3.1.0 holds the calculations, tables and scripts of the revised manuscript. It also holds the
+Version 3.1.1 holds the calculations, tables and scripts of the revised manuscript. It also holds the
 four-phonon diagnostics with the ALAMODE patches they used, the job manifest of every calculation, and the
 rules and predictions recorded before the runs. The raw solver outputs are archived on Zenodo, in the same
 record as this release.
 
-## Key results (v3.1.0, revised manuscript)
+## Key results (v3.1.1, revised manuscript)
 
 All values are for this model: fixed-cell cubic SCPH on the inherited force constants, three-phonon scattering, and
 the relaxation-time approximation for κ<sub>P</sub>.
@@ -42,7 +42,7 @@ The revised manuscript supersedes their SrTiO₃ conclusions where the two diffe
 
 ## Status
 
-v3.1.0 accompanies the revised manuscript. Standing caveats and checks are in
+v3.1.1 accompanies the revised manuscript. Standing caveats and checks are in
 `METHODS_AND_CAVEATS.md`.
 
 ## Repository structure

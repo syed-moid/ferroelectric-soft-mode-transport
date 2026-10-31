@@ -1,3 +1,8 @@
+# Ferroelectric-Kappa-SCPH — Reproducibility Package (v3.1.1)
+
+Removes the journal name from the Zenodo packaging script (`tools/zenodo/make_release_v3.py`: the README template and
+the metadata notes). Code, tables and data are those of v3.1.0. Package version 3.1.1.
+
 # Ferroelectric-Kappa-SCPH — Reproducibility Package (v3.1.0)
 
 Corrects a mis-attributed experimental value: the `tachibana_2008` entry (11 ± 1 W m⁻¹ K⁻¹ at 300 K) is removed,
