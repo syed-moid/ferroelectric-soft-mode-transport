@@ -1,3 +1,17 @@
+# Ferroelectric-Kappa-SCPH — Reproducibility Package (v3.1.0)
+
+Corrects a mis-attributed experimental value: the `tachibana_2008` entry (11 ± 1 W m⁻¹ K⁻¹ at 300 K) is removed,
+because Appl. Phys. Lett. 93, 092902 (2008) does not report SrTiO₃. Figure 3 now shows κP + κC on the 16³ mesh.
+Adds the SCPH force-constant-correction reproduction check and the single-rounding check for the four-phonon ratio
+tables.
+
+- Removed: `data/literature/STO/tachibana_2008/`, its loader in `fekappa.literature_io` and its tests; the Tachibana
+  rows of `exp_datasets.csv` and of `manuscript_numbers_v8.csv`.
+- Added: `scripts/revision/dfc2_reproduction_check.py` → `data/processed/revision/dfc2_reproduction.csv`;
+  `scripts/revision/s7_ratios_single_rounding.py` → `data/processed/revision/s7_ratios_unrounded.csv`.
+- The raw-output archives are those of v3.0.0, unchanged.
+- Package version 3.1.0.
+
 # Ferroelectric-Kappa-SCPH — Reproducibility Package (v3.0.0)
 
 Release for the revised manuscript on zone-resolved soft-mode damping and the particle/coherence decomposition of
