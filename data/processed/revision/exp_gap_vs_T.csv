@@ -1,6 +1,6 @@
 # script: scripts/revision/exp_datasets.py
-# inputs: data/literature/STO/; data/processed/sto_production/kappa_mesh_T.csv; data/processed/revision/r_point_check.csv
-# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# inputs: figure readings in the script (Tadano_STO.pdf Fig. 7); data/processed/sto_production/kappa_mesh_T.csv; data/processed/revision/r_point_check.csv
+# generated: 2026-10-31; fekappa 3.1.0; manifest_final.json sha256 b9e3d32ab98b
 # ours: kappa_mesh_T.csv, 16^3 (own SCPH q1 = 12^3, PM). exp: Muta / Popuri read from Tadano arXiv v1 Fig. 7, linear interpolation in T between read points, no extrapolation (blank outside the read range).
 # R: ours q1 = 12^3 PM (r_point_check.csv) vs Fauque Fig. 1(d) INS, read from figure (+-5.0 cm^-1). Correlation table only.
 T_K,kP_16,ktot_16,k_Muta2005,kP/k_Muta2005,ktot/k_Muta2005,k_Popuri2014,kP/k_Popuri2014,ktot/k_Popuri2014,k_Tadano2015_calc,R_ours_cm,R_exp_cm_read,R_deficit_pct

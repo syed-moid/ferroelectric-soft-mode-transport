@@ -55,16 +55,16 @@ muta = (min(11.025, m300.min()), max(11.025, m300.max()))
 km = pd.read_csv(REPO / "data/processed/sto_production/kappa_mesh_T.csv", comment="#")
 k = km[(km.T_K == 300) & (km.mesh >= 15)]
 kp, kt = (k.kappa_P.min(), k.kappa_P.max()), (k.kappa_total.min(), k.kappa_total.max())
-print(f"\nMuta 300 K: {muta[0]:.2f}-{muta[1]:.2f} (three figures); Tachibana 11 +- 1 (tracked CSV)")
+print(f"\nMuta 300 K: {muta[0]:.2f}-{muta[1]:.2f} (three figures)")
 print(f"ours >= 15^3 meshes: kappa_P {kp[0]:.2f}-{kp[1]:.2f} (mean {k.kappa_P.mean():.2f}), "
       f"kappa_total {kt[0]:.2f}-{kt[1]:.2f}")
 for lab, (lo, hi) in (("kappa_P", kp), ("kappa_total", kt)):
-    g = [100 * (v / e - 1) for v in (lo, hi) for e in (*muta, 11.0)]
-    print(f"{lab} vs Muta + Tachibana central: {min(g):.1f} to {max(g):.1f} %")
+    g = [100 * (v / e - 1) for v in (lo, hi) for e in muta]
+    print(f"{lab} vs Muta: {min(g):.1f} to {max(g):.1f} %")
 
 
 # provenance header (fekappa.provenance)
 from fekappa.provenance import stamp  # noqa: E402
 for _f in (f"exp_300K_crossread.csv",):
     stamp(Path(__file__).resolve().parents[2] / "data/processed/revision" / _f, __file__,
-          ['data/processed/sto_production/kappa_mesh_T.csv', 'figure readings in the script (Muta 2005, Tachibana 2008, Popuri 2017)'])
+          ['data/processed/sto_production/kappa_mesh_T.csv', 'figure readings in the script (Muta 2005, Popuri 2014)'])

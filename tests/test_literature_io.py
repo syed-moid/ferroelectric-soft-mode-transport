@@ -174,13 +174,6 @@ def test_load_tadano2015_kappa_total_T() -> None:
     assert "Tadano2015" in df.attrs["provenance"]
 
 
-def test_load_tachibana2008_kappa_total_T() -> None:
-    df = lit.load_tachibana2008_kappa_total_T()
-    assert len(df) == 1  # approximate experimental 300 K anchor
-    assert float(df["kappa_W_per_m_K"].iloc[0]) == 11.0
-    assert "Tachibana2008" in df.attrs["provenance"]
-
-
 # ---------------------------------------------------------------------------
 # STO Verdi 2023
 # ---------------------------------------------------------------------------

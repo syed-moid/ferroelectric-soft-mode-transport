@@ -1,6 +1,6 @@
 # script: scripts/revision/exp_datasets.py
-# inputs: data/literature/STO/; data/processed/sto_production/kappa_mesh_T.csv; data/processed/revision/r_point_check.csv
-# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# inputs: figure readings in the script (Tadano_STO.pdf Fig. 7); data/processed/sto_production/kappa_mesh_T.csv; data/processed/revision/r_point_check.csv
+# generated: 2026-10-31; fekappa 3.1.0; manifest_final.json sha256 b9e3d32ab98b
 dataset,T_K,kappa_W_mK,unc_W_mK,bar_lo,bar_hi,note,reference,sample,obtained
 Muta2005,296.8,11.136,0.13,,,,"H. Muta, K. Kurosaki, S. Yamanaka, J. Alloys Compd. 392, 306 (2005)",single crystal (title as cited by Wang 2021: 'reduced and La-doped single-crystalline SrTiO3'); which sample Tadano plotted is not stated in Tadano,read from figure: Tadano 2015 arXiv v1 Fig. 7
 Muta2005,324.3,10.178,0.13,,,,"H. Muta, K. Kurosaki, S. Yamanaka, J. Alloys Compd. 392, 306 (2005)",single crystal (title as cited by Wang 2021: 'reduced and La-doped single-crystalline SrTiO3'); which sample Tadano plotted is not stated in Tadano,read from figure: Tadano 2015 arXiv v1 Fig. 7
@@ -29,4 +29,3 @@ Tadano2015_calc,700.1,5.786,0.11,,,"calculation, not experiment","Tadano & Tsune
 Tadano2015_calc,800.1,5.39,0.11,,,"calculation, not experiment","Tadano & Tsuneyuki, PRB 92, 054301 (2015), arXiv:1506.01781v1","calculation (SCPH q1 = 8^3, BTE-RTA 12^3 q grid, per p.9 text)",read from figure: Tadano 2015 arXiv v1 Fig. 7
 Tadano2015_calc,900.1,5.074,0.11,,,"calculation, not experiment","Tadano & Tsuneyuki, PRB 92, 054301 (2015), arXiv:1506.01781v1","calculation (SCPH q1 = 8^3, BTE-RTA 12^3 q grid, per p.9 text)",read from figure: Tadano 2015 arXiv v1 Fig. 7
 Tadano2015_calc,997.5,4.794,0.11,,,"calculation, not experiment","Tadano & Tsuneyuki, PRB 92, 054301 (2015), arXiv:1506.01781v1","calculation (SCPH q1 = 8^3, BTE-RTA 12^3 q grid, per p.9 text)",read from figure: Tadano 2015 arXiv v1 Fig. 7
-Tachibana2008,300.0,11.0,1.0,,,"tracked CSV, method 'exp_single_crystal_approx'; PDF not on hand; origin of value and uncertainty not recorded","M. Tachibana, T. Kolodiazhnyi, E. Takayama-Muromachi, APL 93, 092902 (2008)",single crystal (as recorded in the tracked CSV),tracked CSV (data inventory)

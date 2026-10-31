@@ -1,6 +1,6 @@
 # script: scripts/revision/exp_300K_crossread.py
-# inputs: data/processed/sto_production/kappa_mesh_T.csv; figure readings in the script (Muta 2005, Tachibana 2008, Popuri 2017)
-# generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
+# inputs: data/processed/sto_production/kappa_mesh_T.csv; figure readings in the script (Muta 2005, Popuri 2014)
+# generated: 2026-10-31; fekappa 3.1.0; manifest_final.json sha256 b9e3d32ab98b
 dataset,figure,T_K,kappa_W_mK,unc_W_mK,note,obtained
 Muta2005,Tadano 2015 Fig. 7 (arXiv v1),296.8,11.14,0.13,exp_datasets.py,read from figure
 Muta2005,Tadano 2015 Fig. 7 (arXiv v1),324.3,10.18,0.13,exp_datasets.py,read from figure

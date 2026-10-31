@@ -8,8 +8,7 @@ versus temperature. The light vertical line marks the ~105 K cubic-tetragonal
 boundary (fixed-structure cubic reference below it).
 
 Data: data/processed/sto_alamode/{kappa_five_way_T,kappa_coherence_blocks_T,
-bare_vs_scph_control}.csv + data/literature/STO/{tadano_2015,tachibana_2008}/
-kappa_total_T.csv.
+bare_vs_scph_control}.csv + data/literature/STO/tadano_2015/kappa_total_T.csv.
 """
 
 from __future__ import annotations
@@ -33,7 +32,6 @@ five = five[five["boundary_cm1"] == 175.0].sort_values("T_K")
 control = pd.read_csv(TIDY / "bare_vs_scph_control.csv", comment="#")
 bare = control[control["record"] == "kappa_T"].sort_values("T_K")
 tadano = pd.read_csv(LIT / "tadano_2015" / "kappa_total_T.csv")
-tachibana = pd.read_csv(LIT / "tachibana_2008" / "kappa_total_T.csv")
 
 blocks = pd.read_csv(TIDY / "kappa_coherence_blocks_T.csv", comment="#")
 blocks = blocks[blocks["T_K"] > 0].sort_values("T_K")
@@ -60,11 +58,6 @@ ax.errorbar(
     tadano["T_K"], tadano["kappa_W_per_m_K"], yerr=tadano["kappa_uncertainty"],
     fmt="D", ms=6, color="tab:purple", zorder=5, capsize=3,
     label=r"Tadano 2015 ($\kappa_P$, RTA $12^3$)",
-)
-ax.errorbar(
-    tachibana["T_K"], tachibana["kappa_W_per_m_K"], yerr=tachibana["kappa_uncertainty"],
-    fmt="*", ms=11, color="k", zorder=5, capsize=3,
-    label=r"Tachibana 2008 (exp. total, $\approx$)",
 )
 pubstyle.mark_phase_boundary(ax)
 ax.set_xlim(0, 1000)

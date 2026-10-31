@@ -87,8 +87,6 @@ EXPECTED_SCHEMAS: dict[str, list[str]] = {
          "method", "source_figure"],
     "STO/tadano_2015/kappa_total_T.csv":
         ["T_K", "kappa_W_per_m_K", "kappa_uncertainty", "method", "source"],
-    "STO/tachibana_2008/kappa_total_T.csv":
-        ["T_K", "kappa_W_per_m_K", "kappa_uncertainty", "method", "source"],
     # --- STO Verdi 2023 (sscha_omega_T extended with shift_meV column;
     #     dispersion and inverse_dielectric_T are new v1 additions) ---
     "STO/verdi_2023/sscha_omega_T.csv":

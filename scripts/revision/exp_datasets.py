@@ -102,16 +102,8 @@ def build_datasets():
     for T, k in READ["Tadano_calc"]:
         rows.append(dict(dataset="Tadano2015_calc", T_K=T, kappa_W_mK=k, unc_W_mK=0.11, bar_lo=np.nan,
                          bar_hi=np.nan, note="calculation, not experiment"))
-    tb = pd.read_csv(REPO / "data/literature/STO/tachibana_2008/kappa_total_T.csv")
-    for _, r in tb.iterrows():
-        rows.append(dict(dataset="Tachibana2008", T_K=r.T_K, kappa_W_mK=r.kappa_W_per_m_K,
-                         unc_W_mK=r.kappa_uncertainty, bar_lo=np.nan, bar_hi=np.nan,
-                         note="tracked CSV, method 'exp_single_crystal_approx'; PDF not on hand; origin of value "
-                              "and uncertainty not recorded"))
     d = pd.DataFrame(rows)
-    src = {"Muta2005": SRC["Muta"], "Popuri2014": SRC["Popuri"], "Tadano2015_calc": SRC["Tadano_calc"],
-           "Tachibana2008": ("M. Tachibana, T. Kolodiazhnyi, E. Takayama-Muromachi, APL 93, 092902 (2008)",
-                             "single crystal (as recorded in the tracked CSV)", "tracked CSV (data inventory)")}
+    src = {"Muta2005": SRC["Muta"], "Popuri2014": SRC["Popuri"], "Tadano2015_calc": SRC["Tadano_calc"]}
     d["reference"] = d.dataset.map(lambda s: src[s][0])
     d["sample"] = d.dataset.map(lambda s: src[s][1])
     d["obtained"] = d.dataset.map(lambda s: src[s][2])
@@ -175,4 +167,4 @@ if __name__ == "__main__":
 from fekappa.provenance import stamp  # noqa: E402
 for _f in (f"exp_datasets.csv", f"exp_gap_vs_T.csv",):
     stamp(Path(__file__).resolve().parents[2] / "data/processed/revision" / _f, __file__,
-          ['data/literature/STO/', 'data/processed/sto_production/kappa_mesh_T.csv', 'data/processed/revision/r_point_check.csv'])
+          ['figure readings in the script (Tadano_STO.pdf Fig. 7)', 'data/processed/sto_production/kappa_mesh_T.csv', 'data/processed/revision/r_point_check.csv'])
