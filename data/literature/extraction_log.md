@@ -115,8 +115,8 @@ which is *below* T_c ≈ 403 K, so BTO is in the **tetragonal phase**. The
 Shirane-derived Λ² is a tetragonal-phase value applied to the cubic-phase
 soft-mode treatment.
 
-**Pre-filled `Lambda_sq.csv`:** 5100 meV²·Å² central value from prior
-chat fit (no uncertainty stored).
+**Pre-filled `Lambda_sq.csv`:** 5100 meV²·Å² central value from an earlier
+reference fit (no uncertainty stored).
 
 **Figs. 3 & 6 — soft-TO dispersion (`cubic_dispersion.csv`):**
 - 21 rows (12 from Fig. 6 e‖[100]; 9 from Fig. 3 e‖[110]).
@@ -284,7 +284,7 @@ digitize it).
   than ω(T) at fixed q. TODO: digitize the STO panel of Shirane 1970
   Fig. 1 (or the original Yamada-Shirane 1969 paper if obtained).
 - `gamma_T.csv` — schema unchanged. TODO if Yamada-Shirane PDF obtained;
-  prior-chat reference: linewidth 0.22 → 0.85 meV from 20 K to 250 K.
+  earlier reference: linewidth 0.22 → 0.85 meV from 20 K to 250 K.
 
 ---
 

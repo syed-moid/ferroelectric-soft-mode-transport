@@ -19,7 +19,7 @@ explaining why.
 ### BTO-1. Ehsan et al 2021 (Phys. Rev. B 103, 094108)
 
 - File: `data/Ehsan_BTO.pdf`
-- Already extracted (from prior chat): two anchor points
+- Already extracted (earlier extraction): two anchor points
   - 0 K: bare imaginary ω₀ = 166i cm⁻¹ → ω₀² = −424 meV²
   - 500 K: stabilized Ω = 170 cm⁻¹ → Ω(500 K) = 21.08 meV; Ω² = 444 meV²
 - These two points are pre-filled in
@@ -116,7 +116,7 @@ explaining why.
     the two directions disagree. Replaces the inherited 5100 meV²·Å² with
     a properly sourced number.
 - `data/literature/BTO/shirane_1970/Lambda_sq.csv` is pre-filled with the
-  central value 5100 meV²·Å² already established in prior chat work; the
+  central value 5100 meV²·Å² already established in an earlier fit; the
   Λ² fit from `cubic_dispersion.csv` is intended to either corroborate
   this number or replace it.
   - Schema: `{Lambda_sq_meV2_A2, Lambda_sq_uncertainty_meV2_A2, T_K, reference_q_range}`
@@ -337,7 +337,7 @@ explaining why.
   - Schema: `{T_K, gamma_meV, gamma_uncertainty_meV}`
   - This is the **experimental STO Γ(T)** — the quantity that lets
     `eta.eta_bracket` be replaced by a fitted `eta.eta_fit`. Γ values are
-    plotted, not tabulated; prior-chat reference linewidth 0.22 → 0.85 meV
+    plotted, not tabulated; earlier reference linewidth 0.22 → 0.85 meV
     from 20 → 250 K. Fig. 5 annotates the per-temperature ℏΓ best-fit
     values used to build Fig. 6, so cross-check Fig. 5 labels against the
     Fig. 6 curve while digitizing.

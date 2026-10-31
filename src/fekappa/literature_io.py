@@ -281,7 +281,7 @@ def load_tadano2022_kappa_total_T() -> pd.DataFrame:
 # BTO -- Shirane 1970
 # ===========================================================================
 def load_shirane_Lambda_sq() -> SimpleNamespace:
-    """BTO Shirane 1970 Λ² central lock (prior-chat fit).
+    """BTO Shirane 1970 Λ² central lock (earlier reference fit).
 
     Returns:
         SimpleNamespace with ``central_meV2_A2``, ``uncertainty_meV2_A2``
