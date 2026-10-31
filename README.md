@@ -6,12 +6,12 @@ force constants distributed with the ALAMODE SrTiO₃ example, three-phonon line
 contributions. Both contributions are grouped by reference character under two mode-labelling rules. BaTiO₃ and
 KTaO₃ appear only as literature context from the earlier releases.
 
-Version 3.0.0 holds the calculations, tables and scripts of the revised manuscript. It also holds the
+Version 3.1.0 holds the calculations, tables and scripts of the revised manuscript. It also holds the
 four-phonon diagnostics with the ALAMODE patches they used, the job manifest of every calculation, and the
 rules and predictions recorded before the runs. The raw solver outputs are archived on Zenodo, in the same
 record as this release.
 
-## Key results (v3.0.0, revised manuscript)
+## Key results (v3.1.0, revised manuscript)
 
 All values are for this model: fixed-cell cubic SCPH on the inherited force constants, three-phonon scattering, and
 the relaxation-time approximation for κ_P.
@@ -42,7 +42,7 @@ The revised manuscript supersedes their SrTiO₃ conclusions where the two diffe
 
 ## Status
 
-v3.0.0 accompanies the revised manuscript. Standing caveats and checks are in
+v3.1.0 accompanies the revised manuscript. Standing caveats and checks are in
 `METHODS_AND_CAVEATS.md`.
 
 ## Repository structure
@@ -79,7 +79,7 @@ v3.0.0 accompanies the revised manuscript. Standing caveats and checks are in
 | `data/processed/revision/` | revision tables with provenance headers (benchmark, convergence, labels, pair factors, four-phonon diagnostics) |
 | `data/processed/si_v4/` | the tables of the Supplementary Information |
 | `data/processed/manuscript_numbers_v8.csv` | every number of the revised main text, with its source table |
-| `data/provenance/` | scrubbed job manifest of all 170 calculations (inputs, outputs, sha256, build ids) |
+| `data/provenance/` | scrubbed job manifest: 170 entries, 169 lattice-dynamics runs and one entry recording the SCPH-grid selection rule (inputs, outputs, sha256, build ids) |
 | `docs/recorded_rules.md` | dated rules and predictions with their outcomes |
 | `queue/` | the checkpointed job runner, job specs and tests |
 | `tools/alamode_patches/` | ALAMODE c5b015c patches, build notes and binary hashes (`BUILD.md`), one-quartet trace (`TRACE.md`) |

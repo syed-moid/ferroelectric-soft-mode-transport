@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fekappa"
-version = "3.0.0"
+version = "3.1.0"
 description = "Thermal conductivity of anharmonic ferroelectrics: SCPH + Wigner"
 requires-python = ">=3.11"
 authors = [{ name = "Syed A. Moid" }]

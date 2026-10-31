@@ -24,9 +24,10 @@ production run regenerates bit-for-bit after a toolchain rebuild. Standing cavea
 records the fixed-cell SCPH Ω₀ systematic and its handling.
 
 **Revision state (v3, production dataset of the revised manuscript, 2026-10-24).**
-- Data: own SCPH on q₁ = 12³ with polarization mixing, 300–1000 K. All 170 jobs are in
-  `data/provenance/manifest_final.json`.
-- Tests: **311 passed / 2 skipped** with the raw outputs present; 305 passed / 8 skipped in a clean checkout.
+- Data: own SCPH on q₁ = 12³ with polarization mixing, 300–1000 K. The 170 entries of
+  `data/provenance/manifest_final.json` are 169 lattice-dynamics runs and one entry recording the SCPH-grid
+  selection rule (`d0_decision`).
+- Tests (v3.1.0): **306 passed / 2 skipped** with the raw outputs present; 300 passed / 8 skipped in a clean checkout.
 - New checks, all passing:
   - production-table closure: κ_P + κ_C = κ_total; sector and mode sums against the solver within the recorded
     closure; six coherence blocks summing to the pair sum; the three character projections summing to one;

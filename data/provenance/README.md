@@ -1,7 +1,8 @@
 # Provenance record of the revision calculations
 
-`manifest_final.json` is the final job manifest of the compute queue (`queue/run_queue.py`). It lists 170 jobs, all
-`done`, and is written by `scripts/revision/export_manifest.py` from the live, untracked `queue/manifest.json`. The
+`manifest_final.json` is the final job manifest of the compute queue (`queue/run_queue.py`). It lists 170 entries, all
+`done`: 169 lattice-dynamics runs and one `decision` entry (`d0_decision`) that applied the SCPH-grid selection
+rule (R1 of `docs/recorded_rules.md`), with no solver run. It is written by `scripts/revision/export_manifest.py` from the live, untracked `queue/manifest.json`. The
 raw outputs of every job are in the Zenodo record; the archive is named in each job's `archive_file`.
 
 ## Fields of a job record
