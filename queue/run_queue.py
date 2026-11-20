@@ -210,6 +210,19 @@ def write_scph_inputs(job, wd):
     return f'"{ANPHON}" scph.in > scph.log 2>&1'
 
 
+def model_alat():
+    """Lattice constant (bohr) of the model in QUEUE_TOOLCHAIN: the line after &cell in its SCPH template."""
+    lines = SCPH_TEMPLATE.read_text().splitlines()
+    return lines[next(i for i, l in enumerate(lines) if l.strip() == "&cell") + 1].strip()
+
+
+def set_alat(s):
+    """Put the model's lattice constant into an input that carries the example's template value (7.363)."""
+    s = s.replace("\n&cell\n7.363\n", f"\n&cell\n{model_alat()}\n")
+    assert f"\n&cell\n{model_alat()}\n" in s, "&cell"
+    return s
+
+
 def dfc2_file_for(scph_entry):
     return workdir_of(scph_entry) / f"{prefix_of(scph_entry)}.scph_dfc2"
 
@@ -224,6 +237,7 @@ def write_rta_inputs(job, wd, manifest):
     s = s.replace("\n8 8 8\n", f"\n{p['mesh']} {p['mesh']} {p['mesh']}\n")
     for k, v in (p.get("extra") or {}).items():
         s = s.replace("\n/\n", f"\n {k} = {v}\n/\n", 1)
+    s = set_alat(s)
     for must in (f"PREFIX = {job['id']}", f"TMIN = {p['T']}", f"\n{p['mesh']} {p['mesh']} {p['mesh']}\n",
                  "KAPPA_COHERENT = 2", "NONANALYTIC = 3"):
         assert must in s, must
@@ -246,6 +260,7 @@ def write_mode4ph_inputs(job, wd, manifest):
     s = s.replace("\n8 8 8\n", f"\n{p['mesh']} {p['mesh']} {p['mesh']}\n")
     s = s.replace(" KAPPA_COHERENT = 2\n", " KS_INPUT = modes.txt\n QUARTIC = 2\n SELF_ENERGY = 1\n")
     s = s.replace("\n/\n", f"\n EPSILON = {p['epsilon']}\n/\n", 1)
+    s = set_alat(s)
     for must in ("QUARTIC = 2", "SELF_ENERGY = 1", "KS_INPUT = modes.txt", f"EPSILON = {p['epsilon']}", f"TMIN = {p['tmin']}"):
         assert must in s, must
     (wd / "rta.in").write_text(s)
@@ -268,7 +283,7 @@ def write_evec_inputs(job, wd, manifest):
     p = job["params"]
     scph = manifest["jobs"][job["deps"][0]]
     s = (f"&general\n PREFIX = {job['id']}\n MODE = phonons\n NKD = 3; KD = Sr Ti O\n FCSXML = renorm.xml\n"
-         f" NONANALYTIC = 3; BORNINFO = BORN\n/\n&cell\n7.363\n1.0 0.0 0.0\n0.0 1.0 0.0\n0.0 0.0 1.0\n/\n"
+         f" NONANALYTIC = 3; BORNINFO = BORN\n/\n&cell\n{model_alat()}\n1.0 0.0 0.0\n0.0 1.0 0.0\n0.0 0.0 1.0\n/\n"
          f"&kpoint\n2\n{p['mesh']} {p['mesh']} {p['mesh']}\n/\n&analysis\n PRINTEVEC = 1\n/\n")
     (wd / "ph.in").write_text(s)
     shutil.copy(EXAMPLE / "BORN", wd / "BORN")
