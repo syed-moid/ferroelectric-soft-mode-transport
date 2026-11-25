@@ -1,0 +1,152 @@
+Partner-resolved three-phonon linewidth for anphon (ALAMODE). Applies to ALAMODE commit
+c5b015caaf72c1a86a5250b6e34a86c0e09c7986 with `patch -p1` or `git apply` (text above the first "---" line is
+ignored by both). Build and use: tools/alamode_patches/BUILD.md, section "Linewidth partition build".
+
+This patch modifies ALAMODE, which is distributed under the MIT License:
+
+  The MIT License (MIT)
+
+  Copyright (c) 2014 Terumasa Tadano
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+
+The changes in this patch are released under the same license.
+
+--- a/anphon/anharmonic_core.cpp
++++ b/anphon/anharmonic_core.cpp
+@@ -34,6 +34,60 @@
+ 
+ using namespace PHON_NS;
+ 
++// ---- T3 partner-resolved three-phonon linewidth (patch; see tools/alamode_patches/BUILD.md) ----
++// Active only when the environment variable T3_LABELS names a label table. The original linewidth is computed
++// exactly as in the base code; the partition is accumulated in a separate loop from the same per-pair arrays.
++// T3_LABELS: lines "qx qy qz branch label" (reduced coordinates, branch 1-based, label 0..T3_MAXLAB-1) covering
++//            every wave vector of the transport mesh and every branch.
++// T3_OUT:    output file (appended): per carrier and temperature one "T" line (base total) and one "B" line
++//            per unordered partner-label pair (l1 <= l2) with the decay and the absorption parts.
++#include <cstdlib>
++#include <fstream>
++#include <sstream>
++#include <iomanip>
++#include <iostream>
++namespace {
++void t3_fail(const char *msg)
++{
++    std::cerr << "T3 patch: " << msg << std::endl;
++    std::exit(EXIT_FAILURE);
++}
++
++const int T3_MAXLAB = 64;
++bool t3_checked = false;
++bool t3_active = false;
++int t3_nk = -1;
++int t3_ns = -1;
++std::vector<int> t3_label;
++
++void t3_load(const KpointMeshUniform *kmesh, const int ns)
++{
++    if (t3_checked && t3_nk == static_cast<int>(kmesh->nk)) return;
++    t3_checked = true;
++    const char *path = std::getenv("T3_LABELS");
++    if (path == nullptr) { t3_active = false; return; }
++    t3_nk = kmesh->nk;
++    t3_ns = ns;
++    t3_label.assign(t3_nk * ns, -1);
++    std::ifstream fin(path);
++    if (!fin) t3_fail("cannot open T3_LABELS");
++    std::string line;
++    double xq[3];
++    int ib, lab;
++    while (std::getline(fin, line)) {
++        if (line.empty() || line[0] == '#') continue;
++        std::istringstream ss(line);
++        if (!(ss >> xq[0] >> xq[1] >> xq[2] >> ib >> lab)) t3_fail("bad line in T3_LABELS");
++        const int kn = kmesh->get_knum(xq);
++        if (kn < 0 || ib < 1 || ib > ns || lab < 0 || lab >= T3_MAXLAB) t3_fail("label out of range");
++        t3_label[kn * ns + ib - 1] = lab;
++    }
++    for (const auto l: t3_label) if (l < 0) t3_fail("T3_LABELS does not cover the mesh");
++    t3_active = true;
++}
++}
++// ---- end T3 helpers ----
++
+ AnharmonicCore::AnharmonicCore(PHON *phon) : Pointers(phon)
+ {
+     set_default_variables();
+@@ -1073,7 +1127,58 @@
+             }
+         }
+         ret[i] = ret_tmp;
++    }
++
++    // ---- T3: partition of the same sum by the labels of the two partners (does not touch ret) ----
++    t3_load(kmesh_in, ns);
++    if (t3_active) {
++        const auto pref = pi * std::pow(0.5, 4);
++        std::vector<double> bin_dec(T3_MAXLAB * T3_MAXLAB), bin_abs(T3_MAXLAB * T3_MAXLAB);
++        const char *outpath = std::getenv("T3_OUT");
++        std::ofstream fout(outpath ? outpath : "t3_partition.txt", std::ios::app);
++        fout << std::setprecision(17) << std::scientific;
++        for (i = 0; i < ntemp; ++i) {
++            T_tmp = temp_in[i];
++            std::fill(bin_dec.begin(), bin_dec.end(), 0.0);
++            std::fill(bin_abs.begin(), bin_abs.end(), 0.0);
++            for (ik = 0; ik < npair_uniq; ++ik) {
++                k1 = triplet[ik].group[0].ks[0];
++                k2 = triplet[ik].group[0].ks[1];
++                for (is = 0; is < ns; ++is) {
++                    omega_inner[0] = eval_in[k1][is];
++                    for (js = 0; js < ns; ++js) {
++                        omega_inner[1] = eval_in[k2][js];
++                        if (thermodynamics->classical) {
++                            f1 = thermodynamics->fC(omega_inner[0], T_tmp);
++                            f2 = thermodynamics->fC(omega_inner[1], T_tmp);
++                            n1 = f1 + f2;
++                            n2 = f1 - f2;
++                        } else {
++                            f1 = thermodynamics->fB(omega_inner[0], T_tmp);
++                            f2 = thermodynamics->fB(omega_inner[1], T_tmp);
++                            n1 = f1 + f2 + 1.0;
++                            n2 = f1 - f2;
++                        }
++                        int l1 = t3_label[k1 * ns + is];
++                        int l2 = t3_label[k2 * ns + js];
++                        if (l1 > l2) std::swap(l1, l2);
++                        const int b = l1 * T3_MAXLAB + l2;
++                        bin_dec[b] += v3_arr[ik][ns * is + js] * (n1 * delta_arr[ik][ns * is + js][0]);
++                        bin_abs[b] += -v3_arr[ik][ns * is + js] * (n2 * delta_arr[ik][ns * is + js][1]);
++                    }
++                }
++            }
++            fout << "T " << ik_in << " " << is_in << " " << knum << " " << T_tmp << " "
++                 << omega_in << " " << ret[i] * pref << " " << npair_uniq << "\n";
++            for (int b = 0; b < T3_MAXLAB * T3_MAXLAB; ++b) {
++                if (bin_dec[b] != 0.0 || bin_abs[b] != 0.0) {
++                    fout << "B " << ik_in << " " << is_in << " " << T_tmp << " " << b / T3_MAXLAB << " "
++                         << b % T3_MAXLAB << " " << bin_dec[b] * pref << " " << bin_abs[b] * pref << "\n";
++                }
++            }
++        }
+     }
++    // ---- end T3 ----
+ 
+     deallocate(v3_arr);
+     deallocate(delta_arr);

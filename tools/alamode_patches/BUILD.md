@@ -40,6 +40,27 @@ The job manifest also holds four entries without a binary. Three are imported ru
 run and two RTA runs on it), made with the HOME production toolchain before the queue existed. The fourth is the q₁ rule job
 (`d0_decision`).
 
+## Linewidth partition build (v4)
+
+| variant | tree | patch (sha256 of the patch file) | machine | anphon sha256 | jobs |
+|---|---|---|---|---|---|
+| three-phonon linewidth binned by the labels of the two partners | `alamode_t3part` | `t3_partition.diff` (`c1d375d25bde66a0d33287adbadcf66cad779178884c7330dabd36f51ad55a6d`) | NODE | `a0a5d30ca29489bf6e37ba3ab92c04780f2ba64408cde7ec42c4c1d08b2ec6e9` | 16 (v4, parts a and b) [+ 3 held] |
+
+- The patch touches `anphon/anharmonic_core.cpp` only. Active only when the environment variable `T3_LABELS` names a
+  label table (lines `qx qy qz branch label`); the partition is appended to `T3_OUT`. Without `T3_LABELS` the binary
+  behaves as the base build.
+- The base linewidth is computed exactly as in c5b015c; the partition is accumulated in a separate loop from the same
+  per-pair arrays. Checks on every reported run: the bins sum to the base total per carrier (relative ≤ 1.5 × 10⁻¹⁴);
+  the total equals the printed `.result` width to its 6 digits; `.result`, `.kl`, `.kl_coherent` and `.kc_elem` are
+  byte-identical to those of the base build for the same input.
+- Applying the released patch to a clean c5b015c checkout reproduces the source of the tree that was built, except one
+  comment line (line 37 of `anharmonic_core.cpp`), whose pointer to an internal note was replaced by a pointer to this
+  file; the line count is unchanged. The binary was not rebuilt from the released patch.
+- A HOME build of the same tree exists (anphon sha256 `8905677d9881b4aed235ebf383589fb11e2f2ad64e1a9ff5c7c1786819dc978d`);
+  it ran no reported job.
+- The base build that ran the unpatched v4 jobs on the compute node is the production build of the table above
+  (`266b507a…`, NODE); `dfc2` of the same tree: `2db3d7af443250ea02252bed7c1b92c2e6fb919fb37dc1fcb319589bb28b5619`.
+
 ## Pre-queue build
 
 | variant | tree | patch (sha256) | machine | anphon sha256 | used for |
