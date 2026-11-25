@@ -1,0 +1,9 @@
+# script: scripts/v4/build_tables_v4.py from a/reports/t8_report_A.md (table 1); part a
+# heading: 3. T4 shares under both settings (rows of T4 §2a–2d) — 3a. Carriers
+quantity,model,TRISYM 1,TRISYM 0
+κ_P mode sum (W/mK),A,8.8907,8.8910
+carrier modes (irreducible) / degenerate groups,A,203 / 198,203 / 198
+"carriers by family, primary_c0.5 (neither / pol / rot / mixed)",A,154 / 0 / 49 / 0,154 / 0 / 49 / 0
+"carriers by family, secondary_c0.5 (neither / pol / rot / mixed)",A,153 / 1 / 48 / 1,153 / 1 / 48 / 1
+"carriers by family, primary_c0.4 (neither / pol / rot / mixed)",A,131 / 0 / 72 / 0,131 / 0 / 72 / 0
+"carriers by family, primary_c0.6 (neither / pol / rot / mixed)",A,165 / 0 / 38 / 0,165 / 0 / 38 / 0

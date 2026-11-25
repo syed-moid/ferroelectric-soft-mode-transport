@@ -1,0 +1,15 @@
+# script: scripts/v4/build_tables_v4.py from b/reports/t6_report.md (table 4); part b
+# heading: 2. Results: 16³ and 20³ side by side (rows of T4 §2a–2d) — 2c. Linewidth of the carriers by partner family pair (primary c0.5)
+quantity,model,16³ (%),20³ (%),20³ − 16³ (pp),mesh-stable (≤ 2 pp)
+neither/neither,A,76.13,76.34,+0.20,yes
+neither/neither,B,73.71,74.15,+0.43,yes
+neither/pol,A,2.62,2.52,-0.10,yes
+neither/pol,B,2.91,2.67,-0.24,yes
+neither/rot,A,18.74,18.75,+0.01,yes
+neither/rot,B,20.46,20.33,-0.13,yes
+pol/pol,A,0.00,0.00,+0.00,yes
+pol/pol,B,0.00,0.00,0.00,yes
+pol/rot,A,0.06,0.05,-0.01,yes
+pol/rot,B,0.08,0.06,-0.01,yes
+rot/rot,A,2.45,2.35,-0.10,yes
+rot/rot,B,2.84,2.79,-0.05,yes

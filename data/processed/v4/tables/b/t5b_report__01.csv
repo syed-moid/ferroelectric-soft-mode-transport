@@ -1,0 +1,3 @@
+# script: scripts/v4/build_tables_v4.py from b/reports/t5b_report.md (table 1); part b
+# heading: 1. Runs and checks
+run,label table sha256,time,max RSS,"Σ bins = total, per carrier group (max rel.)",total = .result (max rel.),outputs vs reference

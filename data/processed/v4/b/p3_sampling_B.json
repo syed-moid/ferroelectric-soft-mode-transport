@@ -1,0 +1,1108 @@
+{
+ "model": "B",
+ "unit": "star-group (degenerate group x star)",
+ "bands": {
+  "<105": {
+   "S_total": {
+    "rot": 0.19075305702127826,
+    "nonrot": 0.12803628191785102
+   },
+   "N": {
+    "rot": 660,
+    "nonrot": 2003
+   },
+   "N_from_labels": {
+    "rot": 660,
+    "nonrot": 2003
+   },
+   "ratio": 4.521426406717071,
+   "class": "\u2265 2.0",
+   "stars_in_band": {
+    "rot": {
+     "n_star_groups": 42,
+     "sizes": [
+      1,
+      2,
+      3,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      8,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      16,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24
+     ]
+    },
+    "nonrot": {
+     "n_star_groups": 83,
+     "sizes": [
+      3,
+      6,
+      6,
+      6,
+      8,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      16,
+      16,
+      16,
+      18,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48
+     ]
+    }
+   },
+   "edges": {
+    "105.0": [
+     {
+      "Omega": 103.139,
+      "family": "rot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 103.445,
+      "family": "nonrot",
+      "size": 12,
+      "side": "inside"
+     },
+     {
+      "Omega": 103.612,
+      "family": "nonrot",
+      "size": 48,
+      "side": "inside"
+     },
+     {
+      "Omega": 103.739,
+      "family": "nonrot",
+      "size": 48,
+      "side": "inside"
+     },
+     {
+      "Omega": 103.757,
+      "family": "nonrot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 103.974,
+      "family": "nonrot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 103.987,
+      "family": "rot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 104.19,
+      "family": "nonrot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 104.377,
+      "family": "nonrot",
+      "size": 18,
+      "side": "inside"
+     },
+     {
+      "Omega": 104.378,
+      "family": "nonrot",
+      "size": 6,
+      "side": "inside"
+     },
+     {
+      "Omega": 104.605,
+      "family": "nonrot",
+      "size": 48,
+      "side": "inside"
+     },
+     {
+      "Omega": 104.633,
+      "family": "nonrot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 105.108,
+      "family": "nonrot",
+      "size": 48,
+      "side": "outside"
+     },
+     {
+      "Omega": 105.446,
+      "family": "nonrot",
+      "size": 48,
+      "side": "outside"
+     },
+     {
+      "Omega": 105.587,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 105.675,
+      "family": "nonrot",
+      "size": 48,
+      "side": "outside"
+     },
+     {
+      "Omega": 105.742,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 105.767,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 105.767,
+      "family": "nonrot",
+      "size": 12,
+      "side": "outside"
+     },
+     {
+      "Omega": 105.9,
+      "family": "rot",
+      "size": 48,
+      "side": "outside"
+     },
+     {
+      "Omega": 106.062,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 106.098,
+      "family": "nonrot",
+      "size": 12,
+      "side": "outside"
+     },
+     {
+      "Omega": 106.236,
+      "family": "nonrot",
+      "size": 48,
+      "side": "outside"
+     },
+     {
+      "Omega": 106.644,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 106.807,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 106.918,
+      "family": "nonrot",
+      "size": 48,
+      "side": "outside"
+     },
+     {
+      "Omega": 106.949,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     }
+    ]
+   },
+   "moves": [
+    {
+     "edge": 105.0,
+     "class_moved": "rot",
+     "star_group_Omega": 105.9,
+     "size": 48,
+     "direction": "into band",
+     "distance_cm1": 0.9000000000000057,
+     "N_after": {
+      "rot": 708,
+      "nonrot": 2003
+     },
+     "ratio_after": 4.214889023210828,
+     "crosses_2.0_or_1.3": false
+    },
+    {
+     "edge": 105.0,
+     "class_moved": "nonrot",
+     "star_group_Omega": 105.108,
+     "size": 48,
+     "direction": "into band",
+     "distance_cm1": 0.10800000000000409,
+     "N_after": {
+      "rot": 660,
+      "nonrot": 2051
+     },
+     "ratio_after": 4.629778112918976,
+     "crosses_2.0_or_1.3": false
+    }
+   ],
+   "sensitive_to_sampling": false
+  },
+  "<80": {
+   "S_total": {
+    "rot": 0.15220482574869867,
+    "nonrot": 0.03583120179841788
+   },
+   "N": {
+    "rot": 264,
+    "nonrot": 393
+   },
+   "N_from_labels": {
+    "rot": 264,
+    "nonrot": 393
+   },
+   "ratio": 6.323473033507172,
+   "class": "\u2265 2.0",
+   "stars_in_band": {
+    "rot": {
+     "n_star_groups": 23,
+     "sizes": [
+      1,
+      2,
+      3,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      8,
+      12,
+      12,
+      12,
+      16,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24
+     ]
+    },
+    "nonrot": {
+     "n_star_groups": 23,
+     "sizes": [
+      3,
+      6,
+      8,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      16,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24
+     ]
+    }
+   },
+   "edges": {
+    "80.0": [
+     {
+      "Omega": 78.4378,
+      "family": "rot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 80.1134,
+      "family": "nonrot",
+      "size": 12,
+      "side": "outside"
+     },
+     {
+      "Omega": 80.4386,
+      "family": "nonrot",
+      "size": 48,
+      "side": "outside"
+     },
+     {
+      "Omega": 81.1336,
+      "family": "nonrot",
+      "size": 16,
+      "side": "outside"
+     },
+     {
+      "Omega": 81.9348,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     }
+    ]
+   },
+   "moves": [
+    {
+     "edge": 80.0,
+     "class_moved": "rot",
+     "star_group_Omega": 78.4378,
+     "size": 24,
+     "direction": "out of band",
+     "distance_cm1": 1.5622000000000043,
+     "N_after": {
+      "rot": 240,
+      "nonrot": 393
+     },
+     "ratio_after": 6.955820336857889,
+     "crosses_2.0_or_1.3": false
+    },
+    {
+     "edge": 80.0,
+     "class_moved": "nonrot",
+     "star_group_Omega": 80.1134,
+     "size": 12,
+     "direction": "into band",
+     "distance_cm1": 0.11339999999999861,
+     "N_after": {
+      "rot": 264,
+      "nonrot": 405
+     },
+     "ratio_after": 6.51655617956846,
+     "crosses_2.0_or_1.3": false
+    }
+   ],
+   "sensitive_to_sampling": false
+  },
+  "80-95": {
+   "S_total": {
+    "rot": 0.023556536445685207,
+    "nonrot": 0.03927515233303844
+   },
+   "N": {
+    "rot": 180,
+    "nonrot": 598
+   },
+   "N_from_labels": {
+    "rot": 180,
+    "nonrot": 598
+   },
+   "ratio": 1.9926096834667235,
+   "class": "1.3 to < 2.0",
+   "stars_in_band": {
+    "rot": {
+     "n_star_groups": 9,
+     "sizes": [
+      12,
+      12,
+      12,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24
+     ]
+    },
+    "nonrot": {
+     "n_star_groups": 24,
+     "sizes": [
+      6,
+      12,
+      12,
+      12,
+      12,
+      16,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      48,
+      48,
+      48,
+      48
+     ]
+    }
+   },
+   "edges": {
+    "80.0": [
+     {
+      "Omega": 78.4378,
+      "family": "rot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 80.1134,
+      "family": "nonrot",
+      "size": 12,
+      "side": "inside"
+     },
+     {
+      "Omega": 80.4386,
+      "family": "nonrot",
+      "size": 48,
+      "side": "inside"
+     },
+     {
+      "Omega": 81.1336,
+      "family": "nonrot",
+      "size": 16,
+      "side": "inside"
+     },
+     {
+      "Omega": 81.9348,
+      "family": "nonrot",
+      "size": 24,
+      "side": "inside"
+     }
+    ],
+    "95.0": [
+     {
+      "Omega": 93.0384,
+      "family": "nonrot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 93.2599,
+      "family": "rot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 93.4892,
+      "family": "nonrot",
+      "size": 48,
+      "side": "inside"
+     },
+     {
+      "Omega": 93.5173,
+      "family": "nonrot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 95.0856,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 95.1073,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 95.4162,
+      "family": "nonrot",
+      "size": 48,
+      "side": "outside"
+     },
+     {
+      "Omega": 95.6471,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 95.9708,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 96.0837,
+      "family": "rot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 96.1012,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 96.1534,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 96.8578,
+      "family": "rot",
+      "size": 12,
+      "side": "outside"
+     }
+    ]
+   },
+   "moves": [
+    {
+     "edge": 80.0,
+     "class_moved": "rot",
+     "star_group_Omega": 78.4378,
+     "size": 24,
+     "direction": "into band",
+     "distance_cm1": 1.5622000000000043,
+     "N_after": {
+      "rot": 204,
+      "nonrot": 598
+     },
+     "ratio_after": 1.7581850148235796,
+     "crosses_2.0_or_1.3": false
+    },
+    {
+     "edge": 80.0,
+     "class_moved": "nonrot",
+     "star_group_Omega": 80.1134,
+     "size": 12,
+     "direction": "out of band",
+     "distance_cm1": 0.11339999999999861,
+     "N_after": {
+      "rot": 180,
+      "nonrot": 586
+     },
+     "ratio_after": 1.9526242048687292,
+     "crosses_2.0_or_1.3": false
+    },
+    {
+     "edge": 95.0,
+     "class_moved": "rot",
+     "star_group_Omega": 96.0837,
+     "size": 24,
+     "direction": "into band",
+     "distance_cm1": 1.0836999999999932,
+     "N_after": {
+      "rot": 204,
+      "nonrot": 598
+     },
+     "ratio_after": 1.7581850148235796,
+     "crosses_2.0_or_1.3": false
+    },
+    {
+     "edge": 95.0,
+     "class_moved": "nonrot",
+     "star_group_Omega": 95.0856,
+     "size": 24,
+     "direction": "into band",
+     "distance_cm1": 0.08559999999999945,
+     "N_after": {
+      "rot": 180,
+      "nonrot": 622
+     },
+     "ratio_after": 2.072580640662712,
+     "crosses_2.0_or_1.3": true
+    }
+   ],
+   "sensitive_to_sampling": true
+  },
+  "95-105": {
+   "S_total": {
+    "rot": 0.02253766452887862,
+    "nonrot": 0.05557637745630625
+   },
+   "N": {
+    "rot": 216,
+    "nonrot": 1012
+   },
+   "N_from_labels": {
+    "rot": 216,
+    "nonrot": 1012
+   },
+   "ratio": 1.89996427965087,
+   "class": "1.3 to < 2.0",
+   "stars_in_band": {
+    "rot": {
+     "n_star_groups": 10,
+     "sizes": [
+      12,
+      12,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24
+     ]
+    },
+    "nonrot": {
+     "n_star_groups": 36,
+     "sizes": [
+      6,
+      12,
+      12,
+      12,
+      16,
+      18,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48
+     ]
+    }
+   },
+   "edges": {
+    "95.0": [
+     {
+      "Omega": 93.0384,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 93.2599,
+      "family": "rot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 93.4892,
+      "family": "nonrot",
+      "size": 48,
+      "side": "outside"
+     },
+     {
+      "Omega": 93.5173,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 95.0856,
+      "family": "nonrot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 95.1073,
+      "family": "nonrot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 95.4162,
+      "family": "nonrot",
+      "size": 48,
+      "side": "inside"
+     },
+     {
+      "Omega": 95.6471,
+      "family": "nonrot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 95.9708,
+      "family": "nonrot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 96.0837,
+      "family": "rot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 96.1012,
+      "family": "nonrot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 96.1534,
+      "family": "nonrot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 96.8578,
+      "family": "rot",
+      "size": 12,
+      "side": "inside"
+     }
+    ],
+    "105.0": [
+     {
+      "Omega": 103.139,
+      "family": "rot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 103.445,
+      "family": "nonrot",
+      "size": 12,
+      "side": "inside"
+     },
+     {
+      "Omega": 103.612,
+      "family": "nonrot",
+      "size": 48,
+      "side": "inside"
+     },
+     {
+      "Omega": 103.739,
+      "family": "nonrot",
+      "size": 48,
+      "side": "inside"
+     },
+     {
+      "Omega": 103.757,
+      "family": "nonrot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 103.974,
+      "family": "nonrot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 103.987,
+      "family": "rot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 104.19,
+      "family": "nonrot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 104.377,
+      "family": "nonrot",
+      "size": 18,
+      "side": "inside"
+     },
+     {
+      "Omega": 104.378,
+      "family": "nonrot",
+      "size": 6,
+      "side": "inside"
+     },
+     {
+      "Omega": 104.605,
+      "family": "nonrot",
+      "size": 48,
+      "side": "inside"
+     },
+     {
+      "Omega": 104.633,
+      "family": "nonrot",
+      "size": 24,
+      "side": "inside"
+     },
+     {
+      "Omega": 105.108,
+      "family": "nonrot",
+      "size": 48,
+      "side": "outside"
+     },
+     {
+      "Omega": 105.446,
+      "family": "nonrot",
+      "size": 48,
+      "side": "outside"
+     },
+     {
+      "Omega": 105.587,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 105.675,
+      "family": "nonrot",
+      "size": 48,
+      "side": "outside"
+     },
+     {
+      "Omega": 105.742,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 105.767,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 105.767,
+      "family": "nonrot",
+      "size": 12,
+      "side": "outside"
+     },
+     {
+      "Omega": 105.9,
+      "family": "rot",
+      "size": 48,
+      "side": "outside"
+     },
+     {
+      "Omega": 106.062,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 106.098,
+      "family": "nonrot",
+      "size": 12,
+      "side": "outside"
+     },
+     {
+      "Omega": 106.236,
+      "family": "nonrot",
+      "size": 48,
+      "side": "outside"
+     },
+     {
+      "Omega": 106.644,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 106.807,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     },
+     {
+      "Omega": 106.918,
+      "family": "nonrot",
+      "size": 48,
+      "side": "outside"
+     },
+     {
+      "Omega": 106.949,
+      "family": "nonrot",
+      "size": 24,
+      "side": "outside"
+     }
+    ]
+   },
+   "moves": [
+    {
+     "edge": 95.0,
+     "class_moved": "rot",
+     "star_group_Omega": 96.0837,
+     "size": 24,
+     "direction": "out of band",
+     "distance_cm1": 1.0836999999999932,
+     "N_after": {
+      "rot": 192,
+      "nonrot": 1012
+     },
+     "ratio_after": 2.1374598146072286,
+     "crosses_2.0_or_1.3": true
+    },
+    {
+     "edge": 95.0,
+     "class_moved": "nonrot",
+     "star_group_Omega": 95.0856,
+     "size": 24,
+     "direction": "out of band",
+     "distance_cm1": 0.08559999999999945,
+     "N_after": {
+      "rot": 216,
+      "nonrot": 988
+     },
+     "ratio_after": 1.854905838236225,
+     "crosses_2.0_or_1.3": false
+    },
+    {
+     "edge": 105.0,
+     "class_moved": "rot",
+     "star_group_Omega": 105.9,
+     "size": 48,
+     "direction": "into band",
+     "distance_cm1": 0.9000000000000057,
+     "N_after": {
+      "rot": 264,
+      "nonrot": 1012
+     },
+     "ratio_after": 1.5545162288052572,
+     "crosses_2.0_or_1.3": false
+    },
+    {
+     "edge": 105.0,
+     "class_moved": "nonrot",
+     "star_group_Omega": 105.108,
+     "size": 48,
+     "direction": "into band",
+     "distance_cm1": 0.10800000000000409,
+     "N_after": {
+      "rot": 216,
+      "nonrot": 1060
+     },
+     "ratio_after": 1.9900811624801604,
+     "crosses_2.0_or_1.3": false
+    }
+   ],
+   "sensitive_to_sampling": true
+  }
+ }
+}

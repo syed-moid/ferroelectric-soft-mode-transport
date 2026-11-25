@@ -1,0 +1,4 @@
+run,T_K,mesh,gamma,kappa_P_modesum,eta_max,eta_max_q_index,eta_max_branch,eta_max_omega_cm1,share_kP_eta_gt_0.02,share_kP_eta_gt_0.05,share_kP_eta_gt_0.1
+a345,300,16,avg,8.89073,0.128388,165,1,25.8239,0.268406,0.00903827,1.84552e-05
+a198,300,16,avg,8.7995,0.12573,165,1,27.1414,0.272428,0.0087781,1.62443e-05
+a600,300,16,avg,8.78059,0.18971,165,1,21.804,0.277746,0.00937585,2.11909e-05

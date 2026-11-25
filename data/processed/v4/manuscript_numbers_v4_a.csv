@@ -1,0 +1,209 @@
+# script: scripts/v4/build_manuscript_numbers_v4.py; part a
+# generated: 2026-11-24
+key,value,unit,description,source,job,status
+a_A,7.363,bohr,"lattice parameter, model A (distributed example fit)",sto_example template,,FINAL
+A_free_params,3081 (698/2215/43/125),,"free anharmonic parameters, orders 3-6, model A",fit record of model A (example opt.log; not regenerated here),,REPORT
+A_nonzero_params,530/1340/37/83,,"nonzero parameters after LASSO, orders 3-6, model A",fit record of model A (example opt.log; not regenerated here),,REPORT
+A_residual,2.30451,%,"ALM training residual, model A",fit record of model A (example opt.log; not regenerated here),,REPORT
+harm_Gamma_A,"-58.49, -58.49, -58.49, 0.00, 0.00, 0.00",cm-1,"bare harmonic frequencies at Gamma, model A (negative = imaginary)","harm_A_m16 (bare 16^3, MODE=phonons)",,FINAL
+harm_R_A,"-76.41, -76.41, -76.41",cm-1,"bare harmonic frequencies at R, model A (negative = imaginary)","harm_A_m16 (bare 16^3, MODE=phonons)",,FINAL
+harm_M_A,20.60,cm-1,"bare harmonic frequencies at M, model A (negative = imaginary)","harm_A_m16 (bare 16^3, MODE=phonons)",,FINAL
+scph_Gamma_A_q2,145.2,cm-1,"SCPH Gamma (lowest / TO1), 300 K, PM, q1 2^3, model A",data/processed/v3/r_point_check.csv,,FINAL
+scph_Gamma_2015_q2,144.0,cm-1,"2015 Table I, Gamma, q1 2^3 (17.85 meV)",data/literature/STO/tadano_2015/scph_convergence_300K.csv,,FINAL
+scph_M_A_q2,100.8,cm-1,"SCPH M (lowest / TO1), 300 K, PM, q1 2^3, model A",data/processed/v3/r_point_check.csv,,FINAL
+scph_M_2015_q2,103.0,cm-1,"2015 Table I, M, q1 2^3 (12.77 meV)",data/literature/STO/tadano_2015/scph_convergence_300K.csv,,FINAL
+scph_R_A_q2,68.22,cm-1,"SCPH R (lowest / TO1), 300 K, PM, q1 2^3, model A",data/processed/v3/r_point_check.csv,,FINAL
+scph_R_2015_q2,69.0,cm-1,"2015 Table I, R, q1 2^3 (8.55 meV)",data/literature/STO/tadano_2015/scph_convergence_300K.csv,,FINAL
+scph_Gamma_A_q4,136.4,cm-1,"SCPH Gamma (lowest / TO1), 300 K, PM, q1 4^3, model A",data/processed/v3/r_point_check.csv,,FINAL
+scph_Gamma_2015_q4,138.0,cm-1,"2015 Table I, Gamma, q1 4^3 (17.11 meV)",data/literature/STO/tadano_2015/scph_convergence_300K.csv,,FINAL
+scph_M_A_q4,86.04,cm-1,"SCPH M (lowest / TO1), 300 K, PM, q1 4^3, model A",data/processed/v3/r_point_check.csv,,FINAL
+scph_M_2015_q4,89.0,cm-1,"2015 Table I, M, q1 4^3 (11.03 meV)",data/literature/STO/tadano_2015/scph_convergence_300K.csv,,FINAL
+scph_R_A_q4,41.95,cm-1,"SCPH R (lowest / TO1), 300 K, PM, q1 4^3, model A",data/processed/v3/r_point_check.csv,,FINAL
+scph_R_2015_q4,46.0,cm-1,"2015 Table I, R, q1 4^3 (5.7 meV)",data/literature/STO/tadano_2015/scph_convergence_300K.csv,,FINAL
+scph_Gamma_A_q8,134.0,cm-1,"SCPH Gamma (lowest / TO1), 300 K, PM, q1 8^3, model A",data/processed/v3/r_point_check.csv,,FINAL
+scph_Gamma_2015_q8,136.0,cm-1,"2015 Table I, Gamma, q1 8^3 (16.86 meV)",data/literature/STO/tadano_2015/scph_convergence_300K.csv,,FINAL
+scph_M_A_q8,80.82,cm-1,"SCPH M (lowest / TO1), 300 K, PM, q1 8^3, model A",data/processed/v3/r_point_check.csv,,FINAL
+scph_M_2015_q8,85.0,cm-1,"2015 Table I, M, q1 8^3 (10.54 meV)",data/literature/STO/tadano_2015/scph_convergence_300K.csv,,FINAL
+scph_R_A_q8,28.93,cm-1,"SCPH R (lowest / TO1), 300 K, PM, q1 8^3, model A",data/processed/v3/r_point_check.csv,,FINAL
+scph_R_2015_q8,37.0,cm-1,"2015 Table I, R, q1 8^3 (4.59 meV)",data/literature/STO/tadano_2015/scph_convergence_300K.csv,,FINAL
+scph_Gamma_A_q12,133.7,cm-1,"SCPH Gamma (lowest / TO1), 300 K, PM, q1 12^3, model A",data/processed/v3/r_point_check.csv,,FINAL
+scph_Gamma_2015_q12,135.0,cm-1,"2015 Table I, Gamma, q1 12^3 (16.74 meV)",data/literature/STO/tadano_2015/scph_convergence_300K.csv,,FINAL
+scph_M_A_q12,79.86,cm-1,"SCPH M (lowest / TO1), 300 K, PM, q1 12^3, model A",data/processed/v3/r_point_check.csv,,FINAL
+scph_M_2015_q12,85.0,cm-1,"2015 Table I, M, q1 12^3 (10.54 meV)",data/literature/STO/tadano_2015/scph_convergence_300K.csv,,FINAL
+scph_R_A_q12,25.82,cm-1,"SCPH R (lowest / TO1), 300 K, PM, q1 12^3, model A",data/processed/v3/r_point_check.csv,,FINAL
+scph_R_2015_q12,35.0,cm-1,"2015 Table I, R, q1 12^3 (4.34 meV)",data/literature/STO/tadano_2015/scph_convergence_300K.csv,,FINAL
+kP_a345_m16,8.8907,W/mK,"kappa_P, 300 K, 16^3, q1 12^3, fit a345",benchmark table A3_transport.csv (input),rta_pm_q12_T300_m16,FINAL
+kC_a345_m16,0.5081,W/mK,"kappa_C, 300 K, 16^3, fit a345",benchmark table A3_transport.csv (input),rta_pm_q12_T300_m16,FINAL
+kP_a345_q8_m12,9.2384,W/mK,"kappa_P, 300 K, 12^3, q1 8^3, fit a345",benchmark table A3_transport.csv (input),,FINAL
+kC_a345_q8_m12,0.279,W/mK,"kappa_C, 300 K, 12^3, q1 8^3, fit a345",benchmark table A3_transport.csv (input),,FINAL
+kP_a198_m16,8.7995,W/mK,"kappa_P, 300 K, 16^3, q1 12^3, fit a198",benchmark table A3_transport.csv (input),rta_rf_a198_pm_q12_T300_m16,FINAL
+kC_a198_m16,0.5117,W/mK,"kappa_C, 300 K, 16^3, fit a198",benchmark table A3_transport.csv (input),rta_rf_a198_pm_q12_T300_m16,FINAL
+kP_a198_q8_m12,9.1397,W/mK,"kappa_P, 300 K, 12^3, q1 8^3, fit a198",benchmark table A3_transport.csv (input),,FINAL
+kC_a198_q8_m12,0.2746,W/mK,"kappa_C, 300 K, 12^3, q1 8^3, fit a198",benchmark table A3_transport.csv (input),,FINAL
+kP_a600_m16,8.7806,W/mK,"kappa_P, 300 K, 16^3, q1 12^3, fit a600",benchmark table A3_transport.csv (input),rta_rf_a600_pm_q12_T300_m16,FINAL
+kC_a600_m16,0.5245,W/mK,"kappa_C, 300 K, 16^3, fit a600",benchmark table A3_transport.csv (input),rta_rf_a600_pm_q12_T300_m16,FINAL
+kP_a600_q8_m12,9.1258,W/mK,"kappa_P, 300 K, 12^3, q1 8^3, fit a600",benchmark table A3_transport.csv (input),,FINAL
+kC_a600_q8_m12,0.2784,W/mK,"kappa_C, 300 K, 12^3, q1 8^3, fit a600",benchmark table A3_transport.csv (input),,FINAL
+kP_2015,8.7,W/mK,"2015 study, 300 K, 12^3 BTE (digitized Fig. 7)",data/literature/STO/tadano_2015/kappa_total_T.csv,,FINAL
+kP_A_mesh8,7.5376,W/mK,"kappa_P, 300 K, 8^3, model A",data/processed/sto_production/kappa_mesh_T.csv,rta_pm_q12_T300_m8,FINAL
+kC_A_mesh8,0.3641,W/mK,"kappa_C, 300 K, 8^3, model A",data/processed/sto_production/kappa_mesh_T.csv,rta_pm_q12_T300_m8,FINAL
+kP_A_mesh12,9.1112,W/mK,"kappa_P, 300 K, 12^3, model A",data/processed/sto_production/kappa_mesh_T.csv,rta_pm_q12_T300_m12,FINAL
+kC_A_mesh12,0.2772,W/mK,"kappa_C, 300 K, 12^3, model A",data/processed/sto_production/kappa_mesh_T.csv,rta_pm_q12_T300_m12,FINAL
+kP_A_mesh15,9.0684,W/mK,"kappa_P, 300 K, 15^3, model A",data/processed/sto_production/kappa_mesh_T.csv,rta_pm_q12_T300_m15,FINAL
+kC_A_mesh15,0.5296,W/mK,"kappa_C, 300 K, 15^3, model A",data/processed/sto_production/kappa_mesh_T.csv,rta_pm_q12_T300_m15,FINAL
+kP_A_mesh16,8.8907,W/mK,"kappa_P, 300 K, 16^3, model A",data/processed/sto_production/kappa_mesh_T.csv,rta_pm_q12_T300_m16,FINAL
+kC_A_mesh16,0.5081,W/mK,"kappa_C, 300 K, 16^3, model A",data/processed/sto_production/kappa_mesh_T.csv,rta_pm_q12_T300_m16,FINAL
+kP_A_mesh17,9.0487,W/mK,"kappa_P, 300 K, 17^3, model A",data/processed/sto_production/kappa_mesh_T.csv,rta_pm_q12_T300_m17,FINAL
+kC_A_mesh17,0.526,W/mK,"kappa_C, 300 K, 17^3, model A",data/processed/sto_production/kappa_mesh_T.csv,rta_pm_q12_T300_m17,FINAL
+kP_A_mesh20,9.209,W/mK,"kappa_P, 300 K, 20^3, model A",data/processed/sto_production/kappa_mesh_T.csv,rta_pm_q12_T300_m20,FINAL
+kC_A_mesh20,0.4417,W/mK,"kappa_C, 300 K, 20^3, model A",data/processed/sto_production/kappa_mesh_T.csv,rta_pm_q12_T300_m20,FINAL
+kP_A_mesh24,9.0808,W/mK,"kappa_P, 300 K, 24^3, model A",data/processed/sto_production/kappa_mesh_T.csv,rta_pm_q12_T300_m24,FINAL
+kC_A_mesh24,0.5411,W/mK,"kappa_C, 300 K, 24^3, model A",data/processed/sto_production/kappa_mesh_T.csv,rta_pm_q12_T300_m24,FINAL
+share_eta_gt_0.02_a345,26.84,%,"share of kappa_P from modes with eta > 0.02, 300 K, 16^3, group-averaged widths",data/processed/v4/a/kp_eta_300K_m16_gavg_shares.csv,rta_pm_q12_T300_m16,FINAL
+share_eta_gt_0.02_a345_perbranch,26.86,%,same with per-branch widths (released convention),data/processed/v4/a/kp_eta_300K_m16_shares.csv,rta_pm_q12_T300_m16,SECONDARY
+share_eta_gt_0.05_a345,0.9038,%,"share of kappa_P from modes with eta > 0.05, 300 K, 16^3, group-averaged widths",data/processed/v4/a/kp_eta_300K_m16_gavg_shares.csv,rta_pm_q12_T300_m16,FINAL
+share_eta_gt_0.05_a345_perbranch,0.9071,%,same with per-branch widths (released convention),data/processed/v4/a/kp_eta_300K_m16_shares.csv,rta_pm_q12_T300_m16,SECONDARY
+share_eta_gt_0.1_a345,0.001846,%,"share of kappa_P from modes with eta > 0.1, 300 K, 16^3, group-averaged widths",data/processed/v4/a/kp_eta_300K_m16_gavg_shares.csv,rta_pm_q12_T300_m16,FINAL
+share_eta_gt_0.1_a345_perbranch,0.001845,%,same with per-branch widths (released convention),data/processed/v4/a/kp_eta_300K_m16_shares.csv,rta_pm_q12_T300_m16,SECONDARY
+eta_max_a345,0.1284,,"largest group-averaged eta on 16^3, 300 K (R triplet, 25.8239 cm-1)",data/processed/v4/a/kp_eta_300K_m16_gavg_shares.csv,rta_pm_q12_T300_m16,FINAL
+eta_max_a345_perbranch,0.1639,,"same, per-branch widths (released convention)",data/processed/v4/a/kp_eta_300K_m16_shares.csv,rta_pm_q12_T300_m16,SECONDARY
+R_omega_a345_m16,25.8239,cm-1,R triplet frequency in the 16^3 run,data/processed/v4/a/kp_eta_300K_m16_gavg_shares.csv,rta_pm_q12_T300_m16,FINAL
+share_eta_gt_0.02_a198,27.24,%,"share of kappa_P from modes with eta > 0.02, 300 K, 16^3, group-averaged widths",data/processed/v4/a/kp_eta_300K_m16_gavg_shares.csv,rta_rf_a198_pm_q12_T300_m16,FINAL
+share_eta_gt_0.02_a198_perbranch,27.27,%,same with per-branch widths (released convention),data/processed/v4/a/kp_eta_300K_m16_shares.csv,rta_rf_a198_pm_q12_T300_m16,SECONDARY
+share_eta_gt_0.05_a198,0.8778,%,"share of kappa_P from modes with eta > 0.05, 300 K, 16^3, group-averaged widths",data/processed/v4/a/kp_eta_300K_m16_gavg_shares.csv,rta_rf_a198_pm_q12_T300_m16,FINAL
+share_eta_gt_0.05_a198_perbranch,0.8809,%,same with per-branch widths (released convention),data/processed/v4/a/kp_eta_300K_m16_shares.csv,rta_rf_a198_pm_q12_T300_m16,SECONDARY
+share_eta_gt_0.1_a198,0.001624,%,"share of kappa_P from modes with eta > 0.1, 300 K, 16^3, group-averaged widths",data/processed/v4/a/kp_eta_300K_m16_gavg_shares.csv,rta_rf_a198_pm_q12_T300_m16,FINAL
+share_eta_gt_0.1_a198_perbranch,0.001623,%,same with per-branch widths (released convention),data/processed/v4/a/kp_eta_300K_m16_shares.csv,rta_rf_a198_pm_q12_T300_m16,SECONDARY
+eta_max_a198,0.1257,,"largest group-averaged eta on 16^3, 300 K (R triplet, 27.1414 cm-1)",data/processed/v4/a/kp_eta_300K_m16_gavg_shares.csv,rta_rf_a198_pm_q12_T300_m16,FINAL
+eta_max_a198_perbranch,0.1816,,"same, per-branch widths (released convention)",data/processed/v4/a/kp_eta_300K_m16_shares.csv,rta_rf_a198_pm_q12_T300_m16,SECONDARY
+R_omega_a198_m16,27.1414,cm-1,R triplet frequency in the 16^3 run,data/processed/v4/a/kp_eta_300K_m16_gavg_shares.csv,rta_rf_a198_pm_q12_T300_m16,FINAL
+share_eta_gt_0.02_a600,27.77,%,"share of kappa_P from modes with eta > 0.02, 300 K, 16^3, group-averaged widths",data/processed/v4/a/kp_eta_300K_m16_gavg_shares.csv,rta_rf_a600_pm_q12_T300_m16,FINAL
+share_eta_gt_0.02_a600_perbranch,27.77,%,same with per-branch widths (released convention),data/processed/v4/a/kp_eta_300K_m16_shares.csv,rta_rf_a600_pm_q12_T300_m16,SECONDARY
+share_eta_gt_0.05_a600,0.9376,%,"share of kappa_P from modes with eta > 0.05, 300 K, 16^3, group-averaged widths",data/processed/v4/a/kp_eta_300K_m16_gavg_shares.csv,rta_rf_a600_pm_q12_T300_m16,FINAL
+share_eta_gt_0.05_a600_perbranch,0.9407,%,same with per-branch widths (released convention),data/processed/v4/a/kp_eta_300K_m16_shares.csv,rta_rf_a600_pm_q12_T300_m16,SECONDARY
+share_eta_gt_0.1_a600,0.002119,%,"share of kappa_P from modes with eta > 0.1, 300 K, 16^3, group-averaged widths",data/processed/v4/a/kp_eta_300K_m16_gavg_shares.csv,rta_rf_a600_pm_q12_T300_m16,FINAL
+share_eta_gt_0.1_a600_perbranch,0.002119,%,same with per-branch widths (released convention),data/processed/v4/a/kp_eta_300K_m16_shares.csv,rta_rf_a600_pm_q12_T300_m16,SECONDARY
+eta_max_a600,0.1897,,"largest group-averaged eta on 16^3, 300 K (R triplet, 21.804 cm-1)",data/processed/v4/a/kp_eta_300K_m16_gavg_shares.csv,rta_rf_a600_pm_q12_T300_m16,FINAL
+eta_max_a600_perbranch,0.2661,,"same, per-branch widths (released convention)",data/processed/v4/a/kp_eta_300K_m16_shares.csv,rta_rf_a600_pm_q12_T300_m16,SECONDARY
+R_omega_a600_m16,21.804,cm-1,R triplet frequency in the 16^3 run,data/processed/v4/a/kp_eta_300K_m16_gavg_shares.csv,rta_rf_a600_pm_q12_T300_m16,FINAL
+hh_freq_A,73.59,%,"hard/hard share of kappa_C, frequency rule, 300 K, 16^3",data/processed/v4/a/t1/charphase_cell_a345.json,rta_pm_q12_T300_m16,FINAL
+hh_char_cell_A,68.96,%,"hard/hard share of kappa_C, character rule, published (cell) convention",data/processed/v4/a/t1/charphase_cell_a345.json,rta_pm_q12_T300_m16,SECONDARY
+hh_char_atom_A,61.53,%,"hard/hard share of kappa_C, character rule, star-invariant (atom-position) convention",data/processed/v4/a/t1/charphase_atom_a345.json,rta_pm_q12_T300_m16,FINAL
+hh_freq_a198,72.47,%,"hard/hard share of kappa_C, frequency rule, 300 K, 16^3",data/processed/v4/a/t1/charphase_cell_a198.json,rta_rf_a198_pm_q12_T300_m16,FINAL
+hh_char_cell_a198,69.34,%,"hard/hard share of kappa_C, character rule, published (cell) convention",data/processed/v4/a/t1/charphase_cell_a198.json,rta_rf_a198_pm_q12_T300_m16,SECONDARY
+hh_char_atom_a198,60.22,%,"hard/hard share of kappa_C, character rule, star-invariant (atom-position) convention",data/processed/v4/a/t1/charphase_atom_a198.json,rta_rf_a198_pm_q12_T300_m16,FINAL
+hh_freq_a600,71.7,%,"hard/hard share of kappa_C, frequency rule, 300 K, 16^3",data/processed/v4/a/t1/charphase_cell_a600.json,rta_rf_a600_pm_q12_T300_m16,FINAL
+hh_char_cell_a600,70.03,%,"hard/hard share of kappa_C, character rule, published (cell) convention",data/processed/v4/a/t1/charphase_cell_a600.json,rta_rf_a600_pm_q12_T300_m16,SECONDARY
+hh_char_atom_a600,61.35,%,"hard/hard share of kappa_C, character rule, star-invariant (atom-position) convention",data/processed/v4/a/t1/charphase_atom_a600.json,rta_rf_a600_pm_q12_T300_m16,FINAL
+census_A_primary_c0.4,pol 527 / rot 3156 / mixed 0,modes,"star-weighted family counts, 16^3, primary definition, c_min 0.4",data/processed/v4/a/labels/labels_A_m16.csv,,FINAL
+census_A_primary_c0.5,pol 383 / rot 2076 / mixed 0,modes,"star-weighted family counts, 16^3, primary definition, c_min 0.5",data/processed/v4/a/labels/labels_A_m16.csv,,FINAL
+census_A_primary_c0.6,pol 235 / rot 1536 / mixed 0,modes,"star-weighted family counts, 16^3, primary definition, c_min 0.6",data/processed/v4/a/labels/labels_A_m16.csv,,FINAL
+kP_modesum_A_m16,8.891,W/mK,"kappa_P (mode sum = solver), model A, 300 K, 16^3, TRISYM 1",data/processed/v4/a/t4/t4_A_summary.json,T4,FINAL
+carriers_A_m16,203 / 198,modes / groups,"carriers, model A, 300 K, 16^3, TRISYM 1",data/processed/v4/a/t4/t4_A_summary.json,T4,FINAL
+nsoft0_A_m16,76.13,%,"carriers' linewidth with no soft partner(s), kappa_P-weighted, model A, 300 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/t4_A_summary.json,T4,FINAL
+nsoft1_A_m16,21.36,%,"carriers' linewidth with one soft partner(s), kappa_P-weighted, model A, 300 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/t4_A_summary.json,T4,FINAL
+nsoft2_A_m16,2.51,%,"carriers' linewidth with both soft partner(s), kappa_P-weighted, model A, 300 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/t4_A_summary.json,T4,FINAL
+pair_neither_rot_A_m16,18.74,%,"carriers' linewidth from partner pair neither/rot, model A, 300 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/t4_A_summary.json,T4,FINAL
+kP_share_neither_A_m16,85.96,%,"share of kappa_P carried by family neither (all modes), model A, 300 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/t4_A_summary.json,T4,FINAL
+kP_share_pol_A_m16,0.4513,%,"share of kappa_P carried by family pol (all modes), model A, 300 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/t4_A_summary.json,T4,FINAL
+kP_share_rot_A_m16,13.59,%,"share of kappa_P carried by family rot (all modes), model A, 300 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/t4_A_summary.json,T4,FINAL
+kP_share_eta01_A_m16,0.00184552,%,"share of kappa_P carried by modes with group-averaged eta > 0.1, model A, 300 K, 16^3, TRISYM 1",data/processed/v4/a/t4/t4_A_summary.json,T4,FINAL
+kP_modesum_A_m20,9.209,W/mK,"kappa_P (mode sum = solver), model A, 300 K, 20^3, TRISYM 1",data/processed/v4/a/t4/m20/t4_A_summary.json,T6,FINAL
+carriers_A_m20,351 / 343,modes / groups,"carriers, model A, 300 K, 20^3, TRISYM 1",data/processed/v4/a/t4/m20/t4_A_summary.json,T6,FINAL
+nsoft0_A_m20,76.34,%,"carriers' linewidth with no soft partner(s), kappa_P-weighted, model A, 300 K, 20^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/m20/t4_A_summary.json,T6,FINAL
+nsoft1_A_m20,21.27,%,"carriers' linewidth with one soft partner(s), kappa_P-weighted, model A, 300 K, 20^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/m20/t4_A_summary.json,T6,FINAL
+nsoft2_A_m20,2.398,%,"carriers' linewidth with both soft partner(s), kappa_P-weighted, model A, 300 K, 20^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/m20/t4_A_summary.json,T6,FINAL
+pair_neither_rot_A_m20,18.75,%,"carriers' linewidth from partner pair neither/rot, model A, 300 K, 20^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/m20/t4_A_summary.json,T6,FINAL
+kP_share_neither_A_m20,84.7,%,"share of kappa_P carried by family neither (all modes), model A, 300 K, 20^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/m20/t4_A_summary.json,T6,FINAL
+kP_share_pol_A_m20,0.3585,%,"share of kappa_P carried by family pol (all modes), model A, 300 K, 20^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/m20/t4_A_summary.json,T6,FINAL
+kP_share_rot_A_m20,14.94,%,"share of kappa_P carried by family rot (all modes), model A, 300 K, 20^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/m20/t4_A_summary.json,T6,FINAL
+kP_share_eta01_A_m20,0.000603049,%,"share of kappa_P carried by modes with group-averaged eta > 0.1, model A, 300 K, 20^3, TRISYM 1",data/processed/v4/a/t4/m20/t4_A_summary.json,T6,FINAL
+kP_modesum_A_m16_T600,6.284,W/mK,"kappa_P (mode sum = solver), model A, 600 K, 16^3, TRISYM 1",data/processed/v4/a/t4/T600/t4_A_summary.json,T7,FINAL
+carriers_A_m16_T600,206 / 200,modes / groups,"carriers, model A, 600 K, 16^3, TRISYM 1",data/processed/v4/a/t4/T600/t4_A_summary.json,T7,FINAL
+nsoft0_A_m16_T600,85.64,%,"carriers' linewidth with no soft partner(s), kappa_P-weighted, model A, 600 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/T600/t4_A_summary.json,T7,FINAL
+nsoft1_A_m16_T600,13.51,%,"carriers' linewidth with one soft partner(s), kappa_P-weighted, model A, 600 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/T600/t4_A_summary.json,T7,FINAL
+nsoft2_A_m16_T600,0.8524,%,"carriers' linewidth with both soft partner(s), kappa_P-weighted, model A, 600 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/T600/t4_A_summary.json,T7,FINAL
+pair_neither_rot_A_m16_T600,11.21,%,"carriers' linewidth from partner pair neither/rot, model A, 600 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/T600/t4_A_summary.json,T7,FINAL
+kP_share_neither_A_m16_T600,87.43,%,"share of kappa_P carried by family neither (all modes), model A, 600 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/T600/t4_A_summary.json,T7,FINAL
+kP_share_pol_A_m16_T600,0.2783,%,"share of kappa_P carried by family pol (all modes), model A, 600 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/T600/t4_A_summary.json,T7,FINAL
+kP_share_rot_A_m16_T600,12.29,%,"share of kappa_P carried by family rot (all modes), model A, 600 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/T600/t4_A_summary.json,T7,FINAL
+kP_share_eta01_A_m16_T600,0.0,%,"share of kappa_P carried by modes with group-averaged eta > 0.1, model A, 600 K, 16^3, TRISYM 1",data/processed/v4/a/t4/T600/t4_A_summary.json,T7,FINAL
+kP_modesum_A_m16_trisym0,8.891,W/mK,"kappa_P (mode sum = solver), model A, 300 K, 16^3, TRISYM 0 (full sum)",data/processed/v4/a/t4/trisym0/t4_A_summary.json,T8,FINAL
+carriers_A_m16_trisym0,203 / 198,modes / groups,"carriers, model A, 300 K, 16^3, TRISYM 0 (full sum)",data/processed/v4/a/t4/trisym0/t4_A_summary.json,T8,FINAL
+nsoft0_A_m16_trisym0,76.11,%,"carriers' linewidth with no soft partner(s), kappa_P-weighted, model A, 300 K, 16^3, TRISYM 0 (full sum); primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/trisym0/t4_A_summary.json,T8,FINAL
+nsoft1_A_m16_trisym0,21.37,%,"carriers' linewidth with one soft partner(s), kappa_P-weighted, model A, 300 K, 16^3, TRISYM 0 (full sum); primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/trisym0/t4_A_summary.json,T8,FINAL
+nsoft2_A_m16_trisym0,2.52,%,"carriers' linewidth with both soft partner(s), kappa_P-weighted, model A, 300 K, 16^3, TRISYM 0 (full sum); primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/trisym0/t4_A_summary.json,T8,FINAL
+pair_neither_rot_A_m16_trisym0,18.74,%,"carriers' linewidth from partner pair neither/rot, model A, 300 K, 16^3, TRISYM 0 (full sum); primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/trisym0/t4_A_summary.json,T8,FINAL
+kP_share_neither_A_m16_trisym0,85.96,%,"share of kappa_P carried by family neither (all modes), model A, 300 K, 16^3, TRISYM 0 (full sum); primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/trisym0/t4_A_summary.json,T8,FINAL
+kP_share_pol_A_m16_trisym0,0.451,%,"share of kappa_P carried by family pol (all modes), model A, 300 K, 16^3, TRISYM 0 (full sum); primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/trisym0/t4_A_summary.json,T8,FINAL
+kP_share_rot_A_m16_trisym0,13.59,%,"share of kappa_P carried by family rot (all modes), model A, 300 K, 16^3, TRISYM 0 (full sum); primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/a/t4/trisym0/t4_A_summary.json,T8,FINAL
+kP_share_eta01_A_m16_trisym0,0.00188391,%,"share of kappa_P carried by modes with group-averaged eta > 0.1, model A, 300 K, 16^3, TRISYM 0 (full sum)",data/processed/v4/a/t4/trisym0/t4_A_summary.json,T8,FINAL
+trisym0_m16_A_width_group_averaged_median_abs,0.252,%,"median of |relative difference| of group-averaged widths, TRISYM 0 vs 1, model A, 300 K, 16^3",data/processed/v4/a/t4/trisym0/t8_widths.json,T8,FINAL
+trisym0_m16_A_width_group_averaged_q95_abs,1.22,%,"95% quantile of |relative difference| of group-averaged widths, TRISYM 0 vs 1, model A, 300 K, 16^3",data/processed/v4/a/t4/trisym0/t8_widths.json,T8,FINAL
+trisym0_m16_A_width_group_averaged_max_abs,5.56,%,"maximum of |relative difference| of group-averaged widths, TRISYM 0 vs 1, model A, 300 K, 16^3",data/processed/v4/a/t4/trisym0/t8_widths.json,T8,FINAL
+trisym0_m16_A_width_per_branch_median_abs,0.28,%,"median of |relative difference| of per-branch widths, TRISYM 0 vs 1, model A, 300 K, 16^3",data/processed/v4/a/t4/trisym0/t8_widths.json,T8,FINAL
+trisym0_m16_A_width_per_branch_q95_abs,6.93,%,"95% quantile of |relative difference| of per-branch widths, TRISYM 0 vs 1, model A, 300 K, 16^3",data/processed/v4/a/t4/trisym0/t8_widths.json,T8,FINAL
+trisym0_m16_A_width_per_branch_max_abs,42.9,%,"maximum of |relative difference| of per-branch widths, TRISYM 0 vs 1, model A, 300 K, 16^3",data/processed/v4/a/t4/trisym0/t8_widths.json,T8,FINAL
+trisym0_m16_A_kP_rel,0.00316,%,"relative change of kappa_P, TRISYM 0 vs 1, model A, 300 K, 16^3",data/processed/v4/a/t4/trisym0/t8_widths.json,T8,FINAL
+t5_A_<105_s_rot,26.54,% per 1000 modes,"carriers' linewidth per rot partner mode, band <105 cm-1, model A, 300 K, 16^3",data/processed/v4/a/t5/t5_A.json,T5,FINAL
+t5_A_<105_s_nonrot,7.199,% per 1000 modes,"carriers' linewidth per non-rot partner mode, band <105 cm-1, model A",data/processed/v4/a/t5/t5_A.json,T5,FINAL
+t5_A_<105_ratio_total,3.69,,"s_rot / s_nonrot (total), band <105 cm-1, model A",data/processed/v4/a/t5/t5_A.json,T5,FINAL
+t5_A_<105_ratio_decay,3.03,,"s_rot / s_nonrot (decay), band <105 cm-1, model A",data/processed/v4/a/t5/t5_A.json,T5,FINAL
+t5_A_<105_ratio_absorption,2.72,,"s_rot / s_nonrot (absorption), band <105 cm-1, model A",data/processed/v4/a/t5/t5_A.json,T5,FINAL
+t5_A_105-145_s_rot,3.785,% per 1000 modes,"carriers' linewidth per rot partner mode, band 105-145 cm-1, model A, 300 K, 16^3",data/processed/v4/a/t5/t5_A.json,T5,FINAL
+t5_A_105-145_s_nonrot,3.822,% per 1000 modes,"carriers' linewidth per non-rot partner mode, band 105-145 cm-1, model A",data/processed/v4/a/t5/t5_A.json,T5,FINAL
+t5_A_105-145_ratio_total,0.99,,"s_rot / s_nonrot (total), band 105-145 cm-1, model A",data/processed/v4/a/t5/t5_A.json,T5,FINAL
+t5_A_105-145_ratio_decay,1.02,,"s_rot / s_nonrot (decay), band 105-145 cm-1, model A",data/processed/v4/a/t5/t5_A.json,T5,FINAL
+t5_A_105-145_ratio_absorption,0.942,,"s_rot / s_nonrot (absorption), band 105-145 cm-1, model A",data/processed/v4/a/t5/t5_A.json,T5,FINAL
+t5_A_145-160_s_rot,2.69,% per 1000 modes,"carriers' linewidth per rot partner mode, band 145-160 cm-1, model A, 300 K, 16^3",data/processed/v4/a/t5/t5_A.json,T5,FINAL
+t5_A_145-160_s_nonrot,4.943,% per 1000 modes,"carriers' linewidth per non-rot partner mode, band 145-160 cm-1, model A",data/processed/v4/a/t5/t5_A.json,T5,FINAL
+t5_A_145-160_ratio_total,0.544,,"s_rot / s_nonrot (total), band 145-160 cm-1, model A",data/processed/v4/a/t5/t5_A.json,T5,FINAL
+t5_A_145-160_ratio_decay,0.762,,"s_rot / s_nonrot (decay), band 145-160 cm-1, model A",data/processed/v4/a/t5/t5_A.json,T5,FINAL
+t5_A_145-160_ratio_absorption,0.504,,"s_rot / s_nonrot (absorption), band 145-160 cm-1, model A",data/processed/v4/a/t5/t5_A.json,T5,FINAL
+t5b_A_<80_s_rot,56.55,% per 1000 modes,"carriers' linewidth per rot partner mode, band <80 cm-1, model A, 300 K, 16^3",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_<80_s_nonrot,9.955,% per 1000 modes,"carriers' linewidth per non-rot partner mode, band <80 cm-1, model A",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_<80_ratio_total,5.68,,"s_rot / s_nonrot (total), band <80 cm-1, model A",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_<80_ratio_decay,2.34,,"s_rot / s_nonrot (decay), band <80 cm-1, model A",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_<80_ratio_absorption,4.06,,"s_rot / s_nonrot (absorption), band <80 cm-1, model A",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_<80_omega_mean_rot,64.341,cm-1,"mean frequency of the rot partner modes, band <80 cm-1, model A, full 16^3 mesh",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_<80_omega_mean_nonrot,63.128,cm-1,"mean frequency of the nonrot partner modes, band <80 cm-1, model A, full 16^3 mesh",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_80-95_s_rot,13.04,% per 1000 modes,"carriers' linewidth per rot partner mode, band 80-95 cm-1, model A, 300 K, 16^3",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_80-95_s_nonrot,7.255,% per 1000 modes,"carriers' linewidth per non-rot partner mode, band 80-95 cm-1, model A",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_80-95_ratio_total,1.8,,"s_rot / s_nonrot (total), band 80-95 cm-1, model A",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_80-95_ratio_decay,1.56,,"s_rot / s_nonrot (decay), band 80-95 cm-1, model A",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_80-95_ratio_absorption,1.71,,"s_rot / s_nonrot (absorption), band 80-95 cm-1, model A",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_80-95_omega_mean_rot,88.114,cm-1,"mean frequency of the rot partner modes, band 80-95 cm-1, model A, full 16^3 mesh",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_80-95_omega_mean_nonrot,88.447,cm-1,"mean frequency of the nonrot partner modes, band 80-95 cm-1, model A, full 16^3 mesh",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_95-105_s_rot,9.578,% per 1000 modes,"carriers' linewidth per rot partner mode, band 95-105 cm-1, model A, 300 K, 16^3",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_95-105_s_nonrot,6.28,% per 1000 modes,"carriers' linewidth per non-rot partner mode, band 95-105 cm-1, model A",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_95-105_ratio_total,1.53,,"s_rot / s_nonrot (total), band 95-105 cm-1, model A",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_95-105_ratio_decay,1.49,,"s_rot / s_nonrot (decay), band 95-105 cm-1, model A",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_95-105_ratio_absorption,1.71,,"s_rot / s_nonrot (absorption), band 95-105 cm-1, model A",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_95-105_omega_mean_rot,100.33,cm-1,"mean frequency of the rot partner modes, band 95-105 cm-1, model A, full 16^3 mesh",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_95-105_omega_mean_nonrot,100.7,cm-1,"mean frequency of the nonrot partner modes, band 95-105 cm-1, model A, full 16^3 mesh",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_>=105_s_rot,3.241,% per 1000 modes,"carriers' linewidth per rot partner mode, band >=105 cm-1, model A, 300 K, 16^3",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_>=105_s_nonrot,1.641,% per 1000 modes,"carriers' linewidth per non-rot partner mode, band >=105 cm-1, model A",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_>=105_ratio_total,1.98,,"s_rot / s_nonrot (total), band >=105 cm-1, model A",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_>=105_ratio_decay,3.62,,"s_rot / s_nonrot (decay), band >=105 cm-1, model A",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_>=105_ratio_absorption,1.49,,"s_rot / s_nonrot (absorption), band >=105 cm-1, model A",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_>=105_omega_mean_rot,137.19,cm-1,"mean frequency of the rot partner modes, band >=105 cm-1, model A, full 16^3 mesh",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+t5b_A_>=105_omega_mean_nonrot,335.87,cm-1,"mean frequency of the nonrot partner modes, band >=105 cm-1, model A, full 16^3 mesh",data/processed/v4/a/t5b/t5b_A.json,T5b,FINAL
+rot_below105_A_T300,660,modes,"rot-family modes (primary c_min 0.5) below 105 cm-1, model A, 300 K, full 16^3 mesh (61440 modes)",data/processed/v4/a/labels/labels_A_m16.csv,scripts/v4/rot_below_105.py (labels and frequencies only),FINAL
+rot_range_A_T300,25.82–158.41,cm-1,"frequency range of the rot family (primary c_min 0.5), model A, 300 K, 16^3",data/processed/v4/a/labels/labels_A_m16.csv,scripts/v4/rot_below_105.py (labels and frequencies only),FINAL
+rot_below105_A_T600,312,modes,"rot-family modes (primary c_min 0.5) below 105 cm-1, model A, 600 K, full 16^3 mesh (61440 modes)",data/processed/v4/a/labels/T600/labels_A_m16_T600.csv,scripts/v4/rot_below_105.py (labels and frequencies only),FINAL
+rot_range_A_T600,65.79–168.85,cm-1,"frequency range of the rot family (primary c_min 0.5), model A, 600 K, 16^3",data/processed/v4/a/labels/T600/labels_A_m16_T600.csv,scripts/v4/rot_below_105.py (labels and frequencies only),FINAL
+exp_kappa_Muta2005_Tadano_296.8K,11.14 ± 0.13,W/mK,"measured total kappa, Muta2005, at 296.8 K, read from Tadano 2015 Fig. 7 (arXiv v1) (exp_datasets.py); used in the v3 paper (Fig. 3; Muta 300 K: 11.0–11.1 in the text)",data/processed/v3/exp_300K_crossread.csv,earlier release (v3),READ_FROM_FIGURE
+exp_kappa_Muta2005_Tadano_324.3K,10.18 ± 0.13,W/mK,"measured total kappa, Muta2005, at 324.3 K, read from Tadano 2015 Fig. 7 (arXiv v1) (exp_datasets.py); used in the v3 paper (Fig. 3; Muta 300 K: 11.0–11.1 in the text)",data/processed/v3/exp_300K_crossread.csv,earlier release (v3),READ_FROM_FIGURE
+exp_kappa_Popuri2014_Tadano_321.3K,9.81 ± 0.1,W/mK,"measured total kappa, Popuri2014, at 321.3 K, read from Tadano 2015 Fig. 7 (arXiv v1) (exp_datasets.py; lowest T plotted); used in the v3 paper (Fig. 3; Muta 300 K: 11.0–11.1 in the text)",data/processed/v3/exp_300K_crossread.csv,earlier release (v3),READ_FROM_FIGURE
+exp_kappa_Muta2005_Wang_300.5K,11.14 ± 0.2,W/mK,"measured total kappa, Muta2005, at 300.5 K, read from Wang 2021 Fig. 4 (behind the 3ph square; hand-placed centroid); used in the v3 paper (Fig. 3; Muta 300 K: 11.0–11.1 in the text)",data/processed/v3/exp_300K_crossread.csv,earlier release (v3),READ_FROM_FIGURE
+exp_kappa_Muta2005_Wang_326.5K,10.17 ± 0.2,W/mK,"measured total kappa, Muta2005, at 326.5 K, read from Wang 2021 Fig. 4 (hand-placed centroid); used in the v3 paper (Fig. 3; Muta 300 K: 11.0–11.1 in the text)",data/processed/v3/exp_300K_crossread.csv,earlier release (v3),READ_FROM_FIGURE
+exp_kappa_Popuri2014_Wang_320.6K,9.82 ± 0.2,W/mK,"measured total kappa, Popuri2014, at 320.6 K, read from Wang 2021 Fig. 4 (lowest T plotted; error bar not read); used in the v3 paper (Fig. 3; Muta 300 K: 11.0–11.1 in the text)",data/processed/v3/exp_300K_crossread.csv,earlier release (v3),READ_FROM_FIGURE
+exp_kappa_Suemune1965_Wang_293.4K,10.57 ± 0.2,W/mK,"measured total kappa, Suemune1965, at 293.4 K, read from Wang 2021 Fig. 4 (sample form not established in files on hand); cross-read in the same file; not cited in the v3 paper",data/processed/v3/exp_300K_crossread.csv,earlier release (v3),READ_FROM_FIGURE
+exp_kappa_Buscaglia2014_Wang_290.3K,11.67 ± 0.2,W/mK,"measured total kappa, Buscaglia2014, at 290.3 K, read from Wang 2021 Fig. 4 (La-doped ceramics (Buscaglia et al. 2014)); cross-read in the same file; not cited in the v3 paper",data/processed/v3/exp_300K_crossread.csv,earlier release (v3),READ_FROM_FIGURE
+exp_kappa_Yu2008_Wang_288.7K,11.14 ± 0.2,W/mK,"measured total kappa, Yu2008, at 288.7 K, read from Wang 2021 Fig. 4 (oxygen-deficient (Yu et al. 2008)); cross-read in the same file; not cited in the v3 paper",data/processed/v3/exp_300K_crossread.csv,earlier release (v3),READ_FROM_FIGURE
+exp_kappa_Yu2008_Wang_311.1K,10.77 ± 0.2,W/mK,"measured total kappa, Yu2008, at 311.1 K, read from Wang 2021 Fig. 4 (oxygen-deficient (Yu et al. 2008)); cross-read in the same file; not cited in the v3 paper",data/processed/v3/exp_300K_crossread.csv,earlier release (v3),READ_FROM_FIGURE
+exp_kappa_Muta2005_Guo_300K,11.14 ± 0.32,W/mK,"measured total kappa, Muta2005, at 300 K, read from Guo & Guo 2023 Fig. 10(c) (colour-mask centroid); used in the v3 paper (Fig. 3; Muta 300 K: 11.0–11.1 in the text)",data/processed/v3/exp_300K_crossread.csv,earlier release (v3),READ_FROM_FIGURE
+exp_kappa_Muta2005_Guo_323.6K,10.26 ± 0.32,W/mK,"measured total kappa, Muta2005, at 323.6 K, read from Guo & Guo 2023 Fig. 10(c) (colour-mask centroid); used in the v3 paper (Fig. 3; Muta 300 K: 11.0–11.1 in the text)",data/processed/v3/exp_300K_crossread.csv,earlier release (v3),READ_FROM_FIGURE
+exp_kappa_Popuri2014_Guo_325.2K,9.82 ± 0.32,W/mK,"measured total kappa, Popuri2014, at 325.2 K, read from Guo & Guo 2023 Fig. 10(c) (lowest T plotted); used in the v3 paper (Fig. 3; Muta 300 K: 11.0–11.1 in the text)",data/processed/v3/exp_300K_crossread.csv,earlier release (v3),READ_FROM_FIGURE
+lit_R_omega_300K_meV,6.61,meV,"measured R-point soft-mode energy at 300 K, Q = (1.5, 0.5, 0.5) (Fauqué et al. 2022, Fig. 1(d), open circles; reading uncertainty +-0.62 meV, see the README of the data folder)",data/literature/STO/fauque_2022/dho_fits_T.csv,,FINAL
+lit_R_omega_300K_cm1,53.31,cm-1,the same in cm-1 (x 8.065544),data/literature/STO/fauque_2022/dho_fits_T.csv,,FINAL

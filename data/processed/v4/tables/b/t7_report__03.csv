@@ -1,0 +1,41 @@
+# script: scripts/v4/build_tables_v4.py from b/reports/t7_report.md (table 3); part b
+# heading: 2. Results: 300 K and 600 K side by side (rows of T4 §2a–2d) — 2b. Linewidth of the carriers by number of soft partners
+quantity,model,300 K (%),600 K (%),600 K − 300 K (pp)
+primary_c0.5: neither soft,A,76.13,85.64,+9.51
+primary_c0.5: one soft,A,21.36,13.51,-7.85
+primary_c0.5: both soft,A,2.51,0.85,-1.66
+primary_c0.5: absorption part,A,77.69,87.64,+9.96
+primary_c0.5: neither soft,B †,73.71,84.25,+10.54
+primary_c0.5: one soft,B †,23.37,14.90,-8.48
+primary_c0.5: both soft,B †,2.91,0.85,-2.06
+primary_c0.5: absorption part,B †,76.99,86.41,+9.42
+secondary_c0.5: neither soft,A,68.85,77.30,+8.45
+secondary_c0.5: one soft,A,28.11,21.55,-6.56
+secondary_c0.5: both soft,A,3.04,1.15,-1.89
+secondary_c0.5: absorption part,A,77.69,87.64,+9.96
+secondary_c0.5: neither soft,B †,66.87,74.65,+7.78
+secondary_c0.5: one soft,B †,29.61,24.02,-5.58
+secondary_c0.5: both soft,B †,3.52,1.32,-2.20
+secondary_c0.5: absorption part,B †,76.99,86.41,+9.42
+primary_c0.4: neither soft,A,73.23,82.32,+9.09
+primary_c0.4: one soft,A,23.79,16.36,-7.44
+primary_c0.4: both soft,A,2.97,1.32,-1.65
+primary_c0.4: absorption part,A,77.69,87.64,+9.96
+primary_c0.4: neither soft,B †,70.52,80.66,+10.15
+primary_c0.4: one soft,B †,25.95,17.96,-7.99
+primary_c0.4: both soft,B †,3.53,1.38,-2.15
+primary_c0.4: absorption part,B †,76.99,86.41,+9.42
+primary_c0.6: neither soft,A,78.03,87.42,+9.38
+primary_c0.6: one soft,A,19.93,11.93,-8.00
+primary_c0.6: both soft,A,2.04,0.65,-1.39
+primary_c0.6: absorption part,A,77.69,87.64,+9.96
+primary_c0.6: neither soft,B †,75.80,86.31,+10.51
+primary_c0.6: one soft,B †,21.82,13.08,-8.75
+primary_c0.6: both soft,B †,2.37,0.61,-1.76
+primary_c0.6: absorption part,B †,76.99,86.41,+9.42
+primary_c0.5 median: neither soft,A,77.36,87.13,+9.77
+primary_c0.5 median: one soft,A,18.29,11.86,-6.43
+primary_c0.5 median: both soft,A,0.16,0.00,-0.15
+primary_c0.5 median: neither soft,B †,74.31,85.52,+11.21
+primary_c0.5 median: one soft,B †,20.12,13.80,-6.32
+primary_c0.5 median: both soft,B †,0.19,0.02,-0.17

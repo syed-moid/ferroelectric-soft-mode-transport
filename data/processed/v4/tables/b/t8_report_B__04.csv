@@ -1,0 +1,9 @@
+# script: scripts/v4/build_tables_v4.py from b/reports/t8_report_B.md (table 4); part b
+# heading: 3. T4 shares under both settings (rows of T4 §2a–2d) — 3c. Linewidth of the carriers by partner family pair (primary c0.5)
+quantity,model,TRISYM 1 (%),TRISYM 0 (%),TRISYM 0 − TRISYM 1 (pp)
+neither/neither,B,73.71,73.65,-0.06
+neither/pol,B,2.91,2.94,+0.02
+neither/rot,B,20.46,20.50,+0.04
+pol/pol,B,0.00,0.00,0.00
+pol/rot,B,0.08,0.08,0.00
+rot/rot,B,2.84,2.84,0.00

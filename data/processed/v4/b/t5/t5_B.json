@@ -1,0 +1,511 @@
+{
+ "model": "B",
+ "band_edges_cm1": [
+  105.0,
+  145.0,
+  160.0
+ ],
+ "carriers": 211,
+ "classes": {
+  "neither|<105": {
+   "N_modes": 2003,
+   "S": {
+    "decay_of_total": 0.06881320480864225,
+    "absorption_of_total": 0.05922307710920878,
+    "total": 0.12803628191785102,
+    "decay_of_decay": 0.44443058562056437,
+    "absorption_of_absorption": 0.0760136691956031
+   },
+   "per_mode": {
+    "decay_of_total": 3.4355069799621695e-05,
+    "absorption_of_total": 2.9567187772944973e-05,
+    "total": 6.392225757256666e-05,
+    "decay_of_decay": 0.00022188246910662224,
+    "absorption_of_absorption": 3.7949909733201747e-05
+   },
+   "omega_cm1": null
+  },
+  "neither|105-145": {
+   "N_modes": 10276,
+   "S": {
+    "decay_of_total": 0.14975115770663275,
+    "absorption_of_total": 0.2350557371722954,
+    "total": 0.38480689487892816,
+    "decay_of_decay": 0.42945594688843497,
+    "absorption_of_absorption": 0.29341876607966155
+   },
+   "per_mode": {
+    "decay_of_total": 1.457290363046251e-05,
+    "absorption_of_total": 2.2874244567175497e-05,
+    "total": 3.744714819763801e-05,
+    "decay_of_decay": 4.1792131849789315e-05,
+    "absorption_of_absorption": 2.855379195014223e-05
+   },
+   "omega_cm1": null
+  },
+  "neither|145-160": {
+   "N_modes": 276,
+   "S": {
+    "decay_of_total": 0.0025140044134801687,
+    "absorption_of_total": 0.008758366254217746,
+    "total": 0.011272370667697915,
+    "decay_of_decay": 0.0068125705555242225,
+    "absorption_of_absorption": 0.010583375717039224
+   },
+   "per_mode": {
+    "decay_of_total": 9.10871164304409e-06,
+    "absorption_of_total": 3.173321106600632e-05,
+    "total": 4.084192270905041e-05,
+    "decay_of_decay": 2.468322665045008e-05,
+    "absorption_of_absorption": 3.8345564192171104e-05
+   },
+   "omega_cm1": null
+  },
+  "neither|>=160": {
+   "N_modes": 46438,
+   "S": {
+    "decay_of_total": 0.05447388756195386,
+    "absorption_of_total": 0.7244511040687559,
+    "total": 0.7789249916307097,
+    "decay_of_decay": 0.13332673165634987,
+    "absorption_of_absorption": 0.9542254256686276
+   },
+   "per_mode": {
+    "decay_of_total": 1.1730455136300844e-06,
+    "absorption_of_total": 1.5600394161435804e-05,
+    "total": 1.6773439675065887e-05,
+    "decay_of_decay": 2.8710696338418938e-06,
+    "absorption_of_absorption": 2.0548374729071612e-05
+   },
+   "omega_cm1": null
+  },
+  "pol|<105": {
+   "N_modes": 0,
+   "S": {
+    "decay_of_total": 0.0,
+    "absorption_of_total": 0.0,
+    "total": 0.0,
+    "decay_of_decay": 0.0,
+    "absorption_of_absorption": 0.0
+   },
+   "per_mode": {
+    "decay_of_total": null,
+    "absorption_of_total": null,
+    "total": null,
+    "decay_of_decay": null,
+    "absorption_of_absorption": null
+   },
+   "omega_cm1": null
+  },
+  "pol|105-145": {
+   "N_modes": 67,
+   "S": {
+    "decay_of_total": 0.0010309142444952335,
+    "absorption_of_total": 0.006799485492589205,
+    "total": 0.007830399737084437,
+    "decay_of_decay": 0.0027288784167773207,
+    "absorption_of_absorption": 0.007991844632173012
+   },
+   "per_mode": {
+    "decay_of_total": 1.5386779768585576e-05,
+    "absorption_of_total": 0.00010148485809834635,
+    "total": 0.0001168716378669319,
+    "decay_of_decay": 4.072952860861673e-05,
+    "absorption_of_absorption": 0.00011928126316676137
+   },
+   "omega_cm1": null
+  },
+  "pol|145-160": {
+   "N_modes": 252,
+   "S": {
+    "decay_of_total": 0.0028284314373697044,
+    "absorption_of_total": 0.015592605668715833,
+    "total": 0.018421037106085537,
+    "decay_of_decay": 0.007450125395537311,
+    "absorption_of_absorption": 0.017425138961579524
+   },
+   "per_mode": {
+    "decay_of_total": 1.1223934275276605e-05,
+    "absorption_of_total": 6.187541932030092e-05,
+    "total": 7.309935359557753e-05,
+    "decay_of_decay": 2.95639896648306e-05,
+    "absorption_of_absorption": 6.914737683166478e-05
+   },
+   "omega_cm1": null
+  },
+  "pol|>=160": {
+   "N_modes": 64,
+   "S": {
+    "decay_of_total": 0.0005546412942921384,
+    "absorption_of_total": 0.0031005893425445547,
+    "total": 0.0036552306368366934,
+    "decay_of_decay": 0.0014225165549844093,
+    "absorption_of_absorption": 0.0035467143054448706
+   },
+   "per_mode": {
+    "decay_of_total": 8.666270223314663e-06,
+    "absorption_of_total": 4.844670847725867e-05,
+    "total": 5.7112978700573334e-05,
+    "decay_of_decay": 2.2226821171631395e-05,
+    "absorption_of_absorption": 5.5417411022576104e-05
+   },
+   "omega_cm1": null
+  },
+  "rot|<105": {
+   "N_modes": 660,
+   "S": {
+    "decay_of_total": 0.1191080012230785,
+    "absorption_of_total": 0.07164505579819974,
+    "total": 0.19075305702127826,
+    "decay_of_decay": 0.5141081970207891,
+    "absorption_of_absorption": 0.08756182837489282
+   },
+   "per_mode": {
+    "decay_of_total": 0.00018046666851981592,
+    "absorption_of_total": 0.00010855311484575719,
+    "total": 0.0002890197833655731,
+    "decay_of_decay": 0.0007789518136678623,
+    "absorption_of_absorption": 0.0001326694369316558
+   },
+   "omega_cm1": null
+  },
+  "rot|105-145": {
+   "N_modes": 816,
+   "S": {
+    "decay_of_total": 0.014866619666171442,
+    "absorption_of_total": 0.020803276791432575,
+    "total": 0.03566989645760402,
+    "decay_of_decay": 0.038254940722388164,
+    "absorption_of_absorption": 0.026079864225378162
+   },
+   "per_mode": {
+    "decay_of_total": 1.8218896649719904e-05,
+    "absorption_of_total": 2.5494211754206587e-05,
+    "total": 4.3713108403926494e-05,
+    "decay_of_decay": 4.688105480684824e-05,
+    "absorption_of_absorption": 3.196061792325755e-05
+   },
+   "omega_cm1": null
+  },
+  "rot|145-160": {
+   "N_modes": 588,
+   "S": {
+    "decay_of_total": 0.0057700904628312805,
+    "absorption_of_total": 0.011953966751120784,
+    "total": 0.017724057213952062,
+    "decay_of_decay": 0.014933889349226246,
+    "absorption_of_absorption": 0.015095579845519983
+   },
+   "per_mode": {
+    "decay_of_total": 9.813079018420546e-06,
+    "absorption_of_total": 2.032987542707616e-05,
+    "total": 3.0142954445496704e-05,
+    "decay_of_decay": 2.5397771002085453e-05,
+    "absorption_of_absorption": 2.56727548393197e-05
+   },
+   "omega_cm1": null
+  },
+  "rot|>=160": {
+   "N_modes": 0,
+   "S": {
+    "decay_of_total": 0.0,
+    "absorption_of_total": 0.0,
+    "total": 0.0,
+    "decay_of_decay": 0.0,
+    "absorption_of_absorption": 0.0
+   },
+   "per_mode": {
+    "decay_of_total": null,
+    "absorption_of_total": null,
+    "total": null,
+    "decay_of_decay": null,
+    "absorption_of_absorption": null
+   },
+   "omega_cm1": null
+  }
+ },
+ "bands": {
+  "<105": {
+   "rot": {
+    "N_modes": 660,
+    "S": {
+     "decay_of_total": 0.1191080012230785,
+     "absorption_of_total": 0.07164505579819974,
+     "total": 0.19075305702127826,
+     "decay_of_decay": 0.5141081970207891,
+     "absorption_of_absorption": 0.08756182837489282
+    },
+    "per_mode": {
+     "decay_of_total": 0.00018046666851981592,
+     "absorption_of_total": 0.00010855311484575719,
+     "total": 0.0002890197833655731,
+     "decay_of_decay": 0.0007789518136678623,
+     "absorption_of_absorption": 0.0001326694369316558
+    },
+    "omega_cm1": null
+   },
+   "nonrot": {
+    "N_modes": 2003,
+    "S": {
+     "decay_of_total": 0.06881320480864225,
+     "absorption_of_total": 0.05922307710920878,
+     "total": 0.12803628191785102,
+     "decay_of_decay": 0.44443058562056437,
+     "absorption_of_absorption": 0.0760136691956031
+    },
+    "per_mode": {
+     "decay_of_total": 3.4355069799621695e-05,
+     "absorption_of_total": 2.9567187772944973e-05,
+     "total": 6.392225757256666e-05,
+     "decay_of_decay": 0.00022188246910662224,
+     "absorption_of_absorption": 3.7949909733201747e-05
+    },
+    "omega_cm1": null
+   },
+   "ratio_rot_over_nonrot": {
+    "decay_of_total": 5.252985063700938,
+    "absorption_of_total": 3.6714047909922343,
+    "total": 4.521426406717071,
+    "decay_of_decay": 3.5106505565951176,
+    "absorption_of_absorption": 3.4959091566846467
+   },
+   "neither": {
+    "N_modes": 2003,
+    "S": {
+     "decay_of_total": 0.06881320480864225,
+     "absorption_of_total": 0.05922307710920878,
+     "total": 0.12803628191785102,
+     "decay_of_decay": 0.44443058562056437,
+     "absorption_of_absorption": 0.0760136691956031
+    },
+    "per_mode": {
+     "decay_of_total": 3.4355069799621695e-05,
+     "absorption_of_total": 2.9567187772944973e-05,
+     "total": 6.392225757256666e-05,
+     "decay_of_decay": 0.00022188246910662224,
+     "absorption_of_absorption": 3.7949909733201747e-05
+    },
+    "omega_cm1": null
+   },
+   "ratio_rot_over_neither": {
+    "decay_of_total": 5.252985063700938,
+    "absorption_of_total": 3.6714047909922343,
+    "total": 4.521426406717071,
+    "decay_of_decay": 3.5106505565951176,
+    "absorption_of_absorption": 3.4959091566846467
+   }
+  },
+  "105-145": {
+   "rot": {
+    "N_modes": 816,
+    "S": {
+     "decay_of_total": 0.014866619666171442,
+     "absorption_of_total": 0.020803276791432575,
+     "total": 0.03566989645760402,
+     "decay_of_decay": 0.038254940722388164,
+     "absorption_of_absorption": 0.026079864225378162
+    },
+    "per_mode": {
+     "decay_of_total": 1.8218896649719904e-05,
+     "absorption_of_total": 2.5494211754206587e-05,
+     "total": 4.3713108403926494e-05,
+     "decay_of_decay": 4.688105480684824e-05,
+     "absorption_of_absorption": 3.196061792325755e-05
+    },
+    "omega_cm1": null
+   },
+   "nonrot": {
+    "N_modes": 10343,
+    "S": {
+     "decay_of_total": 0.15014884280758728,
+     "absorption_of_total": 0.24184602609370007,
+     "total": 0.3919948689012874,
+     "decay_of_decay": 0.4303422692471085,
+     "absorption_of_absorption": 0.3014014141406318
+    },
+    "per_mode": {
+     "decay_of_total": 1.4516952799728055e-05,
+     "absorption_of_total": 2.3382580111544045e-05,
+     "total": 3.78995329112721e-05,
+     "decay_of_decay": 4.160710328213366e-05,
+     "absorption_of_absorption": 2.9140618209478084e-05
+    },
+    "omega_cm1": null
+   },
+   "ratio_rot_over_nonrot": {
+    "decay_of_total": 1.2550083272338803,
+    "absorption_of_total": 1.0903078972717823,
+    "total": 1.1533943836792067,
+    "decay_of_decay": 1.1267560370389746,
+    "absorption_of_absorption": 1.0967721306908393
+   },
+   "neither": {
+    "N_modes": 10276,
+    "S": {
+     "decay_of_total": 0.14975115770663275,
+     "absorption_of_total": 0.2350557371722954,
+     "total": 0.38480689487892816,
+     "decay_of_decay": 0.42945594688843497,
+     "absorption_of_absorption": 0.29341876607966155
+    },
+    "per_mode": {
+     "decay_of_total": 1.457290363046251e-05,
+     "absorption_of_total": 2.2874244567175497e-05,
+     "total": 3.744714819763801e-05,
+     "decay_of_decay": 4.1792131849789315e-05,
+     "absorption_of_absorption": 2.855379195014223e-05
+    },
+    "omega_cm1": null
+   },
+   "ratio_rot_over_neither": {
+    "decay_of_total": 1.2501898805970268,
+    "absorption_of_total": 1.1145378672216673,
+    "total": 1.1673281012807195,
+    "decay_of_decay": 1.1217674890419496,
+    "absorption_of_absorption": 1.1193125585233645
+   }
+  },
+  "145-160": {
+   "rot": {
+    "N_modes": 588,
+    "S": {
+     "decay_of_total": 0.0057700904628312805,
+     "absorption_of_total": 0.011953966751120784,
+     "total": 0.017724057213952062,
+     "decay_of_decay": 0.014933889349226246,
+     "absorption_of_absorption": 0.015095579845519983
+    },
+    "per_mode": {
+     "decay_of_total": 9.813079018420546e-06,
+     "absorption_of_total": 2.032987542707616e-05,
+     "total": 3.0142954445496704e-05,
+     "decay_of_decay": 2.5397771002085453e-05,
+     "absorption_of_absorption": 2.56727548393197e-05
+    },
+    "omega_cm1": null
+   },
+   "nonrot": {
+    "N_modes": 528,
+    "S": {
+     "decay_of_total": 0.005332304227098642,
+     "absorption_of_total": 0.024350971922933583,
+     "total": 0.02968327615003222,
+     "decay_of_decay": 0.014234739139989478,
+     "absorption_of_absorption": 0.02800851467861875
+    },
+    "per_mode": {
+     "decay_of_total": 1.009906103617167e-05,
+     "absorption_of_total": 4.611926500555603e-05,
+     "total": 5.621832604172769e-05,
+     "decay_of_decay": 2.6959733219677042e-05,
+     "absorption_of_absorption": 5.304642931556581e-05
+    },
+    "omega_cm1": null
+   },
+   "ratio_rot_over_nonrot": {
+    "decay_of_total": 0.971682316135448,
+    "absorption_of_total": 0.4408109154520785,
+    "total": 0.5361766628042837,
+    "decay_of_decay": 0.9420631426555971,
+    "absorption_of_absorption": 0.4839676330822582
+   },
+   "neither": {
+    "N_modes": 276,
+    "S": {
+     "decay_of_total": 0.0025140044134801687,
+     "absorption_of_total": 0.008758366254217746,
+     "total": 0.011272370667697915,
+     "decay_of_decay": 0.0068125705555242225,
+     "absorption_of_absorption": 0.010583375717039224
+    },
+    "per_mode": {
+     "decay_of_total": 9.10871164304409e-06,
+     "absorption_of_total": 3.173321106600632e-05,
+     "total": 4.084192270905041e-05,
+     "decay_of_decay": 2.468322665045008e-05,
+     "absorption_of_absorption": 3.8345564192171104e-05
+    },
+    "omega_cm1": null
+   },
+   "ratio_rot_over_neither": {
+    "decay_of_total": 1.077328979440726,
+    "absorption_of_total": 0.640649803286192,
+    "total": 0.7380395546073825,
+    "decay_of_decay": 1.0289485796064812,
+    "absorption_of_absorption": 0.6695104213530186
+   }
+  },
+  ">=160": {
+   "rot": {
+    "N_modes": 0,
+    "S": {
+     "decay_of_total": 0.0,
+     "absorption_of_total": 0.0,
+     "total": 0.0,
+     "decay_of_decay": 0.0,
+     "absorption_of_absorption": 0.0
+    },
+    "per_mode": {
+     "decay_of_total": null,
+     "absorption_of_total": null,
+     "total": null,
+     "decay_of_decay": null,
+     "absorption_of_absorption": null
+    },
+    "omega_cm1": null
+   },
+   "nonrot": {
+    "N_modes": 46502,
+    "S": {
+     "decay_of_total": 0.05488799455790387,
+     "absorption_of_total": 0.7255076605925803,
+     "total": 0.780395655150484,
+     "decay_of_decay": 0.13445605178558323,
+     "absorption_of_absorption": 0.9553143803267092
+    },
+    "per_mode": {
+     "decay_of_total": 1.1803362125909395e-06,
+     "absorption_of_total": 1.5601644243098798e-05,
+     "total": 1.6781980455689734e-05,
+     "decay_of_decay": 2.8914036339422656e-06,
+     "absorption_of_absorption": 2.0543511683942826e-05
+    },
+    "omega_cm1": null
+   },
+   "ratio_rot_over_nonrot": {
+    "decay_of_total": null,
+    "absorption_of_total": null,
+    "total": null,
+    "decay_of_decay": null,
+    "absorption_of_absorption": null
+   },
+   "neither": {
+    "N_modes": 46438,
+    "S": {
+     "decay_of_total": 0.05447388756195386,
+     "absorption_of_total": 0.7244511040687559,
+     "total": 0.7789249916307097,
+     "decay_of_decay": 0.13332673165634987,
+     "absorption_of_absorption": 0.9542254256686276
+    },
+    "per_mode": {
+     "decay_of_total": 1.1730455136300844e-06,
+     "absorption_of_total": 1.5600394161435804e-05,
+     "total": 1.6773439675065887e-05,
+     "decay_of_decay": 2.8710696338418938e-06,
+     "absorption_of_absorption": 2.0548374729071612e-05
+    },
+    "omega_cm1": null
+   },
+   "ratio_rot_over_neither": {
+    "decay_of_total": null,
+    "absorption_of_total": null,
+    "total": null,
+    "decay_of_decay": null,
+    "absorption_of_absorption": null
+   }
+  }
+ },
+ "check_bins_vs_total_max_rel": 7.231027326935901e-15,
+ "check_total_vs_result_avg_max_rel": 3.2406418308638053e-06
+}

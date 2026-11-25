@@ -1,0 +1,27 @@
+# script: scripts/v4/build_tables_v4.py from b/reports/t5b_report.md (table 8); part b
+# heading: 5. Frequency of each class (full 16³ mesh, unweighted over the class's modes; cm⁻¹)
+model,partners,band (cm⁻¹),N,Ω mean,Ω min,Ω max
+A,rot,Ω < 80,240,64.34,25.82,79.86
+A,non-rot (neither ∪ pol),Ω < 80,453,63.13,0.00,79.41
+A,neither,Ω < 80,453,63.13,0.00,79.41
+A,rot,80 ≤ Ω < 95,180,88.11,80.32,93.67
+A,non-rot (neither ∪ pol),80 ≤ Ω < 95,658,88.45,80.24,94.46
+A,neither,80 ≤ Ω < 95,658,88.45,80.24,94.46
+A,rot,95 ≤ Ω < 105,240,100.33,95.02,104.78
+A,non-rot (neither ∪ pol),95 ≤ Ω < 105,1036,100.70,95.21,104.87
+A,neither,95 ≤ Ω < 105,1036,100.70,95.21,104.87
+A,rot,Ω ≥ 105,1416,137.19,106.88,158.41
+A,non-rot (neither ∪ pol),Ω ≥ 105,57217,335.87,105.40,830.66
+A,neither,Ω ≥ 105,56834,337.10,105.40,830.66
+B,rot,Ω < 80,264,64.15,22.85,78.44
+B,non-rot (neither ∪ pol),Ω < 80,393,61.55,0.00,75.31
+B,neither,Ω < 80,393,61.55,0.00,75.31
+B,rot,80 ≤ Ω < 95,180,88.50,83.16,93.26
+B,non-rot (neither ∪ pol),80 ≤ Ω < 95,598,87.58,80.11,93.52
+B,neither,80 ≤ Ω < 95,598,87.58,80.11,93.52
+B,rot,95 ≤ Ω < 105,216,99.85,96.08,103.99
+B,non-rot (neither ∪ pol),95 ≤ Ω < 105,1012,100.40,95.09,104.63
+B,neither,95 ≤ Ω < 105,1012,100.40,95.09,104.63
+B,rot,Ω ≥ 105,1404,136.32,105.90,157.56
+B,non-rot (neither ∪ pol),Ω ≥ 105,57373,336.04,105.11,832.69
+B,neither,Ω ≥ 105,56990,337.27,105.11,832.69

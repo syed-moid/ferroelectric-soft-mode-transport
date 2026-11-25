@@ -1,0 +1,41 @@
+# script: scripts/v4/build_tables_v4.py from b/reports/t6_report.md (table 3); part b
+# heading: 2. Results: 16³ and 20³ side by side (rows of T4 §2a–2d) — 2b. Linewidth of the carriers by number of soft partners
+quantity,model,16³ (%),20³ (%),20³ − 16³ (pp),mesh-stable (≤ 2 pp)
+primary_c0.5: neither soft,A,76.13,76.34,+0.20,yes
+primary_c0.5: one soft,A,21.36,21.27,-0.09,yes
+primary_c0.5: both soft,A,2.51,2.40,-0.11,yes
+primary_c0.5: absorption part,A,77.69,78.11,+0.42,yes
+primary_c0.5: neither soft,B,73.71,74.15,+0.43,yes
+primary_c0.5: one soft,B,23.37,23.00,-0.37,yes
+primary_c0.5: both soft,B,2.91,2.86,-0.06,yes
+primary_c0.5: absorption part,B,76.99,77.56,+0.57,yes
+secondary_c0.5: neither soft,A,68.85,69.32,+0.47,yes
+secondary_c0.5: one soft,A,28.11,27.75,-0.36,yes
+secondary_c0.5: both soft,A,3.04,2.93,-0.11,yes
+secondary_c0.5: absorption part,A,77.69,78.11,+0.42,yes
+secondary_c0.5: neither soft,B,66.87,67.83,+0.96,yes
+secondary_c0.5: one soft,B,29.61,28.82,-0.79,yes
+secondary_c0.5: both soft,B,3.52,3.35,-0.17,yes
+secondary_c0.5: absorption part,B,76.99,77.56,+0.57,yes
+primary_c0.4: neither soft,A,73.23,74.17,+0.94,yes
+primary_c0.4: one soft,A,23.79,23.15,-0.65,yes
+primary_c0.4: both soft,A,2.97,2.68,-0.29,yes
+primary_c0.4: absorption part,A,77.69,78.11,+0.42,yes
+primary_c0.4: neither soft,B,70.52,71.82,+1.30,yes
+primary_c0.4: one soft,B,25.95,24.97,-0.98,yes
+primary_c0.4: both soft,B,3.53,3.21,-0.32,yes
+primary_c0.4: absorption part,B,76.99,77.56,+0.57,yes
+primary_c0.6: neither soft,A,78.03,78.10,+0.07,yes
+primary_c0.6: one soft,A,19.93,19.90,-0.03,yes
+primary_c0.6: both soft,A,2.04,2.00,-0.04,yes
+primary_c0.6: absorption part,A,77.69,78.11,+0.42,yes
+primary_c0.6: neither soft,B,75.80,76.12,+0.32,yes
+primary_c0.6: one soft,B,21.82,21.49,-0.34,yes
+primary_c0.6: both soft,B,2.37,2.39,+0.02,yes
+primary_c0.6: absorption part,B,76.99,77.56,+0.57,yes
+primary_c0.5 median: neither soft,A,77.36,77.68,+0.32,yes
+primary_c0.5 median: one soft,A,18.29,17.68,-0.62,yes
+primary_c0.5 median: both soft,A,0.16,0.22,+0.06,yes
+primary_c0.5 median: neither soft,B,74.31,75.17,+0.87,yes
+primary_c0.5 median: one soft,B,20.12,19.25,-0.87,yes
+primary_c0.5 median: both soft,B,0.19,0.31,+0.12,yes

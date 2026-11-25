@@ -1,0 +1,37 @@
+# script: scripts/v4/build_tables_v4.py from b/reports/t6_report.md (table 5); part b
+# heading: 2. Results: 16³ and 20³ side by side (rows of T4 §2a–2d) — 2d. κ_P carried by each family, next to κ_P carried by modes with η > 0.1 (all modes)
+quantity,model,16³ (%),20³ (%),20³ − 16³ (pp),mesh-stable (≤ 2 pp)
+primary_c0.5: neither,A,85.96,84.70,-1.26,yes
+primary_c0.5: pol,A,0.45,0.36,-0.09,yes
+primary_c0.5: rot,A,13.59,14.94,+1.35,yes
+primary_c0.5: mixed,A,0.00,0.00,+0.00,yes
+primary_c0.5: neither,B,86.01,84.35,-1.66,yes
+primary_c0.5: pol,B,0.51,0.41,-0.09,yes
+primary_c0.5: rot,B,13.49,15.24,+1.75,yes
+primary_c0.5: mixed,B,0.00,0.00,+0.00,yes
+secondary_c0.5: neither,A,83.97,82.74,-1.24,yes
+secondary_c0.5: pol,A,2.44,2.32,-0.11,yes
+secondary_c0.5: rot,A,13.36,14.69,+1.33,yes
+secondary_c0.5: mixed,A,0.23,0.25,+0.02,yes
+secondary_c0.5: neither,B,83.79,82.33,-1.46,yes
+secondary_c0.5: pol,B,2.73,2.43,-0.30,yes
+secondary_c0.5: rot,B,13.26,14.99,+1.73,yes
+secondary_c0.5: mixed,B,0.23,0.25,+0.02,yes
+primary_c0.4: neither,A,79.88,80.48,+0.60,yes
+primary_c0.4: pol,A,0.68,0.61,-0.07,yes
+primary_c0.4: rot,A,19.44,18.91,-0.53,yes
+primary_c0.4: mixed,A,0.00,0.00,+0.00,yes
+primary_c0.4: neither,B,79.77,80.07,+0.29,yes
+primary_c0.4: pol,B,0.81,0.72,-0.08,yes
+primary_c0.4: rot,B,19.42,19.21,-0.21,yes
+primary_c0.4: mixed,B,0.00,0.00,+0.00,yes
+primary_c0.6: neither,A,89.33,88.31,-1.01,yes
+primary_c0.6: pol,A,0.25,0.27,+0.02,yes
+primary_c0.6: rot,A,10.42,11.42,+1.00,yes
+primary_c0.6: mixed,A,0.00,0.00,+0.00,yes
+primary_c0.6: neither,B,89.49,87.98,-1.51,yes
+primary_c0.6: pol,B,0.28,0.30,+0.01,yes
+primary_c0.6: rot,B,10.23,11.72,+1.49,yes
+primary_c0.6: mixed,B,0.00,0.00,+0.00,yes
+η > 0.1 (group-averaged),A,0.00185,0.00060,-0.00124,yes
+η > 0.1 (group-averaged),B,0.00198,0.00233,+0.00035,yes

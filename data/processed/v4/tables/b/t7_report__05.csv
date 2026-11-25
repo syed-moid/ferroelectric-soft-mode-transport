@@ -1,0 +1,37 @@
+# script: scripts/v4/build_tables_v4.py from b/reports/t7_report.md (table 5); part b
+# heading: 2. Results: 300 K and 600 K side by side (rows of T4 §2a–2d) — 2d. κ_P carried by each family, next to κ_P carried by modes with η > 0.1 (all modes)
+quantity,model,300 K (%),600 K (%),600 K − 300 K (pp)
+primary_c0.5: neither,A,85.96,87.43,+1.47
+primary_c0.5: pol,A,0.45,0.28,-0.17
+primary_c0.5: rot,A,13.59,12.29,-1.30
+primary_c0.5: mixed,A,0.00,0.00,0.00
+primary_c0.5: neither,B †,86.01,87.28,+1.28
+primary_c0.5: pol,B †,0.51,0.53,+0.03
+primary_c0.5: rot,B †,13.49,12.18,-1.31
+primary_c0.5: mixed,B †,0.00,0.00,0.00
+secondary_c0.5: neither,A,83.97,83.95,-0.02
+secondary_c0.5: pol,A,2.44,3.75,+1.32
+secondary_c0.5: rot,A,13.36,12.20,-1.16
+secondary_c0.5: mixed,A,0.23,0.09,-0.14
+secondary_c0.5: neither,B †,83.79,83.15,-0.63
+secondary_c0.5: pol,B †,2.73,4.67,+1.94
+secondary_c0.5: rot,B †,13.26,12.18,-1.07
+secondary_c0.5: mixed,B †,0.23,0.00,-0.23
+primary_c0.4: neither,A,79.88,80.17,+0.29
+primary_c0.4: pol,A,0.68,0.65,-0.03
+primary_c0.4: rot,A,19.44,19.17,-0.27
+primary_c0.4: mixed,A,0.00,0.00,0.00
+primary_c0.4: neither,B †,79.77,80.40,+0.62
+primary_c0.4: pol,B †,0.81,0.94,+0.13
+primary_c0.4: rot,B †,19.42,18.67,-0.76
+primary_c0.4: mixed,B †,0.00,0.00,0.00
+primary_c0.6: neither,A,89.33,90.19,+0.86
+primary_c0.6: pol,A,0.25,0.13,-0.12
+primary_c0.6: rot,A,10.42,9.67,-0.75
+primary_c0.6: mixed,A,0.00,0.00,0.00
+primary_c0.6: neither,B †,89.49,90.02,+0.53
+primary_c0.6: pol,B †,0.28,0.26,-0.02
+primary_c0.6: rot,B †,10.23,9.72,-0.50
+primary_c0.6: mixed,B †,0.00,0.00,0.00
+η > 0.1 (group-averaged),A,0.00185,0.00000,-0.00185
+η > 0.1 (group-averaged),B †,0.00198,0.00000,-0.00198

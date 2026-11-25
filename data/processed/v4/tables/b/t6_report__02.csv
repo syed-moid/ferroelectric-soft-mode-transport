@@ -1,0 +1,5 @@
+# script: scripts/v4/build_tables_v4.py from b/reports/t6_report.md (table 2); part b
+# heading: 2. Results: 16³ and 20³ side by side (rows of T4 §2a–2d) — 2a. Carriers
+quantity,model,16³ (%),20³ (%),20³ − 16³ (pp),mesh-stable (≤ 2 pp)
+share of κ_P carried by the carriers,A,50.03,50.03,+0.00,yes
+share of κ_P carried by the carriers,B,50.05,50.04,-0.01,yes

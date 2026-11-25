@@ -1,0 +1,38 @@
+quantity,mesh,model_A,model_A_source,model_B_H1,model_B_source,note
+lattice parameter (Bohr),,7.363,sto_example template (distributed fit),7.35167842615,model B SCPH template / rta.in (T1),
+Born charges and dielectric tensor,,distributed example BORN (sha256 e283...),,DFPT k6 header (BORN sha256 1961c459...),G-B2 decision,
+"harmonic frequencies at Gamma, lowest 6 (cm^-1; negative = imaginary)","exact point, no NA direction","-58.49, -58.49, -58.49, 0.00, 0.00, 0.00","harm_A_m16 (bare 16^3, MODE=phonons)","-87.72, -87.72, -87.72, 0.00, 0.00, 0.00","harm_B_m16 (bare 16^3, MODE=phonons)","a2_harmonic_xcheck.csv approaches Gamma along [100] (LO split): -58.49, -58.49, 0.00, 0.00, 0.00, 154.47"
+"harmonic frequencies at R, lowest 3 (cm^-1; negative = imaginary)","exact point, no NA direction","-76.41, -76.41, -76.41","harm_A_m16 (bare 16^3, MODE=phonons)","-82.85, -82.85, -82.85","harm_B_m16 (bare 16^3, MODE=phonons)",model A equals data/processed/v3/a2_harmonic_xcheck.csv (STO222)
+"harmonic frequencies at M, lowest 1 (cm^-1; negative = imaginary)","exact point, no NA direction",20.60,"harm_A_m16 (bare 16^3, MODE=phonons)",-21.14,"harm_B_m16 (bare 16^3, MODE=phonons)",model A equals data/processed/v3/a2_harmonic_xcheck.csv (STO222)
+"SCPH frequency at Gamma, 300 K, PM (cm^-1)",q1 8^3,134.0,data/processed/v3/d_q1_freq_shift.csv,133.777,b3_scph_softmodes.csv (H1_q8),
+"SCPH frequency at M, 300 K, PM (cm^-1)",q1 8^3,80.82,data/processed/v3/d_q1_freq_shift.csv,78.5795,b3_scph_softmodes.csv (H1_q8),
+"SCPH frequency at R, 300 K, PM (cm^-1)",q1 8^3,28.93,data/processed/v3/d_q1_freq_shift.csv,26.9713,b3_scph_softmodes.csv (H1_q8),
+"SCPH frequency at Gamma, 300 K, PM (cm^-1)",q1 12^3,133.7,data/processed/v3/d_q1_freq_shift.csv,133.416,b3_scph_softmodes.csv (H1_q12),
+"SCPH frequency at M, 300 K, PM (cm^-1)",q1 12^3,79.86,data/processed/v3/d_q1_freq_shift.csv,77.4926,b3_scph_softmodes.csv (H1_q12),
+"SCPH frequency at R, 300 K, PM (cm^-1)",q1 12^3,25.82,data/processed/v3/d_q1_freq_shift.csv,22.8519,b3_scph_softmodes.csv (H1_q12),
+kappa_P (W/mK),12^3 (q1 12^3),9.1112,rta_pm_q12_T300_m12,not run,,T1 has no 12^3 run at q1 = 12^3
+kappa_P (W/mK),16^3 (q1 12^3),8.8907,rta_pm_q12_T300_m16,8.685,rta_mb_pm_q12_T300_m16,
+kappa_P (W/mK),20^3 (q1 12^3),9.209,rta_pm_q12_T300_m20,not run,,the analysis plan: 20^3 not run now
+kappa_P (W/mK),12^3 (q1 8^3),9.2384,data/processed/v3/c1_benchmark_matrix.csv (on_k8),9.0639,rta_mb_pm_q8_T300_m12,
+kappa_C (W/mK),12^3,0.279,"data/processed/v3/c1_benchmark_matrix.csv (on_k8, q1 8^3)",0.3006,rta_mb_pm_q8_T300_m12 (q1 8^3),
+kappa_C (W/mK),16^3,0.5081,rta_pm_q12_T300_m16,0.513,rta_mb_pm_q12_T300_m16,
+kappa_C (W/mK),15^3-24^3,0.442-0.541,data/processed/sto_production/kappa_mesh_T.csv,not run,,
+"R frequency, lowest branch (cm^-1)",16^3 (q1 12^3),25.82,data/processed/v3/d_q1_freq_shift.csv,22.8518,rta_mb_pm_q12_T300_m16 .result,
+"R mode HWHM, lowest branch (cm^-1)",16^3,4.23339,A3_transport.csv (production run),3.50931,rta_mb_pm_q12_T300_m16,
+"eta of R mode, lowest branch",16^3,0.1639330232846317,A3_transport.csv,0.15356820906886984,rta_mb_pm_q12_T300_m16,
+largest eta and its mode,12^3,"0.180635 (q index 84, branch 1, 25.8239 cm^-1)",data/processed/sto_production/eta_validity_T.csv,not run,,per-branch .result widths inside the degenerate R triplet (before anphon's averaging)
+largest eta and its mode,16^3,"0.163933 (q index 165, branch 1, 25.8239 cm^-1)",data/processed/sto_production/eta_validity_T.csv,"0.200348 (R, q index 165, branch 2, 22.85 cm^-1)",rta_mb_pm_q12_T300_m16,per-branch .result widths inside the degenerate R triplet (before anphon's averaging)
+largest eta and its mode,20^3,"0.184122 (q index 286, branch 1, 25.8239 cm^-1)",data/processed/sto_production/eta_validity_T.csv,not run,,per-branch .result widths inside the degenerate R triplet (before anphon's averaging)
+largest eta,12^3 (q1 8^3),,,0.16905488426586782,rta_mb_pm_q8_T300_m12,
+share of kappa_P from modes with eta > 0.02,16^3,0.268607,kp_eta_300K_m16_shares.csv (a345),0.269786,kp_eta_300K_m16_shares.csv (H1),
+share of kappa_P from modes with eta > 0.05,16^3,0.00907068,data/processed/sto_production/eta_validity_T.csv,0.010102,kp_eta_300K_m16_shares.csv (H1),
+share of kappa_P from modes with eta > 0.1,16^3,1.84475e-05,data/processed/sto_production/eta_validity_T.csv,1.98071e-05,kp_eta_300K_m16_shares.csv (H1),
+"hard/hard kappa_C (freq rule, W/mK)",16^3,0.373893,data/processed/sto_production/coherence_blocks_T.csv,0.3859423300344294,rta_mb_pm_q12_T300_m16 + evec_mb_pm_q12_T300_m16,
+hard/hard share of kappa_C (freq rule),16^3,0.7358606424287989,data/processed/sto_production/coherence_blocks_T.csv,0.7523300432291756,same,
+hard/hard pairs (freq rule; star-weighted),16^3,17060 (443040),A3_transport.csv (production run),17412 (454728),same,
+"mean kappa_C per hard/hard pair (freq rule; star-weighted, W/mK)",16^3,8.439265168128902e-07,A3_transport.csv,8.487322751940268e-07,same,
+"hard/hard kappa_C (char rule, W/mK)",16^3,0.350389,data/processed/sto_production/coherence_blocks_T.csv,0.3635334281353223,rta_mb_pm_q12_T300_m16 + evec_mb_pm_q12_T300_m16,
+hard/hard share of kappa_C (char rule),16^3,0.6896023050444497,data/processed/sto_production/coherence_blocks_T.csv,0.7086476357229307,same,
+hard/hard pairs (char rule; star-weighted),16^3,19614 (493482),A3_transport.csv (production run),18994 (475686),same,
+"mean kappa_C per hard/hard pair (char rule; star-weighted, W/mK)",16^3,7.100348507351608e-07,A3_transport.csv,7.642298241598919e-07,same,
+hard/hard share of kappa_C (freq rule),12^3 (q1 8^3),0.7801746885486315,A3_transport.csv (A2 rerun),0.7380115668919027,rta_mb_pm_q8_T300_m12,no eigenvector run at this setting

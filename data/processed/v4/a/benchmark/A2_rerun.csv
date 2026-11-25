@@ -1,0 +1,58 @@
+# A2 rerun vs imported runs; script scripts/v4/a2_compare.py; imported run scph_on_k8 (v3 record), rerun scph_pm_q8_rb (run map)
+quantity,imported_or_reference,rerun,difference,build_id,job_id,output_sha256_16
+Omega_Gamma_T250_cm-1,128.2388,128.2388,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_M_T250_cm-1,78.28103,78.28103,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_R_T250_cm-1,20.12245,20.12245,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_Gamma_T300_cm-1,134.0381,134.0381,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_M_T300_cm-1,80.81819,80.81819,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_R_T300_cm-1,28.92934,28.92934,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_Gamma_T350_cm-1,139.4151,139.4151,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_M_T350_cm-1,83.92717,83.92717,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_R_T350_cm-1,37.33063,37.33063,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_Gamma_T400_cm-1,144.2524,144.2524,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_M_T400_cm-1,87.13415,87.13415,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_R_T400_cm-1,44.637,44.637,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_Gamma_T450_cm-1,148.5508,148.5508,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_M_T450_cm-1,90.25701,90.25701,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_R_T450_cm-1,50.97346,50.97346,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_Gamma_T500_cm-1,152.3595,152.3595,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_M_T500_cm-1,93.24115,93.24115,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_R_T500_cm-1,56.5483,56.5483,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_Gamma_T550_cm-1,155.7412,155.7412,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_M_T550_cm-1,96.07633,96.07633,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_R_T550_cm-1,61.52743,61.52743,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_Gamma_T600_cm-1,158.7582,158.7582,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_M_T600_cm-1,98.76761,98.76761,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_R_T600_cm-1,66.03215,66.03215,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_Gamma_T650_cm-1,161.4671,161.4671,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_M_T650_cm-1,101.325,101.325,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_R_T650_cm-1,70.15116,70.15116,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_Gamma_T700_cm-1,163.9172,163.9172,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_M_T700_cm-1,103.7596,103.7596,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_R_T700_cm-1,73.95052,73.95052,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_Gamma_T750_cm-1,166.1498,166.1498,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_M_T750_cm-1,106.0822,106.0822,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_R_T750_cm-1,77.48052,77.48052,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_Gamma_T800_cm-1,168.1992,168.1992,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_M_T800_cm-1,108.3027,108.3027,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_R_T800_cm-1,80.78028,80.78028,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_Gamma_T850_cm-1,170.0937,170.0937,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_M_T850_cm-1,110.4299,110.4299,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_R_T850_cm-1,83.88078,83.88078,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_Gamma_T900_cm-1,171.8562,171.8562,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_M_T900_cm-1,112.4717,112.4717,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_R_T900_cm-1,86.80699,86.80699,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_Gamma_T950_cm-1,173.5056,173.5056,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_M_T950_cm-1,114.4351,114.4351,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_R_T950_cm-1,89.57934,89.57934,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_Gamma_T1000_cm-1,175.0573,175.0573,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_M_T1000_cm-1,116.3265,116.3265,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_R_T1000_cm-1,92.21487,92.21487,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8 -> scph_pm_q8_rb,6a8becf665e06a5e
+Omega_Gamma_T300_vs_2015_TableI_cm-1,136.0,134.0381,-1.9619000000000142,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8_rb vs Table I (stated),
+Omega_R_T300_vs_2015_TableI_cm-1,37.0,28.92934,-8.07066,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8_rb vs Table I (stated),
+Omega_M_T300_vs_2015_TableI_cm-1,85.0,80.81819,-4.181809999999999,alamode@c5b015ca/anphon-sha256:266b507a02c2,scph_pm_q8_rb vs Table I (stated),
+kappa_P_m12_W/mK,9.2384,9.2384,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,rta_pm_q8_T300_m12 -> rta_pm_q8_rb_T300_m12,
+kappa_P_m12_vs_2015_Fig7_W/mK,8.7,9.2384,0.5384000000000011,alamode@c5b015ca/anphon-sha256:266b507a02c2,rta_pm_q8_rb_T300_m12 vs 8.7 (read from figure),
+kappa_C_m12_W/mK,0.279,0.279,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,rta_pm_q8_T300_m12 -> rta_pm_q8_rb_T300_m12,
+kappa_P_m16_W/mK,8.996,8.996,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,rta_pm_q8_T300_m16 -> rta_pm_q8_rb_T300_m16,
+kappa_C_m16_W/mK,0.4998,0.4998,0.0,alamode@c5b015ca/anphon-sha256:266b507a02c2,rta_pm_q8_T300_m16 -> rta_pm_q8_rb_T300_m16,

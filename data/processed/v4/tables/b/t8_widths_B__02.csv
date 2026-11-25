@@ -1,0 +1,5 @@
+# script: scripts/v4/build_tables_v4.py from b/reports/t8_widths_B.md (table 2); part b
+# heading: 
+widths,modes,median \,Δ\,,95 % quantile,max,signed mean,"max at (q index, branch, Ω cm⁻¹)"
+group-averaged (what κ uses),2472,0.26 %,1.27 %,5.8 %,+1.96e-04,"53, 3, 141.81"
+per branch (.result),2472,0.28 %,6.59 %,51.3 %,+1.54e-03,"46, 1, 46.76"

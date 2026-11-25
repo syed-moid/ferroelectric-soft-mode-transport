@@ -1,0 +1,9 @@
+# script: scripts/v4/build_tables_v4.py from b/reports/t4_report.md (table 3); part b
+# heading: 2. Results (opened here first) — 2c. Linewidth of the carriers by partner family pair (primary c0.5; %)
+partner pair,model A,model B
+neither/neither,76.13,73.71
+neither/pol,2.62,2.91
+neither/rot,18.74,20.46
+pol/pol,0.00,0.00
+pol/rot,0.06,0.08
+rot/rot,2.45,2.84

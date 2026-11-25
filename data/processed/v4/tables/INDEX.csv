@@ -1,0 +1,45 @@
+file,part,report,table,heading,rows
+tables/a/t8_report_A__01.csv,a,t8_report_A.md,1,3. T4 shares under both settings (rows of T4 §2a–2d) — 3a. Carriers,6
+tables/a/t8_report_A__02.csv,a,t8_report_A.md,2,3. T4 shares under both settings (rows of T4 §2a–2d) — 3a. Carriers,1
+tables/a/t8_report_A__03.csv,a,t8_report_A.md,3,3. T4 shares under both settings (rows of T4 §2a–2d) — 3b. Linewidth of the carriers by number of soft partners,19
+tables/a/t8_report_A__04.csv,a,t8_report_A.md,4,3. T4 shares under both settings (rows of T4 §2a–2d) — 3c. Linewidth of the carriers by partner family pair (primary c0.5),6
+tables/a/t8_report_A__05.csv,a,t8_report_A.md,5,"3. T4 shares under both settings (rows of T4 §2a–2d) — 3d. κ_P carried by each family, next to κ_P carried by modes with η > 0.1 (all modes)",17
+tables/a/t8_widths_A__01.csv,a,t8_widths_A.md,1,,3
+tables/a/t8_widths_A__02.csv,a,t8_widths_A.md,2,,2
+tables/b/rot_below_105__01.csv,b,rot_below_105.md,1,,16
+tables/b/t4_report__01.csv,b,t4_report.md,1,2. Results (opened here first) — 2a. Carriers (frozen 50 % rule),7
+tables/b/t4_report__02.csv,b,t4_report.md,2,2. Results (opened here first) — 2b. Linewidth of the carriers by number of soft partners,8
+tables/b/t4_report__03.csv,b,t4_report.md,3,2. Results (opened here first) — 2c. Linewidth of the carriers by partner family pair (primary c0.5; %),6
+tables/b/t4_report__04.csv,b,t4_report.md,4,"2. Results (opened here first) — 2d. κ_P carried by each family, next to κ_P carried by modes with η > 0.1 (all modes; %)",8
+tables/b/t4_report__05.csv,b,t4_report.md,5,"2. Results (opened here first) — 2e. Sensitivity to TRISYM, 8³",2
+tables/b/t5_report__01.csv,b,t5_report.md,1,1. Runs and checks,0
+tables/b/t5_report__02.csv,b,t5_report.md,2,3. Share of the carriers' linewidth by partner class (family × band) — Model A,12
+tables/b/t5_report__03.csv,b,t5_report.md,3,3. Share of the carriers' linewidth by partner class (family × band) — Model B,12
+tables/b/t5_report__04.csv,b,t5_report.md,4,"4. Per band: rot partners against non-rot partners, per mode — Decay + absorption",8
+tables/b/t5_report__05.csv,b,t5_report.md,5,"4. Per band: rot partners against non-rot partners, per mode — Decay (share of the decay part)",8
+tables/b/t5_report__06.csv,b,t5_report.md,6,"4. Per band: rot partners against non-rot partners, per mode — Absorption (share of the absorption part)",8
+tables/b/t5b_report__01.csv,b,t5b_report.md,1,1. Runs and checks,0
+tables/b/t5b_report__02.csv,b,t5b_report.md,2,3. Share of the carriers' linewidth by partner class (family × band) — Model A,12
+tables/b/t5b_report__03.csv,b,t5b_report.md,3,3. Share of the carriers' linewidth by partner class (family × band) — Model B,12
+tables/b/t5b_report__04.csv,b,t5b_report.md,4,"4. Per band: rot partners against non-rot partners, per mode — Decay + absorption",8
+tables/b/t5b_report__05.csv,b,t5b_report.md,5,"4. Per band: rot partners against non-rot partners, per mode — Decay (share of the decay part)",8
+tables/b/t5b_report__06.csv,b,t5b_report.md,6,"4. Per band: rot partners against non-rot partners, per mode — Absorption (share of the absorption part)",8
+tables/b/t5b_report__07.csv,b,t5b_report.md,7,"5. Frequency of each class (full 16³ mesh, unweighted over the class's modes; cm⁻¹)",24
+tables/b/t5b_report__08.csv,b,t5b_report.md,8,"5. Frequency of each class (full 16³ mesh, unweighted over the class's modes; cm⁻¹)",24
+tables/b/t6_report__01.csv,b,t6_report.md,1,2. Results: 16³ and 20³ side by side (rows of T4 §2a–2d) — 2a. Carriers,12
+tables/b/t6_report__02.csv,b,t6_report.md,2,2. Results: 16³ and 20³ side by side (rows of T4 §2a–2d) — 2a. Carriers,2
+tables/b/t6_report__03.csv,b,t6_report.md,3,2. Results: 16³ and 20³ side by side (rows of T4 §2a–2d) — 2b. Linewidth of the carriers by number of soft partners,38
+tables/b/t6_report__04.csv,b,t6_report.md,4,2. Results: 16³ and 20³ side by side (rows of T4 §2a–2d) — 2c. Linewidth of the carriers by partner family pair (primary c0.5),12
+tables/b/t6_report__05.csv,b,t6_report.md,5,"2. Results: 16³ and 20³ side by side (rows of T4 §2a–2d) — 2d. κ_P carried by each family, next to κ_P carried by modes with η > 0.1 (all modes)",34
+tables/b/t7_report__01.csv,b,t7_report.md,1,2. Results: 300 K and 600 K side by side (rows of T4 §2a–2d) — 2a. Carriers,12
+tables/b/t7_report__02.csv,b,t7_report.md,2,2. Results: 300 K and 600 K side by side (rows of T4 §2a–2d) — 2a. Carriers,2
+tables/b/t7_report__03.csv,b,t7_report.md,3,2. Results: 300 K and 600 K side by side (rows of T4 §2a–2d) — 2b. Linewidth of the carriers by number of soft partners,38
+tables/b/t7_report__04.csv,b,t7_report.md,4,2. Results: 300 K and 600 K side by side (rows of T4 §2a–2d) — 2c. Linewidth of the carriers by partner family pair (primary c0.5),12
+tables/b/t7_report__05.csv,b,t7_report.md,5,"2. Results: 300 K and 600 K side by side (rows of T4 §2a–2d) — 2d. κ_P carried by each family, next to κ_P carried by modes with η > 0.1 (all modes)",34
+tables/b/t8_report_B__01.csv,b,t8_report_B.md,1,3. T4 shares under both settings (rows of T4 §2a–2d) — 3a. Carriers,6
+tables/b/t8_report_B__02.csv,b,t8_report_B.md,2,3. T4 shares under both settings (rows of T4 §2a–2d) — 3a. Carriers,1
+tables/b/t8_report_B__03.csv,b,t8_report_B.md,3,3. T4 shares under both settings (rows of T4 §2a–2d) — 3b. Linewidth of the carriers by number of soft partners,19
+tables/b/t8_report_B__04.csv,b,t8_report_B.md,4,3. T4 shares under both settings (rows of T4 §2a–2d) — 3c. Linewidth of the carriers by partner family pair (primary c0.5),6
+tables/b/t8_report_B__05.csv,b,t8_report_B.md,5,"3. T4 shares under both settings (rows of T4 §2a–2d) — 3d. κ_P carried by each family, next to κ_P carried by modes with η > 0.1 (all modes)",17
+tables/b/t8_widths_B__01.csv,b,t8_widths_B.md,1,,3
+tables/b/t8_widths_B__02.csv,b,t8_widths_B.md,2,,2

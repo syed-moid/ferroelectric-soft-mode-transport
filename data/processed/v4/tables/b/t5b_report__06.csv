@@ -1,0 +1,11 @@
+# script: scripts/v4/build_tables_v4.py from b/reports/t5b_report.md (table 6); part b
+# heading: 4. Per band: rot partners against non-rot partners, per mode — Absorption (share of the absorption part)
+band (cm⁻¹),model,N rot,s rot,N non-rot,s non-rot,s rot / s non-rot,N neither,s neither,s rot / s neither
+Ω < 80,A,240,21.709,453,5.343,4.06,453,5.343,4.06
+Ω < 80,B,264,24.743,393,4.671,5.30,393,4.671,5.30
+80 ≤ Ω < 95,A,180,6.973,658,4.088,1.71,658,4.088,1.71
+80 ≤ Ω < 95,B,180,7.656,598,4.003,1.91,598,4.003,1.91
+95 ≤ Ω < 105,A,240,6.009,1036,3.522,1.71,1036,3.522,1.71
+95 ≤ Ω < 105,B,216,6.955,1012,3.341,2.08,1012,3.341,2.08
+Ω ≥ 105,A,1416,2.566,57217,1.720,1.49,56834,1.723,1.49
+Ω ≥ 105,B,1404,2.908,57373,1.712,1.70,56990,1.714,1.70

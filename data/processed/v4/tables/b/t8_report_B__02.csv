@@ -1,0 +1,4 @@
+# script: scripts/v4/build_tables_v4.py from b/reports/t8_report_B.md (table 2); part b
+# heading: 3. T4 shares under both settings (rows of T4 §2a–2d) — 3a. Carriers
+quantity,model,TRISYM 1 (%),TRISYM 0 (%),TRISYM 0 − TRISYM 1 (pp)
+share of κ_P carried by the carriers,B,50.05,50.06,0.00

@@ -1,0 +1,15 @@
+# script: scripts/v4/build_tables_v4.py from b/reports/t6_report.md (table 1); part b
+# heading: 2. Results: 16³ and 20³ side by side (rows of T4 §2a–2d) — 2a. Carriers
+quantity,model,16³,20³
+κ_P mode sum (W/mK),A,8.8907,9.2090
+carrier modes (irreducible) / degenerate groups,A,203 / 198,351 / 343
+κ_P mode sum (W/mK),B,8.6850,9.0116
+carrier modes (irreducible) / degenerate groups,B,211 / 205,364 / 357
+"carriers by family, primary_c0.5 (neither / pol / rot / mixed)",A,154 / 0 / 49 / 0,248 / 0 / 103 / 0
+"carriers by family, primary_c0.5 (neither / pol / rot / mixed)",B,162 / 0 / 49 / 0,262 / 0 / 102 / 0
+"carriers by family, secondary_c0.5 (neither / pol / rot / mixed)",A,153 / 1 / 48 / 1,248 / 0 / 101 / 2
+"carriers by family, secondary_c0.5 (neither / pol / rot / mixed)",B,161 / 1 / 48 / 1,261 / 1 / 100 / 2
+"carriers by family, primary_c0.4 (neither / pol / rot / mixed)",A,131 / 0 / 72 / 0,220 / 0 / 131 / 0
+"carriers by family, primary_c0.4 (neither / pol / rot / mixed)",B,139 / 0 / 72 / 0,235 / 0 / 129 / 0
+"carriers by family, primary_c0.6 (neither / pol / rot / mixed)",A,165 / 0 / 38 / 0,274 / 0 / 77 / 0
+"carriers by family, primary_c0.6 (neither / pol / rot / mixed)",B,174 / 0 / 37 / 0,286 / 0 / 78 / 0

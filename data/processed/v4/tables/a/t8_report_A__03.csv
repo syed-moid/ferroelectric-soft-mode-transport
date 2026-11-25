@@ -1,0 +1,22 @@
+# script: scripts/v4/build_tables_v4.py from a/reports/t8_report_A.md (table 3); part a
+# heading: 3. T4 shares under both settings (rows of T4 §2a–2d) — 3b. Linewidth of the carriers by number of soft partners
+quantity,model,TRISYM 1 (%),TRISYM 0 (%),TRISYM 0 − TRISYM 1 (pp)
+primary_c0.5: neither soft,A,76.13,76.11,-0.02
+primary_c0.5: one soft,A,21.36,21.37,+0.01
+primary_c0.5: both soft,A,2.51,2.52,+0.01
+primary_c0.5: absorption part,A,77.69,77.69,0.00
+secondary_c0.5: neither soft,A,68.85,68.85,0.00
+secondary_c0.5: one soft,A,28.11,28.10,-0.01
+secondary_c0.5: both soft,A,3.04,3.05,+0.01
+secondary_c0.5: absorption part,A,77.69,77.69,0.00
+primary_c0.4: neither soft,A,73.23,73.22,-0.01
+primary_c0.4: one soft,A,23.79,23.80,+0.01
+primary_c0.4: both soft,A,2.97,2.98,+0.01
+primary_c0.4: absorption part,A,77.69,77.69,0.00
+primary_c0.6: neither soft,A,78.03,78.01,-0.02
+primary_c0.6: one soft,A,19.93,19.94,+0.01
+primary_c0.6: both soft,A,2.04,2.05,+0.01
+primary_c0.6: absorption part,A,77.69,77.69,0.00
+primary_c0.5 median: neither soft,A,77.36,77.36,0.00
+primary_c0.5 median: one soft,A,18.29,18.32,+0.03
+primary_c0.5 median: both soft,A,0.16,0.16,0.00

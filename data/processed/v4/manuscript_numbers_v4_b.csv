@@ -1,0 +1,140 @@
+# script: scripts/v4/build_manuscript_numbers_v4.py; part b
+# generated: 2026-11-23
+key,value,unit,description,source,job,status
+a_B,7.35167842615,bohr,"lattice parameter, model B (H1)",model B SCPH template; T1 rta.in,rta_mb_pm_q12_T300_m16,FINAL
+born_B,DFPT k6 header,,Born charges and dielectric tensor of model B (G-B2 decision),"fit record of model B (ALM logs of h1_fit, h2_fit; not regenerated here)",,REPORT
+B_ntrain,128,,"training configurations (DFSET_train), model B","fit record of model B (ALM logs of h1_fit, h2_fit; not regenerated here)",,REPORT
+B_free_params,698/2215/43/125 (FC2 fixed: H1; 45 free: H2),,"free parameters, orders 3-6","fit record of model B (ALM logs of h1_fit, h2_fit; not regenerated here)",,REPORT
+H1_L1_alpha,3.36918e-07,,"LASSO penalty (4-fold CV minimum), H1","fit record of model B (ALM logs of h1_fit, h2_fit; not regenerated here)",,REPORT
+H1_cv_err,2.14,%,"mean CV validation force error, H1","fit record of model B (ALM logs of h1_fit, h2_fit; not regenerated here)",,REPORT
+H1_train_EF_RMSE,1.538 / 10.55,% / meV/Å,"training force error / RMSE, H1","fit record of model B (ALM logs of h1_fit, h2_fit; not regenerated here)",,REPORT
+H1_test_EF_RMSE,2.326 / 15.78,% / meV/Å,"held-out test force error / RMSE, H1","fit record of model B (ALM logs of h1_fit, h2_fit; not regenerated here)",,REPORT
+H2_L1_alpha,3.48779e-07,,"LASSO penalty (4-fold CV minimum), H2","fit record of model B (ALM logs of h1_fit, h2_fit; not regenerated here)",,REPORT
+H2_cv_err,2.041,%,"mean CV validation force error, H2","fit record of model B (ALM logs of h1_fit, h2_fit; not regenerated here)",,REPORT
+H2_train_EF_RMSE,1.476 / 10.13,% / meV/Å,"training force error / RMSE, H2","fit record of model B (ALM logs of h1_fit, h2_fit; not regenerated here)",,REPORT
+H2_test_EF_RMSE,2.18 / 14.79,% / meV/Å,"held-out test force error / RMSE, H2","fit record of model B (ALM logs of h1_fit, h2_fit; not regenerated here)",,REPORT
+A_on_Btest_EF_RMSE,4.19 / 28.4,% / meV/Å,model A evaluated on model B's test set (descriptive),"fit record of model B (ALM logs of h1_fit, h2_fit; not regenerated here)",,REPORT
+harm_Gamma_B,"-87.72, -87.72, -87.72, 0.00, 0.00, 0.00",cm-1,"bare harmonic frequencies at Gamma, model B","harm_B_m16 (bare 16^3, MODE=phonons)",,FINAL
+harm_R_B,"-82.85, -82.85, -82.85",cm-1,"bare harmonic frequencies at R, model B","harm_B_m16 (bare 16^3, MODE=phonons)",,FINAL
+harm_M_B,-21.14,cm-1,"bare harmonic frequencies at M, model B","harm_B_m16 (bare 16^3, MODE=phonons)",,FINAL
+scph_Gamma_H1_q2,143.95,cm-1,"SCPH Gamma, 300 K, PM, q1 2^3, H1",data/processed/v4/b/b3_scph_softmodes.csv,scph_mb_pm_q2,FINAL
+scph_Gamma_H2_q2,143.668,cm-1,"SCPH Gamma, 300 K, PM, q1 2^3, H2",data/processed/v4/b/b3_scph_softmodes.csv,scph_mbh2_pm_q2,FINAL
+scph_M_H1_q2,99.6936,cm-1,"SCPH M, 300 K, PM, q1 2^3, H1",data/processed/v4/b/b3_scph_softmodes.csv,scph_mb_pm_q2,FINAL
+scph_M_H2_q2,99.7494,cm-1,"SCPH M, 300 K, PM, q1 2^3, H2",data/processed/v4/b/b3_scph_softmodes.csv,scph_mbh2_pm_q2,FINAL
+scph_R_H1_q2,69.704,cm-1,"SCPH R, 300 K, PM, q1 2^3, H1",data/processed/v4/b/b3_scph_softmodes.csv,scph_mb_pm_q2,FINAL
+scph_R_H2_q2,69.421,cm-1,"SCPH R, 300 K, PM, q1 2^3, H2",data/processed/v4/b/b3_scph_softmodes.csv,scph_mbh2_pm_q2,FINAL
+scph_Gamma_H1_q4,136.065,cm-1,"SCPH Gamma, 300 K, PM, q1 4^3, H1",data/processed/v4/b/b3_scph_softmodes.csv,scph_mb_pm_q4,FINAL
+scph_Gamma_H2_q4,136.111,cm-1,"SCPH Gamma, 300 K, PM, q1 4^3, H2",data/processed/v4/b/b3_scph_softmodes.csv,scph_mbh2_pm_q4,FINAL
+scph_M_H1_q4,84.1381,cm-1,"SCPH M, 300 K, PM, q1 4^3, H1",data/processed/v4/b/b3_scph_softmodes.csv,scph_mb_pm_q4,FINAL
+scph_M_H2_q4,84.8761,cm-1,"SCPH M, 300 K, PM, q1 4^3, H2",data/processed/v4/b/b3_scph_softmodes.csv,scph_mbh2_pm_q4,FINAL
+scph_R_H1_q4,41.6674,cm-1,"SCPH R, 300 K, PM, q1 4^3, H1",data/processed/v4/b/b3_scph_softmodes.csv,scph_mb_pm_q4,FINAL
+scph_R_H2_q4,42.5627,cm-1,"SCPH R, 300 K, PM, q1 4^3, H2",data/processed/v4/b/b3_scph_softmodes.csv,scph_mbh2_pm_q4,FINAL
+scph_Gamma_H1_q8,133.777,cm-1,"SCPH Gamma, 300 K, PM, q1 8^3, H1",data/processed/v4/b/b3_scph_softmodes.csv,scph_mb_pm_q8,FINAL
+scph_Gamma_H2_q8,134.051,cm-1,"SCPH Gamma, 300 K, PM, q1 8^3, H2",data/processed/v4/b/b3_scph_softmodes.csv,scph_mbh2_pm_q8,FINAL
+scph_M_H1_q8,78.5795,cm-1,"SCPH M, 300 K, PM, q1 8^3, H1",data/processed/v4/b/b3_scph_softmodes.csv,scph_mb_pm_q8,FINAL
+scph_M_H2_q8,79.4375,cm-1,"SCPH M, 300 K, PM, q1 8^3, H2",data/processed/v4/b/b3_scph_softmodes.csv,scph_mbh2_pm_q8,FINAL
+scph_R_H1_q8,26.9713,cm-1,"SCPH R, 300 K, PM, q1 8^3, H1",data/processed/v4/b/b3_scph_softmodes.csv,scph_mb_pm_q8,FINAL
+scph_R_H2_q8,28.8057,cm-1,"SCPH R, 300 K, PM, q1 8^3, H2",data/processed/v4/b/b3_scph_softmodes.csv,scph_mbh2_pm_q8,FINAL
+scph_Gamma_H1_q12,133.416,cm-1,"SCPH Gamma, 300 K, PM, q1 12^3, H1",data/processed/v4/b/b3_scph_softmodes.csv,scph_mb_pm_q12,FINAL
+scph_Gamma_H2_q12,133.747,cm-1,"SCPH Gamma, 300 K, PM, q1 12^3, H2",data/processed/v4/b/b3_scph_softmodes.csv,scph_mbh2_pm_q12,FINAL
+scph_M_H1_q12,77.4926,cm-1,"SCPH M, 300 K, PM, q1 12^3, H1",data/processed/v4/b/b3_scph_softmodes.csv,scph_mb_pm_q12,FINAL
+scph_M_H2_q12,78.4343,cm-1,"SCPH M, 300 K, PM, q1 12^3, H2",data/processed/v4/b/b3_scph_softmodes.csv,scph_mbh2_pm_q12,FINAL
+scph_R_H1_q12,22.8519,cm-1,"SCPH R, 300 K, PM, q1 12^3, H1",data/processed/v4/b/b3_scph_softmodes.csv,scph_mb_pm_q12,FINAL
+scph_R_H2_q12,25.3337,cm-1,"SCPH R, 300 K, PM, q1 12^3, H2",data/processed/v4/b/b3_scph_softmodes.csv,scph_mbh2_pm_q12,FINAL
+kP_B_m16,8.685,W/mK,"kappa_P, 300 K, 16^3, q1 12^3, model B",data/processed/v4/b/t1/H1_q12_m16.json,rta_mb_pm_q12_T300_m16,FINAL
+kC_B_m16,0.513,W/mK,"kappa_C, 300 K, 16^3, model B",data/processed/v4/b/t1/H1_q12_m16.json,rta_mb_pm_q12_T300_m16,FINAL
+kP_B_q8_m12,9.0639,W/mK,"kappa_P, 300 K, 12^3, q1 8^3, model B",data/processed/v4/b/t1/H1_q8_m12.json,rta_mb_pm_q8_T300_m12,FINAL
+kC_B_q8_m12,0.3006,W/mK,"kappa_C, 300 K, 12^3, q1 8^3, model B",data/processed/v4/b/t1/H1_q8_m12.json,rta_mb_pm_q8_T300_m12,FINAL
+share_eta_gt_0.02_B,26.95,%,"share of kappa_P from modes with eta > 0.02, 300 K, 16^3, group-averaged widths",data/processed/v4/b/kp_eta_300K_m16_gavg_shares.csv,rta_mb_pm_q12_T300_m16,FINAL
+share_eta_gt_0.02_B_perbranch,26.98,%,same with per-branch widths (released convention),data/processed/v4/b/kp_eta_300K_m16_shares.csv,rta_mb_pm_q12_T300_m16,SECONDARY
+share_eta_gt_0.05_B,1.007,%,"share of kappa_P from modes with eta > 0.05, 300 K, 16^3, group-averaged widths",data/processed/v4/b/kp_eta_300K_m16_gavg_shares.csv,rta_mb_pm_q12_T300_m16,FINAL
+share_eta_gt_0.05_B_perbranch,1.01,%,same with per-branch widths (released convention),data/processed/v4/b/kp_eta_300K_m16_shares.csv,rta_mb_pm_q12_T300_m16,SECONDARY
+share_eta_gt_0.1_B,0.001982,%,"share of kappa_P from modes with eta > 0.1, 300 K, 16^3, group-averaged widths",data/processed/v4/b/kp_eta_300K_m16_gavg_shares.csv,rta_mb_pm_q12_T300_m16,FINAL
+share_eta_gt_0.1_B_perbranch,0.001981,%,same with per-branch widths (released convention),data/processed/v4/b/kp_eta_300K_m16_shares.csv,rta_mb_pm_q12_T300_m16,SECONDARY
+eta_max_B,0.1581,,"largest group-averaged eta on 16^3, 300 K (R triplet, 22.8518 cm-1)",data/processed/v4/b/kp_eta_300K_m16_gavg_shares.csv,rta_mb_pm_q12_T300_m16,FINAL
+eta_max_B_perbranch,0.2003,,"same, per-branch widths (released convention)",data/processed/v4/b/kp_eta_300K_m16_shares.csv,rta_mb_pm_q12_T300_m16,SECONDARY
+R_omega_B_m16,22.8518,cm-1,R triplet frequency in the 16^3 run,data/processed/v4/b/kp_eta_300K_m16_gavg_shares.csv,rta_mb_pm_q12_T300_m16,FINAL
+hh_freq_B,75.23,%,"hard/hard share of kappa_C, frequency rule, 300 K, 16^3",data/processed/v4/b/t1/charphase_cell_H1.json,rta_mb_pm_q12_T300_m16,FINAL
+hh_char_cell_B,70.86,%,"hard/hard share of kappa_C, character rule, published (cell) convention",data/processed/v4/b/t1/charphase_cell_H1.json,rta_mb_pm_q12_T300_m16,SECONDARY
+hh_char_atom_B,62.07,%,"hard/hard share of kappa_C, character rule, star-invariant (atom-position) convention",data/processed/v4/b/t1/charphase_atom_H1.json,rta_mb_pm_q12_T300_m16,FINAL
+census_B_primary_c0.4,pol 569 / rot 3156 / mixed 0,modes,"star-weighted family counts, 16^3, primary definition, c_min 0.4",data/processed/v4/b/labels/labels_B_m16.csv,,FINAL
+census_B_primary_c0.5,pol 383 / rot 2064 / mixed 0,modes,"star-weighted family counts, 16^3, primary definition, c_min 0.5",data/processed/v4/b/labels/labels_B_m16.csv,,FINAL
+census_B_primary_c0.6,pol 247 / rot 1488 / mixed 0,modes,"star-weighted family counts, 16^3, primary definition, c_min 0.6",data/processed/v4/b/labels/labels_B_m16.csv,,FINAL
+kP_modesum_B_m16,8.685,W/mK,"kappa_P (mode sum = solver), model B, 300 K, 16^3, TRISYM 1",data/processed/v4/b/t4/t4_B_summary.json,T4,FINAL
+carriers_B_m16,211 / 205,modes / groups,"carriers, model B, 300 K, 16^3, TRISYM 1",data/processed/v4/b/t4/t4_B_summary.json,T4,FINAL
+nsoft0_B_m16,73.71,%,"carriers' linewidth with no soft partner(s), kappa_P-weighted, model B, 300 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/t4_B_summary.json,T4,FINAL
+nsoft1_B_m16,23.37,%,"carriers' linewidth with one soft partner(s), kappa_P-weighted, model B, 300 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/t4_B_summary.json,T4,FINAL
+nsoft2_B_m16,2.913,%,"carriers' linewidth with both soft partner(s), kappa_P-weighted, model B, 300 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/t4_B_summary.json,T4,FINAL
+pair_neither_rot_B_m16,20.46,%,"carriers' linewidth from partner pair neither/rot, model B, 300 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/t4_B_summary.json,T4,FINAL
+kP_share_neither_B_m16,86.01,%,"share of kappa_P carried by family neither (all modes), model B, 300 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/t4_B_summary.json,T4,FINAL
+kP_share_pol_B_m16,0.5059,%,"share of kappa_P carried by family pol (all modes), model B, 300 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/t4_B_summary.json,T4,FINAL
+kP_share_rot_B_m16,13.49,%,"share of kappa_P carried by family rot (all modes), model B, 300 K, 16^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/t4_B_summary.json,T4,FINAL
+kP_share_eta01_B_m16,0.00198226,%,"share of kappa_P carried by modes with group-averaged eta > 0.1, model B, 300 K, 16^3, TRISYM 1",data/processed/v4/b/t4/t4_B_summary.json,T4,FINAL
+kP_modesum_B_m20,9.012,W/mK,"kappa_P (mode sum = solver), model B, 300 K, 20^3, TRISYM 1",data/processed/v4/b/t4/m20/t4_B_summary.json,T6,FINAL
+carriers_B_m20,364 / 357,modes / groups,"carriers, model B, 300 K, 20^3, TRISYM 1",data/processed/v4/b/t4/m20/t4_B_summary.json,T6,FINAL
+nsoft0_B_m20,74.15,%,"carriers' linewidth with no soft partner(s), kappa_P-weighted, model B, 300 K, 20^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/m20/t4_B_summary.json,T6,FINAL
+nsoft1_B_m20,23.0,%,"carriers' linewidth with one soft partner(s), kappa_P-weighted, model B, 300 K, 20^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/m20/t4_B_summary.json,T6,FINAL
+nsoft2_B_m20,2.855,%,"carriers' linewidth with both soft partner(s), kappa_P-weighted, model B, 300 K, 20^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/m20/t4_B_summary.json,T6,FINAL
+pair_neither_rot_B_m20,20.33,%,"carriers' linewidth from partner pair neither/rot, model B, 300 K, 20^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/m20/t4_B_summary.json,T6,FINAL
+kP_share_neither_B_m20,84.35,%,"share of kappa_P carried by family neither (all modes), model B, 300 K, 20^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/m20/t4_B_summary.json,T6,FINAL
+kP_share_pol_B_m20,0.412,%,"share of kappa_P carried by family pol (all modes), model B, 300 K, 20^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/m20/t4_B_summary.json,T6,FINAL
+kP_share_rot_B_m20,15.24,%,"share of kappa_P carried by family rot (all modes), model B, 300 K, 20^3, TRISYM 1; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/m20/t4_B_summary.json,T6,FINAL
+kP_share_eta01_B_m20,0.00232916,%,"share of kappa_P carried by modes with group-averaged eta > 0.1, model B, 300 K, 20^3, TRISYM 1",data/processed/v4/b/t4/m20/t4_B_summary.json,T6,FINAL
+kP_modesum_B_m16_T600,6.25,W/mK,"kappa_P (mode sum = solver), model B, 600 K, 16^3, TRISYM 1; outside the training distribution",data/processed/v4/b/t4/T600/t4_B_summary.json,T7,OUTSIDE_TRAINING
+carriers_B_m16_T600,212 / 206,modes / groups,"carriers, model B, 600 K, 16^3, TRISYM 1; outside the training distribution",data/processed/v4/b/t4/T600/t4_B_summary.json,T7,OUTSIDE_TRAINING
+nsoft0_B_m16_T600,84.25,%,"carriers' linewidth with no soft partner(s), kappa_P-weighted, model B, 600 K, 16^3, TRISYM 1; outside the training distribution; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/T600/t4_B_summary.json,T7,OUTSIDE_TRAINING
+nsoft1_B_m16_T600,14.9,%,"carriers' linewidth with one soft partner(s), kappa_P-weighted, model B, 600 K, 16^3, TRISYM 1; outside the training distribution; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/T600/t4_B_summary.json,T7,OUTSIDE_TRAINING
+nsoft2_B_m16_T600,0.8542,%,"carriers' linewidth with both soft partner(s), kappa_P-weighted, model B, 600 K, 16^3, TRISYM 1; outside the training distribution; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/T600/t4_B_summary.json,T7,OUTSIDE_TRAINING
+pair_neither_rot_B_m16_T600,11.85,%,"carriers' linewidth from partner pair neither/rot, model B, 600 K, 16^3, TRISYM 1; outside the training distribution; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/T600/t4_B_summary.json,T7,OUTSIDE_TRAINING
+kP_share_neither_B_m16_T600,87.28,%,"share of kappa_P carried by family neither (all modes), model B, 600 K, 16^3, TRISYM 1; outside the training distribution; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/T600/t4_B_summary.json,T7,OUTSIDE_TRAINING
+kP_share_pol_B_m16_T600,0.5345,%,"share of kappa_P carried by family pol (all modes), model B, 600 K, 16^3, TRISYM 1; outside the training distribution; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/T600/t4_B_summary.json,T7,OUTSIDE_TRAINING
+kP_share_rot_B_m16_T600,12.18,%,"share of kappa_P carried by family rot (all modes), model B, 600 K, 16^3, TRISYM 1; outside the training distribution; primary c_min 0.5; carriers = frozen 50 % rule",data/processed/v4/b/t4/T600/t4_B_summary.json,T7,OUTSIDE_TRAINING
+kP_share_eta01_B_m16_T600,0.0,%,"share of kappa_P carried by modes with group-averaged eta > 0.1, model B, 600 K, 16^3, TRISYM 1; outside the training distribution",data/processed/v4/b/t4/T600/t4_B_summary.json,T7,OUTSIDE_TRAINING
+t5_B_<105_s_rot,28.9,% per 1000 modes,"carriers' linewidth per rot partner mode, band <105 cm-1, model B, 300 K, 16^3",data/processed/v4/b/t5/t5_B.json,T5,FINAL
+t5_B_<105_s_nonrot,6.392,% per 1000 modes,"carriers' linewidth per non-rot partner mode, band <105 cm-1, model B",data/processed/v4/b/t5/t5_B.json,T5,FINAL
+t5_B_<105_ratio_total,4.52,,"s_rot / s_nonrot (total), band <105 cm-1, model B",data/processed/v4/b/t5/t5_B.json,T5,FINAL
+t5_B_<105_ratio_decay,3.51,,"s_rot / s_nonrot (decay), band <105 cm-1, model B",data/processed/v4/b/t5/t5_B.json,T5,FINAL
+t5_B_<105_ratio_absorption,3.5,,"s_rot / s_nonrot (absorption), band <105 cm-1, model B",data/processed/v4/b/t5/t5_B.json,T5,FINAL
+t5_B_105-145_s_rot,4.371,% per 1000 modes,"carriers' linewidth per rot partner mode, band 105-145 cm-1, model B, 300 K, 16^3",data/processed/v4/b/t5/t5_B.json,T5,FINAL
+t5_B_105-145_s_nonrot,3.79,% per 1000 modes,"carriers' linewidth per non-rot partner mode, band 105-145 cm-1, model B",data/processed/v4/b/t5/t5_B.json,T5,FINAL
+t5_B_105-145_ratio_total,1.15,,"s_rot / s_nonrot (total), band 105-145 cm-1, model B",data/processed/v4/b/t5/t5_B.json,T5,FINAL
+t5_B_105-145_ratio_decay,1.13,,"s_rot / s_nonrot (decay), band 105-145 cm-1, model B",data/processed/v4/b/t5/t5_B.json,T5,FINAL
+t5_B_105-145_ratio_absorption,1.1,,"s_rot / s_nonrot (absorption), band 105-145 cm-1, model B",data/processed/v4/b/t5/t5_B.json,T5,FINAL
+t5_B_145-160_s_rot,3.014,% per 1000 modes,"carriers' linewidth per rot partner mode, band 145-160 cm-1, model B, 300 K, 16^3",data/processed/v4/b/t5/t5_B.json,T5,FINAL
+t5_B_145-160_s_nonrot,5.622,% per 1000 modes,"carriers' linewidth per non-rot partner mode, band 145-160 cm-1, model B",data/processed/v4/b/t5/t5_B.json,T5,FINAL
+t5_B_145-160_ratio_total,0.536,,"s_rot / s_nonrot (total), band 145-160 cm-1, model B",data/processed/v4/b/t5/t5_B.json,T5,FINAL
+t5_B_145-160_ratio_decay,0.942,,"s_rot / s_nonrot (decay), band 145-160 cm-1, model B",data/processed/v4/b/t5/t5_B.json,T5,FINAL
+t5_B_145-160_ratio_absorption,0.484,,"s_rot / s_nonrot (absorption), band 145-160 cm-1, model B",data/processed/v4/b/t5/t5_B.json,T5,FINAL
+t5b_B_<80_s_rot,57.65,% per 1000 modes,"carriers' linewidth per rot partner mode, band <80 cm-1, model B, 300 K, 16^3",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_<80_s_nonrot,9.117,% per 1000 modes,"carriers' linewidth per non-rot partner mode, band <80 cm-1, model B",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_<80_ratio_total,6.32,,"s_rot / s_nonrot (total), band <80 cm-1, model B",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_<80_ratio_decay,2.42,,"s_rot / s_nonrot (decay), band <80 cm-1, model B",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_<80_ratio_absorption,5.3,,"s_rot / s_nonrot (absorption), band <80 cm-1, model B",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_<80_omega_mean_rot,64.147,cm-1,"mean frequency of the rot partner modes, band <80 cm-1, model B, full 16^3 mesh",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_<80_omega_mean_nonrot,61.553,cm-1,"mean frequency of the nonrot partner modes, band <80 cm-1, model B, full 16^3 mesh",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_80-95_s_rot,13.09,% per 1000 modes,"carriers' linewidth per rot partner mode, band 80-95 cm-1, model B, 300 K, 16^3",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_80-95_s_nonrot,6.568,% per 1000 modes,"carriers' linewidth per non-rot partner mode, band 80-95 cm-1, model B",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_80-95_ratio_total,1.99,,"s_rot / s_nonrot (total), band 80-95 cm-1, model B",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_80-95_ratio_decay,1.49,,"s_rot / s_nonrot (decay), band 80-95 cm-1, model B",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_80-95_ratio_absorption,1.91,,"s_rot / s_nonrot (absorption), band 80-95 cm-1, model B",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_80-95_omega_mean_rot,88.503,cm-1,"mean frequency of the rot partner modes, band 80-95 cm-1, model B, full 16^3 mesh",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_80-95_omega_mean_nonrot,87.577,cm-1,"mean frequency of the nonrot partner modes, band 80-95 cm-1, model B, full 16^3 mesh",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_95-105_s_rot,10.43,% per 1000 modes,"carriers' linewidth per rot partner mode, band 95-105 cm-1, model B, 300 K, 16^3",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_95-105_s_nonrot,5.492,% per 1000 modes,"carriers' linewidth per non-rot partner mode, band 95-105 cm-1, model B",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_95-105_ratio_total,1.9,,"s_rot / s_nonrot (total), band 95-105 cm-1, model B",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_95-105_ratio_decay,1.65,,"s_rot / s_nonrot (decay), band 95-105 cm-1, model B",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_95-105_ratio_absorption,2.08,,"s_rot / s_nonrot (absorption), band 95-105 cm-1, model B",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_95-105_omega_mean_rot,99.854,cm-1,"mean frequency of the rot partner modes, band 95-105 cm-1, model B, full 16^3 mesh",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_95-105_omega_mean_nonrot,100.4,cm-1,"mean frequency of the nonrot partner modes, band 95-105 cm-1, model B, full 16^3 mesh",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_>=105_s_rot,3.737,% per 1000 modes,"carriers' linewidth per rot partner mode, band >=105 cm-1, model B, 300 K, 16^3",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_>=105_s_nonrot,1.636,% per 1000 modes,"carriers' linewidth per non-rot partner mode, band >=105 cm-1, model B",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_>=105_ratio_total,2.28,,"s_rot / s_nonrot (total), band >=105 cm-1, model B",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_>=105_ratio_decay,4.04,,"s_rot / s_nonrot (decay), band >=105 cm-1, model B",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_>=105_ratio_absorption,1.7,,"s_rot / s_nonrot (absorption), band >=105 cm-1, model B",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_>=105_omega_mean_rot,136.32,cm-1,"mean frequency of the rot partner modes, band >=105 cm-1, model B, full 16^3 mesh",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+t5b_B_>=105_omega_mean_nonrot,336.04,cm-1,"mean frequency of the nonrot partner modes, band >=105 cm-1, model B, full 16^3 mesh",data/processed/v4/b/t5b/t5b_B.json,T5b,FINAL
+kC_B_m20,0.4485,W/mK,"kappa_C (xx), model B, 300 K, 20^3 (base run bB; patched tB identical)",<runs>/B_rta_q12_m20_T300/rta_mb_pm_q12_T300_m20.kl_coherent,T6,FINAL
+rot_below105_B_T300,660,modes,"rot-family modes (primary c_min 0.5) below 105 cm-1, model B, 300 K, full 16^3 mesh (61440 modes)",data/processed/v4/b/labels/labels_B_m16.csv,scripts/v4/rot_below_105.py (labels and frequencies only),FINAL
+rot_range_B_T300,22.85–157.56,cm-1,"frequency range of the rot family (primary c_min 0.5), model B, 300 K, 16^3",data/processed/v4/b/labels/labels_B_m16.csv,scripts/v4/rot_below_105.py (labels and frequencies only),FINAL
+rot_below105_B_T600,336,modes,"rot-family modes (primary c_min 0.5) below 105 cm-1, model B, 600 K, full 16^3 mesh (61440 modes)",data/processed/v4/b/labels/T600/labels_B_m16_T600.csv,scripts/v4/rot_below_105.py (labels and frequencies only),OUTSIDE_TRAINING
+rot_range_B_T600,66.27–168.37,cm-1,"frequency range of the rot family (primary c_min 0.5), model B, 600 K, 16^3",data/processed/v4/b/labels/T600/labels_B_m16_T600.csv,scripts/v4/rot_below_105.py (labels and frequencies only),OUTSIDE_TRAINING

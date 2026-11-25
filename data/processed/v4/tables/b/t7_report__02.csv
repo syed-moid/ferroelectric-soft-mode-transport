@@ -1,0 +1,5 @@
+# script: scripts/v4/build_tables_v4.py from b/reports/t7_report.md (table 2); part b
+# heading: 2. Results: 300 K and 600 K side by side (rows of T4 §2a–2d) — 2a. Carriers
+quantity,model,300 K (%),600 K (%),600 K − 300 K (pp)
+share of κ_P carried by the carriers,A,50.03,50.00,-0.03
+share of κ_P carried by the carriers,B †,50.05,50.10,+0.05

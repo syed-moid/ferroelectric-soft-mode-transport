@@ -1,0 +1,161 @@
+{
+ "model": "A",
+ "kappa_P_modesum": 7.537351574491229,
+ "n_irred_modes": 525,
+ "carriers": 46,
+ "carrier_groups": 41,
+ "carrier_kappa_share": 0.5026720230150015,
+ "check_bins_vs_total_max_rel": 6.099104766283177e-15,
+ "check_total_vs_result_avg_max_rel": 4.409975094071343e-06,
+ "share_kP_eta_gt_0.1": 2.5349005311077828e-11,
+ "definitions": {
+  "primary_c0.5": {
+   "kappa_P_share_by_family": {
+    "neither": 0.8679213169909407,
+    "pol": 0.00655436355113125,
+    "rot": 0.12552431945792808,
+    "mixed": 0.0
+   },
+   "carrier_family_counts": {
+    "neither": 33,
+    "pol": 0,
+    "rot": 13,
+    "mixed": 0
+   },
+   "kappa_weighted_nsoft_frac": {
+    "0": 0.7091177353559204,
+    "1": 0.2609790988896266,
+    "2": 0.029903165754452992
+   },
+   "median_nsoft_frac": {
+    "0": 0.7556766383448045,
+    "1": 0.21383513234779172,
+    "2": 0.0012024594365533344
+   },
+   "kappa_weighted_pair_frac": {
+    "neither/neither": 0.7091177353559204,
+    "neither/pol": 0.03315791651670386,
+    "neither/rot": 0.2278211823729227,
+    "neither/mixed": 0.0,
+    "pol/pol": -1.6211171179712113e-07,
+    "pol/rot": 0.001168339865782743,
+    "pol/mixed": 0.0,
+    "rot/rot": 0.028734988000382048,
+    "rot/mixed": 0.0,
+    "mixed/mixed": 0.0
+   },
+   "kappa_weighted_absorption_share": 0.7276325299313215
+  },
+  "secondary_c0.5": {
+   "kappa_P_share_by_family": {
+    "neither": 0.8432576692091346,
+    "pol": 0.031218011332937407,
+    "rot": 0.11663961389122347,
+    "mixed": 0.008884705566704603
+   },
+   "carrier_family_counts": {
+    "neither": 33,
+    "pol": 0,
+    "rot": 12,
+    "mixed": 1
+   },
+   "kappa_weighted_nsoft_frac": {
+    "0": 0.6301302156923297,
+    "1": 0.33376606402721504,
+    "2": 0.036103720280455345
+   },
+   "median_nsoft_frac": {
+    "0": 0.6323454544374936,
+    "1": 0.3438300252868401,
+    "2": 0.012632531046239598
+   },
+   "kappa_weighted_pair_frac": {
+    "neither/neither": 0.6301302156923297,
+    "neither/pol": 0.1105374232703131,
+    "neither/rot": 0.21743626408643496,
+    "neither/mixed": 0.005792376670467,
+    "pol/pol": 0.0016078507982698151,
+    "pol/rot": 0.005609750634570027,
+    "pol/mixed": 0.00015113084723346153,
+    "rot/rot": 0.027859268342647635,
+    "rot/mixed": 0.0008757196577344128,
+    "mixed/mixed": 0.0
+   },
+   "kappa_weighted_absorption_share": 0.7276325299313215
+  },
+  "primary_c0.4": {
+   "kappa_P_share_by_family": {
+    "neither": 0.7477339540639152,
+    "pol": 0.00655436355113125,
+    "rot": 0.24571168238495364,
+    "mixed": 0.0
+   },
+   "carrier_family_counts": {
+    "neither": 25,
+    "pol": 0,
+    "rot": 21,
+    "mixed": 0
+   },
+   "kappa_weighted_nsoft_frac": {
+    "0": 0.6642575227097056,
+    "1": 0.29685650092531524,
+    "2": 0.03888597636497893
+   },
+   "median_nsoft_frac": {
+    "0": 0.6587999474161956,
+    "1": 0.29751536126971667,
+    "2": 0.009821859213413308
+   },
+   "kappa_weighted_pair_frac": {
+    "neither/neither": 0.6642575227097056,
+    "neither/pol": 0.032787878864566605,
+    "neither/rot": 0.2640686220607487,
+    "neither/mixed": 0.0,
+    "pol/pol": -1.6211171179712113e-07,
+    "pol/rot": 0.0015383775179199969,
+    "pol/mixed": 0.0,
+    "rot/rot": 0.03734776095877074,
+    "rot/mixed": 0.0,
+    "mixed/mixed": 0.0
+   },
+   "kappa_weighted_absorption_share": 0.7276325299313215
+  },
+  "primary_c0.6": {
+   "kappa_P_share_by_family": {
+    "neither": 0.8785325228689724,
+    "pol": 0.004827863239804084,
+    "rot": 0.11663961389122347,
+    "mixed": 0.0
+   },
+   "carrier_family_counts": {
+    "neither": 34,
+    "pol": 0,
+    "rot": 12,
+    "mixed": 0
+   },
+   "kappa_weighted_nsoft_frac": {
+    "0": 0.7252814430822278,
+    "1": 0.24581063364133326,
+    "2": 0.02890792327643896
+   },
+   "median_nsoft_frac": {
+    "0": 0.7616042787935349,
+    "1": 0.19740561482179173,
+    "2": 0.0006799923770247607
+   },
+   "kappa_weighted_pair_frac": {
+    "neither/neither": 0.7252814430822278,
+    "neither/pol": 0.02293771630809701,
+    "neither/rot": 0.2228729173332363,
+    "neither/mixed": 0.0,
+    "pol/pol": -1.6211171179712113e-07,
+    "pol/rot": 0.001048817045503126,
+    "pol/mixed": 0.0,
+    "rot/rot": 0.027859268342647635,
+    "rot/mixed": 0.0,
+    "mixed/mixed": 0.0
+   },
+   "kappa_weighted_absorption_share": 0.7276325299313215
+  }
+ }
+}

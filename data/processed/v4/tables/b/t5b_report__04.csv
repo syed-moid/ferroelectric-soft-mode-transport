@@ -1,0 +1,11 @@
+# script: scripts/v4/build_tables_v4.py from b/reports/t5b_report.md (table 4); part b
+# heading: 4. Per band: rot partners against non-rot partners, per mode — Decay + absorption
+band (cm⁻¹),model,N rot,s rot,N non-rot,s non-rot,s rot / s non-rot,N neither,s neither,s rot / s neither
+Ω < 80,A,240,56.547,453,9.955,5.68,453,9.955,5.68
+Ω < 80,B,264,57.653,393,9.117,6.32,393,9.117,6.32
+80 ≤ Ω < 95,A,180,13.036,658,7.255,1.80,658,7.255,1.80
+80 ≤ Ω < 95,B,180,13.087,598,6.568,1.99,598,6.568,1.99
+95 ≤ Ω < 105,A,240,9.578,1036,6.280,1.53,1036,6.280,1.53
+95 ≤ Ω < 105,B,216,10.434,1012,5.492,1.90,1012,5.492,1.90
+Ω ≥ 105,A,1416,3.241,57217,1.641,1.98,56834,1.642,1.97
+Ω ≥ 105,B,1404,3.737,57373,1.636,2.28,56990,1.638,2.28

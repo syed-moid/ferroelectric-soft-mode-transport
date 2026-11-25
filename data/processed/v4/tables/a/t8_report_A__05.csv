@@ -1,0 +1,20 @@
+# script: scripts/v4/build_tables_v4.py from a/reports/t8_report_A.md (table 5); part a
+# heading: 3. T4 shares under both settings (rows of T4 §2a–2d) — 3d. κ_P carried by each family, next to κ_P carried by modes with η > 0.1 (all modes)
+quantity,model,TRISYM 1 (%),TRISYM 0 (%),TRISYM 0 − TRISYM 1 (pp)
+primary_c0.5: neither,A,85.96,85.96,0.00
+primary_c0.5: pol,A,0.45,0.45,0.00
+primary_c0.5: rot,A,13.59,13.59,0.00
+primary_c0.5: mixed,A,0.00,0.00,0.00
+secondary_c0.5: neither,A,83.97,83.97,0.00
+secondary_c0.5: pol,A,2.44,2.44,0.00
+secondary_c0.5: rot,A,13.36,13.36,0.00
+secondary_c0.5: mixed,A,0.23,0.23,0.00
+primary_c0.4: neither,A,79.88,79.88,0.00
+primary_c0.4: pol,A,0.68,0.68,0.00
+primary_c0.4: rot,A,19.44,19.44,0.00
+primary_c0.4: mixed,A,0.00,0.00,0.00
+primary_c0.6: neither,A,89.33,89.33,0.00
+primary_c0.6: pol,A,0.25,0.25,0.00
+primary_c0.6: rot,A,10.42,10.42,0.00
+primary_c0.6: mixed,A,0.00,0.00,0.00
+η > 0.1 (group-averaged),A,0.00185,0.00188,+0.00004

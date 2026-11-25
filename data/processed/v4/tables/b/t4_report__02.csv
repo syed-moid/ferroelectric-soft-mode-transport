@@ -1,0 +1,11 @@
+# script: scripts/v4/build_tables_v4.py from b/reports/t4_report.md (table 2); part b
+# heading: 2. Results (opened here first) — 2b. Linewidth of the carriers by number of soft partners
+definition,model,neither soft (%),one soft (%),both soft (%),absorption part (%)
+primary_c0.5,A,76.13,21.36,2.51,77.69
+primary_c0.5,B,73.71,23.37,2.91,76.99
+secondary_c0.5,A,68.85,28.11,3.04,77.69
+secondary_c0.5,B,66.87,29.61,3.52,76.99
+primary_c0.4,A,73.23,23.79,2.97,77.69
+primary_c0.4,B,70.52,25.95,3.53,76.99
+primary_c0.6,A,78.03,19.93,2.04,77.69
+primary_c0.6,B,75.80,21.82,2.37,76.99

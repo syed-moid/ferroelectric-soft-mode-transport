@@ -1,0 +1,15 @@
+# script: scripts/v4/build_tables_v4.py from b/reports/t7_report.md (table 4); part b
+# heading: 2. Results: 300 K and 600 K side by side (rows of T4 §2a–2d) — 2c. Linewidth of the carriers by partner family pair (primary c0.5)
+quantity,model,300 K (%),600 K (%),600 K − 300 K (pp)
+neither/neither,A,76.13,85.64,+9.51
+neither/neither,B †,73.71,84.25,+10.54
+neither/pol,A,2.62,2.30,-0.32
+neither/pol,B †,2.91,3.05,+0.14
+neither/rot,A,18.74,11.21,-7.53
+neither/rot,B †,20.46,11.85,-8.61
+pol/pol,A,0.00,0.01,+0.01
+pol/pol,B †,0.00,0.02,+0.02
+pol/rot,A,0.06,0.01,-0.05
+pol/rot,B †,0.08,0.04,-0.04
+rot/rot,A,2.45,0.84,-1.61
+rot/rot,B †,2.84,0.79,-2.04
