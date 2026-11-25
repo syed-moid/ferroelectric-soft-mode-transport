@@ -1,0 +1,71 @@
+run,job,model,kind,q1,mesh,T_K,setting,build,part,archive
+A_scph_q12,scph_pm_q12,A,scph,12,,0-1000,"PM, Ewald",v3 manifest,i,v3 (reused)
+A_rta_q12_m16_T300,rta_pm_q12_T300_m16,A,rta,12,16,300,TRISYM 1,v3 manifest,i,v3 (reused)
+A_rta_q12_m20_T300,rta_pm_q12_T300_m20,A,rta,12,20,300,TRISYM 1,v3 manifest,i,v3 (reused)
+A_rta_q12_m16_T600,rta_pm_q12_T600_m16,A,rta,12,16,600,TRISYM 1,v3 manifest,i,v3 (reused)
+A_rta_q8_m12_T300,rta_pm_q8_T300_m12,A,rta,8,12,300,TRISYM 1,v3 manifest,i,v3 (reused)
+A_scph_q8,scph_pm_q8,A,scph,8,,0-1000,"PM, Ewald",v3 manifest,i,v3 (reused)
+A_evec_q12_m16_T300,evec_pm_q12_T300_m16,A,evec,12,16,300,,v3 manifest,i,v3 (reused)
+A_evec_q12_m16_T600,evec_pm_q12_T600_m16,A,evec,12,16,600,,v3 manifest,i,v3 (reused)
+A_evec_q12_m20_T300,evec_pm_q12_T300_m20,A,evec,12,20,300,,v3 manifest,i,v3 (reused)
+A_harm_m16,harm_A_m16,A,harmonic evec,,16,,"bare, MODE=phonons",base 266b507a,i,v4_runs_a
+A_harm_m20,harm_A_m20,A,harmonic evec,,20,,"bare, MODE=phonons",base 266b507a,i,v4_runs_a
+A_partition_q12_m16_T300,t4_a_m16_code32,A,rta + partition,12,16,300,"TRISYM 1, 32 labels",patched a0a5d30c (t3_partition.diff),i,v4_runs_a
+A_partition_q12_m20_T300,t6_a_m20_code32,A,rta + partition,12,20,300,"TRISYM 1, 32 labels",patched a0a5d30c (t3_partition.diff),i,v4_runs_a
+A_partition_q12_m16_T600,t7_a_m16_T600_code32,A,rta + partition,12,16,600,"TRISYM 1, 32 labels",patched a0a5d30c (t3_partition.diff),i,v4_runs_a
+A_partition_q12_m16_T300_fullsum,t8_a_m16_trisym0_code32,A,rta + partition,12,16,300,"TRISYM 0, 32 labels",patched a0a5d30c (t3_partition.diff),i,v4_runs_a
+A_partition_q12_m16_T300_bands,t5_a_m16_control,A,rta + partition,12,16,300,"TRISYM 1, band labels 105/145/160",patched a0a5d30c (t3_partition.diff),i,v4_runs_a
+A_partition_q12_m16_T300_lowbands,t5b_a_m16,A,rta + partition,12,16,300,"TRISYM 1, band labels 80/95/105",patched a0a5d30c (t3_partition.diff),i,v4_runs_a
+A198_rta_q12_m16_T300,rta_rf_a198_pm_q12_T300_m16,A (refit a198),rta,12,16,300,TRISYM 1,base c5b015c,i,v4_runs_a
+A600_rta_q12_m16_T300,rta_rf_a600_pm_q12_T300_m16,A (refit a600),rta,12,16,300,TRISYM 1,base c5b015c,i,v4_runs_a
+A198_evec_q12_m16_T300,evec_rf_a198_pm_q12_T300_m16,A (refit a198),evec,12,16,300,,base c5b015c,i,v4_runs_a
+A600_evec_q12_m16_T300,evec_rf_a600_pm_q12_T300_m16,A (refit a600),evec,12,16,300,,base c5b015c,i,v4_runs_a
+B_scph_q2,scph_mb_pm_q2,B (H1),scph,2,,0-1000,"PM, Ewald",base c5b015c,ii,v4_runs_b
+B_scph_q4,scph_mb_pm_q4,B (H1),scph,4,,0-1000,"PM, Ewald",base c5b015c,ii,v4_runs_b
+B_scph_q8,scph_mb_pm_q8,B (H1),scph,8,,0-1000,"PM, Ewald",base c5b015c,ii,v4_runs_b
+B_scph_q12,scph_mb_pm_q12,B (H1),scph,12,,0-1000,"PM, Ewald",base c5b015c,ii,v4_runs_b
+H2_scph_q2,scph_mbh2_pm_q2,B (H2),scph,2,,0-1000,"PM, Ewald",base c5b015c,ii,v4_runs_b
+H2_scph_q4,scph_mbh2_pm_q4,B (H2),scph,4,,0-1000,"PM, Ewald",base c5b015c,ii,v4_runs_b
+H2_scph_q8,scph_mbh2_pm_q8,B (H2),scph,8,,0-1000,"PM, Ewald",base c5b015c,ii,v4_runs_b
+H2_scph_q12,scph_mbh2_pm_q12,B (H2),scph,12,,0-1000,"PM, Ewald",base c5b015c,ii,v4_runs_b
+B_rta_q12_m16_T300,rta_mb_pm_q12_T300_m16,B (H1),rta,12,16,300,TRISYM 1,base c5b015c,ii,v4_runs_b
+B_rta_q8_m12_T300,rta_mb_pm_q8_T300_m12,B (H1),rta,8,12,300,TRISYM 1,base c5b015c,ii,v4_runs_b
+B_rta_q12_m20_T300,rta_mb_pm_q12_T300_m20 (base_b_m20),B (H1),rta,12,20,300,TRISYM 1,base c5b015c,ii,v4_runs_b
+B_rta_q12_m16_T600,rta_mb_pm_q12_T600_m16 (base_b_m16_T600),B (H1),rta,12,16,600,TRISYM 1,base c5b015c,ii,v4_runs_b
+B_evec_q12_m16_T300,evec_mb_pm_q12_T300_m16,B (H1),evec,12,16,300,,base c5b015c,ii,v4_runs_b
+B_evec_q12_m16_T600,evec_mb_pm_q12_T600_m16 (ph_mb_m16_T600),B (H1),evec,12,16,600,,base c5b015c,ii,v4_runs_b
+B_evec_q12_m20_T300,evec_mb_pm_q12_T300_m20 + harm_B_m20 (ph_mb_m20),B (H1),evec + harmonic evec,12,20,300,,base c5b015c,ii,v4_runs_b
+B_harm_m16,harm_B_m16,B (H1),harmonic evec,,16,,"bare, MODE=phonons",base 266b507a,ii,v4_runs_b
+B_partition_q12_m16_T300,t4_b_m16_code32,B (H1),rta + partition,12,16,300,"TRISYM 1, 32 labels",patched a0a5d30c (t3_partition.diff),ii,v4_runs_b
+B_partition_q12_m20_T300,t6_b_m20_code32,B (H1),rta + partition,12,20,300,"TRISYM 1, 32 labels",patched a0a5d30c (t3_partition.diff),ii,v4_runs_b
+B_partition_q12_m16_T600,t7_b_m16_T600_code32,B (H1),rta + partition,12,16,600,"TRISYM 1, 32 labels",patched a0a5d30c (t3_partition.diff),ii,v4_runs_b
+B_partition_q12_m16_T300_fullsum,t8_b_m16_trisym0_code32,B (H1),rta + partition,12,16,300,"TRISYM 0, 32 labels",patched a0a5d30c (t3_partition.diff),ii,v4_runs_b
+B_partition_q12_m16_T300_bands,t5_b_m16_control,B (H1),rta + partition,12,16,300,"TRISYM 1, band labels 105/145/160",patched a0a5d30c (t3_partition.diff),ii,v4_runs_b
+B_partition_q12_m16_T300_lowbands,t5b_b_m16,B (H1),rta + partition,12,16,300,"TRISYM 1, band labels 80/95/105",patched a0a5d30c (t3_partition.diff),ii,v4_runs_b
+A_evec_q12_m8_T300,evec_pm_q12_T300_m8,A,evec,12,8,300,,v3 manifest,i,v3 (reused)
+A_harm_m8,harm_A_m8,A,harmonic evec,,8,,"bare, MODE=phonons",base 266b507a,i,v4_runs_a
+B_evec_q12_m8_T300,evec_mb_pm_q12_T300_m8 + harm_B_m8 (ph_mb_m8),B (H1),evec + harmonic evec,12,8,300,,base c5b015c,ii,v4_runs_b
+A_partition_q12_m8_T300_trisym1,t4_a8_code32_t1,A,rta + partition,12,8,300,"TRISYM 1, 32 labels",patched a0a5d30c (t3_partition.diff),i,v4_runs_a
+A_partition_q12_m8_T300_trisym0,t4_a8_code32_t0,A,rta + partition,12,8,300,"TRISYM 0, 32 labels",patched a0a5d30c (t3_partition.diff),i,v4_runs_a
+B_partition_q12_m8_T300_trisym1,t4_b8_code32_t1,B (H1),rta + partition,12,8,300,"TRISYM 1, 32 labels",patched a0a5d30c (t3_partition.diff),ii,v4_runs_b
+B_partition_q12_m8_T300_trisym0,t4_b8_code32_t0,B (H1),rta + partition,12,8,300,"TRISYM 0, 32 labels",patched a0a5d30c (t3_partition.diff),ii,v4_runs_b
+A_bench_scph_rf_a198_pm_q12,scph_rf_a198_pm_q12,A (fit a198),scph,12,,0-1000,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_scph_rf_a198_pm_q2,scph_rf_a198_pm_q2,A (fit a198),scph,2,,0-1000,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_rta_rf_a198_pm_q8_T300_m12,rta_rf_a198_pm_q8_T300_m12,A (fit a198),rta,8,12,300,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_scph_rf_a198_pm_q8,scph_rf_a198_pm_q8,A (fit a198),scph,8,,0-1000,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_scph_rf_a262_pm_q2,scph_rf_a262_pm_q2,A (fit a262),scph,2,,0-1000,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_scph_rf_a262_pm_q8,scph_rf_a262_pm_q8,A (fit a262),scph,8,,0-1000,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_scph_rf_a345_pic1_pm_q2,scph_rf_a345_pic1_pm_q2,A (fit a345_pic1),scph,2,,0-1000,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_scph_rf_a345_pic1_pm_q8,scph_rf_a345_pic1_pm_q8,A (fit a345_pic1),scph,8,,0-1000,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_scph_rf_a345_pm_q2,scph_rf_a345_pm_q2,A (fit a345),scph,2,,0-1000,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_scph_rf_a455_pm_q2,scph_rf_a455_pm_q2,A (fit a455),scph,2,,0-1000,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_scph_rf_a455_pm_q8,scph_rf_a455_pm_q8,A (fit a455),scph,8,,0-1000,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_scph_rf_a600_pm_q12,scph_rf_a600_pm_q12,A (fit a600),scph,12,,0-1000,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_scph_rf_a600_pm_q2,scph_rf_a600_pm_q2,A (fit a600),scph,2,,0-1000,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_rta_rf_a600_pm_q8_T300_m12,rta_rf_a600_pm_q8_T300_m12,A (fit a600),rta,8,12,300,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_scph_rf_a600_pm_q8,scph_rf_a600_pm_q8,A (fit a600),scph,8,,0-1000,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_scph_rf_rr1053_pm_q2,scph_rf_rr1053_pm_q2,A (fit rr1053),scph,2,,0-1000,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_scph_rf_rr1053_pm_q8,scph_rf_rr1053_pm_q8,A (fit rr1053),scph,8,,0-1000,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_rta_pm_q8_rb_T300_m12,rta_pm_q8_rb_T300_m12,A (rerun),rta,8,12,300,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_rta_pm_q8_rb_T300_m16,rta_pm_q8_rb_T300_m16,A (rerun),rta,8,16,300,benchmark of model A,base c5b015c,i,v4_runs_a
+A_bench_scph_pm_q8_rb,scph_pm_q8_rb,A (rerun),scph,8,,0-1000,benchmark of model A,base c5b015c,i,v4_runs_a

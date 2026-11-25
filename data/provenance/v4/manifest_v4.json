@@ -1,0 +1,3819 @@
+{
+ "meta": {
+  "runs": 70,
+  "builds": [
+   "PATCH:t3_partition/anphon-sha256:a0a5d30ca294",
+   "alamode@c5b015ca/anphon-sha256:266b507a02c2"
+  ],
+  "note": "files of each run directory with size and sha256; symbolic links recorded without target; no host or user name, no local path; bytes_archived and sha256_archived: the file as archived, where the archive replaces a home path in the file by <home>"
+ },
+ "runs": [
+  {
+   "name": "A_scph_q12",
+   "job": "scph_pm_q12",
+   "model": "A",
+   "kind": "scph",
+   "q1": 12,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "PM, Ewald",
+   "part": "i",
+   "archive": "v3 (reused)",
+   "build": "as recorded for this job in data/provenance/manifest_final.json (v3)",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 491,
+     "sha256": "ea823350904c5314a30106f117e75fa558a36de5d118d2cfcd3fbefef8eaf784"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 144700,
+     "sha256": "d219d66fc9d53ff558c5ceb7f713328e5e9289a0d03b69d40b23de27a1d6e45e"
+    },
+    {
+     "file": "scph_pm_q12.scph_bands",
+     "bytes": 1371019,
+     "sha256": "41df6234aea14087e0075f9a01c8605db62cb9cbecd220bcf2a292d9455a7c91"
+    },
+    {
+     "file": "scph_pm_q12.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "6a0e282f7eb17eb39e6acfdb42a8bce8928e939b06e6c4c188e71f8ea0111506"
+    }
+   ]
+  },
+  {
+   "name": "A_rta_q12_m16_T300",
+   "job": "rta_pm_q12_T300_m16",
+   "model": "A",
+   "kind": "rta",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 300,
+   "setting": "TRISYM 1",
+   "part": "i",
+   "archive": "v3 (reused)",
+   "build": "as recorded for this job in data/provenance/manifest_final.json (v3)",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 295,
+     "sha256": "156faf6d2fae0ec2e05833a797655d5a93953860e3bb5eb5232eb61ac8613fb5"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 61545,
+     "sha256": "b6d5e651fa034704e0fc124e1e5d2b6d1df6604c8a440d060f812bb97f45b79f"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.kc_elem",
+     "bytes": 9578395,
+     "sha256": "0bd79b4d046b949109afb7c864d389da000c834c71bf097ebb1b785977f895fe"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.kl",
+     "bytes": 230,
+     "sha256": "c10b62a17e70e97670ef4645943d8a1e1070fd31b63342c4980b1d3498c06cb7"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.kl_coherent",
+     "bytes": 145,
+     "sha256": "ce3cb3cf039a75f06d9a733a6f2f627e9f01cd738b254f1293f6a355fcf9415d"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.result",
+     "bytes": 3036798,
+     "sha256": "ac98b047519617e20e5d91ad32e2c7f232af4c2cd281895bb9a21384d3843e3b"
+    }
+   ]
+  },
+  {
+   "name": "A_rta_q12_m20_T300",
+   "job": "rta_pm_q12_T300_m20",
+   "model": "A",
+   "kind": "rta",
+   "q1": 12,
+   "mesh": 20,
+   "T_K": 300,
+   "setting": "TRISYM 1",
+   "part": "i",
+   "archive": "v3 (reused)",
+   "build": "as recorded for this job in data/provenance/manifest_final.json (v3)",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 295,
+     "sha256": "1d32c35d7be72831b8785b9b42e24abf50963ad6cd1e651fede2d34df7a2db17"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 101717,
+     "sha256": "5cd8b1b799c8fbe5fce3152b9a52f040ff9a1a8729faefab22644bca911d8d48"
+    },
+    {
+     "file": "rta_pm_q12_T300_m20.kc_elem",
+     "bytes": 16602445,
+     "sha256": "e791e78f79e49cc2e7a76ca1bd01f576484f221091e83a4054bab3361a9f59f6"
+    },
+    {
+     "file": "rta_pm_q12_T300_m20.kl",
+     "bytes": 230,
+     "sha256": "d3f40a7cdec0497a504146d9a0993b045e4ed00f13d5e64bea967b80fd4c85fe"
+    },
+    {
+     "file": "rta_pm_q12_T300_m20.kl_coherent",
+     "bytes": 145,
+     "sha256": "5980343c7948b46fcbd50a5096c62c80f2512849441e99a13d2ba31d07e8a09e"
+    },
+    {
+     "file": "rta_pm_q12_T300_m20.result",
+     "bytes": 5886074,
+     "sha256": "49baad5b39fb991d397a00f06461b33f187d74775dbb5f345355bfc1bac103a6"
+    }
+   ]
+  },
+  {
+   "name": "A_rta_q12_m16_T600",
+   "job": "rta_pm_q12_T600_m16",
+   "model": "A",
+   "kind": "rta",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 600,
+   "setting": "TRISYM 1",
+   "part": "i",
+   "archive": "v3 (reused)",
+   "build": "as recorded for this job in data/provenance/manifest_final.json (v3)",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 295,
+     "sha256": "5c6f9427f49b5243e0137e2c22f570a4ecd0c0692a1688301ec32c078f11d6e6"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 61545,
+     "sha256": "c6ff7aaa553af4865b97de11674a793904981efa95a61f2241dc8af4e1605284"
+    },
+    {
+     "file": "rta_pm_q12_T600_m16.kc_elem",
+     "bytes": 9578395,
+     "sha256": "b046095c1f5808d8f6ee05ed5db5eebc8430848246ffd2ada31102178f899c37"
+    },
+    {
+     "file": "rta_pm_q12_T600_m16.kl",
+     "bytes": 230,
+     "sha256": "63acb1bb195e64bc521fc07c4ca6aa2b5ffa4ae551a73477fe14f4fc5efc191a"
+    },
+    {
+     "file": "rta_pm_q12_T600_m16.kl_coherent",
+     "bytes": 145,
+     "sha256": "f7d9df70adf0590e3933c96a800ec2cacf3b788af76d22e21ddf71d695d57908"
+    },
+    {
+     "file": "rta_pm_q12_T600_m16.result",
+     "bytes": 3036798,
+     "sha256": "8819e48c79113beab8908154f84dcb724deaf03c393cb008c8628bf881a1af2b"
+    }
+   ]
+  },
+  {
+   "name": "A_rta_q8_m12_T300",
+   "job": "rta_pm_q8_T300_m12",
+   "model": "A",
+   "kind": "rta",
+   "q1": 8,
+   "mesh": 12,
+   "T_K": 300,
+   "setting": "TRISYM 1",
+   "part": "i",
+   "archive": "v3 (reused)",
+   "build": "as recorded for this job in data/provenance/manifest_final.json (v3)",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90531,
+     "sha256": "b3cdc0e8ec59335372dd2c9a7ef05758cec87e9c1418103d9882d34317ac638b"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 294,
+     "sha256": "0a220ba786cb969ea74fa06676377ea83676a1e2c6ef72cad2aa6588559b70fb"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 34649,
+     "sha256": "0a791c954b438003834c93649a5d6937654d8298923b566d9764ff67b3e66966"
+    },
+    {
+     "file": "rta_on_k8_m12.kc_elem",
+     "bytes": 4876345,
+     "sha256": "f0c49473f0c03f7633d559226f2552f206677de7b7bcc5a7c1410b76b78f235f"
+    },
+    {
+     "file": "rta_on_k8_m12.kl",
+     "bytes": 230,
+     "sha256": "be1f450f7a60db99a856c734b4cfc1d7419ae2c958f54c3170c400bc9ffc9548"
+    },
+    {
+     "file": "rta_on_k8_m12.kl_coherent",
+     "bytes": 145,
+     "sha256": "82bc068e83c7fc1b102ef3cf054fc57f8e40c7f6f2a3bf2aa90106545bd23c71"
+    },
+    {
+     "file": "rta_on_k8_m12.result",
+     "bytes": 1299026,
+     "sha256": "52ac3d55fc47a7f3b8ec31cec153f466bd2faa11dd45fd19a9c4ae769ec52acf"
+    }
+   ]
+  },
+  {
+   "name": "A_scph_q8",
+   "job": "scph_pm_q8",
+   "model": "A",
+   "kind": "scph",
+   "q1": 8,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "PM, Ewald",
+   "part": "i",
+   "archive": "v3 (reused)",
+   "build": "as recorded for this job in data/provenance/manifest_final.json (v3)",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 486,
+     "sha256": "22bfee5373aad41082dac3aacddd976c15476222eaec4ab4145111c0ebd0f0e1"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 143331,
+     "sha256": "378ed3230ad5d70d36d212916bd10e49dbbdb7311d2e427173c44d4077252797"
+    },
+    {
+     "file": "scph_on_k8.scph_bands",
+     "bytes": 1371019,
+     "sha256": "6a8becf665e06a5e7cbd565d5aec8887a9c7773582c70c6e8ceca2213a7b9acd"
+    },
+    {
+     "file": "scph_on_k8.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "9d1f9004c4413e47d691adc4848cac176582be550640b41c25f3ba191e98a9d3"
+    }
+   ]
+  },
+  {
+   "name": "A_evec_q12_m16_T300",
+   "job": "evec_pm_q12_T300_m16",
+   "model": "A",
+   "kind": "evec",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 300,
+   "setting": "",
+   "part": "i",
+   "archive": "v3 (reused)",
+   "build": "as recorded for this job in data/provenance/manifest_final.json (v3)",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "evec_pm_q12_T300_m16.mesh.evec",
+     "bytes": 31117909,
+     "sha256": "b3760e8891995ac4db20538c43a7b68dcd42ac8a54070621e5a5e4a251a46688"
+    },
+    {
+     "file": "ph.in",
+     "bytes": 234,
+     "sha256": "90e99306d2ec97f3aab294868b0bf6c0aa67a5f25e4b403ea69e119a7a5fee1e"
+    },
+    {
+     "file": "ph.log",
+     "bytes": 144935,
+     "sha256": "ab370460acb2bf659c4becaeef70ad4a2c255187832e0d09d03eb1499b864356"
+    }
+   ]
+  },
+  {
+   "name": "A_evec_q12_m16_T600",
+   "job": "evec_pm_q12_T600_m16",
+   "model": "A",
+   "kind": "evec",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 600,
+   "setting": "",
+   "part": "i",
+   "archive": "v3 (reused)",
+   "build": "as recorded for this job in data/provenance/manifest_final.json (v3)",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "evec_pm_q12_T600_m16.mesh.evec",
+     "bytes": 31117909,
+     "sha256": "3a32cd068242c09ee1099c45fa1c03af56c888e54e54316600633b5bea56d624"
+    },
+    {
+     "file": "ph.in",
+     "bytes": 234,
+     "sha256": "69eb8faaf89954581cd2f9c2d297f24ea2c4962a4f87ccdce80d1cf81ae471ea"
+    },
+    {
+     "file": "ph.log",
+     "bytes": 144935,
+     "sha256": "307c6a759b43c68e6ae7b3c69f50420db85c7ec668fd267143aaac7e57199c62"
+    }
+   ]
+  },
+  {
+   "name": "A_evec_q12_m20_T300",
+   "job": "evec_pm_q12_T300_m20",
+   "model": "A",
+   "kind": "evec",
+   "q1": 12,
+   "mesh": 20,
+   "T_K": 300,
+   "setting": "",
+   "part": "i",
+   "archive": "v3 (reused)",
+   "build": "as recorded for this job in data/provenance/manifest_final.json (v3)",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "evec_pm_q12_T300_m20.mesh.evec",
+     "bytes": 60776597,
+     "sha256": "f346e1bd7200b460ef3de05c04e1a8c7a00e43c56e11bd5bfdcca68e6c06c380"
+    },
+    {
+     "file": "ph.in",
+     "bytes": 234,
+     "sha256": "b06c290597e398c000d1397da479ae46c8546c9dc96f44bdd2c78d066031e199"
+    },
+    {
+     "file": "ph.log",
+     "bytes": 246817,
+     "sha256": "708dce89e88f6e675b3cd1a85a51ca0e4b3e18ea8bc0a58ccb79d34b35846afa"
+    }
+   ]
+  },
+  {
+   "name": "A_harm_m16",
+   "job": "harm_A_m16",
+   "model": "A",
+   "kind": "harmonic evec",
+   "q1": "",
+   "mesh": 16,
+   "T_K": "",
+   "setting": "bare, MODE=phonons",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 918,
+     "sha256": "e283fbf4a6d75c7dbe00a8d8589c1a0a241ea9a4255bc1fc1b078e2c229a1bb9"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116506,
+     "sha256": "9739c36af71eb1ab306760e0a86a7ba09f7337c6220901272fea1b20400f9f0f"
+    },
+    {
+     "file": "harm_A_m16.dos",
+     "bytes": 2759,
+     "sha256": "27c650cf2089c8a56f87f67ff47b3ff776ae9f9be9d3662414532306332a0ac0"
+    },
+    {
+     "file": "harm_A_m16.mesh.evec",
+     "bytes": 31117909,
+     "sha256": "596b82298173a1c21f2477c3be17140d94b3ffa31d3c612fababb7f47ea39186"
+    },
+    {
+     "file": "harm_A_m16.thermo",
+     "bytes": 9087,
+     "sha256": "b16f8a1b6ddad3e5984b13c4f0518529e0dc8f097b8409d770251df8ffb94807"
+    },
+    {
+     "file": "ph.in",
+     "bytes": 224,
+     "sha256": "8402fd0fdeb5352bac83e8860d2e86dbabaeaac4b2fa4602cfb1d2ac9ca65cf9"
+    },
+    {
+     "file": "ph.log",
+     "bytes": 144894,
+     "sha256": "c188197eeef1fa871e135fea811d293a3761921218122e9c17b0636932641f2d"
+    }
+   ]
+  },
+  {
+   "name": "A_harm_m20",
+   "job": "harm_A_m20",
+   "model": "A",
+   "kind": "harmonic evec",
+   "q1": "",
+   "mesh": 20,
+   "T_K": "",
+   "setting": "bare, MODE=phonons",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 918,
+     "sha256": "e283fbf4a6d75c7dbe00a8d8589c1a0a241ea9a4255bc1fc1b078e2c229a1bb9"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 632,
+     "sha256": "afb4d074552ccca261e81f1e2ccd9c52dcacc9157fb4a84cf28048622e1ae611"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116506,
+     "sha256": "9739c36af71eb1ab306760e0a86a7ba09f7337c6220901272fea1b20400f9f0f"
+    },
+    {
+     "file": "harm_A_m20.dos",
+     "bytes": 2759,
+     "sha256": "49126d02475cf25cc238f18398fa21be3ff826d4fc9bf35958766eb698aa9686"
+    },
+    {
+     "file": "harm_A_m20.mesh.evec",
+     "bytes": 60776597,
+     "sha256": "f154832a01e65f732947648b707eeed983435832e4b15acc9be77cedf1f9edb5"
+    },
+    {
+     "file": "harm_A_m20.thermo",
+     "bytes": 9087,
+     "sha256": "45fef265d0a18077a65f80c2e14adb93ea8b988e3c76db5834af7e8e14098d4b"
+    },
+    {
+     "file": "ph_bare.in",
+     "bytes": 224,
+     "sha256": "0c2cd005b9a39256263263321eac5b74a6465b4ce22459477e0acb4c4c92ef79"
+    },
+    {
+     "file": "ph_bare.log",
+     "bytes": 246777,
+     "sha256": "6be34bc839ed28530979b4998224e82597057332904d3ccd94dfcf3023daaf89"
+    },
+    {
+     "file": "time_l.txt",
+     "bytes": 777,
+     "sha256": "0d351f193a9d10c9a1c4874d6ea58795dddef1a9c034757921cb3f24a873a457"
+    }
+   ]
+  },
+  {
+   "name": "A_partition_q12_m16_T300",
+   "job": "t4_a_m16_code32",
+   "model": "A",
+   "kind": "rta + partition",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 300,
+   "setting": "TRISYM 1, 32 labels",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "PATCH:t3_partition/anphon-sha256:a0a5d30ca294",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 918,
+     "sha256": "e283fbf4a6d75c7dbe00a8d8589c1a0a241ea9a4255bc1fc1b078e2c229a1bb9"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 985,
+     "sha256": "81664173bbe0122a911010e21ffa4c6cd796c62351c9b7c91f53b467107c53e3"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116506,
+     "sha256": "9739c36af71eb1ab306760e0a86a7ba09f7337c6220901272fea1b20400f9f0f"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 110449252,
+     "sha256": "5e787b95eb59fdc2a5cd93a3fe298d976f71d3a83905dce568cc021d86e71b79"
+    },
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113055,
+     "sha256": "dfb3b7dba4792bafb06839672221dffefef8923afcc716def733ae0b79ebf7d9",
+     "bytes_archived": 113046,
+     "sha256_archived": "61998f2e9bb5c0e7f51df8437e5dfdbea1923aaf6d939bd07f4448011897b39a"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 295,
+     "sha256": "156faf6d2fae0ec2e05833a797655d5a93953860e3bb5eb5232eb61ac8613fb5"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 61545,
+     "sha256": "a8023c91145a23929cb44c67f884549f48f4725c99544e777186337b4e2397a9"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.kc_elem",
+     "bytes": 9578395,
+     "sha256": "0bd79b4d046b949109afb7c864d389da000c834c71bf097ebb1b785977f895fe"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.kl",
+     "bytes": 230,
+     "sha256": "c10b62a17e70e97670ef4645943d8a1e1070fd31b63342c4980b1d3498c06cb7"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.kl_coherent",
+     "bytes": 145,
+     "sha256": "ce3cb3cf039a75f06d9a733a6f2f627e9f01cd738b254f1293f6a355fcf9415d"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.result",
+     "bytes": 3036798,
+     "sha256": "ac98b047519617e20e5d91ad32e2c7f232af4c2cd281895bb9a21384d3843e3b"
+    },
+    {
+     "file": "t3_partition.txt",
+     "bytes": 4249888,
+     "sha256": "b3f513c281783a040533c94fa8e718191be969072973d9bde3c7e537c3db47c8"
+    },
+    {
+     "file": "t3_partition.txt.check.csv",
+     "bytes": 403491,
+     "sha256": "110a0dc11ef049ebb6455bd5a0ad6e00acb0f36c01d43725ae83efecb6783da5"
+    }
+   ]
+  },
+  {
+   "name": "A_partition_q12_m20_T300",
+   "job": "t6_a_m20_code32",
+   "model": "A",
+   "kind": "rta + partition",
+   "q1": 12,
+   "mesh": 20,
+   "T_K": 300,
+   "setting": "TRISYM 1, 32 labels",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "PATCH:t3_partition/anphon-sha256:a0a5d30ca294",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 918,
+     "sha256": "e283fbf4a6d75c7dbe00a8d8589c1a0a241ea9a4255bc1fc1b078e2c229a1bb9"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 1062,
+     "sha256": "b17f7795691d2e889c1cbe57634db94d9ec6542c67e4db8fd6467129c86a7f1b"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116506,
+     "sha256": "9739c36af71eb1ab306760e0a86a7ba09f7337c6220901272fea1b20400f9f0f"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 110449252,
+     "sha256": "5e787b95eb59fdc2a5cd93a3fe298d976f71d3a83905dce568cc021d86e71b79"
+    },
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113055,
+     "sha256": "dfb3b7dba4792bafb06839672221dffefef8923afcc716def733ae0b79ebf7d9",
+     "bytes_archived": 113046,
+     "sha256_archived": "61998f2e9bb5c0e7f51df8437e5dfdbea1923aaf6d939bd07f4448011897b39a"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 295,
+     "sha256": "1d32c35d7be72831b8785b9b42e24abf50963ad6cd1e651fede2d34df7a2db17"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 101717,
+     "sha256": "41c88566d83ed27c64937440abc05678e2e5054062f40cde00992f8d52d0ed6f"
+    },
+    {
+     "file": "rta_pm_q12_T300_m20.kc_elem",
+     "bytes": 16602445,
+     "sha256": "e791e78f79e49cc2e7a76ca1bd01f576484f221091e83a4054bab3361a9f59f6"
+    },
+    {
+     "file": "rta_pm_q12_T300_m20.kl",
+     "bytes": 230,
+     "sha256": "d3f40a7cdec0497a504146d9a0993b045e4ed00f13d5e64bea967b80fd4c85fe"
+    },
+    {
+     "file": "rta_pm_q12_T300_m20.kl_coherent",
+     "bytes": 145,
+     "sha256": "5980343c7948b46fcbd50a5096c62c80f2512849441e99a13d2ba31d07e8a09e"
+    },
+    {
+     "file": "rta_pm_q12_T300_m20.result",
+     "bytes": 5886074,
+     "sha256": "49baad5b39fb991d397a00f06461b33f187d74775dbb5f345355bfc1bac103a6"
+    },
+    {
+     "file": "t3_partition.txt",
+     "bytes": 7202658,
+     "sha256": "61cab2c6bfb2be5e2201fed03264fc64464ef061a7553cfc0acc23bfc8d3444c"
+    },
+    {
+     "file": "t3_partition.txt.check.csv",
+     "bytes": 702748,
+     "sha256": "f2242e407c34039e21f67927f1f896c5968cfc790114d38cefeafa77628a5608"
+    },
+    {
+     "file": "time_l.txt",
+     "bytes": 777,
+     "sha256": "ad43aacaa7a00cb445b85ff10b603f4fcac7d092c8f8811b034d84181d5fe64b"
+    }
+   ]
+  },
+  {
+   "name": "A_partition_q12_m16_T600",
+   "job": "t7_a_m16_T600_code32",
+   "model": "A",
+   "kind": "rta + partition",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 600,
+   "setting": "TRISYM 1, 32 labels",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "PATCH:t3_partition/anphon-sha256:a0a5d30ca294",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 918,
+     "sha256": "e283fbf4a6d75c7dbe00a8d8589c1a0a241ea9a4255bc1fc1b078e2c229a1bb9"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 1062,
+     "sha256": "c75735c4345c76e3c7e5b359f54aca1cfe6af25c55c571f21abdd546dcd88575"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116506,
+     "sha256": "9739c36af71eb1ab306760e0a86a7ba09f7337c6220901272fea1b20400f9f0f"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 110449252,
+     "sha256": "5e787b95eb59fdc2a5cd93a3fe298d976f71d3a83905dce568cc021d86e71b79"
+    },
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113199,
+     "sha256": "880b56f0ebb4a1e553d846458d2a03c46adcdac78ab30750da6d61af6abaf791",
+     "bytes_archived": 113190,
+     "sha256_archived": "ccc7856ace0d0d35b18e1e9d55b7e4d7196463fc9d5b0e8b061ea9bd582e9a44"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 295,
+     "sha256": "5c6f9427f49b5243e0137e2c22f570a4ecd0c0692a1688301ec32c078f11d6e6"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 61545,
+     "sha256": "3e1f297c2ccea39092bc9d9b7b9ee8b10a834c6e07fc4734c563be7cbacb5a57"
+    },
+    {
+     "file": "rta_pm_q12_T600_m16.kc_elem",
+     "bytes": 9578395,
+     "sha256": "b046095c1f5808d8f6ee05ed5db5eebc8430848246ffd2ada31102178f899c37"
+    },
+    {
+     "file": "rta_pm_q12_T600_m16.kl",
+     "bytes": 230,
+     "sha256": "63acb1bb195e64bc521fc07c4ca6aa2b5ffa4ae551a73477fe14f4fc5efc191a"
+    },
+    {
+     "file": "rta_pm_q12_T600_m16.kl_coherent",
+     "bytes": 145,
+     "sha256": "f7d9df70adf0590e3933c96a800ec2cacf3b788af76d22e21ddf71d695d57908"
+    },
+    {
+     "file": "rta_pm_q12_T600_m16.result",
+     "bytes": 3036798,
+     "sha256": "8819e48c79113beab8908154f84dcb724deaf03c393cb008c8628bf881a1af2b"
+    },
+    {
+     "file": "t3_partition.txt",
+     "bytes": 3514674,
+     "sha256": "2357bb686b207d03d1de0b548a636cb851332f9c6e9879e7c58f1926011d8f43"
+    },
+    {
+     "file": "t3_partition.txt.check.csv",
+     "bytes": 402059,
+     "sha256": "a59c65b57554523949be64aa0cf525b5afd2812f74ed84742a1a0e019ef71958"
+    },
+    {
+     "file": "time_l.txt",
+     "bytes": 777,
+     "sha256": "bc9f18d9de29d79fd0e3703d26e9ecd826eb0120b20dd7975a5a43a34f5024ff"
+    }
+   ]
+  },
+  {
+   "name": "A_partition_q12_m16_T300_fullsum",
+   "job": "t8_a_m16_trisym0_code32",
+   "model": "A",
+   "kind": "rta + partition",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 300,
+   "setting": "TRISYM 0, 32 labels",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "PATCH:t3_partition/anphon-sha256:a0a5d30ca294",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 918,
+     "sha256": "e283fbf4a6d75c7dbe00a8d8589c1a0a241ea9a4255bc1fc1b078e2c229a1bb9"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 1154,
+     "sha256": "22e1f977e9c4af42415dd231e68978bf8307a812274ffe39db45ac0658466979"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116506,
+     "sha256": "9739c36af71eb1ab306760e0a86a7ba09f7337c6220901272fea1b20400f9f0f"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 110449252,
+     "sha256": "5e787b95eb59fdc2a5cd93a3fe298d976f71d3a83905dce568cc021d86e71b79"
+    },
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113055,
+     "sha256": "dfb3b7dba4792bafb06839672221dffefef8923afcc716def733ae0b79ebf7d9",
+     "bytes_archived": 113046,
+     "sha256_archived": "61998f2e9bb5c0e7f51df8437e5dfdbea1923aaf6d939bd07f4448011897b39a"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 307,
+     "sha256": "2d4bd528c81cd974bf85638b13b608f13737153b77d1a022517169381a844fa7"
+    },
+    {
+     "file": "rta.in.diff_vs_production",
+     "bytes": 18,
+     "sha256": "4f9c74f90f821937671099b884efcd282eec1d5a813b1abe9e69d213918c402a"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 61545,
+     "sha256": "33c3177282175f8330e8236fec859283151cebb23e4a8b0dfa4b7b13839c3088"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.kc_elem",
+     "bytes": 9578395,
+     "sha256": "90473e0c3d03219f99297805232fbf32469589f76b4492790fa13f78aed1a819"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.kl",
+     "bytes": 230,
+     "sha256": "fe0d00eeecc1b01ed35119b3afc214cd5b8a7ae1491ff452df6c064f85873689"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.kl_coherent",
+     "bytes": 145,
+     "sha256": "ce3cb3cf039a75f06d9a733a6f2f627e9f01cd738b254f1293f6a355fcf9415d"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.result",
+     "bytes": 3036798,
+     "sha256": "46fa5b8d1d723a082f090119fec45c731c2b398d66ccf4b8dc357a9d231c47ce"
+    },
+    {
+     "file": "t3_partition.txt",
+     "bytes": 4326869,
+     "sha256": "a7e370a8492857c3d6f49e24af1dd84e075e855a04d9c4dc66653a5e7d45fc5b"
+    },
+    {
+     "file": "t3_partition.txt.check.csv",
+     "bytes": 404528,
+     "sha256": "83673db75da4d231e22e1c1f97eafb93baa2ef5b171c274460236328dba27dd4"
+    },
+    {
+     "file": "time_l.txt",
+     "bytes": 777,
+     "sha256": "ca5ca44ec8027a401499901100e5b44b271116c91820652cbe2a730510587929"
+    }
+   ]
+  },
+  {
+   "name": "A_partition_q12_m16_T300_bands",
+   "job": "t5_a_m16_control",
+   "model": "A",
+   "kind": "rta + partition",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 300,
+   "setting": "TRISYM 1, band labels 105/145/160",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "PATCH:t3_partition/anphon-sha256:a0a5d30ca294",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 918,
+     "sha256": "e283fbf4a6d75c7dbe00a8d8589c1a0a241ea9a4255bc1fc1b078e2c229a1bb9"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 1062,
+     "sha256": "922d477b509d7692cb915603c334f93cc022b2ee475742afc4c1e4ec1c637f56"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116506,
+     "sha256": "9739c36af71eb1ab306760e0a86a7ba09f7337c6220901272fea1b20400f9f0f"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 110449252,
+     "sha256": "5e787b95eb59fdc2a5cd93a3fe298d976f71d3a83905dce568cc021d86e71b79"
+    },
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113055,
+     "sha256": "dfb3b7dba4792bafb06839672221dffefef8923afcc716def733ae0b79ebf7d9",
+     "bytes_archived": 113046,
+     "sha256_archived": "61998f2e9bb5c0e7f51df8437e5dfdbea1923aaf6d939bd07f4448011897b39a"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 295,
+     "sha256": "156faf6d2fae0ec2e05833a797655d5a93953860e3bb5eb5232eb61ac8613fb5"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 61545,
+     "sha256": "907d7a38afc82c93b1bb06c3131172a37aa5ea30303dacdfdb09fd8a27c7f93c"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.kc_elem",
+     "bytes": 9578395,
+     "sha256": "0bd79b4d046b949109afb7c864d389da000c834c71bf097ebb1b785977f895fe"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.kl",
+     "bytes": 230,
+     "sha256": "c10b62a17e70e97670ef4645943d8a1e1070fd31b63342c4980b1d3498c06cb7"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.kl_coherent",
+     "bytes": 145,
+     "sha256": "ce3cb3cf039a75f06d9a733a6f2f627e9f01cd738b254f1293f6a355fcf9415d"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.result",
+     "bytes": 3036798,
+     "sha256": "ac98b047519617e20e5d91ad32e2c7f232af4c2cd281895bb9a21384d3843e3b"
+    },
+    {
+     "file": "t3_partition.txt",
+     "bytes": 4048981,
+     "sha256": "09d90630204af4783d81429ccd91503e4482c6ae0e44eed43b53d4847c147f52"
+    },
+    {
+     "file": "t3_partition.txt.check.csv",
+     "bytes": 402504,
+     "sha256": "57450e51abbfe3a7bd49141014da159aaf85301091144d86c331ea76288bca5a"
+    },
+    {
+     "file": "time_l.txt",
+     "bytes": 777,
+     "sha256": "cdebf4eb56353ac009ea201c92892e223f63a3de033aeb393df3450947543e24"
+    }
+   ]
+  },
+  {
+   "name": "A_partition_q12_m16_T300_lowbands",
+   "job": "t5b_a_m16",
+   "model": "A",
+   "kind": "rta + partition",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 300,
+   "setting": "TRISYM 1, band labels 80/95/105",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "PATCH:t3_partition/anphon-sha256:a0a5d30ca294",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 918,
+     "sha256": "e283fbf4a6d75c7dbe00a8d8589c1a0a241ea9a4255bc1fc1b078e2c229a1bb9"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 1062,
+     "sha256": "eb0968cb0ab445405843d44971087146e0b019993d1749530dd48757b16e4047"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116506,
+     "sha256": "9739c36af71eb1ab306760e0a86a7ba09f7337c6220901272fea1b20400f9f0f"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 110449252,
+     "sha256": "5e787b95eb59fdc2a5cd93a3fe298d976f71d3a83905dce568cc021d86e71b79"
+    },
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113055,
+     "sha256": "dfb3b7dba4792bafb06839672221dffefef8923afcc716def733ae0b79ebf7d9",
+     "bytes_archived": 113046,
+     "sha256_archived": "61998f2e9bb5c0e7f51df8437e5dfdbea1923aaf6d939bd07f4448011897b39a"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 295,
+     "sha256": "156faf6d2fae0ec2e05833a797655d5a93953860e3bb5eb5232eb61ac8613fb5"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 61545,
+     "sha256": "ef9e53361eceffb8eb637cd9474c52d3b5d34f5bb9c92bd26c316e8a524f2d85"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.kc_elem",
+     "bytes": 9578395,
+     "sha256": "0bd79b4d046b949109afb7c864d389da000c834c71bf097ebb1b785977f895fe"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.kl",
+     "bytes": 230,
+     "sha256": "c10b62a17e70e97670ef4645943d8a1e1070fd31b63342c4980b1d3498c06cb7"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.kl_coherent",
+     "bytes": 145,
+     "sha256": "ce3cb3cf039a75f06d9a733a6f2f627e9f01cd738b254f1293f6a355fcf9415d"
+    },
+    {
+     "file": "rta_pm_q12_T300_m16.result",
+     "bytes": 3036798,
+     "sha256": "ac98b047519617e20e5d91ad32e2c7f232af4c2cd281895bb9a21384d3843e3b"
+    },
+    {
+     "file": "t3_partition.txt",
+     "bytes": 3429810,
+     "sha256": "30a9241165cf0cb3aa5cdf392679519ee2febea16a1e93bfeeaae884c7e4d3ab"
+    },
+    {
+     "file": "t3_partition.txt.check.csv",
+     "bytes": 403003,
+     "sha256": "4846164a45ff6b8c0215f47cbb90b3e2843dfe111f614c077863dc79ca126d9a"
+    },
+    {
+     "file": "time_l.txt",
+     "bytes": 777,
+     "sha256": "9648b3f96c8c675a5ce6e0973dd37b7c8afce036f8d883129da2f01618628ec1"
+    }
+   ]
+  },
+  {
+   "name": "A198_rta_q12_m16_T300",
+   "job": "rta_rf_a198_pm_q12_T300_m16",
+   "model": "A (refit a198)",
+   "kind": "rta",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 300,
+   "setting": "TRISYM 1",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "e5ea853bd10aaefdf780348731346cb2dbb3d4d85c7928fcb0b48c1744f70bce"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 303,
+     "sha256": "2bcae526905bdb1c9d2fd1f3af0e786e13cdb06fce3b1f642c577862b8112430"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 61569,
+     "sha256": "956020079acb44ce5f6fde8aa44dc9f197393ea36ea5999c7adfb8bd261dd5f2"
+    },
+    {
+     "file": "rta_rf_a198_pm_q12_T300_m16.kc_elem",
+     "bytes": 9578395,
+     "sha256": "3eeafb0b7c41802bec025e9f2d79a249e5b5961eb2071e67f4b5d52d66257d5a"
+    },
+    {
+     "file": "rta_rf_a198_pm_q12_T300_m16.kl",
+     "bytes": 230,
+     "sha256": "b274bb2b82852342436bc834af69abee714d7b971d98d57b8955dd810d208502"
+    },
+    {
+     "file": "rta_rf_a198_pm_q12_T300_m16.kl_coherent",
+     "bytes": 145,
+     "sha256": "df33d4a6d07cd443f5cd4047ef5e005083a6ccb7ca6cd403f374ec3f14114446"
+    },
+    {
+     "file": "rta_rf_a198_pm_q12_T300_m16.result",
+     "bytes": 3036798,
+     "sha256": "30a8db0f3c1a61d2fbff56a1dcc55c65d6296d3791ced303a60b6469d92af5bf"
+    }
+   ]
+  },
+  {
+   "name": "A600_rta_q12_m16_T300",
+   "job": "rta_rf_a600_pm_q12_T300_m16",
+   "model": "A (refit a600)",
+   "kind": "rta",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 300,
+   "setting": "TRISYM 1",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "1b6a40536457fac3397bf1f6c08ceaf921db047744cd9538057bf3724741491f"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 303,
+     "sha256": "6bff5e20984957d327aae5fb4829b81430a531b006a2376f8c741b89acb298dd"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 61569,
+     "sha256": "b664c511e3ab848e5813ae9240a62279ae34b78569c193f16b42a42ea7bec6a4"
+    },
+    {
+     "file": "rta_rf_a600_pm_q12_T300_m16.kc_elem",
+     "bytes": 9578395,
+     "sha256": "085ea7ea50bb45c340ec59037221978dd001540d8fe9e393512c1aa8bd2cf9e3"
+    },
+    {
+     "file": "rta_rf_a600_pm_q12_T300_m16.kl",
+     "bytes": 230,
+     "sha256": "4d80f0ef401f649768624f3c47fcc2779c54818c24edc4b6b60aea49ad4dc791"
+    },
+    {
+     "file": "rta_rf_a600_pm_q12_T300_m16.kl_coherent",
+     "bytes": 145,
+     "sha256": "fb39529655594f51125d56e735f8d89bc428bded2229b03288fca93b4eadd6da"
+    },
+    {
+     "file": "rta_rf_a600_pm_q12_T300_m16.result",
+     "bytes": 3036798,
+     "sha256": "d96c075f56a098d830e087b6d0116a2288792bda140943dc958efe2544d1c099"
+    }
+   ]
+  },
+  {
+   "name": "A198_evec_q12_m16_T300",
+   "job": "evec_rf_a198_pm_q12_T300_m16",
+   "model": "A (refit a198)",
+   "kind": "evec",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 300,
+   "setting": "",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "e5ea853bd10aaefdf780348731346cb2dbb3d4d85c7928fcb0b48c1744f70bce"
+    },
+    {
+     "file": "evec_rf_a198_pm_q12_T300_m16.mesh.evec",
+     "bytes": 31117909,
+     "sha256": "d22f5371cc2600a6da0708cd254c9f5a5bbebbfeccecf4f264b9aa7b4e058711"
+    },
+    {
+     "file": "ph.in",
+     "bytes": 242,
+     "sha256": "a276fed7ec25a632037714f646643c51a8c5a7205d4ab2b623a57e500b59d676"
+    },
+    {
+     "file": "ph.log",
+     "bytes": 144967,
+     "sha256": "dd03472f8236d3fa4036c8b3e0cb454a810c863689c77dbeb41f85fa4ceab3cb"
+    }
+   ]
+  },
+  {
+   "name": "A600_evec_q12_m16_T300",
+   "job": "evec_rf_a600_pm_q12_T300_m16",
+   "model": "A (refit a600)",
+   "kind": "evec",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 300,
+   "setting": "",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "1b6a40536457fac3397bf1f6c08ceaf921db047744cd9538057bf3724741491f"
+    },
+    {
+     "file": "evec_rf_a600_pm_q12_T300_m16.mesh.evec",
+     "bytes": 31117909,
+     "sha256": "571c98c8a8afd5d38b0064a1d392c0382588ef9ad918e0c37868d94d0488118d"
+    },
+    {
+     "file": "ph.in",
+     "bytes": 242,
+     "sha256": "4b940b91bad484798182d13412a7ea2545d7b91a3a48486083083e60584eed86"
+    },
+    {
+     "file": "ph.log",
+     "bytes": 144967,
+     "sha256": "816e3db33e152bcd7d46cb6e6ccff068c8dddd3f8bede73594649e1e0b428c16"
+    }
+   ]
+  },
+  {
+   "name": "B_scph_q2",
+   "job": "scph_mb_pm_q2",
+   "model": "B (H1)",
+   "kind": "scph",
+   "q1": 2,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "PM, Ewald",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 498,
+     "sha256": "54a9078466beebd09ef1e3c3861a814ffd81de84fdf353361ebcf1f8f6077381"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 60920,
+     "sha256": "be0006005372cdb963f4548b4834f418e89aabe44157296b54f7b1838e989f32"
+    },
+    {
+     "file": "scph_mb_pm_q2.scph_bands",
+     "bytes": 1371019,
+     "sha256": "f6232065ff0c1b67baa4fbd59545cde8def24d29d99aaddb8648edec24d61d9d"
+    },
+    {
+     "file": "scph_mb_pm_q2.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "e78f18c398d22ad4088d64d84c7ad27e81a501b557e9af8afc2f35a80d844423"
+    }
+   ]
+  },
+  {
+   "name": "B_scph_q4",
+   "job": "scph_mb_pm_q4",
+   "model": "B (H1)",
+   "kind": "scph",
+   "q1": 4,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "PM, Ewald",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 498,
+     "sha256": "99c110727caff858a3056f51c4a04fc1fc49a279c5ff2708157a719d872406ae"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 103474,
+     "sha256": "0b6f745c83011da32e6e880c3126800394525c817eb35c95754a5a74c1aeeb5a"
+    },
+    {
+     "file": "scph_mb_pm_q4.scph_bands",
+     "bytes": 1371019,
+     "sha256": "c6f587ab02c21bc77f6af5d55b184e3dcc107fa7cb3495727e18a34fbaa9f0aa"
+    },
+    {
+     "file": "scph_mb_pm_q4.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "fd25f656a7bb50790babe150156f5f66a4693f606e3eb7e0793189f0a8457c6e"
+    }
+   ]
+  },
+  {
+   "name": "B_scph_q8",
+   "job": "scph_mb_pm_q8",
+   "model": "B (H1)",
+   "kind": "scph",
+   "q1": 8,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "PM, Ewald",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 498,
+     "sha256": "99c93a829976c56aa485d07eee4617d21bf3e1630253825db9dd940558327f53"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 143563,
+     "sha256": "c9f98938eb5c443aad459ad02d92471d52d0900b45063f266567b8e2279bc4ae"
+    },
+    {
+     "file": "scph_mb_pm_q8.scph_bands",
+     "bytes": 1371019,
+     "sha256": "93fea65d213e330da228f9565791be4fbe5536b42bcb2e0ae5681ff3a8ab556d"
+    },
+    {
+     "file": "scph_mb_pm_q8.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "b2cdc295f5e088ce73b34ebff4da2ad2ecd5421f6c117b86380cf8f34b164c79"
+    }
+   ]
+  },
+  {
+   "name": "B_scph_q12",
+   "job": "scph_mb_pm_q12",
+   "model": "B (H1)",
+   "kind": "scph",
+   "q1": 12,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "PM, Ewald",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 502,
+     "sha256": "3db502fb0d4731d7bd3a65cf1d26d3fe64a7dffce742f94ef18599e490ad0542"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 144360,
+     "sha256": "60d8d58804d255f0420d30cf111edde92cdb2d6f7ee47bd74e72514213c55f72"
+    },
+    {
+     "file": "scph_mb_pm_q12.scph_bands",
+     "bytes": 1371019,
+     "sha256": "0322fe6a8e84cac25c175881411d0438b6ff5438df3c318dcb6b4940af2c6623"
+    },
+    {
+     "file": "scph_mb_pm_q12.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "241a33c2135fc3699a700c47d20b38beee0b56d4033da1361f548e67330a1f6e"
+    }
+   ]
+  },
+  {
+   "name": "H2_scph_q2",
+   "job": "scph_mbh2_pm_q2",
+   "model": "B (H2)",
+   "kind": "scph",
+   "q1": 2,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "PM, Ewald",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 500,
+     "sha256": "b2caeb2d6d41391ba35cc9e60a5b84d41073dae64791b1d2fb2507d63ec9dc05"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 64800,
+     "sha256": "67eb776b0f42635b8719c560626c4476ce65dd1ae045b67c29c5b7a054e006dc"
+    },
+    {
+     "file": "scph_mbh2_pm_q2.scph_bands",
+     "bytes": 1371019,
+     "sha256": "ba5090b2a9435dd7fcf832d92ecbd9dd85dd8d7f5d6ae8a4a42b1b394ac3176a"
+    },
+    {
+     "file": "scph_mbh2_pm_q2.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "6c3c9c59575e521c28918358e0c90d10157e11ebf4bbdcd93e5618569fa9e5ca"
+    }
+   ]
+  },
+  {
+   "name": "H2_scph_q4",
+   "job": "scph_mbh2_pm_q4",
+   "model": "B (H2)",
+   "kind": "scph",
+   "q1": 4,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "PM, Ewald",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 500,
+     "sha256": "50ee2d6e7f8354e88a0337dae1f2f46c4809b3138dcfb9bb87d6f99ad47fa5be"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 103174,
+     "sha256": "cd84aab236d21485604d71532dd46eeebb27e1a3dfc91e0a82aea3e9b840bbee"
+    },
+    {
+     "file": "scph_mbh2_pm_q4.scph_bands",
+     "bytes": 1371019,
+     "sha256": "45fa1b0b4dc7035eb7f82c9324b4f941f970c38052ad1bb23bb71c958e0171d8"
+    },
+    {
+     "file": "scph_mbh2_pm_q4.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "78990df84d83e57b2b5cf662c958ff36f0136c58e7826c1bfeec2ae353c30745"
+    }
+   ]
+  },
+  {
+   "name": "H2_scph_q8",
+   "job": "scph_mbh2_pm_q8",
+   "model": "B (H2)",
+   "kind": "scph",
+   "q1": 8,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "PM, Ewald",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 500,
+     "sha256": "b0203b18f130ffbbea9099f8c5930d98b6f524d43d3723cae2ab78c74f49cc32"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 143483,
+     "sha256": "6b25177b1b21d3b03e8f5864ab1ac34dd01a70c9c436741755d9db063996adf5"
+    },
+    {
+     "file": "scph_mbh2_pm_q8.scph_bands",
+     "bytes": 1371019,
+     "sha256": "56e2c7df8e1834340a1493118682f25a14be4d5e7d0e5b50401c61f9b60e708a"
+    },
+    {
+     "file": "scph_mbh2_pm_q8.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "20f8d76d0d681ac7cc10dd7245694e58bc54bafc683b1324e42c59eb7de9a5c0"
+    }
+   ]
+  },
+  {
+   "name": "H2_scph_q12",
+   "job": "scph_mbh2_pm_q12",
+   "model": "B (H2)",
+   "kind": "scph",
+   "q1": 12,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "PM, Ewald",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 504,
+     "sha256": "ffc1c5d94c4f3592804cdec1621206f6bd9645c45a5b1537188e016a422ac0c6"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 144808,
+     "sha256": "2679a67e500d97362c4113655db57baa03f58ecfcc7516a90e989c701b92db93"
+    },
+    {
+     "file": "scph_mbh2_pm_q12.scph_bands",
+     "bytes": 1371019,
+     "sha256": "0a96fe212a948b0fd8ece628709ba6d1a54a98e3d56d80a1cc10c11c5514f127"
+    },
+    {
+     "file": "scph_mbh2_pm_q12.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "24655d97d508febb8c49b062f9e8e33816f4cea8eb8fcb19dd699fa06067ccfb"
+    }
+   ]
+  },
+  {
+   "name": "B_rta_q12_m16_T300",
+   "job": "rta_mb_pm_q12_T300_m16",
+   "model": "B (H1)",
+   "kind": "rta",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 300,
+   "setting": "TRISYM 1",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "ef176a7d32ffaa2282fb0bc756aa4b288d6973c1671f80459b63d56be220fbb3"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 306,
+     "sha256": "bb42a6d803f23522f86b758cdf9553214dced517e17bbd0e3250d68f3b157532"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 61554,
+     "sha256": "06c34428027a0c982afaae2c005458875b9bc0c34878c1eb5f988df5eaedf698"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.kc_elem",
+     "bytes": 9578395,
+     "sha256": "9b31051583b9a5d660f816144e2a7f241219209d5a181abbe487079deca4b58b"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.kl",
+     "bytes": 230,
+     "sha256": "8a3c879717dbdb471a3bf0d409d255790f60ad0bebb8a5282daa0afb0dbed47b"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.kl_coherent",
+     "bytes": 145,
+     "sha256": "724b5b400e641d20ceec445633e80862e4c43ea974e598073b1e33340ec5cbad"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.result",
+     "bytes": 3036798,
+     "sha256": "d487c6c0fd275fb24c7930a007a3ebbcce545044052058f8ed38f2d98f2573b2"
+    }
+   ]
+  },
+  {
+   "name": "B_rta_q8_m12_T300",
+   "job": "rta_mb_pm_q8_T300_m12",
+   "model": "B (H1)",
+   "kind": "rta",
+   "q1": 8,
+   "mesh": 12,
+   "T_K": 300,
+   "setting": "TRISYM 1",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "9bc2bda7637dc0b39308ce5522c2c44ae6d8508029002e18cdaaed72f7b14389"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 305,
+     "sha256": "eff5aaeb75cb5b74c4636f8b598c5bca39c07ea6367f03334f080c283205aa1d"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 34658,
+     "sha256": "3bdfcfdca96c40b7e8df3c12f27994c83dd370adda02035ad74165dc10839cf9"
+    },
+    {
+     "file": "rta_mb_pm_q8_T300_m12.kc_elem",
+     "bytes": 4876345,
+     "sha256": "d29c8ecb51ca9ba4b5b068f6e99bc62d8502f6a0907bc519efc073e3c275d92e"
+    },
+    {
+     "file": "rta_mb_pm_q8_T300_m12.kl",
+     "bytes": 230,
+     "sha256": "2d2a0b6afd7e13ba101ce10b2e14c35bbcea0b8e4b7bbcb0b04ab1af72b1929b"
+    },
+    {
+     "file": "rta_mb_pm_q8_T300_m12.kl_coherent",
+     "bytes": 145,
+     "sha256": "4b5359be1aae50c4b04fe532690a5bdf4339adc0af557ad7dacce1b3da2f4a0b"
+    },
+    {
+     "file": "rta_mb_pm_q8_T300_m12.result",
+     "bytes": 1299026,
+     "sha256": "1b20e9adb4b5a695fd80382fb3ba428738f9b0c9b36e86a275232780c0dc1e9d"
+    }
+   ]
+  },
+  {
+   "name": "B_rta_q12_m20_T300",
+   "job": "rta_mb_pm_q12_T300_m20 (base_b_m20)",
+   "model": "B (H1)",
+   "kind": "rta",
+   "q1": 12,
+   "mesh": 20,
+   "T_K": 300,
+   "setting": "TRISYM 1",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 846,
+     "sha256": "1961c459b0654770a95369f31d8f74bcc41e537b0e00a2e528ed495694da2e8b"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 916,
+     "sha256": "880aeacb3bded9b6060c97a5679302faf9dbd3038f327df6e5b7a3b8a4b97b95"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116511,
+     "sha256": "845b063fffdabf3e5354f94ad4b146185b4599f9e4df92a5dd1e63b3e6bac687"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 132716536,
+     "sha256": "705889f59c7f0f8031c62ea4adb71fc35aeb1cedb3f8b1c6761f753f81a23469"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113074,
+     "sha256": "bf7d57bbeb808e698e4c267bc847ecf508096e3372b9bf9b97d51a79558f4ee9",
+     "bytes_archived": 113065,
+     "sha256_archived": "d0ada46d510cb4bb99e3fef7ee8b1819058c086bf5969decacebb2f788bbf37a"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 306,
+     "sha256": "b9a4f93f3712712b473292c3866d1dc4652e17ebd60f77d153d0cd9a86a3806d"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 101726,
+     "sha256": "7f96b1299dcc430ad8db95789f1f4d7bc95edc3d73dae9a2ee2fd22677ead799"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m20.kc_elem",
+     "bytes": 16602445,
+     "sha256": "1d58b57ecca6b02c22a6165b8559fd4abc7920a0c596ae961b3890c15c8170ed"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m20.kl",
+     "bytes": 230,
+     "sha256": "7144fdd6ce5ef9fec378e6ed27090c46da6d1a42aff2c7e43003b03b3dea89ff"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m20.kl_coherent",
+     "bytes": 145,
+     "sha256": "d55a17d98a5fcec8966a70996dedc379e3fbf0b7605beb8e94899f139a102c71"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m20.result",
+     "bytes": 5886074,
+     "sha256": "341e974764a40932cb6920b21a13ec8ae6304c376e005ccf7b52591f913f7d0a"
+    },
+    {
+     "file": "time_l.txt",
+     "bytes": 777,
+     "sha256": "5bf38a36732d47eeaf38300ef6db951f183c5b934a28794d543f3b9ccb3f9833"
+    }
+   ]
+  },
+  {
+   "name": "B_rta_q12_m16_T600",
+   "job": "rta_mb_pm_q12_T600_m16 (base_b_m16_T600)",
+   "model": "B (H1)",
+   "kind": "rta",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 600,
+   "setting": "TRISYM 1",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 846,
+     "sha256": "1961c459b0654770a95369f31d8f74bcc41e537b0e00a2e528ed495694da2e8b"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 991,
+     "sha256": "c1db70bfa29386559b7486baf841a7f1bbba5d0a61380a34aaee1f5d3b7976a0"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116511,
+     "sha256": "845b063fffdabf3e5354f94ad4b146185b4599f9e4df92a5dd1e63b3e6bac687"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 132716536,
+     "sha256": "705889f59c7f0f8031c62ea4adb71fc35aeb1cedb3f8b1c6761f753f81a23469"
+    },
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "b7e3ca4c468b72237759dba067febf70fe240b8816634a2d42341c9bd4747ed9"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113122,
+     "sha256": "9a9480825be4e69a79085e10dae429d30b3238c5a9a38684226976470f80a2a7",
+     "bytes_archived": 113113,
+     "sha256_archived": "1c010e82badcee5757507ffd179a5b42d367123becc3b62d07d31cdfa75e2062"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 306,
+     "sha256": "8f0397652d96d428dc029ee0911d716769bcac1ea30d52dd3bcfe7b34f7cba3e"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 61554,
+     "sha256": "ffcfd2f986801f8e9547f28fb630f946e13cdf848582017d306c539d309d5625"
+    },
+    {
+     "file": "rta_mb_pm_q12_T600_m16.kc_elem",
+     "bytes": 9578395,
+     "sha256": "a8f1b4614a6a2727dc7b5481d535699d5291acc13083e43200ecf81eb3727b78"
+    },
+    {
+     "file": "rta_mb_pm_q12_T600_m16.kl",
+     "bytes": 230,
+     "sha256": "9471c5ff8985825840610348af14591808ea966df77af8f6ec32f992fc68d1ca"
+    },
+    {
+     "file": "rta_mb_pm_q12_T600_m16.kl_coherent",
+     "bytes": 145,
+     "sha256": "fce69e5819b72db1702e01724ed5793bc42462d686c223e715fb42ec4278ca36"
+    },
+    {
+     "file": "rta_mb_pm_q12_T600_m16.result",
+     "bytes": 3036798,
+     "sha256": "1822c754b125f2a4fc84adaf462b5f266f91fe15e9e01e8fb71beba13ed57fab"
+    },
+    {
+     "file": "time_l.txt",
+     "bytes": 777,
+     "sha256": "095cfe4046d5a1e7098a259ffd6cd6792ee20122dbcbebaab3ebb9e87d5c8bfd"
+    }
+   ]
+  },
+  {
+   "name": "B_evec_q12_m16_T300",
+   "job": "evec_mb_pm_q12_T300_m16",
+   "model": "B (H1)",
+   "kind": "evec",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 300,
+   "setting": "",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "ef176a7d32ffaa2282fb0bc756aa4b288d6973c1671f80459b63d56be220fbb3"
+    },
+    {
+     "file": "evec_mb_pm_q12_T300_m16.mesh.evec",
+     "bytes": 31117909,
+     "sha256": "47a1888351f1a44dcdc99b5264b129b58a93d73a1e1efcc25aa5577a51c11f82"
+    },
+    {
+     "file": "ph.in",
+     "bytes": 245,
+     "sha256": "1d7ffb5ede92d79b1d79665a2aa6a28ed3f48bba3dd42da9ae5425e7af5254eb"
+    },
+    {
+     "file": "ph.log",
+     "bytes": 144947,
+     "sha256": "4ab039cf6de0b5bf90110367fcad1ddf65484cd6154a6bf22c059e4e89609ac0"
+    }
+   ]
+  },
+  {
+   "name": "B_evec_q12_m16_T600",
+   "job": "evec_mb_pm_q12_T600_m16 (ph_mb_m16_T600)",
+   "model": "B (H1)",
+   "kind": "evec",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 600,
+   "setting": "",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 846,
+     "sha256": "1961c459b0654770a95369f31d8f74bcc41e537b0e00a2e528ed495694da2e8b"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 821,
+     "sha256": "dde500fd1a07f44c278e8a43b7518d995f7178418fe29861ab1563c88cca3b5c"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116511,
+     "sha256": "845b063fffdabf3e5354f94ad4b146185b4599f9e4df92a5dd1e63b3e6bac687"
+    },
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "b7e3ca4c468b72237759dba067febf70fe240b8816634a2d42341c9bd4747ed9"
+    },
+    {
+     "file": "evec_mb_pm_q12_T600_m16.dos",
+     "bytes": 2573,
+     "sha256": "e33be52c24bb0d7db8546bae4076114303948c7720925e9b04db7f319271c3fc"
+    },
+    {
+     "file": "evec_mb_pm_q12_T600_m16.mesh.evec",
+     "bytes": 31117909,
+     "sha256": "de463448976d43a89d93dc4bc2ccb804bb6680aa57db8221176c6414e0e08811"
+    },
+    {
+     "file": "evec_mb_pm_q12_T600_m16.thermo",
+     "bytes": 9087,
+     "sha256": "e407c2abc273950257615cf8882dba05329cda586af81a6862855c8e421fa92d"
+    },
+    {
+     "file": "ph_ren.in",
+     "bytes": 245,
+     "sha256": "526c61c187334abb89120034e71987ea16218f98d9ffdec9cd41a3ef38937b5f"
+    },
+    {
+     "file": "ph_ren.log",
+     "bytes": 144947,
+     "sha256": "2782f12c29012ebc80b8f46bd2b525296c932e69320c4ddcb975df762997081f"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113122,
+     "sha256": "9a9480825be4e69a79085e10dae429d30b3238c5a9a38684226976470f80a2a7",
+     "bytes_archived": 113113,
+     "sha256_archived": "1c010e82badcee5757507ffd179a5b42d367123becc3b62d07d31cdfa75e2062"
+    },
+    {
+     "file": "time_l.txt",
+     "bytes": 777,
+     "sha256": "289ea10a65681b217c20636d25852477b72d234d0497ba3edd7971ba2fc1e94b"
+    }
+   ]
+  },
+  {
+   "name": "B_evec_q12_m20_T300",
+   "job": "evec_mb_pm_q12_T300_m20 + harm_B_m20 (ph_mb_m20)",
+   "model": "B (H1)",
+   "kind": "evec + harmonic evec",
+   "q1": 12,
+   "mesh": 20,
+   "T_K": 300,
+   "setting": "",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 846,
+     "sha256": "1961c459b0654770a95369f31d8f74bcc41e537b0e00a2e528ed495694da2e8b"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 1234,
+     "sha256": "8279f8ba74bfd87f5f86d649e3a98624d9fb78e95f0b65b8e1c2ef3f18c96d8c"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116511,
+     "sha256": "845b063fffdabf3e5354f94ad4b146185b4599f9e4df92a5dd1e63b3e6bac687"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 132716536,
+     "sha256": "705889f59c7f0f8031c62ea4adb71fc35aeb1cedb3f8b1c6761f753f81a23469"
+    },
+    {
+     "file": "evec_mb_pm_q12_T300_m20.dos",
+     "bytes": 2573,
+     "sha256": "3b1dc333abfe75a6380259ea439b83c54b70d430590b685406e573e346bd7529"
+    },
+    {
+     "file": "evec_mb_pm_q12_T300_m20.mesh.evec",
+     "bytes": 60776597,
+     "sha256": "1ae98b9dadefa415d98446e8f60a5d6f1ced95d1bb8e8ae3988865f94cfefb53"
+    },
+    {
+     "file": "evec_mb_pm_q12_T300_m20.thermo",
+     "bytes": 9087,
+     "sha256": "624864ede1e922ad48acdbb2701dbc7238a0c45a3342ffc21800f2c02e09fe28"
+    },
+    {
+     "file": "harm_B_m20.dos",
+     "bytes": 2852,
+     "sha256": "5cb3e60c9cf8338a72a78e29af918362a892f1bb4ab718f8777e17e0a471f91e"
+    },
+    {
+     "file": "harm_B_m20.mesh.evec",
+     "bytes": 60776597,
+     "sha256": "18991cec0a4e47fe76c790cc8de1ff12e7c11f5f15f4c2bdbde9519b88c03c8a"
+    },
+    {
+     "file": "harm_B_m20.thermo",
+     "bytes": 9087,
+     "sha256": "a55eead7a441795fdacd680508a7e26d5327dd0d058d17a4a96ffd076edebbe1"
+    },
+    {
+     "file": "ph_bare.in",
+     "bytes": 232,
+     "sha256": "6ba86444fafc866137d4ef9e681ce4e6a550a226aaf8f361f67d6e6694616a3c"
+    },
+    {
+     "file": "ph_bare.log",
+     "bytes": 246777,
+     "sha256": "326db6d8d6d33f140c6b3f831710a5c1ab89a5e6070f2d480c443ed4afe6f8e2"
+    },
+    {
+     "file": "ph_ren.in",
+     "bytes": 245,
+     "sha256": "e93311563f146d58fadda8a9895a0708d02d7982254f035a5bb4e02ef4186fff"
+    },
+    {
+     "file": "ph_ren.log",
+     "bytes": 246829,
+     "sha256": "83ff3fe6c6fa4ae50acbb5b2ad2ac4aa51610314e1b3e6f33251e3dcfe6a3c3d"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113074,
+     "sha256": "bf7d57bbeb808e698e4c267bc847ecf508096e3372b9bf9b97d51a79558f4ee9",
+     "bytes_archived": 113065,
+     "sha256_archived": "d0ada46d510cb4bb99e3fef7ee8b1819058c086bf5969decacebb2f788bbf37a"
+    },
+    {
+     "file": "time_l.txt",
+     "bytes": 777,
+     "sha256": "169cf0bbf281cc1bb13840db7b7a8d0ca1062429138883bf3f83af37278ca489"
+    }
+   ]
+  },
+  {
+   "name": "B_harm_m16",
+   "job": "harm_B_m16",
+   "model": "B (H1)",
+   "kind": "harmonic evec",
+   "q1": "",
+   "mesh": 16,
+   "T_K": "",
+   "setting": "bare, MODE=phonons",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 846,
+     "sha256": "1961c459b0654770a95369f31d8f74bcc41e537b0e00a2e528ed495694da2e8b"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116511,
+     "sha256": "845b063fffdabf3e5354f94ad4b146185b4599f9e4df92a5dd1e63b3e6bac687"
+    },
+    {
+     "file": "harm_B_m16.dos",
+     "bytes": 2852,
+     "sha256": "6f7976a9d6567afce7f2bf7c81c35670db011fafbf3f746ca1fcff3bb927d1b2"
+    },
+    {
+     "file": "harm_B_m16.mesh.evec",
+     "bytes": 31117909,
+     "sha256": "28ce3890e88b3e0223ef800bf16dbd320dffdcb33195db79c60a962fca678b65"
+    },
+    {
+     "file": "harm_B_m16.thermo",
+     "bytes": 9087,
+     "sha256": "4bc9408c754494d7741f32331b60178653917df0bffbc654128b17eda065e74f"
+    },
+    {
+     "file": "ph.in",
+     "bytes": 232,
+     "sha256": "f11583bdd989899aa537ecf64e7a227cfd64d3cf87ad7836f548ce1385e28083"
+    },
+    {
+     "file": "ph.log",
+     "bytes": 144894,
+     "sha256": "dac6cbe215600fc0bb26b71dc11ef615188368b9d65e200913ea55eec5c53293"
+    }
+   ]
+  },
+  {
+   "name": "B_partition_q12_m16_T300",
+   "job": "t4_b_m16_code32",
+   "model": "B (H1)",
+   "kind": "rta + partition",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 300,
+   "setting": "TRISYM 1, 32 labels",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "PATCH:t3_partition/anphon-sha256:a0a5d30ca294",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 846,
+     "sha256": "1961c459b0654770a95369f31d8f74bcc41e537b0e00a2e528ed495694da2e8b"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 922,
+     "sha256": "9e7208b432e3c84a51aeb11d0d35dc7f94c2f44858ee2bfeec188526453e88dd"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116511,
+     "sha256": "845b063fffdabf3e5354f94ad4b146185b4599f9e4df92a5dd1e63b3e6bac687"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 132716536,
+     "sha256": "705889f59c7f0f8031c62ea4adb71fc35aeb1cedb3f8b1c6761f753f81a23469"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113074,
+     "sha256": "bf7d57bbeb808e698e4c267bc847ecf508096e3372b9bf9b97d51a79558f4ee9",
+     "bytes_archived": 113065,
+     "sha256_archived": "d0ada46d510cb4bb99e3fef7ee8b1819058c086bf5969decacebb2f788bbf37a"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 306,
+     "sha256": "bb42a6d803f23522f86b758cdf9553214dced517e17bbd0e3250d68f3b157532"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 61554,
+     "sha256": "37de72ca98750db978c92e7d9b86c734629b388f3b1791cb69fc37f18f8827f9"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.kc_elem",
+     "bytes": 9578395,
+     "sha256": "9b31051583b9a5d660f816144e2a7f241219209d5a181abbe487079deca4b58b"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.kl",
+     "bytes": 230,
+     "sha256": "8a3c879717dbdb471a3bf0d409d255790f60ad0bebb8a5282daa0afb0dbed47b"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.kl_coherent",
+     "bytes": 145,
+     "sha256": "724b5b400e641d20ceec445633e80862e4c43ea974e598073b1e33340ec5cbad"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.result",
+     "bytes": 3036798,
+     "sha256": "d487c6c0fd275fb24c7930a007a3ebbcce545044052058f8ed38f2d98f2573b2"
+    },
+    {
+     "file": "t3_partition.txt",
+     "bytes": 4517834,
+     "sha256": "de40b23df6772da5477479dc0661c2ff47ee8e8a023eedd39e0b960b6c150d2a"
+    },
+    {
+     "file": "t3_partition.txt.check.csv",
+     "bytes": 404071,
+     "sha256": "ff3a8f29f7f281f0dafe4ade0fb7ec1891d535baf736fb0001626447e9535be9"
+    }
+   ]
+  },
+  {
+   "name": "B_partition_q12_m20_T300",
+   "job": "t6_b_m20_code32",
+   "model": "B (H1)",
+   "kind": "rta + partition",
+   "q1": 12,
+   "mesh": 20,
+   "T_K": 300,
+   "setting": "TRISYM 1, 32 labels",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "PATCH:t3_partition/anphon-sha256:a0a5d30ca294",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 846,
+     "sha256": "1961c459b0654770a95369f31d8f74bcc41e537b0e00a2e528ed495694da2e8b"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 999,
+     "sha256": "9995bd59165c73c32cd36e2c20fe7b9a8d053ab77520593150f98f2155dc6954"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116511,
+     "sha256": "845b063fffdabf3e5354f94ad4b146185b4599f9e4df92a5dd1e63b3e6bac687"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 132716536,
+     "sha256": "705889f59c7f0f8031c62ea4adb71fc35aeb1cedb3f8b1c6761f753f81a23469"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113074,
+     "sha256": "bf7d57bbeb808e698e4c267bc847ecf508096e3372b9bf9b97d51a79558f4ee9",
+     "bytes_archived": 113065,
+     "sha256_archived": "d0ada46d510cb4bb99e3fef7ee8b1819058c086bf5969decacebb2f788bbf37a"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 306,
+     "sha256": "b9a4f93f3712712b473292c3866d1dc4652e17ebd60f77d153d0cd9a86a3806d"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 101726,
+     "sha256": "2117fc3133fe75c94a85a548ea7cfcee425ced37012bdc4dab728bae93b29f8d"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m20.kc_elem",
+     "bytes": 16602445,
+     "sha256": "1d58b57ecca6b02c22a6165b8559fd4abc7920a0c596ae961b3890c15c8170ed"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m20.kl",
+     "bytes": 230,
+     "sha256": "7144fdd6ce5ef9fec378e6ed27090c46da6d1a42aff2c7e43003b03b3dea89ff"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m20.kl_coherent",
+     "bytes": 145,
+     "sha256": "d55a17d98a5fcec8966a70996dedc379e3fbf0b7605beb8e94899f139a102c71"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m20.result",
+     "bytes": 5886074,
+     "sha256": "341e974764a40932cb6920b21a13ec8ae6304c376e005ccf7b52591f913f7d0a"
+    },
+    {
+     "file": "t3_partition.txt",
+     "bytes": 7753721,
+     "sha256": "7ee808ce64202b1f1ad0253c945b0aa4fbe846823fd5a18d0b78006cf3322101"
+    },
+    {
+     "file": "t3_partition.txt.check.csv",
+     "bytes": 702395,
+     "sha256": "2bf722b7a438ff5a0ae8e423e0512c3ab4332103c6d70198c35065f48f8e55de"
+    },
+    {
+     "file": "time_l.txt",
+     "bytes": 777,
+     "sha256": "65ce5d071b665bfa377fe16c164fc0830ba27bab145fac30362d197d558a5af5"
+    }
+   ]
+  },
+  {
+   "name": "B_partition_q12_m16_T600",
+   "job": "t7_b_m16_T600_code32",
+   "model": "B (H1)",
+   "kind": "rta + partition",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 600,
+   "setting": "TRISYM 1, 32 labels",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "PATCH:t3_partition/anphon-sha256:a0a5d30ca294",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 846,
+     "sha256": "1961c459b0654770a95369f31d8f74bcc41e537b0e00a2e528ed495694da2e8b"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 1074,
+     "sha256": "f1b5ef7b1c4731de8143c4f32fd8b528ce7fc41f9e1a149f7c75100823df89cf"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116511,
+     "sha256": "845b063fffdabf3e5354f94ad4b146185b4599f9e4df92a5dd1e63b3e6bac687"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 132716536,
+     "sha256": "705889f59c7f0f8031c62ea4adb71fc35aeb1cedb3f8b1c6761f753f81a23469"
+    },
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "b7e3ca4c468b72237759dba067febf70fe240b8816634a2d42341c9bd4747ed9"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113122,
+     "sha256": "9a9480825be4e69a79085e10dae429d30b3238c5a9a38684226976470f80a2a7",
+     "bytes_archived": 113113,
+     "sha256_archived": "1c010e82badcee5757507ffd179a5b42d367123becc3b62d07d31cdfa75e2062"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 306,
+     "sha256": "8f0397652d96d428dc029ee0911d716769bcac1ea30d52dd3bcfe7b34f7cba3e"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 61554,
+     "sha256": "72e551e0383bad4ec8fe06a3d3df47d0ac11788c789ac09bba920d7a4efaf9b1"
+    },
+    {
+     "file": "rta_mb_pm_q12_T600_m16.kc_elem",
+     "bytes": 9578395,
+     "sha256": "a8f1b4614a6a2727dc7b5481d535699d5291acc13083e43200ecf81eb3727b78"
+    },
+    {
+     "file": "rta_mb_pm_q12_T600_m16.kl",
+     "bytes": 230,
+     "sha256": "9471c5ff8985825840610348af14591808ea966df77af8f6ec32f992fc68d1ca"
+    },
+    {
+     "file": "rta_mb_pm_q12_T600_m16.kl_coherent",
+     "bytes": 145,
+     "sha256": "fce69e5819b72db1702e01724ed5793bc42462d686c223e715fb42ec4278ca36"
+    },
+    {
+     "file": "rta_mb_pm_q12_T600_m16.result",
+     "bytes": 3036798,
+     "sha256": "1822c754b125f2a4fc84adaf462b5f266f91fe15e9e01e8fb71beba13ed57fab"
+    },
+    {
+     "file": "t3_partition.txt",
+     "bytes": 3011722,
+     "sha256": "3dd31470c51702786e004803c3e27c2367af88fa0ceb1142a6e5bf3b3a872dfb"
+    },
+    {
+     "file": "t3_partition.txt.check.csv",
+     "bytes": 401096,
+     "sha256": "a67c116ad5dcd01620980fe6cc00342053ea95cc803b3ee2d2c4a884ce029a14"
+    },
+    {
+     "file": "time_l.txt",
+     "bytes": 777,
+     "sha256": "0ed99b4f0a78d837d71038e5ca20c318f0d670382bbe96857a45dc1f01ecee9f"
+    }
+   ]
+  },
+  {
+   "name": "B_partition_q12_m16_T300_fullsum",
+   "job": "t8_b_m16_trisym0_code32",
+   "model": "B (H1)",
+   "kind": "rta + partition",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 300,
+   "setting": "TRISYM 0, 32 labels",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "PATCH:t3_partition/anphon-sha256:a0a5d30ca294",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 846,
+     "sha256": "1961c459b0654770a95369f31d8f74bcc41e537b0e00a2e528ed495694da2e8b"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 1091,
+     "sha256": "fdafe36f8a564dec56cab42070a6f53772ac5ee828655f1f8ca492e32e80d446"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116511,
+     "sha256": "845b063fffdabf3e5354f94ad4b146185b4599f9e4df92a5dd1e63b3e6bac687"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 132716536,
+     "sha256": "705889f59c7f0f8031c62ea4adb71fc35aeb1cedb3f8b1c6761f753f81a23469"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113074,
+     "sha256": "bf7d57bbeb808e698e4c267bc847ecf508096e3372b9bf9b97d51a79558f4ee9",
+     "bytes_archived": 113065,
+     "sha256_archived": "d0ada46d510cb4bb99e3fef7ee8b1819058c086bf5969decacebb2f788bbf37a"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 318,
+     "sha256": "f3610502b7c744820d074005f1dc797e3bc90afbe02e8e1d537c47c755e34e73"
+    },
+    {
+     "file": "rta.in.diff_vs_production",
+     "bytes": 18,
+     "sha256": "4f9c74f90f821937671099b884efcd282eec1d5a813b1abe9e69d213918c402a"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 61554,
+     "sha256": "172035ea67483086b3904e83c69921ab1a38ce8c1305a9fa12cd571782f17462"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.kc_elem",
+     "bytes": 9578395,
+     "sha256": "40e5aa2869b5604503dfd18b10e51883659729550703c2836fa39902c63b17f8"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.kl",
+     "bytes": 230,
+     "sha256": "e76e37cce2058888ad5e0d92b09557462e109accbcb2821f55b08d0214261373"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.kl_coherent",
+     "bytes": 145,
+     "sha256": "724b5b400e641d20ceec445633e80862e4c43ea974e598073b1e33340ec5cbad"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.result",
+     "bytes": 3036798,
+     "sha256": "04c0bc690efe923059bfb776a527dc6dda8914000c7349ce43c52859026a8b26"
+    },
+    {
+     "file": "t3_partition.txt",
+     "bytes": 4597561,
+     "sha256": "e9a7c5c69efca6da963e0111145b9ae6fec3334425c8e7caed51a16db98d27d6"
+    },
+    {
+     "file": "t3_partition.txt.check.csv",
+     "bytes": 404945,
+     "sha256": "4f4834ccab252f8e3553281caf82b58d1a120992e5579d1d7a18dd6023db57d6"
+    },
+    {
+     "file": "time_l.txt",
+     "bytes": 777,
+     "sha256": "105220be4ec57c9c0c5b0b1bd53fa4cd25a8f389bd639c99be9817f83a5051f8"
+    }
+   ]
+  },
+  {
+   "name": "B_partition_q12_m16_T300_bands",
+   "job": "t5_b_m16_control",
+   "model": "B (H1)",
+   "kind": "rta + partition",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 300,
+   "setting": "TRISYM 1, band labels 105/145/160",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "PATCH:t3_partition/anphon-sha256:a0a5d30ca294",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 846,
+     "sha256": "1961c459b0654770a95369f31d8f74bcc41e537b0e00a2e528ed495694da2e8b"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 999,
+     "sha256": "58c6d44a5d7aa1bb2eecd0d236ee486e5cd46789581f2ac6547b07ff91f49e5b"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116511,
+     "sha256": "845b063fffdabf3e5354f94ad4b146185b4599f9e4df92a5dd1e63b3e6bac687"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 132716536,
+     "sha256": "705889f59c7f0f8031c62ea4adb71fc35aeb1cedb3f8b1c6761f753f81a23469"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113074,
+     "sha256": "bf7d57bbeb808e698e4c267bc847ecf508096e3372b9bf9b97d51a79558f4ee9",
+     "bytes_archived": 113065,
+     "sha256_archived": "d0ada46d510cb4bb99e3fef7ee8b1819058c086bf5969decacebb2f788bbf37a"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 306,
+     "sha256": "bb42a6d803f23522f86b758cdf9553214dced517e17bbd0e3250d68f3b157532"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 61554,
+     "sha256": "1f1c795c5a8ae323de2a4e1d6c36bd20eac22248512b004d2ff750407c479f74"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.kc_elem",
+     "bytes": 9578395,
+     "sha256": "9b31051583b9a5d660f816144e2a7f241219209d5a181abbe487079deca4b58b"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.kl",
+     "bytes": 230,
+     "sha256": "8a3c879717dbdb471a3bf0d409d255790f60ad0bebb8a5282daa0afb0dbed47b"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.kl_coherent",
+     "bytes": 145,
+     "sha256": "724b5b400e641d20ceec445633e80862e4c43ea974e598073b1e33340ec5cbad"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.result",
+     "bytes": 3036798,
+     "sha256": "d487c6c0fd275fb24c7930a007a3ebbcce545044052058f8ed38f2d98f2573b2"
+    },
+    {
+     "file": "t3_partition.txt",
+     "bytes": 4022472,
+     "sha256": "c30defac30b280dcffd4bbdbf3aad4a069d613b60a4b9ce60fde590babc540c9"
+    },
+    {
+     "file": "t3_partition.txt.check.csv",
+     "bytes": 403485,
+     "sha256": "592a61b9a415ac9375c0423eb62da4bd4a00a533a9d646c11ee415f23e3d5401"
+    },
+    {
+     "file": "time_l.txt",
+     "bytes": 777,
+     "sha256": "ea53e8a0b2a2a18de97f456b5dfdcb4a1af4e4d62d25f1d94b2a836e445e2cdd"
+    }
+   ]
+  },
+  {
+   "name": "B_partition_q12_m16_T300_lowbands",
+   "job": "t5b_b_m16",
+   "model": "B (H1)",
+   "kind": "rta + partition",
+   "q1": 12,
+   "mesh": 16,
+   "T_K": 300,
+   "setting": "TRISYM 1, band labels 80/95/105",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "PATCH:t3_partition/anphon-sha256:a0a5d30ca294",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 846,
+     "sha256": "1961c459b0654770a95369f31d8f74bcc41e537b0e00a2e528ed495694da2e8b"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 999,
+     "sha256": "f2cdbd8587fd87ff627d6bfc642709eabd15f33da66ca148475086e94fd4e4e7"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116511,
+     "sha256": "845b063fffdabf3e5354f94ad4b146185b4599f9e4df92a5dd1e63b3e6bac687"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 132716536,
+     "sha256": "705889f59c7f0f8031c62ea4adb71fc35aeb1cedb3f8b1c6761f753f81a23469"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113074,
+     "sha256": "bf7d57bbeb808e698e4c267bc847ecf508096e3372b9bf9b97d51a79558f4ee9",
+     "bytes_archived": 113065,
+     "sha256_archived": "d0ada46d510cb4bb99e3fef7ee8b1819058c086bf5969decacebb2f788bbf37a"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 306,
+     "sha256": "bb42a6d803f23522f86b758cdf9553214dced517e17bbd0e3250d68f3b157532"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 61554,
+     "sha256": "8eaa82a118fef3050b65342207c22a7eb82edb2958d13059655088f58999a78d"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.kc_elem",
+     "bytes": 9578395,
+     "sha256": "9b31051583b9a5d660f816144e2a7f241219209d5a181abbe487079deca4b58b"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.kl",
+     "bytes": 230,
+     "sha256": "8a3c879717dbdb471a3bf0d409d255790f60ad0bebb8a5282daa0afb0dbed47b"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.kl_coherent",
+     "bytes": 145,
+     "sha256": "724b5b400e641d20ceec445633e80862e4c43ea974e598073b1e33340ec5cbad"
+    },
+    {
+     "file": "rta_mb_pm_q12_T300_m16.result",
+     "bytes": 3036798,
+     "sha256": "d487c6c0fd275fb24c7930a007a3ebbcce545044052058f8ed38f2d98f2573b2"
+    },
+    {
+     "file": "t3_partition.txt",
+     "bytes": 3419965,
+     "sha256": "eef15683e47b80fb1fcaf5b6350902148d7a145791f4f3872e919c6d08b1620a"
+    },
+    {
+     "file": "t3_partition.txt.check.csv",
+     "bytes": 403435,
+     "sha256": "4923fd6a1ee975470d1d21cea60bbcc069c36b0ee45b50cd6af4e3b6b4a98356"
+    },
+    {
+     "file": "time_l.txt",
+     "bytes": 777,
+     "sha256": "d06d3165a71a647f4da085a38f1293bf91edb5852072f100ab5caef9890cb4af"
+    }
+   ]
+  },
+  {
+   "name": "A_evec_q12_m8_T300",
+   "job": "evec_pm_q12_T300_m8",
+   "model": "A",
+   "kind": "evec",
+   "q1": 12,
+   "mesh": 8,
+   "T_K": 300,
+   "setting": "",
+   "part": "i",
+   "archive": "v3 (reused)",
+   "build": "as recorded for this job in data/provenance/manifest_final.json (v3)",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "evec_pm_q12_T300_m8.mesh.evec",
+     "bytes": 3890261,
+     "sha256": "5cebbf50d474831aa44b029c9d451a0b2f9ac7f8440f1bfb621f0a5291e9248e"
+    },
+    {
+     "file": "ph.in",
+     "bytes": 230,
+     "sha256": "1a0d13e5fb999df00b9319d428158d1ab52a729f814bbb166d3c92fa092b9c41"
+    },
+    {
+     "file": "ph.log",
+     "bytes": 35469,
+     "sha256": "40c07320212c9281ba151eb52a1c6bbfe54f991c20a770b521c37e7959744e08"
+    }
+   ]
+  },
+  {
+   "name": "A_harm_m8",
+   "job": "harm_A_m8",
+   "model": "A",
+   "kind": "harmonic evec",
+   "q1": "",
+   "mesh": 8,
+   "T_K": "",
+   "setting": "bare, MODE=phonons",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 918,
+     "sha256": "e283fbf4a6d75c7dbe00a8d8589c1a0a241ea9a4255bc1fc1b078e2c229a1bb9"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 552,
+     "sha256": "54b49096eea7dc825337245e2d10da190321cf562c049dbcb9526cfe76bd6aee"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116506,
+     "sha256": "9739c36af71eb1ab306760e0a86a7ba09f7337c6220901272fea1b20400f9f0f"
+    },
+    {
+     "file": "harm_A_m8.dos",
+     "bytes": 2728,
+     "sha256": "b21465dabfacbeb805e72705bc60c9e125ec2460866888958048559625220684"
+    },
+    {
+     "file": "harm_A_m8.mesh.evec",
+     "bytes": 3890261,
+     "sha256": "4c46fcc56544f05bdca719b3a1c9bee7d2c97bcc82d23884d0b9350007e08869"
+    },
+    {
+     "file": "harm_A_m8.thermo",
+     "bytes": 9087,
+     "sha256": "e8e8f33fa9ace24df4872472018f28d113b7efaebe8be49a0a6eb3250a2bc8b8"
+    },
+    {
+     "file": "ph_bare.in",
+     "bytes": 220,
+     "sha256": "f3f7bffd2b05e6dda57a2adb0bcfa81094af32cb0e5d8dfff2dbb93e6aac6a12"
+    },
+    {
+     "file": "ph_bare.log",
+     "bytes": 35428,
+     "sha256": "fdaa9c489ae4cdafcdf9f9e5679a04bf1f1fad619f78a82e31086bed215d352f"
+    }
+   ]
+  },
+  {
+   "name": "B_evec_q12_m8_T300",
+   "job": "evec_mb_pm_q12_T300_m8 + harm_B_m8 (ph_mb_m8)",
+   "model": "B (H1)",
+   "kind": "evec + harmonic evec",
+   "q1": 12,
+   "mesh": 8,
+   "T_K": 300,
+   "setting": "",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 846,
+     "sha256": "1961c459b0654770a95369f31d8f74bcc41e537b0e00a2e528ed495694da2e8b"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 1228,
+     "sha256": "09c46d8e117e39074a8ead6b47b006577120bb358199848658e795ea74b457d9"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116511,
+     "sha256": "845b063fffdabf3e5354f94ad4b146185b4599f9e4df92a5dd1e63b3e6bac687"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 132716536,
+     "sha256": "705889f59c7f0f8031c62ea4adb71fc35aeb1cedb3f8b1c6761f753f81a23469"
+    },
+    {
+     "file": "evec_mb_pm_q12_T300_m8.dos",
+     "bytes": 2573,
+     "sha256": "412e408d35f02c63bbae52ac78d858f680b3c18dcdbab9451080d7e783ee0573"
+    },
+    {
+     "file": "evec_mb_pm_q12_T300_m8.mesh.evec",
+     "bytes": 3890261,
+     "sha256": "b16b288036155e68492bea6efec2188da3478b6ca3a830f234b2f7af26b34186"
+    },
+    {
+     "file": "evec_mb_pm_q12_T300_m8.thermo",
+     "bytes": 9087,
+     "sha256": "f60b9d60103ac11679bf04be717b9c1f284467b072f58f049fa90806dbc52f1a"
+    },
+    {
+     "file": "harm_B_m8.dos",
+     "bytes": 2821,
+     "sha256": "201ef470a758df3810c20e315e7c909e8277fb8d9bb31665d404a1722a708450"
+    },
+    {
+     "file": "harm_B_m8.mesh.evec",
+     "bytes": 3890261,
+     "sha256": "e08f5ac5b380dd349b4192122a6e2a9860402aeb650a79d3c412fddde9adc6a8"
+    },
+    {
+     "file": "harm_B_m8.thermo",
+     "bytes": 9087,
+     "sha256": "2e30fcd10fbac603232bd688ba72130cfe465ae4b0b315845503499b0b03ac35"
+    },
+    {
+     "file": "ph_bare.in",
+     "bytes": 228,
+     "sha256": "21d20025033f57769abde1934bcfc2a54f0af0e165ed15a8f13073c6ec8c8f21"
+    },
+    {
+     "file": "ph_bare.log",
+     "bytes": 35429,
+     "sha256": "cc06328b2cf892aa06adb3f9ddb1f3c9e874ce25e2dbe723161e6207d75f3350"
+    },
+    {
+     "file": "ph_ren.in",
+     "bytes": 241,
+     "sha256": "23dc3ba6495f1066fb7d4497c427fc7a97543669ceb54aeabed7b184efe3e91c"
+    },
+    {
+     "file": "ph_ren.log",
+     "bytes": 35481,
+     "sha256": "2263ec6b43c7146ab1084c544f5064e1b9c3c671825b79bfcf8d1171371d4179"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113074,
+     "sha256": "bf7d57bbeb808e698e4c267bc847ecf508096e3372b9bf9b97d51a79558f4ee9",
+     "bytes_archived": 113065,
+     "sha256_archived": "d0ada46d510cb4bb99e3fef7ee8b1819058c086bf5969decacebb2f788bbf37a"
+    }
+   ]
+  },
+  {
+   "name": "A_partition_q12_m8_T300_trisym1",
+   "job": "t4_a8_code32_t1",
+   "model": "A",
+   "kind": "rta + partition",
+   "q1": 12,
+   "mesh": 8,
+   "T_K": 300,
+   "setting": "TRISYM 1, 32 labels",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "PATCH:t3_partition/anphon-sha256:a0a5d30ca294",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 918,
+     "sha256": "e283fbf4a6d75c7dbe00a8d8589c1a0a241ea9a4255bc1fc1b078e2c229a1bb9"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 981,
+     "sha256": "4f7d05b74636657b42fbdff883f81fedeab084bb91b39170ae7e98dafb2fa861"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116506,
+     "sha256": "9739c36af71eb1ab306760e0a86a7ba09f7337c6220901272fea1b20400f9f0f"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 110449252,
+     "sha256": "5e787b95eb59fdc2a5cd93a3fe298d976f71d3a83905dce568cc021d86e71b79"
+    },
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113055,
+     "sha256": "dfb3b7dba4792bafb06839672221dffefef8923afcc716def733ae0b79ebf7d9",
+     "bytes_archived": 113046,
+     "sha256_archived": "61998f2e9bb5c0e7f51df8437e5dfdbea1923aaf6d939bd07f4448011897b39a"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 291,
+     "sha256": "f1774dc41779eca36f2023b9c6c17aa84a61236ce42652e3fe95bed9b1419ce4"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 18379,
+     "sha256": "17b14863b07b25d8bcd67fbbcd8e80e8f3ead9fcd9d60ef1bfa4d73fdd6e2ee3"
+    },
+    {
+     "file": "rta_pm_q12_T300_m8.kc_elem",
+     "bytes": 2031895,
+     "sha256": "e48ec81a868fc7dddb995a1acc1244e0b93af925cc04e4ef48e1ef499869e631"
+    },
+    {
+     "file": "rta_pm_q12_T300_m8.kl",
+     "bytes": 230,
+     "sha256": "6616a4930651b7c43bcb2f3898e3cbc6c8b493be116c750efa13580806659a19"
+    },
+    {
+     "file": "rta_pm_q12_T300_m8.kl_coherent",
+     "bytes": 145,
+     "sha256": "acef77b4e3ee9f58fe3b82a8887e664e4607a6c85cf0aaeb2c736aba01f854a6"
+    },
+    {
+     "file": "rta_pm_q12_T300_m8.result",
+     "bytes": 397794,
+     "sha256": "4ba6a3b2e96b75c1c5fa18dfaafeb27d520936738d6eda9d146af943d0704e0c"
+    },
+    {
+     "file": "t3_partition.txt",
+     "bytes": 575273,
+     "sha256": "0fc973f4da5139ae29672bb8b2f79a4df98d74ec561b482d995f26925cf867a2"
+    },
+    {
+     "file": "t3_partition.txt.check.csv",
+     "bytes": 84337,
+     "sha256": "56148d2c3022f14d90b5eb07dbabeaf24e98d43a7bb5251b5733f233edbcbd2c"
+    }
+   ]
+  },
+  {
+   "name": "A_partition_q12_m8_T300_trisym0",
+   "job": "t4_a8_code32_t0",
+   "model": "A",
+   "kind": "rta + partition",
+   "q1": 12,
+   "mesh": 8,
+   "T_K": 300,
+   "setting": "TRISYM 0, 32 labels",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "PATCH:t3_partition/anphon-sha256:a0a5d30ca294",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 918,
+     "sha256": "e283fbf4a6d75c7dbe00a8d8589c1a0a241ea9a4255bc1fc1b078e2c229a1bb9"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 981,
+     "sha256": "76093aa6e9966733f50412b670c69bcc064f475fc1c3d1bf4a21ae6e14359b21"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116506,
+     "sha256": "9739c36af71eb1ab306760e0a86a7ba09f7337c6220901272fea1b20400f9f0f"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 110449252,
+     "sha256": "5e787b95eb59fdc2a5cd93a3fe298d976f71d3a83905dce568cc021d86e71b79"
+    },
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113055,
+     "sha256": "dfb3b7dba4792bafb06839672221dffefef8923afcc716def733ae0b79ebf7d9",
+     "bytes_archived": 113046,
+     "sha256_archived": "61998f2e9bb5c0e7f51df8437e5dfdbea1923aaf6d939bd07f4448011897b39a"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 303,
+     "sha256": "acb6999ecef58a77ae82733eb1815b2fb69af3ed6efd0c6b1fc9eb558c69e862"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 18379,
+     "sha256": "cfc839b761b0b7c2a5056529ae6a55a0b765cba83d991e9225b65f443f5b09c0"
+    },
+    {
+     "file": "rta_pm_q12_T300_m8.kc_elem",
+     "bytes": 2031895,
+     "sha256": "083b50a176029233cf4490e3682fef1adbdc0187c27445d1f812110e3e1f29c9"
+    },
+    {
+     "file": "rta_pm_q12_T300_m8.kl",
+     "bytes": 230,
+     "sha256": "a431f4ae53fce98420df6374c7cb8a6269e11c76a88f11ed0e254908eb347822"
+    },
+    {
+     "file": "rta_pm_q12_T300_m8.kl_coherent",
+     "bytes": 145,
+     "sha256": "ff66a80949358c6297fee36d2eaf3ba930ee5869436f7ebbdcb6f01f27ec068a"
+    },
+    {
+     "file": "rta_pm_q12_T300_m8.result",
+     "bytes": 397794,
+     "sha256": "46ac233d581f990ef058120b25d1046dff43b543c7bdc55c4aa2045bf13545ce"
+    },
+    {
+     "file": "t3_partition.txt",
+     "bytes": 592440,
+     "sha256": "e40c749f0bb0f9128aacbd82a65cf0bb95992fb974e86d0e7176a2b061696663"
+    },
+    {
+     "file": "t3_partition.txt.check.csv",
+     "bytes": 85054,
+     "sha256": "21e664ffc87ffef1206554f0256df1a54aa01aa69647e71e679704cb1421f7d0"
+    }
+   ]
+  },
+  {
+   "name": "B_partition_q12_m8_T300_trisym1",
+   "job": "t4_b8_code32_t1",
+   "model": "B (H1)",
+   "kind": "rta + partition",
+   "q1": 12,
+   "mesh": 8,
+   "T_K": 300,
+   "setting": "TRISYM 1, 32 labels",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "PATCH:t3_partition/anphon-sha256:a0a5d30ca294",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 846,
+     "sha256": "1961c459b0654770a95369f31d8f74bcc41e537b0e00a2e528ed495694da2e8b"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 894,
+     "sha256": "a4eb5f0f31ac6d8972ecc19e9a88e909f85e10f99bbb4e87ec26cc57edffa592"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116511,
+     "sha256": "845b063fffdabf3e5354f94ad4b146185b4599f9e4df92a5dd1e63b3e6bac687"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 132716536,
+     "sha256": "705889f59c7f0f8031c62ea4adb71fc35aeb1cedb3f8b1c6761f753f81a23469"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113074,
+     "sha256": "bf7d57bbeb808e698e4c267bc847ecf508096e3372b9bf9b97d51a79558f4ee9",
+     "bytes_archived": 113065,
+     "sha256_archived": "d0ada46d510cb4bb99e3fef7ee8b1819058c086bf5969decacebb2f788bbf37a"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 296,
+     "sha256": "a722f53a115179f001fa1d5cb94a0c2b3f556bd3d31c8b1cfe2d474cbb04d81e"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 18370,
+     "sha256": "2473a5bb5e71dda2b37dfab6cd0fc719993a43e9aad45d486b248e86f3d23d12"
+    },
+    {
+     "file": "t3_b_m8_trisym1.kc_elem",
+     "bytes": 2031895,
+     "sha256": "f2d17470cac00534202761af1e5938352946cecb59f1862bcb50241961367708"
+    },
+    {
+     "file": "t3_b_m8_trisym1.kl",
+     "bytes": 230,
+     "sha256": "2388eb321d507f0c92e2ec4082efd877159e54a4419b7752aabf58a95a075f9b"
+    },
+    {
+     "file": "t3_b_m8_trisym1.kl_coherent",
+     "bytes": 145,
+     "sha256": "a87a2170fb0caff07a90317816f7f116f61cb6512e5fec5092cffedf110747b1"
+    },
+    {
+     "file": "t3_b_m8_trisym1.result",
+     "bytes": 397794,
+     "sha256": "b2f49a6eba5710d87d7bcdc526c888788ae82ececb113c6bc3922f0127efc668"
+    },
+    {
+     "file": "t3_partition.txt",
+     "bytes": 575352,
+     "sha256": "44fc84359426ee9f531280c6edc127ed8efe7e5e39022094bc4f38b4bdbaec1c"
+    },
+    {
+     "file": "t3_partition.txt.check.csv",
+     "bytes": 84417,
+     "sha256": "328c47c299398c3b30e6978088a1dc4601aa1e911f78dcdb4fe0f350c55f9d4a"
+    }
+   ]
+  },
+  {
+   "name": "B_partition_q12_m8_T300_trisym0",
+   "job": "t4_b8_code32_t0",
+   "model": "B (H1)",
+   "kind": "rta + partition",
+   "q1": 12,
+   "mesh": 8,
+   "T_K": 300,
+   "setting": "TRISYM 0, 32 labels",
+   "part": "ii",
+   "archive": "v4_runs_b",
+   "build": "PATCH:t3_partition/anphon-sha256:a0a5d30ca294",
+   "files": [
+    {
+     "file": "BORN",
+     "bytes": 846,
+     "sha256": "1961c459b0654770a95369f31d8f74bcc41e537b0e00a2e528ed495694da2e8b"
+    },
+    {
+     "file": "SHA256SUMS",
+     "bytes": 894,
+     "sha256": "e3c2d3a74d5183ad7d44311aa0cb85ffa1dfb58d922a8150a6ce88997523f6d7"
+    },
+    {
+     "file": "STO222.xml",
+     "bytes": 116511,
+     "sha256": "845b063fffdabf3e5354f94ad4b146185b4599f9e4df92a5dd1e63b3e6bac687"
+    },
+    {
+     "file": "STO_anharm.xml",
+     "bytes": 132716536,
+     "sha256": "705889f59c7f0f8031c62ea4adb71fc35aeb1cedb3f8b1c6761f753f81a23469"
+    },
+    {
+     "file": "renorm.xml",
+     "bytes": 113074,
+     "sha256": "bf7d57bbeb808e698e4c267bc847ecf508096e3372b9bf9b97d51a79558f4ee9",
+     "bytes_archived": 113065,
+     "sha256_archived": "d0ada46d510cb4bb99e3fef7ee8b1819058c086bf5969decacebb2f788bbf37a"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 308,
+     "sha256": "fff3cb0564ca7a0ae4237f90a10ce8efe999d640c8f628e07ccef7a7572b9955"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 18370,
+     "sha256": "4369bd17342bcca43d1fd080655e5c77ed2af28186d50c9a056df3a9e9cfd324"
+    },
+    {
+     "file": "t3_b_m8_trisym0.kc_elem",
+     "bytes": 2031895,
+     "sha256": "c42ad237c60d05e80900d244ab41794331eb0ce67f91b2d4077f6b6be8fc3024"
+    },
+    {
+     "file": "t3_b_m8_trisym0.kl",
+     "bytes": 230,
+     "sha256": "c0e3507e1e7dc361f3707e2ae5fb1e841b31f19beb2886365d6098100953a904"
+    },
+    {
+     "file": "t3_b_m8_trisym0.kl_coherent",
+     "bytes": 145,
+     "sha256": "61febb875515c256dd4dc0e4ecd3463b0ad7ce51534abd71b862a96e49ed4bb4"
+    },
+    {
+     "file": "t3_b_m8_trisym0.result",
+     "bytes": 397794,
+     "sha256": "50784b37040cbbc955c6b2973eb036091f8d268fb10fcee2be22ef4e88d2fbbe"
+    },
+    {
+     "file": "t3_partition.txt",
+     "bytes": 591248,
+     "sha256": "ae6df426787297c63c21622ab5a6bec8b3f904cfc4956bb1cbf75edee77d98c7"
+    },
+    {
+     "file": "t3_partition.txt.check.csv",
+     "bytes": 85023,
+     "sha256": "da67a48c8763e4d701b828bfaeb0930366e5f7cb42fc2b0a68dc9a8005d9538b"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_scph_rf_a198_pm_q12",
+   "job": "scph_rf_a198_pm_q12",
+   "model": "A (fit a198)",
+   "kind": "scph",
+   "q1": 12,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 499,
+     "sha256": "567132f976e01edb999b44c1b2d398bd2e1ebdf50a36f798b9cd507f52c3903b"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 145832,
+     "sha256": "41541860264d07a12f2fa8f6edf921bb6dcb45210c84533ca2993042adb24439"
+    },
+    {
+     "file": "scph_rf_a198_pm_q12.scph_bands",
+     "bytes": 1371019,
+     "sha256": "58d38ffe9437bd15f49e2fe52493ff51418ae39c3caec23206bbda147fb19686"
+    },
+    {
+     "file": "scph_rf_a198_pm_q12.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "9a46dacc14cdec5e602f9f2a90f5bffd6d09d22eda1ab7e0cfb9bccbb93e3737"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_scph_rf_a198_pm_q2",
+   "job": "scph_rf_a198_pm_q2",
+   "model": "A (fit a198)",
+   "kind": "scph",
+   "q1": 2,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 495,
+     "sha256": "00f0dd476c6cff27eb64e9a2c63eb2e515d50700ab5c746ec0e56623457fc40c"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 60676,
+     "sha256": "b53606f7c31cd5daffb6035888e81d9638cd7f9566b6b16b72440f5b82bc36eb"
+    },
+    {
+     "file": "scph_rf_a198_pm_q2.scph_bands",
+     "bytes": 1371019,
+     "sha256": "b47a7f27fd9277b8dff63ee26ccf4d5319daa46494799dbb7976fb4cbcf8d659"
+    },
+    {
+     "file": "scph_rf_a198_pm_q2.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "dd7e4a097ef48972adf66f26795e5ee58e444d2465ad33c584ace0cb331c85c9"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_rta_rf_a198_pm_q8_T300_m12",
+   "job": "rta_rf_a198_pm_q8_T300_m12",
+   "model": "A (fit a198)",
+   "kind": "rta",
+   "q1": 8,
+   "mesh": 12,
+   "T_K": 300,
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 302,
+     "sha256": "a2da9e95180c0e35fa66c08fde408f2092098fecd1ca3c78e9643fe1cfd3da29"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 34673,
+     "sha256": "6928139cdf1851b09cea877fd5fb5afee1115c129a871088c7495a0e42756eff"
+    },
+    {
+     "file": "rta_rf_a198_pm_q8_T300_m12.kc_elem",
+     "bytes": 4876345,
+     "sha256": "192535209f6746c88fc9f13adf81e8ff857148bcdb62fdcafea6de5ac0fa1b79"
+    },
+    {
+     "file": "rta_rf_a198_pm_q8_T300_m12.kl",
+     "bytes": 230,
+     "sha256": "e10c8b53972f5d050c4c13b82e3dc2bcaa9915c67c77a96bd3ce10caba3f6bce"
+    },
+    {
+     "file": "rta_rf_a198_pm_q8_T300_m12.kl_coherent",
+     "bytes": 145,
+     "sha256": "9836b540e3af7dd004c14361643ae4d20c6bcbe7a41d2951ff28f11f677edcad"
+    },
+    {
+     "file": "rta_rf_a198_pm_q8_T300_m12.result",
+     "bytes": 1299026,
+     "sha256": "1d700eb2e1428e641e9c0e857bbef54dc2b6ce3fca5f8b2afd96615d1af666fa"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_scph_rf_a198_pm_q8",
+   "job": "scph_rf_a198_pm_q8",
+   "model": "A (fit a198)",
+   "kind": "scph",
+   "q1": 8,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 495,
+     "sha256": "783e7d79b68978c5e760ec9a17fd0f43127fea4bf67d81fe32b6f6d2a7fafd87"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 125167,
+     "sha256": "3337367e6a3744a4c9c015aac56bd6d77670bcf0f795c06393d8800fbac7de53"
+    },
+    {
+     "file": "scph_rf_a198_pm_q8.scph_bands",
+     "bytes": 1371019,
+     "sha256": "df9af6152e1fb495bbdae16bdecc6b2273d61d26ae9d7526f9273a61f0b9f41f"
+    },
+    {
+     "file": "scph_rf_a198_pm_q8.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "599cff0cf984116e2cbc530727f99a4fff589516487811198ec6fd9bac4d39b8"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_scph_rf_a262_pm_q2",
+   "job": "scph_rf_a262_pm_q2",
+   "model": "A (fit a262)",
+   "kind": "scph",
+   "q1": 2,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 495,
+     "sha256": "70683071f7a211781d8be90b55dea66a8537c9f119f0d4d24c028eead03c8651"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 80896,
+     "sha256": "78684a96e5c862055b5b0fa393a768a3d6e72ad79a615c7a657474d6be7dc1a7"
+    },
+    {
+     "file": "scph_rf_a262_pm_q2.scph_bands",
+     "bytes": 1371019,
+     "sha256": "14979c7bc8be4977c79c384ebface488d7de080f002127b282ca1a5bfacaa1bc"
+    },
+    {
+     "file": "scph_rf_a262_pm_q2.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "9fb9c94c4205db16b3f4a6ddd500c735308265338f0ab96615d8a95854200b48"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_scph_rf_a262_pm_q8",
+   "job": "scph_rf_a262_pm_q8",
+   "model": "A (fit a262)",
+   "kind": "scph",
+   "q1": 8,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 495,
+     "sha256": "3213f6492cc080a4e0093f85a4d4a581f3fcf2158beb0ef5e6543173ef5a0d7f"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 124595,
+     "sha256": "2b68a16b0429893aba486f35f0e1aef0da7475517b4b76ad130673c18b8fe546"
+    },
+    {
+     "file": "scph_rf_a262_pm_q8.scph_bands",
+     "bytes": 1371019,
+     "sha256": "47aa9511a9b5d93994a2eeff6d62c0c580da9611d4798e7ef37734073c5c6e73"
+    },
+    {
+     "file": "scph_rf_a262_pm_q8.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "a275df97b9ea048604708fa87e54ec7f7e9641b28b5fd5a280be7f4cb5f595e6"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_scph_rf_a345_pic1_pm_q2",
+   "job": "scph_rf_a345_pic1_pm_q2",
+   "model": "A (fit a345_pic1)",
+   "kind": "scph",
+   "q1": 2,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 500,
+     "sha256": "6148059bf236a3878ca46d7428967c2cf885579d6ac3d28dc43c9e752277d0b8"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 61180,
+     "sha256": "7ebc3d992f76493ed8770d4ba92c911bd0ef6df7ee2558c1897ee5c6e71d64d1"
+    },
+    {
+     "file": "scph_rf_a345_pic1_pm_q2.scph_bands",
+     "bytes": 1371019,
+     "sha256": "29e89b4b5ac0a06dde9973a6d408e48b0514b6ffb9f5577f1438f491ee5c30f1"
+    },
+    {
+     "file": "scph_rf_a345_pic1_pm_q2.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "b6288bffe75046d6729ade47a37312c16c29883860edb4182ba860e636acbd65"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_scph_rf_a345_pic1_pm_q8",
+   "job": "scph_rf_a345_pic1_pm_q8",
+   "model": "A (fit a345_pic1)",
+   "kind": "scph",
+   "q1": 8,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 500,
+     "sha256": "a25a8c357a84f091ce275eb592535511646ca03ccd959047c607ef722aa85ee6"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 143603,
+     "sha256": "b94fbe256d6d71e656666e9db5c087328dbef6c5360636e887ae426bf7d02714"
+    },
+    {
+     "file": "scph_rf_a345_pic1_pm_q8.scph_bands",
+     "bytes": 1371019,
+     "sha256": "23d929a3febb67fa14d1060c71a272dba6fecb325504392a12e69548bd4c1708"
+    },
+    {
+     "file": "scph_rf_a345_pic1_pm_q8.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "fcda809309c688e50f5c973d56534b3131a9b4420f3d6e4e1680f1e2e1385b7b"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_scph_rf_a345_pm_q2",
+   "job": "scph_rf_a345_pm_q2",
+   "model": "A (fit a345)",
+   "kind": "scph",
+   "q1": 2,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 495,
+     "sha256": "16c6c4fb44eabffb7128107818b5c4032d9058044d4770fbd931b7e899408d3c"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 61072,
+     "sha256": "3cb554daa3098f4a9e52a0cc73f0a678d6ed44d3c8eed5d935276fae4b60ee89"
+    },
+    {
+     "file": "scph_rf_a345_pm_q2.scph_bands",
+     "bytes": 1371019,
+     "sha256": "e9667b32717985edef20fb08bea4143645b8c1c9d64a57b05c79f988fe187522"
+    },
+    {
+     "file": "scph_rf_a345_pm_q2.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "065fc2e2fb62d74e679117900f2a8f5e0fd2192c5a1d2a4f12ceb8e592ee3615"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_scph_rf_a455_pm_q2",
+   "job": "scph_rf_a455_pm_q2",
+   "model": "A (fit a455)",
+   "kind": "scph",
+   "q1": 2,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 495,
+     "sha256": "d5817b36a83db45031563181fea9da828a11b44f850de2c4b6ada9c5dd50d322"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 66660,
+     "sha256": "893ea63fd406df18c792ee83ae74a403ceff4f510efb2a4ae3b57fa9f344b50b"
+    },
+    {
+     "file": "scph_rf_a455_pm_q2.scph_bands",
+     "bytes": 1371019,
+     "sha256": "997d3343b9f106945ec7aed67cba9362181dfa607fd1d6ae93c96ac58d43fcd9"
+    },
+    {
+     "file": "scph_rf_a455_pm_q2.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "4a62d4792e9f0f60a5a9f4224612393c01b59adda268d13c05fc97997eea2e2e"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_scph_rf_a455_pm_q8",
+   "job": "scph_rf_a455_pm_q8",
+   "model": "A (fit a455)",
+   "kind": "scph",
+   "q1": 8,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 495,
+     "sha256": "fb42c55dbebd47883e768fed49490f6e7a20240dd622ecd51785f7c5898841c8"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 143495,
+     "sha256": "dba4fff7d7f9e42e26741ff8252d02768122dd48c83ea538033870e31cbb3670"
+    },
+    {
+     "file": "scph_rf_a455_pm_q8.scph_bands",
+     "bytes": 1371019,
+     "sha256": "7b44b6855d8ac6c4d09dccf97e036e4964c990da94229c13d5f865e3930fa720"
+    },
+    {
+     "file": "scph_rf_a455_pm_q8.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "e03eb7dac3a6ea18a7f74c02fe793e62f836898700c3c966bd383317d1c76d8c"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_scph_rf_a600_pm_q12",
+   "job": "scph_rf_a600_pm_q12",
+   "model": "A (fit a600)",
+   "kind": "scph",
+   "q1": 12,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 499,
+     "sha256": "d5af159f682250bc24849d7610698f66af8421be9cae015e1761c485ec8f29ff"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 144600,
+     "sha256": "000994d6c8c605d37ebe17efb005ddff79acb3117b8c512377d317303c5de448"
+    },
+    {
+     "file": "scph_rf_a600_pm_q12.scph_bands",
+     "bytes": 1371019,
+     "sha256": "1035f75c9b6c9ec0fb36f45bae7bbd4e38d40227d9c95a69eae0062e29378a6a"
+    },
+    {
+     "file": "scph_rf_a600_pm_q12.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "90fccdc16065011b597815ed92a8a1751eee1d6ef88f68c90b984fcb6cb0b03f"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_scph_rf_a600_pm_q2",
+   "job": "scph_rf_a600_pm_q2",
+   "model": "A (fit a600)",
+   "kind": "scph",
+   "q1": 2,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 495,
+     "sha256": "2ff74fd97d02849432fb72634e5dc77c35aa012c593e114490016d5d38792ec6"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 61116,
+     "sha256": "e51adcc74092bbe30259b7de8e4907e56915b8c8c2c99bb5dfac0f39e8a07e38"
+    },
+    {
+     "file": "scph_rf_a600_pm_q2.scph_bands",
+     "bytes": 1371019,
+     "sha256": "c88efd4cc1c9ab5db4819ca2afd3e4052cce6b64bf632bb45cce6d1cda4f7d0a"
+    },
+    {
+     "file": "scph_rf_a600_pm_q2.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "999af65e9a62a8285972721e9faca5d9b0aae84534051c5e9a8c39cb1c71a33f"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_rta_rf_a600_pm_q8_T300_m12",
+   "job": "rta_rf_a600_pm_q8_T300_m12",
+   "model": "A (fit a600)",
+   "kind": "rta",
+   "q1": 8,
+   "mesh": 12,
+   "T_K": 300,
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 302,
+     "sha256": "d549d812bdd68fa4ad3c4819458c3b034db2f38a08a701672177b9f2893ab4cc"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 34673,
+     "sha256": "1ae00794bf7d8249d2ffcaff85914ec7b40d74fe16dee999f0f252ef7c372604"
+    },
+    {
+     "file": "rta_rf_a600_pm_q8_T300_m12.kc_elem",
+     "bytes": 4876345,
+     "sha256": "f4cf4f4e36cdc2a52056cf0cb6aac826b907bb44bfc19703fb645b844317aa52"
+    },
+    {
+     "file": "rta_rf_a600_pm_q8_T300_m12.kl",
+     "bytes": 230,
+     "sha256": "67354fe12393dc51515ecdc757710637e9b4bebd134e0a9ebf05b24bd83a1587"
+    },
+    {
+     "file": "rta_rf_a600_pm_q8_T300_m12.kl_coherent",
+     "bytes": 145,
+     "sha256": "48dbd2b7d6475074a92b7c57c2373c45f9355c21060b6c85b50c3fed2c6404cc"
+    },
+    {
+     "file": "rta_rf_a600_pm_q8_T300_m12.result",
+     "bytes": 1299026,
+     "sha256": "d8b52bd59a09847342e832498ffcfc196655316f5fb62fdd620f67ac54ac6c80"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_scph_rf_a600_pm_q8",
+   "job": "scph_rf_a600_pm_q8",
+   "model": "A (fit a600)",
+   "kind": "scph",
+   "q1": 8,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 495,
+     "sha256": "c5f8cbcbec81282638e0390607aa62dd46e2baf149f3400dcf9fa439faeeb63f"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 143451,
+     "sha256": "b91c195adf5829599f21d914b4e499db3a52fefa610b4f2cacd06594396d724d"
+    },
+    {
+     "file": "scph_rf_a600_pm_q8.scph_bands",
+     "bytes": 1371019,
+     "sha256": "fc779247bf0540e9d534884372a7929e443fcea83a940c88ba630deb22d69d9e"
+    },
+    {
+     "file": "scph_rf_a600_pm_q8.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "a2f2d3f112673936957793618f61a1899df6711d866824d913b6713ed79e95d0"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_scph_rf_rr1053_pm_q2",
+   "job": "scph_rf_rr1053_pm_q2",
+   "model": "A (fit rr1053)",
+   "kind": "scph",
+   "q1": 2,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 497,
+     "sha256": "33dc4a919e0366737c989a350c69ce1d4b5df0eba114cbb7127de38cad8fea57"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 60639,
+     "sha256": "cce4a43a84186e35c95a6bd336ad77d2585d12de7db849fd3843d2b5e1dd04f1"
+    },
+    {
+     "file": "scph_rf_rr1053_pm_q2.scph_bands",
+     "bytes": 1371019,
+     "sha256": "70a112b0fd1a93d9afea765d32c6fb61da64662876e7820032da39c06dd6a0a7"
+    },
+    {
+     "file": "scph_rf_rr1053_pm_q2.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "923a995474a7ca16f81ed63367298b1c64093f2b14adbc3f9a3f48cdf7a05f22"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_scph_rf_rr1053_pm_q8",
+   "job": "scph_rf_rr1053_pm_q8",
+   "model": "A (fit rr1053)",
+   "kind": "scph",
+   "q1": 8,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 497,
+     "sha256": "54e4bf6967319280b633992c505e9f08bd18f709c713ac0d78233d3fd1d0e96f"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 123590,
+     "sha256": "18113e1528a6d25513794a6330647cf4d915fe2f898be404e5566ef57482d1d7"
+    },
+    {
+     "file": "scph_rf_rr1053_pm_q8.scph_bands",
+     "bytes": 1371019,
+     "sha256": "eb48f308ab3cd1a10de08906bc5695ccc45d34ea29ee4dd6a6dc09ecc3f7dbcf"
+    },
+    {
+     "file": "scph_rf_rr1053_pm_q8.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "000af2851a4012be2081429ae11f76318d33d1529c782c2b0a858ac8b120604e"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_rta_pm_q8_rb_T300_m12",
+   "job": "rta_pm_q8_rb_T300_m12",
+   "model": "A (rerun)",
+   "kind": "rta",
+   "q1": 8,
+   "mesh": 12,
+   "T_K": 300,
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 297,
+     "sha256": "ccdef990443da211e54352c176a42a654cd40fe8c222865b64f2684ca434d58b"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 34658,
+     "sha256": "07c991b7200ae41c631814fd5998f87f5c45d55e9cd4d3002cf03013ff933005"
+    },
+    {
+     "file": "rta_pm_q8_rb_T300_m12.kc_elem",
+     "bytes": 4876345,
+     "sha256": "f0c49473f0c03f7633d559226f2552f206677de7b7bcc5a7c1410b76b78f235f"
+    },
+    {
+     "file": "rta_pm_q8_rb_T300_m12.kl",
+     "bytes": 230,
+     "sha256": "be1f450f7a60db99a856c734b4cfc1d7419ae2c958f54c3170c400bc9ffc9548"
+    },
+    {
+     "file": "rta_pm_q8_rb_T300_m12.kl_coherent",
+     "bytes": 145,
+     "sha256": "82bc068e83c7fc1b102ef3cf054fc57f8e40c7f6f2a3bf2aa90106545bd23c71"
+    },
+    {
+     "file": "rta_pm_q8_rb_T300_m12.result",
+     "bytes": 1299026,
+     "sha256": "52ac3d55fc47a7f3b8ec31cec153f466bd2faa11dd45fd19a9c4ae769ec52acf"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_rta_pm_q8_rb_T300_m16",
+   "job": "rta_pm_q8_rb_T300_m16",
+   "model": "A (rerun)",
+   "kind": "rta",
+   "q1": 8,
+   "mesh": 16,
+   "T_K": 300,
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "dfc2.log",
+     "bytes": 90526,
+     "sha256": "c8e744580ff61ddcde8b28e914c5faf92164f3a269b9dde69bf86d3b051170fe"
+    },
+    {
+     "file": "rta.in",
+     "bytes": 297,
+     "sha256": "c6484e5a641e32ad91ea11f2948ed6885f6445ce3294e0cb99fe4a8eea2d85e1"
+    },
+    {
+     "file": "rta.log",
+     "bytes": 61551,
+     "sha256": "5e01a3942b67b6048c14a1988423faf7c6fb23602f9f312ecb9d65f82965eee7"
+    },
+    {
+     "file": "rta_pm_q8_rb_T300_m16.kc_elem",
+     "bytes": 9578395,
+     "sha256": "3a8485ce4105309064c83c14d569b04a9d0919e7bbb750fd47a5b208e24fe921"
+    },
+    {
+     "file": "rta_pm_q8_rb_T300_m16.kl",
+     "bytes": 230,
+     "sha256": "41e8d026a08086897a5081471ed6e9910b8fd997628092a02a04ec33cf1d62ed"
+    },
+    {
+     "file": "rta_pm_q8_rb_T300_m16.kl_coherent",
+     "bytes": 145,
+     "sha256": "aba62910a8d01cdf1770331d8f6f416776502447166ebfd77e645051cbbad4d5"
+    },
+    {
+     "file": "rta_pm_q8_rb_T300_m16.result",
+     "bytes": 3036798,
+     "sha256": "6c6f6aab7ae0991d347ad0fe3f86145dae7b2a2b0c5df280104d2caf90853935"
+    }
+   ]
+  },
+  {
+   "name": "A_bench_scph_pm_q8_rb",
+   "job": "scph_pm_q8_rb",
+   "model": "A (rerun)",
+   "kind": "scph",
+   "q1": 8,
+   "mesh": "",
+   "T_K": "0-1000",
+   "setting": "benchmark of model A",
+   "part": "i",
+   "archive": "v4_runs_a",
+   "build": "alamode@c5b015ca/anphon-sha256:266b507a02c2",
+   "files": [
+    {
+     "file": "scph.in",
+     "bytes": 490,
+     "sha256": "dfee399c588c265c082ee3020b1575d3f71a41ef1f0eb0c760667f286940c309"
+    },
+    {
+     "file": "scph.log",
+     "bytes": 143343,
+     "sha256": "843e8930e4c6ddfa7f6595a1ec5b0a533056b3df9b50b534bfabe220b50651e8"
+    },
+    {
+     "file": "scph_pm_q8_rb.scph_bands",
+     "bytes": 1371019,
+     "sha256": "6a8becf665e06a5e7cbd565d5aec8887a9c7773582c70c6e8ceca2213a7b9acd"
+    },
+    {
+     "file": "scph_pm_q8_rb.scph_dfc2",
+     "bytes": 4037683,
+     "sha256": "9d1f9004c4413e47d691adc4848cac176582be550640b41c25f3ba191e98a9d3"
+    }
+   ]
+  }
+ ]
+}
