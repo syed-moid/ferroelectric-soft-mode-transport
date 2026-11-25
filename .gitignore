@@ -48,6 +48,15 @@ data/processed/*
 !data/processed/v3/
 !data/processed/si_v4/
 !data/processed/manuscript_numbers_v8.csv
+!data/processed/v4/
+# v4: per-mode outputs and run links are in the Zenodo archives v4_processed_{a,b}, not in the repository
+data/processed/v4/*/labels/
+data/processed/v4/*/labels_both/
+data/processed/v4/*/census/
+data/processed/v4/*/t4/**/*_modes.csv
+data/processed/v4/*/reports/_checks.json
+data/processed/v4/_harm/
+data/processed/v4/figures/
 
 # Raw solver outputs (archived on Zenodo; see data/raw/alamode_sto/IMPORT_NOTE.md)
 data/raw/alamode_sto/*
