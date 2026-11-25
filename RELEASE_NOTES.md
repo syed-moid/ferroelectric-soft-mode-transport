@@ -1,3 +1,61 @@
+# Ferroelectric-Kappa-SCPH — Reproducibility Package (v4.0.0)
+
+<!-- DRAFT: facts only; the author writes the text. [HELD] = scripts that run on the files of the 2015 study when
+these are given as arguments; those files and everything derived from them are not part of this release. -->
+
+Release for the paper "Polar and rotational soft modes as heat carriers and scattering partners in cubic SrTiO₃".
+Code, tables and new raw-output archives form one new version of the Zenodo record (concept DOI
+10.5281/zenodo.20559513).
+
+## What is new
+
+- **Second model.** Model B: a fit (H1) of orders three to six to the 300 K force data of Lin et al. (Materials
+  Cloud Archive 2026.91, CC BY-NC 4.0) with the DFPT harmonic force constants of that dataset fixed; a companion fit
+  (H2) with the harmonic terms fitted, used for frequencies only.
+- **Family labels.** Polar, rotational and neither, from the atomic motion of each degenerate group, with a rule fixed
+  before any result was resolved by family; four definitions (primary 0.4 / 0.5 / 0.6, unweighted polar 0.5).
+- **Linewidth partition.** A patch of `anphon` (`tools/alamode_patches/t3_partition.diff`) records, per carrier, the
+  three-phonon linewidth split by the labels of the two partners, without changing the standard outputs.
+- **Analyses.** Carriers of half of κ<sub>P</sub> and their scattering partners (16³ and 20³, 300 K and 600 K); the comparison
+  of rotational and non-rotational partners within frequency bands (105 / 145 / 160 cm⁻¹, and 80 / 95 cm⁻¹ below
+  105); full against symmetry-reduced tetrahedron sum (8³, 16³); the penalty endpoints and the reduced-basis refit of
+  model A.
+- **[HELD] Scripts for the archived 2015 fit**: in the configuration of the 2015 study and under the settings of model
+  A. They take the files of the 2015 study as arguments; those files and their outputs are not included.
+- **Scripts and tables.** `scripts/v4/` regenerates the processed outputs from the raw outputs (`regenerate_v4.py`;
+  [HELD] `regenerate_v4_held.py`), the tables (`build_tables_v4.py`) and the number table
+  (`build_manuscript_numbers_v4.py` → `data/processed/v4/manuscript_numbers_v4_{a,b}.csv`). Figure scripts in
+  `scripts/v4/figures/`.
+- **Provenance.** `data/provenance/v4/run_map.csv` names every run by what it does next to its job name;
+  `manifest_v4.json` lists every file with its sha256 and the build id.
+- **Package.** `fekappa.modes` (degenerate groups, group-averaged linewidths, mesh and cell from `rta.in`) and
+  `fekappa.partition` (readers of the partition output and of `.result` linewidths), with tests. Version 4.0.0.
+- **Tests.** 308 passed / 8 skipped in a clean checkout without raw outputs.
+
+## What is superseded from v3.1.1
+
+- The key results and the status text of the v3 README (zone-resolved damping and the κ decomposition of the
+  v3 paper) are replaced by those of this paper.
+- The v3 folders `scripts/revision/` and `data/processed/revision/` are renamed `scripts/v3/` and
+  `data/processed/v3/`; path references inside the files are updated, contents otherwise unchanged
+  (`docs/PATH_MAP_v3.md`). The v3.1.1 archives and `data/provenance/manifest_final.json` keep the old names.
+- `data/processed/manuscript_numbers_v8.csv` is the number table of the v3 paper; the v4 paper uses
+  `data/processed/v4/manuscript_numbers_v4_{a,b}.csv`.
+
+## What is unchanged
+
+- The model A production dataset of v3 (SCPH on q₁ = 12³, RTA on 8³–24³, eigenvectors) and its raw-output archives;
+  v4 reuses these runs (`run_map.csv`, archive "v3 (reused)").
+- `data/processed/sto_production/`, `data/processed/v3/` (renamed), `data/processed/si_v4/`, `data/literature/`,
+  `queue/`, the four-phonon patches and `docs/recorded_rules.md`.
+
+## Raw outputs (new Zenodo archives of this version)
+
+Archives `v4_runs_a`, `v4_runs_b`, `v4_fits_b`, `v4_processed_a` and `v4_processed_b`, each holding the run
+directories or files under their run-map names; `manifest_v4.json` gives the sha256 of every file. In 21
+`renorm.xml` files of `v4_runs_a` and `v4_runs_b` the home path of the compute node in the header is replaced by
+`<home>`; the manifest records both hashes (`sha256` as produced, `sha256_archived`).
+
 # Ferroelectric-Kappa-SCPH — Reproducibility Package (v3.1.1)
 
 Removes the journal name from the Zenodo packaging script (`tools/zenodo/make_release_v3.py`: the README template and
@@ -19,7 +77,7 @@ tables.
 
 # Ferroelectric-Kappa-SCPH — Reproducibility Package (v3.0.0)
 
-Release for the revised manuscript on zone-resolved soft-mode damping and the particle/coherence decomposition of
+Release for the v3 manuscript on zone-resolved soft-mode damping and the particle/coherence decomposition of
 the thermal conductivity of cubic SrTiO₃ (300–1000 K). Code, tables and the raw outputs (Zenodo archives) form one
 new version of the Zenodo record (concept DOI 10.5281/zenodo.20559513), so the paper cites one version DOI.
 
@@ -82,7 +140,7 @@ in the manifest as excluded.
 
 # Ferroelectric-Kappa-SCPH — Reproducibility Package (v2.0.0)
 
-Revision release accompanying the resubmission of the manuscript as a computational study
+Release of the manuscript as a computational study
 of SrTiO₃ (SCPH-coupled anharmonic lattice dynamics; BaTiO₃/KTaO₃ as literature-benchmarked
 context). Archived as a **new version of the existing Zenodo record**
 (concept DOI lineage 10.5281/zenodo.20559513) so the version history stays linked.

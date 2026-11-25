@@ -14,7 +14,7 @@ All notebook gates PASS. No publisher PDFs tracked; all figures gitignored (rege
 notebooks); the one curated notebook-stage interface (`section4_eta_kappa_triples.csv`) is
 tracked.
 
-**Revision state (v2, computed SrTiO₃ core, 2026-08-18).** Test suite **297 passed /
+**State (v2, computed SrTiO₃ core, 2026-08-18).** Test suite **297 passed /
 2 skipped**; `ruff` clean (`src`, `tests`). New gates all PASS: tidy-table row counts and
 locked benchmark numbers (κ(300 K) = 9.5283 W/mK; 0/525 vs 11/525 unstable; τ = 16.19/17.54
 ps at 54.9 cm⁻¹); mode-sum closure vs the solver κ ≤ 0.3 % at all 21 temperatures; five-way
@@ -23,7 +23,7 @@ fed literature inputs; HWHM-once regression extended to the computed dataset. Th
 production run regenerates bit-for-bit after a toolchain rebuild. Standing caveat C8 (below)
 records the fixed-cell SCPH Ω₀ systematic and its handling.
 
-**Revision state (v3, production dataset of the revised manuscript, 2026-10-24).**
+**State (v3, production dataset of the v3 manuscript, 2026-10-24).**
 - Data: own SCPH on q₁ = 12³ with polarization mixing, 300–1000 K. The 170 entries of
   `data/provenance/manifest_final.json` are 169 lattice-dynamics runs and one entry recording the SCPH-grid
   selection rule (`d0_decision`).
@@ -33,10 +33,27 @@ records the fixed-cell SCPH Ω₀ systematic and its handling.
     closure; six coherence blocks summing to the pair sum; the three character projections summing to one;
   - the independent count of the four-phonon excluded set, which reproduces the audit-build counters at 4³;
   - the queue unit tests;
-  - provenance headers on every revision table.
+  - provenance headers on every v3 table.
 - Regeneration: every main-text number and Figs. 1–4 and S1–S8 regenerate from tracked tables. The figures are
   pixel-identical to the manuscript build.
 - Caveats C9–C14 below are specific to v3. C8's statement on κ(T) refers to the v2 dataset; for v3, see C10.
+
+
+**State (v4, paper "Polar and rotational soft modes as heat carriers and scattering partners in cubic SrTiO₃").**
+<!-- DRAFT: facts only; the author writes the text. [HELD] = needs the files of the 2015 study, which are not part
+of this release. -->
+- Data: model A (distributed example) and model B (fit H1 to the Materials Cloud Archive 2026.91 force data), SCPH on
+  q₁ = 12³, transport on 16³ (20³ for the mesh test; 8³ for the full-sum test), 300 K and 600 K. Every run of v4 is in
+  `data/provenance/v4/run_map.csv` with its job name, and in `manifest_v4.json` with the sha256 of every file.
+- Linewidth partition: patched `anphon` (`tools/alamode_patches/t3_partition.diff`). The patched runs reproduce the
+  base build's `.result`, `.kl`, `.kl_coherent` and `.kc_elem` byte for byte; the sum of the recorded bins equals the
+  base linewidth per carrier to ≤ 1.5 × 10⁻¹⁴ (relative), and equals the printed `.result` width to its 6 digits.
+- Family labels: the frozen rule (polar score weighted by cos²(πq) per axis, rotational score by sin²(πq_b) sin²(πq_c));
+  labels invariant under the symmetry of the mesh (0 violations).
+- Tests (v4): 308 passed / 8 skipped in a clean checkout without raw outputs (8 new tests for
+  `fekappa.modes` and `fekappa.partition`).
+- Regeneration: from the stored raw outputs, the scripts reproduce the 343 keys of the number table in parts a and
+  b, and Figs. 1, 3, 4, 5, S2 and S3 byte for byte.
 
 ---
 
@@ -155,6 +172,20 @@ records the fixed-cell SCPH Ω₀ systematic and its handling.
   - The bookkeeping count 210 N_k includes the 78 ordered Γ pairs that involve a translation. Their stored
     contributions are exactly zero; removing them gives 860082 pairs on 16³.
   - A fraction of pair counts is not the fraction of κ<sub>C</sub> those pairs carry.
+
+- **C15 (v4) — 2 × 2 × 2 supercell force constants.** All three sets of force constants come from 2 × 2 × 2 supercells;
+  model A and the archived fit share one set of force data. Errors shared by this cell size are not tested.
+- **C16 (v4) — Three-phonon RTA.** Transport includes three-phonon scattering in the relaxation-time approximation and
+  a separate coherence term; isotope scattering is omitted; four-phonon scattering is not included.
+- **C17 (v4) — R-mode frequency.** Models A and B place the R mode at 300 K at 25.8 and 22.9 cm⁻¹ (q₁ = 12³, Ewald
+  treatment), below the value of about 53 cm⁻¹ read from published neutron data; the band-resolved shares involve the
+  lowest rotational modes.
+- **C18 (v4) — Carrier set and reduced sum.** Linewidth shares refer to the half-current carrier set. The production
+  runs use the symmetry-reduced tetrahedron sum; the full sum was run on 16³ for both models and on 8³, not on 20³,
+  and the band-resolved shares were computed with the reduced sum only (SI S10).
+- **C19 (v4) — Model B at 600 K** is outside its 300 K training distribution.
+- **C20 (v4) — [HELD] Benchmark of the 2015 calculation.** Needs the files of the 2015 study; its outputs are not
+  part of this release.
 
 ---
 
