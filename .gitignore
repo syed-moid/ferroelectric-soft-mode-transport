@@ -45,7 +45,7 @@ data/processed/*
 !data/processed/alamode_crosscheck/
 !data/processed/sto_alamode/
 !data/processed/sto_production/
-!data/processed/revision/
+!data/processed/v3/
 !data/processed/si_v4/
 !data/processed/manuscript_numbers_v8.csv
 

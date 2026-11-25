@@ -1,4 +1,4 @@
-# source: data/raw/alamode_sto/revision/pm_q12 (own SCPH q1=12^3, PM; anphon RTA tetrahedron, NONANALYTIC=3, KAPPA_COHERENT=2) + MODE=phonons eigenvectors on the same FC2/mesh; script scripts/revision/prod_analysis.py
+# source: data/raw/alamode_sto/revision/pm_q12 (own SCPH q1=12^3, PM; anphon RTA tetrahedron, NONANALYTIC=3, KAPPA_COHERENT=2) + MODE=phonons eigenvectors on the same FC2/mesh; script scripts/v3/prod_analysis.py
 T_K,mesh,labels,kappa_C_pairsum,kC_A_A,kC_A_hard,kC_A_soft,kC_hard_hard,kC_hard_soft,kC_soft_soft
 250,12,char,0.273582,0.0061266,0.0234867,0.0347129,0.164155,0.0230707,0.0220304
 250,12,freq,0.273582,0.0326265,0.00529018,0.0316044,0.194591,0.00916421,0.000306047

@@ -12,7 +12,7 @@ Colour (dataviz skill; palette validated with a Python port of validate_palette.
   sectors -> categorical slots 1-3 (blue / orange / aqua; all-pairs CVD dE 9.2, normal-vision 24.0), hard = aqua
   in Figs. 3 and 4; calculation vs experiment in Fig. 3(a) -> neutral ink with distinct markers.
 Inputs: data/processed/sto_production/{kappa_mesh_T,eta_validity_T,kappa_sectors_T,coherence_blocks_T}.csv,
-mode_table_T.csv.gz; data/processed/revision/exp_datasets.csv. Output: out/v8_fig{1..4}.{pdf,png}.
+mode_table_T.csv.gz; data/processed/v3/exp_datasets.csv. Output: out/v8_fig{1..4}.{pdf,png}.
 """
 from __future__ import annotations
 
@@ -28,7 +28,7 @@ from fekappa.plots import set_publication_style  # noqa: E402
 
 set_publication_style()
 PROD = ROOT / "data/processed/sto_production"
-PJ = ROOT / "data/processed/revision"
+PJ = ROOT / "data/processed/v3"
 rd = lambda f: pd.read_csv(f, comment="#")
 km, eta, sec, coh = (rd(PROD / f) for f in ("kappa_mesh_T.csv", "eta_validity_T.csv", "kappa_sectors_T.csv",
                                              "coherence_blocks_T.csv"))

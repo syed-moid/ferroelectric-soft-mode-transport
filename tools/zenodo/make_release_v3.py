@@ -115,13 +115,13 @@ Checksums: `shasum -a 256 -c SHA256SUMS`. Unpack: `tar -xzf <file>.tar.gz`.
 ## How the parts fit
 
 1. Unpack the code archive; install with Python 3.11: `pip install -e ".[dev]"` (or `uv sync --frozen --extra dev`).
-2. From tracked tables alone (no raw data needed): `pytest`; `python scripts/revision/build_manuscript_numbers_v8.py`
+2. From tracked tables alone (no raw data needed): `pytest`; `python scripts/v3/build_manuscript_numbers_v8.py`
    regenerates every number of the main text; `cd paper/figures && python make_v8_figures.py && python
    make_si_v4_figures.py` regenerates Figs. 1–4 and S1–S8.
 3. To regenerate the tables from the raw outputs: unpack the variant archives inside the code tree with
    `mkdir -p data/raw/alamode_sto/revision && for f in pm_q12_rta pm_q12_evec scph_q12 scph_q16 pm_q8 pm_q12_4ph_audit;
    do tar -xzf $f.tar.gz --strip-components=1 -C data/raw/alamode_sto/revision; done`; unpack `prequeue_runs.tar.gz`
-   anywhere and set `FEKAPPA_RUNS` to its `prequeue_runs/` directory; then run the scripts of `scripts/revision/` in the
+   anywhere and set `FEKAPPA_RUNS` to its `prequeue_runs/` directory; then run the scripts of `scripts/v3/` in the
    order of its README. `FEKAPPA_TOOLCHAIN` (the ALAMODE example inputs) is needed only for the input checksums of SI
    Table S1, and `FEKAPPA_DFPT` only for the harmonic cross-check.
 4. Every queue job, with the sha256 of every file and the build id of its binary, is in `manifest_final.json`

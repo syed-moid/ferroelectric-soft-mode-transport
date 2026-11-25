@@ -1,5 +1,5 @@
-# script: scripts/revision/build_si_tables_v4.py
-# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# script: scripts/v3/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/v3/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
 # generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
 # 4³, 300 K: diagram (c) Γ₄ (HWHM, cm⁻¹) of the unmodified and the audit build; fit Γ₄ = a/ε + B to the unmodified values (manifest jobs m4ph_pm_q12_T300_m4_e*, a1_per_mesh.csv)
 mode,eps,G4_unpatched,G4_patched,removed,fit_a_over_eps,fit_B,removed_over_fit_pct

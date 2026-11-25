@@ -32,7 +32,7 @@ inputs, the sha256 of every file, its build id and its Zenodo archive (`archive_
 | `pm_q8/`, `pm_q8_mix0p1/` | SCPH on q₁ = 8³, its RTA runs, and the reduced-mixing run | `pm_q8` |
 | `pm_q12_4ph_audit/`, `pm_q12_4ph_audit_tol1e6/`, `pm_q12_4ph_trace/`, `pm_q12_4ph_v1omit/`, `pm_q12_4ph_v2strict/`, `pm_q12_4ph_v3dump/` | per-mode four-phonon runs of the rule, tolerance, trace and validation builds (`tools/alamode_patches/BUILD.md`) | `pm_q12_4ph_audit` |
 
-To rerun `scripts/revision/`, unpack the archives of the Zenodo record (concept DOI 10.5281/zenodo.20559513) into
+To rerun `scripts/v3/`, unpack the archives of the Zenodo record (concept DOI 10.5281/zenodo.20559513) into
 `data/raw/alamode_sto/revision/`. The runs made before the queue existed are in the archive `prequeue_runs`; point
 `FEKAPPA_RUNS` at it.
 

@@ -1,4 +1,4 @@
-# source: data/raw/alamode_sto/revision/pm_q12 (own SCPH q1=12^3, PM; anphon RTA tetrahedron, NONANALYTIC=3, KAPPA_COHERENT=2) + MODE=phonons eigenvectors on the same FC2/mesh; script scripts/revision/prod_analysis.py
+# source: data/raw/alamode_sto/revision/pm_q12 (own SCPH q1=12^3, PM; anphon RTA tetrahedron, NONANALYTIC=3, KAPPA_COHERENT=2) + MODE=phonons eigenvectors on the same FC2/mesh; script scripts/v3/prod_analysis.py
 T_K,mesh,n_irred_modes,n_in_map,closure_rel,eta_max,eta_max_omega_cm1,eta_max_q_index,eta_max_branch,eta_max_sector_char,eta_max_sector_freq,eta_median_unweighted,eta_median_mesh,eta_median_kappa,frac_eta_gt_0p05_mesh,frac_eta_gt_0p05_kappa,frac_eta_gt_0p1_mesh,frac_eta_gt_0p1_kappa,frac_eta_gt_0p5_mesh,frac_eta_gt_0p5_kappa
 250,12,1260,1257,0.000539187,0.325791,14.6451,84,1,hard,A,0.0125511,0.0131519,0.0131519,0.00347262,0.00753877,0.000347262,9.33037e-05,0,0
 250,16,2475,2472,0.000407409,0.368394,14.6451,165,1,hard,A,0.0122085,0.0129402,0.0132109,0.00346697,0.0107448,0.000146492,2.93206e-05,0,0

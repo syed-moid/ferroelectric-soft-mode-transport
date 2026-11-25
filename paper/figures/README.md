@@ -21,8 +21,8 @@ python make_supp.py                  # v5 supplementary
 
 | Script | Figures | Data dependency |
 | --- | --- | --- |
-| `make_v8_figures.py` | main-text Figs. 1–4 (`out/v8_fig{1..4}`) | `data/processed/sto_production/`, `data/processed/revision/exp_datasets.csv` |
-| `make_si_v4_figures.py` | SI Figs. S1–S8 (`out/si_fig{1..8}`) | `data/processed/si_v4/`, `data/processed/revision/`, `data/processed/sto_production/` |
+| `make_v8_figures.py` | main-text Figs. 1–4 (`out/v8_fig{1..4}`) | `data/processed/sto_production/`, `data/processed/v3/exp_datasets.csv` |
+| `make_si_v4_figures.py` | SI Figs. S1–S8 (`out/si_fig{1..8}`) | `data/processed/si_v4/`, `data/processed/v3/`, `data/processed/sto_production/` |
 
 Both read tracked tables only: `python make_v8_figures.py && python make_si_v4_figures.py` from this directory.
 

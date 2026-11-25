@@ -1,5 +1,5 @@
-# script: scripts/revision/build_si_tables_v4.py
-# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# script: scripts/v3/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/v3/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
 # generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
 # lowest SCPH frequencies at 300 K (cm⁻¹) against Tadano & Tsuneyuki 2015 Table I (meV × 8.0655, not rounded; differences from the unrounded values) (r_point_check.csv; data/literature/STO/tadano_2015/scph_convergence_300K.csv)
 q1,PM,Gamma_ours,Gamma_tadano,Gamma_diff_pct,R_ours,R_tadano,R_diff_pct,M_ours,M_tadano,M_diff_pct

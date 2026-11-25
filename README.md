@@ -74,9 +74,9 @@ v3.1.1 accompanies the revised manuscript. Standing caveats and checks are in
 | `src/fekappa/plots.py` | publication matplotlib style |
 | `notebooks/` | 01–09 (+05b, 07b): inventory → benchmarks → kernel |
 | `paper/figures/` | manuscript figure scripts (`out/` renders gitignored) |
-| `scripts/revision/` | revision analysis scripts: raw outputs → tables → manuscript numbers (`scripts/revision/README.md`) |
+| `scripts/v3/` | revision analysis scripts: raw outputs → tables → manuscript numbers (`scripts/v3/README.md`) |
 | `data/processed/sto_production/` | production tables (q₁ = 12³, polarization mixing): κ per T and mesh, mode table, damping map, sectors, coherence blocks |
-| `data/processed/revision/` | revision tables with provenance headers (benchmark, convergence, labels, pair factors, four-phonon diagnostics) |
+| `data/processed/v3/` | revision tables with provenance headers (benchmark, convergence, labels, pair factors, four-phonon diagnostics) |
 | `data/processed/si_v4/` | the tables of the Supplementary Information |
 | `data/processed/manuscript_numbers_v8.csv` | every number of the revised main text, with its source table |
 | `data/provenance/` | scrubbed job manifest: 170 entries, 169 lattice-dynamics runs and one entry recording the SCPH-grid selection rule (inputs, outputs, sha256, build ids) |
@@ -100,7 +100,7 @@ pip install -e ".[dev]"
 ## Data
 
 **Revision calculations (v3).** The raw outputs of every job are in the Zenodo record of this release, one archive
-per variant. Unpack them under `data/raw/alamode_sto/revision/` to rerun `scripts/revision/`. The job manifest
+per variant. Unpack them under `data/raw/alamode_sto/revision/` to rerun `scripts/v3/`. The job manifest
 `data/provenance/manifest_final.json` gives the sha256 of every input and output file and the build id of the binary
 that produced it. The runs made before the job queue existed are in the archive `prequeue_runs`; set
 `FEKAPPA_RUNS` to the unpacked directory. Zenodo: concept DOI 10.5281/zenodo.20559513 (all versions).
@@ -125,12 +125,12 @@ Revised manuscript and SI (from tracked tables only):
 
 ```bash
 pip install -e ".[dev]"
-python scripts/revision/build_manuscript_numbers_v8.py   # data/processed/manuscript_numbers_v8.csv
+python scripts/v3/build_manuscript_numbers_v8.py   # data/processed/manuscript_numbers_v8.csv
 (cd paper/figures && python make_v8_figures.py && python make_si_v4_figures.py)   # Figs. 1–4, S1–S8 in out/
 pytest
 ```
 
-The tables themselves regenerate from the raw outputs with the scripts in `scripts/revision/` (order and inputs in
+The tables themselves regenerate from the raw outputs with the scripts in `scripts/v3/` (order and inputs in
 its README).
 
 Earlier releases: analysis notebooks live in `notebooks/` (data inventory and pre-flight gate → per-material

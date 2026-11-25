@@ -1,5 +1,5 @@
-# script: scripts/revision/build_si_tables_v4.py
-# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# script: scripts/v3/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/v3/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
 # generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
 # coherence blocks on 16³, both rules: size, pair counts and κ-weighted pair factors (e1_prod_block_factors.csv, e1_pair_counts.csv)
 labels,T_K,block,kappa_block,share_of_kC,n_pairs,pair_frac,per_pair_rel,n_pairs_w,pair_frac_w,per_pair_rel_w,kw_mean_abs_dw_cm1,kw_mean_G1pG2_cm1,kw_mean_H,sum_V,frac_pairs_dw_lt_G

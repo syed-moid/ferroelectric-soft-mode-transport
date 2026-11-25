@@ -1,5 +1,5 @@
-# script: scripts/revision/build_si_tables_v4.py
-# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# script: scripts/v3/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/v3/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
 # generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
 # heat-carrier samples, ε = 5 cm⁻¹, two modes per row: Γ₄/Γ₃ and 1/(1 + Γ₄/Γ₃) at the same settings (n4_results.csv)
 sample,class_300K,G4_over_G3_300,lifetime_factor_300,G4_over_G3_800,lifetime_factor_800

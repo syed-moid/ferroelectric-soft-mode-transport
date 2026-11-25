@@ -12,8 +12,8 @@ tables.
 
 - Removed: `data/literature/STO/tachibana_2008/`, its loader in `fekappa.literature_io` and its tests; the Tachibana
   rows of `exp_datasets.csv` and of `manuscript_numbers_v8.csv`.
-- Added: `scripts/revision/dfc2_reproduction_check.py` → `data/processed/revision/dfc2_reproduction.csv`;
-  `scripts/revision/s7_ratios_single_rounding.py` → `data/processed/revision/s7_ratios_unrounded.csv`.
+- Added: `scripts/v3/dfc2_reproduction_check.py` → `data/processed/v3/dfc2_reproduction.csv`;
+  `scripts/v3/s7_ratios_single_rounding.py` → `data/processed/v3/s7_ratios_unrounded.csv`.
 - The raw-output archives are those of v3.0.0, unchanged.
 - Package version 3.1.0.
 
@@ -50,8 +50,8 @@ new version of the Zenodo record (concept DOI 10.5281/zenodo.20559513), so the p
   - These are implementation checks of a stated finite-mesh prescription, not a converged four-phonon conductivity.
 - **Recorded rules.** `docs/recorded_rules.md` gives each rule and prediction (R1–R11) with the UTC time it was
   written, the runs it governs, its outcome and the SI section that reports it.
-- **Scripts and tables.** `scripts/revision/` regenerates every table from the raw outputs. Every table in
-  `data/processed/revision/` and `data/processed/si_v4/` carries a provenance header (`fekappa.provenance`). The
+- **Scripts and tables.** `scripts/v3/` regenerates every table from the raw outputs. Every table in
+  `data/processed/v3/` and `data/processed/si_v4/` carries a provenance header (`fekappa.provenance`). The
   main-text numbers (`manuscript_numbers_v8.csv`) and Figs. 1–4 and S1–S8 regenerate from tracked tables alone.
 - **Compute queue.** `queue/` holds the checkpointed runner (stdlib only), the job specs and its unit tests.
 - **Package.**

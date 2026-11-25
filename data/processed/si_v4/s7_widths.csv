@@ -1,5 +1,5 @@
-# script: scripts/revision/build_si_tables_v4.py
-# inputs: data/processed/sto_production/; data/processed/revision/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
+# script: scripts/v3/build_si_tables_v4.py
+# inputs: data/processed/sto_production/; data/processed/v3/; data/provenance/manifest_final.json; data/literature/STO/; tools/alamode_patches/; zenodo:pm_q12_rta.tar.gz, scph_q12.tar.gz, pm_q8.tar.gz, pm_q12_4ph_audit.tar.gz (data/raw/alamode_sto/revision/); $FEKAPPA_TOOLCHAIN/sto_example (STO_anharm.xml, BORN)
 # generated: 2026-10-26; fekappa 3.0.0; manifest_final.json sha256 b9e3d32ab98b
 # four-phonon widths, one formula: η₃ = Γ₃(16³ production)/Ω, η₄ = Γ₄/Ω, η₃ + η₄; η₃₊₄ at the same settings uses Γ₃ on the four-phonon mesh (eta4_margin_cases.csv, a1_per_mesh*.csv, mode_table_T.csv.gz)
 T_K,mode,rule,mesh,eps,omega_cm1,Gamma3,Gamma3_prod16,Gamma4,eta3_prod,eta4,eta34_prod,eta34_same

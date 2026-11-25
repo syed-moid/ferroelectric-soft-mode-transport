@@ -40,7 +40,7 @@ run and two of these RTA runs were made before the queue started and were import
 | 300 | 12³ | 9.1112 | 0.2772 | 133.69 | 79.86 | 25.82 |
 | 300 | Δ (%) | −1.38 | −0.65 | −0.26 | −1.19 | −10.73 |
 
-Tables: `data/processed/revision/d_q1_freq_shift.csv`, `data/processed/si_v4/s1_scph_convergence.csv`.
+Tables: `data/processed/v3/d_q1_freq_shift.csv`, `data/processed/si_v4/s1_scph_convergence.csv`.
 
 ## R2. κ<sub>C</sub> at 24³, 300 K
 
@@ -59,7 +59,7 @@ Tables: `data/processed/revision/d_q1_freq_shift.csv`, `data/processed/si_v4/s1_
   convention: with r of the coarser mesh the 300 K 20³ → 24³ pair has r = 0.59. Later comparisons use r of the coarser
   mesh of each pair.
 
-Tables: `data/processed/revision/d2_summary.csv`, `data/processed/sto_production/kappa_mesh_T.csv`.
+Tables: `data/processed/v3/d2_summary.csv`, `data/processed/sto_production/kappa_mesh_T.csv`.
 
 ## R3. Acceptance tests of the four-phonon exclusion build
 
@@ -81,7 +81,7 @@ mesh, so it cannot be matched to 0.8 %.
 - Excluded counts, code against the independent count: 11268 / 11268 (Γ-TO1), 11268 / 11268 (R), 3772 / 3772 (M).
 - Removed amount: 99.7 % (R) to 102–103 % (Γ-TO1, M) of the fitted a/ε.
 
-Tables: `data/processed/si_v4/s7_gate_4cubed.csv`, `data/processed/revision/a1_identity_counts.csv`.
+Tables: `data/processed/si_v4/s7_gate_4cubed.csv`, `data/processed/v3/a1_identity_counts.csv`.
 
 ## R4. Four-phonon rule, 300 K mesh sequence
 
@@ -104,7 +104,7 @@ rule build `alamode_4ph_audit` (`tools/alamode_patches/BUILD.md`).
 | M | 1.754 / 2.100 / 2.335 | 1.662 | 0.79 | 1.33 | 0.064 |
 | R | 1.692 / 1.979 / 2.092 | 2.111 | 1.07 | 1.24 | 0.243 (in this model) |
 
-Tables: `data/processed/revision/a1_decision.csv`, `a1_per_mesh.csv`.
+Tables: `data/processed/v3/a1_decision.csv`, `a1_per_mesh.csv`.
 
 ## R5. Four-phonon rule, 1000 K
 
@@ -115,7 +115,7 @@ Tables: `data/processed/revision/a1_decision.csv`, `a1_per_mesh.csv`.
 > Γ-TO1 85.6, M 53.2, R 39.1, X branch 7: 108.7, R branch 13: 232.1.
 
 **Outcome.** All five modes passed S1 and S2 and fell in the first class. Γ₄,max / Γ₄,thr = 0.052 (Γ-TO1), 0.110
-(M), 0.143 (R, in this model), 0.083 (X b7), 0.034 (R b13). Tables: `data/processed/revision/a1_decision_T1000.csv`,
+(M), 0.143 (R, in this model), 0.083 (X b7), 0.034 (R b13). Tables: `data/processed/v3/a1_decision_T1000.csv`,
 `a1_per_mesh_T1000.csv`.
 
 ## R6. Heat-carrier sample
@@ -132,7 +132,7 @@ Tables: `data/processed/revision/a1_decision.csv`, `a1_per_mesh.csv`.
 - Lifetime factor 1/(1 + Γ₄/Γ₃) = 0.48–0.90 at 300 K and 0.47–0.87 at 800 K.
 - The sample carries 1.2–1.3 % of κ<sub>P</sub>.
 
-Tables: `data/processed/revision/n4_selection.csv`, `n4_results.csv`.
+Tables: `data/processed/v3/n4_selection.csv`, `n4_results.csv`.
 
 ## R7. Identity-tolerance sensitivity
 
@@ -144,7 +144,7 @@ Tables: `data/processed/revision/n4_selection.csv`, `n4_results.csv`.
 
 **Outcome.** The largest change is 1.9 % (R, ε = 2), and every change is a decrease. The 10 % condition was not
 reached, so no 8³ run followed. Tables: `data/processed/si_v4/s7_tolerance.csv`; printed outputs in
-`data/processed/revision/s21_tolerance_printed.txt`.
+`data/processed/v3/s21_tolerance_printed.txt`.
 
 ## R8. κ<sub>C</sub> at 20³, 1000 K
 
@@ -155,7 +155,7 @@ reached, so no 8³ run followed. Tables: `data/processed/si_v4/s7_tolerance.csv`
 > |Δκ<sub>C</sub>(16³→20³)| ≤ 2.2%.
 
 **Outcome.** Held: κ<sub>C</sub>(20³, 1000 K) = 0.50306 W m⁻¹ K⁻¹, Δκ<sub>C</sub> = −2.27 % (pair sums). Tables:
-`data/processed/revision/d2_summary.csv`, `data/processed/sto_production/kappa_mesh_T.csv`.
+`data/processed/v3/d2_summary.csv`, `data/processed/sto_production/kappa_mesh_T.csv`.
 
 ## R9. Additive form of the four-phonon margin
 
@@ -165,7 +165,7 @@ sample, so a statement based on "Γ₄/Γ₃ ≤ 1 in every sampled mode" no lon
 - The ratio form is kept as an SI table.
 
 No pass/fail test is attached. Over the 71 mesh/ε cases the largest η₄ is 0.0818 (R, 300 K, 8³, ε = 5). Tables:
-`data/processed/revision/eta4_margin.csv`, `eta4_margin_cases.csv`.
+`data/processed/v3/eta4_margin.csv`, `eta4_margin_cases.csv`.
 
 ## R10. Labelling of exactly degenerate subspaces
 
@@ -175,7 +175,7 @@ depends on the basis returned by the diagonalizer.
 - The per-eigenvector label is kept as `sector_char_eig`.
 
 The change affects 6 % of such subspaces, carrying at most 0.16 % of κ<sub>P</sub>, and moves the hard/hard share of κ<sub>C</sub> by
-at most 0.6 percentage points. Table: `data/processed/revision/sector_degeneracy.csv`.
+at most 0.6 percentage points. Table: `data/processed/v3/sector_degeneracy.csv`.
 
 ## R11. Implementation checks of the exclusion
 
@@ -195,4 +195,4 @@ Written after the results of R4–R7. These checks verify the implementation; th
 - The trace of one quartet agrees with the code to ≤ 2 × 10⁻¹⁵ relative.
 - The full-precision dump explains the 6³ count difference of R4 as the 7-digit precision of the eigenvalue file.
 
-Tables: `data/processed/revision/v1_validation.csv`, `v1_removed_vs_mesh.csv`.
+Tables: `data/processed/v3/v1_validation.csv`, `v1_removed_vs_mesh.csv`.

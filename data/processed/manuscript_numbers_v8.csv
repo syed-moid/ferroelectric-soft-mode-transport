@@ -1,5 +1,5 @@
-# script: scripts/revision/build_manuscript_numbers_v8.py
-# inputs: data/processed/sto_production/; data/processed/revision/; data/processed/si_v4/; data/provenance/manifest_final.json; data/literature/STO/
+# script: scripts/v3/build_manuscript_numbers_v8.py
+# inputs: data/processed/sto_production/; data/processed/v3/; data/processed/si_v4/; data/provenance/manifest_final.json; data/literature/STO/
 # generated: 2026-10-31; fekappa 3.1.0; manifest_final.json sha256 b9e3d32ab98b
 # v8 placeholder values from production only (own SCPH q1 = 12^3, PM); 300-1000 K main text
 # status FINAL / CHOICE / PENDING

@@ -1,8 +1,8 @@
 """Provenance headers for the derived tables, and the locations of inputs kept outside the repository.
 
-Every table written by `scripts/revision/` starts with three comment lines:
+Every table written by `scripts/v3/` starts with three comment lines:
 
-    # script: scripts/revision/<name>.py
+    # script: scripts/v3/<name>.py
     # inputs: <repo-relative paths, or zenodo:<archive>/<path>, or $FEKAPPA_RUNS/<dir>>
     # generated: <UTC date>; fekappa <version>; manifest_final.json sha256 <12 hex>
 

@@ -26,7 +26,7 @@ from fekappa.plots import set_publication_style  # noqa: E402
 
 set_publication_style()
 PROD = ROOT / "data/processed/sto_production"
-PJ = ROOT / "data/processed/revision"
+PJ = ROOT / "data/processed/v3"
 SI = ROOT / "data/processed/si_v4"
 rd = lambda f: pd.read_csv(f, comment="#")
 RAMP3 = ["#5598e7", "#256abf", "#0d366b"]          # blue steps 350 / 500 / 700 (ordinal; darker for print and grayscale)
