@@ -4,7 +4,7 @@
 Same panels, series and sources as make_figure_drafts.fig_softmodes, plus the archived 2015 fit in the configuration
 of the 2015 study (archived force constants, mixed-space non-analytic term, Born data of that study), on the grids
 2, 4, 8, 12 (soft-mode tables written by scripts/v4/scph_softmodes.py from those SCPH runs). This figure needs the
-files of the 2015 study (held part of the release).
+files of the 2015 study, which are not in this release.
 Colour: categorical slot 4 of the reference palette, with its own marker (triangle) and line style (dotted).
 Usage (repository root): make_fig2_softmode_grid.py KPETA_CUM_A KPETA_CUM_B B3_SOFTMODES_CSV SOURCE_BANDS OUTDIR
                          ARCHIVED_SOFTMODES_CSV [ARCHIVED_SOFTMODES_CSV ...]

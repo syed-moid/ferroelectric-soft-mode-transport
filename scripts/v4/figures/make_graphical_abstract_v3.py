@@ -7,7 +7,8 @@ no callout. New headings and subtitles for panels 2 and 3, "polar ≈ 0.5%", "ne
 model names A and B once, and a new bottom line. Every plotted and printed number is read from the processed outputs
 that feed the manuscript tables (FIT_FILES and FIELDS below: file and field for each number); panel 3's callout and
 the bottom line give the range of the plotted ratios below 80 cm⁻¹. --without-archived draws models A and B only and
-reads nothing of the held part; the figure with the archived fit needs the held outputs (--held).
+reads nothing that needs the files of the 2015 study; the figure with the archived fit needs the outputs of those
+steps (--held; not in this release).
 
 Three questions at 300 K (16^3 transport mesh, primary family rule c_min 0.5, TRISYM = 1), for model A, model B and
 the archived 2015 fit under the settings of model A:
@@ -20,7 +21,7 @@ Usage (repository root):
   python scripts/v4/figures/make_graphical_abstract_v3.py --out DIR [--without-archived | --held HELD]
       [--a DIR] [--b DIR] [--without-names] [--size W H] [--dpi DPI]
 --a / --b: processed outputs of parts a and b (default data/processed/v4/a and data/processed/v4/b); --held: the
-processed outputs of the held part (t4/t4_P_summary.json, t5_P.json, t5b_P.json). The layout checks at the end stop the script with an error if any text lies outside
+processed outputs of the steps that need the files of the 2015 study (t4/t4_P_summary.json, t5_P.json, t5b_P.json). The layout checks at the end stop the script with an error if any text lies outside
 the figure or two texts overlap; text is never rescaled for other sizes.
 """
 import argparse

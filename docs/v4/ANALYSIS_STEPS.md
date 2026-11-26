@@ -1,11 +1,15 @@
 # Analysis steps of v4
 
-<!-- DRAFT: a map of the steps, their scripts and runs. No interpretation. Steps marked [HELD]
-need the files of the 2015 study. Run names: data/provenance/v4/run_map.csv. -->
-
 Each step names what it computes, the script in `scripts/v4/`, the runs it reads and the outputs in
 `data/processed/v4/` (a = model A, b = model B). Rules marked "fixed before" were written down before the
-calculation they govern; the dated records are part of the author's working notes, not of this package.
+calculation they govern; the dated records are part of the author's working notes, not of this package. Run names:
+`data/provenance/v4/run_map.csv`.
+
+Steps marked * need the files of the 2015 study. The production force constants, Born data and numerical results of
+the 2015 study (T. Tadano and S. Tsuneyuki, Phys. Rev. B 92, 054301 (2015)) were shared privately by T. Tadano and
+were used in the calculations of the paper (the benchmark and the fit test). They are not included in this release.
+The results obtained with them are given in the paper and its Supplementary Information. Scripts that take those files
+as arguments are included.
 
 | step | what it computes | script(s) | runs | outputs |
 |---|---|---|---|---|
@@ -21,15 +25,15 @@ calculation they govern; the dated records are part of the author's working note
 | T6 | the T4 rows on 20³ (a share is mesh-stable if 16³ and 20³ differ by ≤ 2 percentage points, fixed before) | `t6_report.py` | `*_partition_q12_m20_T300` | `{a,b}/t4/m20/`, Tables 5, S8–S12 |
 | T7 | the T4 rows at 600 K (labels by the same rule at 600 K) | `t7_report.py` | `*_partition_q12_m16_T600` | `{a,b}/t4/T600/`, Tables S13–S17 |
 | T8 | full sum (TRISYM = 0) against the symmetry-reduced sum on 16³ | `t8_widths.py`, `t8_report.py` | `*_partition_q12_m16_T300_fullsum` | `{a,b}/t4/trisym0/`, Tables S30–S32 |
-| P0 [HELD] | checks of the files of the 2015 study against the distributed example | `p0_archive_files.py` | — | held |
-| P1 [HELD] | the archived fit in the steps from model A to the configuration of the 2015 study (fit, non-analytic term, Born data), q₁ 2³–12³ | `make_inputs_archived_fit.py`, `scph_softmodes.py` | `P_scph_*` | Table 2, Fig. 2 |
-| P2 [HELD] | κ at 300 K in those steps against the 2015 value; mode comparison with the 2015 per-mode file (positional pairing) | `p2_analysis.py` | `P_rta_*_q8_m12_T300` | Table 2 |
-| P3 [HELD] | the archived fit under the settings of model A: T2–T5b repeated; comparison with model A by limits fixed before (± 3 percentage points; ratio classes ≥ 2.0, 1.3–2.0, < 1.3) | `p3_sampling.py`, `p3_report.py` | `P_*_settingsA`, `P_partition_*` | Table 8, Tables S33–S38 |
-| P4 [HELD] | forces of the archived fit on model A's 40 configurations and model B's test set | `b1_force_eval.py --xml` | — | Table 1, Table S7 |
-| P5 [HELD] | κ(T) in the configuration of the 2015 study, 200–1000 K | `p5_kappa_T.py`, `figures/make_kappa_T_2015.py` | `P_rta_e_q8_m12_T*` | Table S39, Fig. S4 |
-| P6 [HELD] | where the difference at 300 K sits: the 2015 per-mode lifetimes (and heat capacities at the 2015 frequencies) in the present conductivity sum, present group velocities | `p6_kappa_split.py` | `P_rta_e_q8_m12_T300` | Sec. 3.2, SI Sec. S12.1, Table S40 |
-| GA | graphical abstract: κ<sub>P</sub> by family, linewidth with at least one / no soft partner, per-mode ratios by band, read from the T4, T5 and T5b outputs; `--without-archived` for models A and B only; [HELD] with the archived fit | `figures/make_graphical_abstract_v3.py` | — | graphical abstract |
+| P0 * | checks of the files of the 2015 study against the distributed example | `p0_archive_files.py` | — | not in this release |
+| P1 * | the archived fit in the steps from model A to the configuration of the 2015 study (fit, non-analytic term, Born data), q₁ 2³–12³ | `make_inputs_archived_fit.py`, `scph_softmodes.py` | `P_scph_*` | Table 2, Fig. 2 |
+| P2 * | κ at 300 K in those steps against the 2015 value; mode comparison with the 2015 per-mode file (positional pairing) | `p2_analysis.py` | `P_rta_*_q8_m12_T300` | Table 2 |
+| P3 * | the archived fit under the settings of model A: T2–T5b repeated; comparison with model A by limits fixed before (± 3 percentage points; ratio classes ≥ 2.0, 1.3–2.0, < 1.3) | `p3_sampling.py`, `p3_report.py` | `P_*_settingsA`, `P_partition_*` | Table 8, Tables S33–S38 |
+| P4 * | forces of the archived fit on model A's 40 configurations and model B's test set | `b1_force_eval.py --xml` | — | Table 1, Table S7 |
+| P5 * | κ(T) in the configuration of the 2015 study, 200–1000 K | `p5_kappa_T.py`, `figures/make_kappa_T_2015.py` | `P_rta_e_q8_m12_T*` | Table S39, Fig. S4 |
+| P6 * | where the difference at 300 K sits: the 2015 per-mode lifetimes (and heat capacities at the 2015 frequencies) in the present conductivity sum, present group velocities | `p6_kappa_split.py` | `P_rta_e_q8_m12_T300` | Sec. 3.2, SI Sec. S12.1, Table S40 |
+| GA | graphical abstract: κ<sub>P</sub> by family, linewidth with at least one / no soft partner, per-mode ratios by band, read from the T4, T5 and T5b outputs; `--without-archived` for models A and B only; with the archived fit * | `figures/make_graphical_abstract_v3.py` | — | graphical abstract |
 
 The driver `regenerate_v4.py` runs B3, T1, T2, T4–T8 and the counts in this order from the stored raw outputs;
-`regenerate_v4_held.py` runs P1–P6 [HELD]; `build_tables_v4.py` and `build_manuscript_numbers_v4.py` write the tables
+`regenerate_v4_held.py` runs P1–P6 (needs the files of the 2015 study; not in this release); `build_tables_v4.py` and `build_manuscript_numbers_v4.py` write the tables
 and the number table.

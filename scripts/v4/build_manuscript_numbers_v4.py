@@ -10,7 +10,7 @@ copied with status REPORT. Parts (written to separate files):
 Usage (repository root): build_manuscript_numbers_v4.py PROC A3_TRANSPORT_CSV [--runs RUNS_ROOT] [--held HELD]
                          [--held-runs RUNS_ROOT_HELD]
   PROC: data/processed/v4 (a/ and b/ written by regenerate_v4.py); RUNS_ROOT: raw run directories by run-map name;
-  HELD: the processed outputs of the held part.
+  HELD: the processed outputs of the steps that need the files of the 2015 study (not in this release).
 """
 import json
 import os
@@ -373,7 +373,7 @@ add("lit_R_omega_300K_meV", float(_F.omega_meV.iloc[0]), "meV",
 add("lit_R_omega_300K_cm1", round(float(_F.omega_meV.iloc[0]) * 8.065544, 2), "cm-1",
     "the same in cm-1 (x 8.065544)", _fq)
 
-# --- the 300 K lifetime test (P6): our velocities and heat capacities with the 2015 per-mode lifetimes (held) ------
+# --- the 300 K lifetime test (P6): our velocities and heat capacities with the 2015 per-mode lifetimes (2015 files) ---
 _p6 = f"{HELD}/p6/p6.json"
 if HELD and os.path.exists(_p6):
     _job, P6 = "P6", json.load(open(_p6))

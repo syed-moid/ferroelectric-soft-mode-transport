@@ -2,11 +2,11 @@
 """Tables of the paper (v4) as CSV, with provenance headers, from the regenerated outputs.
 
 Every pipe table of the Markdown report tables (PROC/{a,b}/reports/*.md, written by regenerate_v4.py; HELD/reports
-for the held part) becomes one CSV: PROC/tables/{a,b}/<report>__<n>.csv (HELD/tables/ for the held part). The
+for the part that needs the files of the 2015 study) becomes one CSV: PROC/tables/{a,b}/<report>__<n>.csv (HELD/tables/ for that part). The
 first lines of each CSV ('#') name the producing script, the report file, the heading above the table and the
 part. The index PROC/tables/INDEX.csv lists every CSV with its heading and size.
 
-Parts: a = model A only; b = model B, or A and B side by side; held = needs the files of the 2015 study.
+Parts: a = model A only; b = model B, or A and B side by side; held = needs the files of the 2015 study; not in this release.
 Usage (repository root): build_tables_v4.py PROC [--held HELD]
 """
 import csv

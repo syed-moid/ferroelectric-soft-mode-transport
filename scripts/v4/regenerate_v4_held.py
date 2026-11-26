@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate the outputs that need the files of the 2015 study (held part) from the stored raw run directories.
+"""Regenerate the outputs that need the files of the 2015 study (not in this release) from the raw run directories.
 
 The files of the 2015 study are arguments; nothing here names them. RUNS_ROOT holds the run directories by run-map
 name (P_* runs of the archived fit, and the model A runs A_rta_q12_m16_T300, A_rta_q8_m12_T300, A_scph_q12).

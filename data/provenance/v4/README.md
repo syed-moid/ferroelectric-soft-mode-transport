@@ -11,4 +11,5 @@
   written by the solver. 21 `renorm.xml` files record a home path of the compute node in their header; in the Zenodo
   archives that path is replaced by `<home>`, and for these files the manifest also gives `sha256_archived` and
   `bytes_archived`, the hash and size of the file as archived.
-- The runs that need the files of the 2015 study are not listed here (held part).
+- The runs that need the files of the 2015 study are not listed here; those files are not in this release
+  (`README.md`, "Data").

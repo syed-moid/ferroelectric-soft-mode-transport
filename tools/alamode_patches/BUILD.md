@@ -44,7 +44,7 @@ run and two RTA runs on it), made with the HOME production toolchain before the 
 
 | variant | tree | patch (sha256 of the patch file) | machine | anphon sha256 | jobs |
 |---|---|---|---|---|---|
-| three-phonon linewidth binned by the labels of the two partners | `alamode_t3part` | `t3_partition.diff` (`c1d375d25bde66a0d33287adbadcf66cad779178884c7330dabd36f51ad55a6d`) | NODE | `a0a5d30ca29489bf6e37ba3ab92c04780f2ba64408cde7ec42c4c1d08b2ec6e9` | 16 (v4, parts a and b) [+ 3 held] |
+| three-phonon linewidth binned by the labels of the two partners | `alamode_t3part` | `t3_partition.diff` (`c1d375d25bde66a0d33287adbadcf66cad779178884c7330dabd36f51ad55a6d`) | NODE | `a0a5d30ca29489bf6e37ba3ab92c04780f2ba64408cde7ec42c4c1d08b2ec6e9` | 16 (v4, parts a and b) [+ 3 that need the files of the 2015 study, not in this release] |
 
 - The patch touches `anphon/anharmonic_core.cpp` only. Active only when the environment variable `T3_LABELS` names a
   label table (lines `qx qy qz branch label`); the partition is appended to `T3_OUT`. Without `T3_LABELS` the binary

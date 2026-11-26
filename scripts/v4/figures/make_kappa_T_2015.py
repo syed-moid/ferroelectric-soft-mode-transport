@@ -4,7 +4,7 @@
 Archived fit, mixed-space non-analytic term, Born data of the 2015 study, q1 8^3, 12^3 transport; our runs next to
 the numerical values behind Fig. 7 of the 2015 paper. One linear axis; 200 K, the lowest converged temperature of
 the SCPH series, is marked with an open symbol and a note. Reads the table written by scripts/v4/p5_kappa_T.py. This
-figure shows values of the files of the 2015 study (held part of the release).
+figure shows values of the files of the 2015 study, which are not in this release.
 Usage: make_kappa_T_2015.py KAPPA_T_CSV OUT_PNG
 """
 import sys
