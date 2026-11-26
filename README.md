@@ -1,7 +1,3 @@
-<!-- DRAFT for the author. Facts from the manuscript with their source tables; the author writes and edits the text.
-[HELD] marks scripts that run on the files of the 2015 study when these are given as arguments; those files, and
-everything derived from them, are not part of this release. -->
-
 # Polar and rotational soft modes as heat carriers and scattering partners in cubic SrTiO₃
 
 Computational study of cubic SrTiO₃ at 300 K (and 600 K): self-consistent phonon (SCPH) frequencies and
@@ -13,7 +9,8 @@ three-phonon linewidth of the modes that carry half of κ<sub>P</sub> is split b
 
 - **Model A**: the SrTiO₃ example distributed with ALAMODE (commit c5b015c), force constants as distributed.
 - **Model B**: a fit (H1) to the independent 300 K force data of the Materials Cloud Archive record 2026.91.
-- **[HELD]** The archived 2015 fit (production force constants of the 2015 study, provided by its author).
+- **Archived 2015 fit**: the production force constants of the 2015 study (Tadano and Tsuneyuki, 2015), shared
+  privately by T. Tadano and used for the benchmark and the fit test; not included in this release (see Data).
 
 Version 4.0.0 holds the scripts, tables and number table of this paper. Earlier releases (v1–v3.1.1) are described
 in `RELEASE_NOTES.md`; their files are kept. Two folders of v3 have new names in v4 (`docs/PATH_MAP_v3.md`).
@@ -51,7 +48,7 @@ force constants. Caveats are in `METHODS_AND_CAVEATS.md`.
 | Path | Contents |
 | --- | --- |
 | `scripts/v4/` | analysis scripts of this paper: raw outputs → processed outputs → tables → number table (`scripts/v4/README.md`) |
-| `scripts/v4/figures/` | figure scripts: Fig. 1 (`make_fig1_parity.py`), Fig. 3 and the soft-mode draft (`make_figure_drafts.py`), Figs. 4, 5, S2, S3 (`make_t4_figures.py`); graphical abstract of models A and B (`make_graphical_abstract_v3.py --without-archived`); [HELD] Fig. 2 (`make_fig2_softmode_grid.py`), Fig. S4 (`make_kappa_T_2015.py`), the graphical abstract with the archived fit |
+| `scripts/v4/figures/` | figure scripts: Fig. 1 (`make_fig1_parity.py`), Fig. 3 and the SCPH soft-mode frequencies against the q₁ grid without the archived fit (`make_figure_drafts.py`), Figs. 4, 5, S2, S3 (`make_t4_figures.py`); graphical abstract of models A and B (`make_graphical_abstract_v3.py --without-archived`); needing the files of the 2015 study (not in this release): Fig. 2 (`make_fig2_softmode_grid.py`), Fig. S4 (`make_kappa_T_2015.py`), the graphical abstract with the archived fit |
 | `src/fekappa/modes.py`, `src/fekappa/partition.py` | degenerate groups and group-averaged linewidths; readers of the linewidth-partition output |
 | `data/processed/v4/a/` | model A and its refits: summaries of the carrier, band and damping-ratio analyses, benchmark tables |
 | `data/processed/v4/b/` | model B, and tables with A and B side by side (see the data licence below) |
@@ -74,7 +71,11 @@ The tables of the earlier releases (`data/processed/sto_production/`, `data/proc
   `v4_processed_a` and `v4_processed_b`; the repository holds the summaries.
 - **Model B** uses the dataset of Lin et al., Materials Cloud Archive 2026.91 (DOI 10.24435/materialscloud:8b-q1),
   licensed CC BY-NC 4.0. Files derived from it are listed in `DATA_LICENSE.md`.
-- **[HELD]** The files of the 2015 study, and the outputs derived from them, are not part of this release.
+- **Files of the 2015 study.** The production force constants, Born data and numerical results of the 2015 study (T.
+  Tadano and S. Tsuneyuki, Phys. Rev. B 92, 054301 (2015)) were shared privately by T. Tadano and were used in the
+  calculations of the paper (the benchmark and the fit test). They are not included in this release. The results
+  obtained with them are given in the paper and its Supplementary Information. Scripts that take those files as
+  arguments are included.
 
 ## Reproducing
 
@@ -86,6 +87,13 @@ python scripts/v4/regenerate_v4.py RUNS_ROOT data/processed/v4 --a3-transport da
 python scripts/v4/build_tables_v4.py data/processed/v4
 python scripts/v4/build_manuscript_numbers_v4.py data/processed/v4 data/processed/v4/a/benchmark/A3_transport.csv --runs RUNS_ROOT
 ```
+
+## How to cite
+
+- Paper: Syed Moid, "Polar and rotational soft modes as heat carriers and scattering partners in cubic SrTiO₃",
+  manuscript in preparation.
+- Code and data: Syed A. Moid, Ferroelectric-Kappa-SCPH reproducibility package, version 4.0.0, Zenodo, concept DOI
+  10.5281/zenodo.20559513 (all versions).
 
 ## License
 

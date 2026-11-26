@@ -1,8 +1,5 @@
 # Ferroelectric-Kappa-SCPH — Reproducibility Package (v4.0.0)
 
-<!-- DRAFT: facts only; the author writes the text. [HELD] = scripts that run on the files of the 2015 study when
-these are given as arguments; those files and everything derived from them are not part of this release. -->
-
 Release for the paper "Polar and rotational soft modes as heat carriers and scattering partners in cubic SrTiO₃".
 Code, tables and new raw-output archives form one new version of the Zenodo record (concept DOI
 10.5281/zenodo.20559513).
@@ -20,25 +17,29 @@ Code, tables and new raw-output archives form one new version of the Zenodo reco
   of rotational and non-rotational partners within frequency bands (105 / 145 / 160 cm⁻¹, and 80 / 95 cm⁻¹ below
   105); full against symmetry-reduced tetrahedron sum (8³, 16³); the penalty endpoints and the reduced-basis refit of
   model A.
-- **[HELD] Scripts for the archived 2015 fit**: in the configuration of the 2015 study and under the settings of model
-  A. They take the files of the 2015 study as arguments; those files and their outputs are not included.
+- **Files of the 2015 study.** The production force constants, Born data and numerical results of the 2015 study (T.
+  Tadano and S. Tsuneyuki, Phys. Rev. B 92, 054301 (2015)) were shared privately by T. Tadano and were used in the
+  calculations of the paper (the benchmark and the fit test). They are not included in this release. The results
+  obtained with them are given in the paper and its Supplementary Information. Scripts that take those files as
+  arguments are included. Among them are the scripts for the archived 2015 fit, in the configuration of the 2015 study
+  and under the settings of model A.
 - **Scripts and tables.** `scripts/v4/` regenerates the processed outputs from the raw outputs (`regenerate_v4.py`;
-  [HELD] `regenerate_v4_held.py`), the tables (`build_tables_v4.py`) and the number table
+  `regenerate_v4_held.py`, which needs the files of the 2015 study), the tables (`build_tables_v4.py`) and the number table
   (`build_manuscript_numbers_v4.py` → `data/processed/v4/manuscript_numbers_v4_{a,b}.csv`). Figure scripts in
   `scripts/v4/figures/`.
 - **Provenance.** `data/provenance/v4/run_map.csv` names every run by what it does next to its job name;
   `manifest_v4.json` lists every file with its sha256 and the build id.
 - **Package.** `fekappa.modes` (degenerate groups, group-averaged linewidths, mesh and cell from `rta.in`) and
   `fekappa.partition` (readers of the partition output and of `.result` linewidths), with tests. Version 4.0.0.
-- **Tests.** 308 passed / 8 skipped in a clean checkout without raw outputs.
+- **Tests.** 313 passed / 3 skipped with the local raw ALAMODE outputs; 308 passed / 8 skipped in a clean checkout
+  without raw outputs (the five further tests need those outputs).
 
 ## What is superseded from v3.1.1
 
 - The key results and the status text of the v3 README (zone-resolved damping and the κ decomposition of the
   v3 paper) are replaced by those of this paper.
-- The v3 folders `scripts/revision/` and `data/processed/revision/` are renamed `scripts/v3/` and
-  `data/processed/v3/`; path references inside the files are updated, contents otherwise unchanged
-  (`docs/PATH_MAP_v3.md`). The v3.1.1 archives and `data/provenance/manifest_final.json` keep the old names.
+- The v3 folders of scripts and tables are renamed `scripts/v3/` and `data/processed/v3/` (old and new paths in
+  `docs/PATH_MAP_v3.md`); path references inside the files are updated, contents otherwise unchanged. The v3.1.1 archives and `data/provenance/manifest_final.json` keep the old names.
 - `data/processed/manuscript_numbers_v8.csv` is the number table of the v3 paper; the v4 paper uses
   `data/processed/v4/manuscript_numbers_v4_{a,b}.csv`.
 

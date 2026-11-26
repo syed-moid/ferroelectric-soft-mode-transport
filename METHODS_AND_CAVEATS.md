@@ -40,8 +40,6 @@ records the fixed-cell SCPH Ω₀ systematic and its handling.
 
 
 **State (v4, paper "Polar and rotational soft modes as heat carriers and scattering partners in cubic SrTiO₃").**
-<!-- DRAFT: facts only; the author writes the text. [HELD] = needs the files of the 2015 study, which are not part
-of this release. -->
 - Data: model A (distributed example) and model B (fit H1 to the Materials Cloud Archive 2026.91 force data), SCPH on
   q₁ = 12³, transport on 16³ (20³ for the mesh test; 8³ for the full-sum test), 300 K and 600 K. Every run of v4 is in
   `data/provenance/v4/run_map.csv` with its job name, and in `manifest_v4.json` with the sha256 of every file.
@@ -50,7 +48,8 @@ of this release. -->
   base linewidth per carrier to ≤ 1.5 × 10⁻¹⁴ (relative), and equals the printed `.result` width to its 6 digits.
 - Family labels: the frozen rule (polar score weighted by cos²(πq) per axis, rotational score by sin²(πq_b) sin²(πq_c));
   labels invariant under the symmetry of the mesh (0 violations).
-- Tests (v4): 308 passed / 8 skipped in a clean checkout without raw outputs (8 new tests for
+- Tests (v4): 313 passed / 3 skipped with the local raw ALAMODE outputs, 308 passed / 8 skipped in a clean checkout
+  without raw outputs (8 new tests for
   `fekappa.modes` and `fekappa.partition`).
 - Regeneration: from the stored raw outputs, the scripts reproduce the 343 keys of the number table in parts a and
   b, and Figs. 1, 3, 4, 5, S2 and S3 byte for byte.
@@ -184,8 +183,11 @@ of this release. -->
   runs use the symmetry-reduced tetrahedron sum; the full sum was run on 16³ for both models and on 8³, not on 20³,
   and the band-resolved shares were computed with the reduced sum only (SI S10).
 - **C19 (v4) — Model B at 600 K** is outside its 300 K training distribution.
-- **C20 (v4) — [HELD] Benchmark of the 2015 calculation.** Needs the files of the 2015 study; its outputs are not
-  part of this release.
+- **C20 (v4) — Benchmark of the 2015 calculation.** The production force constants, Born data and numerical results of
+  the 2015 study (T. Tadano and S. Tsuneyuki, Phys. Rev. B 92, 054301 (2015)) were shared privately by T. Tadano and
+  were used in the calculations of the paper (the benchmark and the fit test). They are not included in this release.
+  The results obtained with them are given in the paper and its Supplementary Information. Scripts that take those
+  files as arguments are included.
 
 ---
 

@@ -1,5 +1,3 @@
-<!-- DRAFT for the author: the per-part terms below follow the author's decisions; the author edits the text. -->
-
 # Data and documentation license
 
 Unless otherwise noted, the generated synthetic datasets, post-processed numerical results, figure data, configuration files, literature-extraction notes, and documentation in this repository are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
@@ -45,9 +43,11 @@ not redistributed.
 
 ### Material of the 2015 study
 
-The files of the 2015 study (T. Tadano and S. Tsuneyuki, Phys. Rev. B 92, 054301 (2015)), and everything derived from
-them, are not part of this release. Scripts that run on those files when they are given as arguments are included as
-code; they contain no name and no value of the files.
+The production force constants, Born data and numerical results of the 2015 study (T. Tadano and S. Tsuneyuki, Phys.
+Rev. B 92, 054301 (2015)) were shared privately by T. Tadano and were used in the calculations of the paper (the
+benchmark and the fit test). They are not included in this release. The results obtained with them are given in the
+paper and its Supplementary Information. Scripts that take those files as arguments are included. These scripts are
+code (MIT); they contain no name and no value of those files.
 
 ### ALAMODE example files and the source patch
 
