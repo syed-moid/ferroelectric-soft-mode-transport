@@ -307,7 +307,7 @@ if _p2 and os.path.exists(_p2):
             f"kappa_C (xx) at 300 K, step {k}-kappa, q1 8^3, transport 12^3", _p2,
             "P2")
         add(f"p15_kP_{k}_minus_archived_rel", r(100 * v["minus_archived_rel"], 4), "%",
-            f"(kappa_P of step {k}-kappa - archived 8.756089) / archived", _p2,
+            f"(kappa_P of step {k}-kappa - archived value) / archived value", _p2,
             "P2")
 
 # --- the analysis plan: P3 numbers (archived 2015 fit under the settings of model A; the P3 report tables (Markdown)) ---------------
