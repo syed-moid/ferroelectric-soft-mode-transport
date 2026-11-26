@@ -19,9 +19,9 @@ source; nothing is modified here):
 This directory (`data/raw/alamode_sto/`) is gitignored except for this note. Only the tidy extracts in
 `data/processed/` are committed.
 
-## Revision calculations (v3.0.0): `revision/`
+## Calculations of v3 (v3.0.0): `revision/`
 
-The calculations of the revised manuscript are under `revision/<variant>/<job id>/`, one directory per job of the
+The calculations of the v3 manuscript are under `revision/<variant>/<job id>/`, one directory per job of the
 compute queue (`queue/run_queue.py`). The job manifest `data/provenance/manifest_final.json` records each job's
 inputs, the sha256 of every file, its build id and its Zenodo archive (`archive_file`).
 

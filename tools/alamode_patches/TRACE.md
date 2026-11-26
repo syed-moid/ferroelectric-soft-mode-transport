@@ -101,7 +101,7 @@ inconsistency to avoid.
 
 ## Vertex normalization against the manuscript (Appendix A)
 
-Appendix A is that of the submitted manuscript (v7.3). The revised manuscript has no appendix; its SI Sec. S7.1 writes
+Appendix A is that of manuscript v7.3. The v3 manuscript has no appendix; its SI Sec. S7.1 writes
 diagram (c) with the code vertex and the 1/96 prefactor.
 
 - **Diagram (c).** Appendix A, Eq. (A6), defines V_n = Φ_λ Π_j √(ħ/(2Ω_j)). The code vertex omits the factor

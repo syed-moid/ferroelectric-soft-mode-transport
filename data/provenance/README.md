@@ -1,4 +1,4 @@
-# Provenance record of the revision calculations
+# Provenance record of the v3 calculations
 
 `manifest_final.json` is the final job manifest of the compute queue (`queue/run_queue.py`). It lists 170 entries, all
 `done`: 169 lattice-dynamics runs and one `decision` entry (`d0_decision`) that applied the SCPH-grid selection

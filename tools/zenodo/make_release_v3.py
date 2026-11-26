@@ -100,7 +100,7 @@ def readme(files: list[dict], sw: dict) -> str:
                       for b in sw["builds"])
     return f"""# Zone-resolved soft-mode damping and the thermal-conductivity decomposition of SrTiO₃: release {TAG}
 
-Code, derived tables and raw calculation outputs of the revised manuscript, archived together as one version of the
+Code, derived tables and raw calculation outputs of the v3 manuscript, archived together as one version of the
 record {CONCEPT_DOI} (all versions). The code archive is the
 tagged release {REPO}/releases/tag/{TAG}.
 

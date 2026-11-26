@@ -1,4 +1,4 @@
-"""Build the Zenodo data package for the revision calculations (raw ALAMODE outputs + scrubbed job manifest).
+"""Build the Zenodo data package for the v3 calculations (raw ALAMODE outputs + scrubbed job manifest).
 
 Reads the job manifest (`queue/manifest.json`) and the raw outputs under `data/raw/alamode_sto/revision/`; the
 originals are never modified. For each archive variant, every job directory is read, each file is checked against
@@ -293,7 +293,7 @@ def readme(results: dict, jobs_by_variant: dict, sw: dict, compress: str) -> str
                     for k, p in sw.get("patches", {}).items()) or "- not recorded on this machine"
     probes = "\n".join(f"- `{k}`: {v}" for k, v in PROBES.items())
     unpack = "zstd -dc <file>.tar.zst | tar -x" if compress == "zst" else "tar -xzf <file>.tar.gz"
-    return f"""# SrTiO3 SCPH + Wigner transport: raw calculation outputs (revision data set)
+    return f"""# SrTiO3 SCPH + Wigner transport: raw calculation outputs (v3 data set)
 
 Raw ALAMODE outputs behind the tables in `data/processed/` of the code repository. Every file here is listed,
 with its sha256, in `manifest_scrubbed.json` (one record per job: parameters, build id, timings, outputs and

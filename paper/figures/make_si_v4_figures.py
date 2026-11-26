@@ -1,4 +1,4 @@
-"""Figures S1-S8 of Supplementary Information v4, from production, revision and SI tables only.
+"""Figures S1-S8 of Supplementary Information v4, from production, v3 and SI tables only.
 
 S1  SCPH soft-mode frequencies (Gamma-TO1, M, R) against T for q1 = 8^3, 12^3, 16^3 (PM; converged points only)
 S2  benchmark matrix: kappa_P(300 K) against the SCPH grid q1, with and without polarization mixing, 8^3 and 12^3 meshes

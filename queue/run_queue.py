@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Checkpointed, resumable local queue for the ALAMODE (anphon) revision runs.
+"""Checkpointed, resumable local queue for the ALAMODE (anphon) runs.
 
 Subcommands
     run      run jobs until all are done, STOP / STOP_NOW is set, or the --until time is reached (default)

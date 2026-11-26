@@ -1,4 +1,4 @@
-"""Provenance headers for the two revision tables that no script generates.
+"""Provenance headers for the two v3 tables that no script generates.
 
 - c1_secondary_sweep.csv: κ_P, κ_C and wall time collected from the rta.log files of the secondary settings sweep
   (300 K, 12³, base = own SCPH q₁ = 8³ with polarization mixing; one setting changed per run).

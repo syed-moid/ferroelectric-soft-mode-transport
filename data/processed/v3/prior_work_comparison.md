@@ -1,7 +1,7 @@
 # Prior SrTiO₃ transport studies against this work (SI Sec. S10, Tables S33–S35)
 
 Read from the full texts of the cited papers (journal versions, or the arXiv version where stated). Values marked
-"read from figure" are graph readings. The Zhao et al. 2021 column and the revised "This work" entries are added by
+"read from figure" are graph readings. The Zhao et al. 2021 column and the "This work" entries of the v3 manuscript are added by
 `scripts/v3/build_si_tables_v4.py`, which writes `data/processed/si_v4/s11_literature.csv` from this table.
 
 |  | Tadano & Tsuneyuki 2015 | Wang, Zeng & Chen 2021 | Han, Lin, Nan, Lin & Xu 2023 | Dangić, Caldarelli, Bianco, Savić & Errea 2025 | Guo & Guo 2023 | This work |

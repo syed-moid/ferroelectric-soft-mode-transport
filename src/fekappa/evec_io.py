@@ -1,5 +1,5 @@
 """Readers for anphon outputs: the `.mesh.evec` eigenvector file (PRINTEVEC = 1, KPMODE = 2) and the irreducible
-wave-vector list of a `.result` file. Used by the revision analysis scripts (scripts/v3/)."""
+wave-vector list of a `.result` file. Used by the analysis scripts (scripts/v3/, scripts/v4/)."""
 import gzip
 from pathlib import Path
 

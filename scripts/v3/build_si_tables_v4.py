@@ -1,6 +1,6 @@
-"""Derived tables and prose numbers of Supplementary Information v4, from production and revision tables only.
+"""Derived tables and prose numbers of Supplementary Information v4, from production and v3 tables only.
 
-Inputs: data/processed/sto_production/*.csv, mode_table_T.csv.gz; data/processed/v3/*.csv (revision tables);
+Inputs: data/processed/sto_production/*.csv, mode_table_T.csv.gz; data/processed/v3/*.csv (v3 tables);
 data/provenance/manifest_final.json (four-phonon job metrics); data/raw/alamode_sto/revision/{pm_q8,pm_q8_mix0p1,pm_q12}
 (SCPH inputs/logs, read for run parameters and the mixing-parameter check); data/literature/STO/{tadano_2015,
 vogt_1995}. Output: data/processed/si_v4/*.csv (one provenance line each) and data/processed/si_v4/si_numbers_v4.csv
@@ -181,7 +181,7 @@ num("r_1000_20", round(r_med[(1000, 20)], 2), "κ_C-weighted median r at 20³, 1
 
 # ------------------------------------------------------------------ S4 250 K boundary
 n3 = rd(PJ / "n3_q1_16_check.csv")
-n3 = n3[n3.T_K.isin([250, 300, 500, 800])].copy()   # 500 and 800 K added in the revision
+n3 = n3[n3.T_K.isin([250, 300, 500, 800])].copy()   # 500 and 800 K added in v3
 LAB = {"omega_Gamma": "Ω Γ-TO1 (cm⁻¹)", "omega_X": "Ω X (cm⁻¹)", "omega_M": "Ω M (cm⁻¹)", "omega_R": "Ω R (cm⁻¹)",
        "kappa_P": "κ_P, 12³ mesh (W m⁻¹ K⁻¹)", "kappa_C": "κ_C, 12³ mesh (W m⁻¹ K⁻¹)"}
 n3 = n3[n3.quantity.isin(LAB)].assign(quantity=lambda d: d.quantity.map(LAB))
@@ -468,7 +468,7 @@ keep = ["Citation", "Material / phase", "FC source, functional", "Renormalizatio
 rows = [[clean(c) for c in r] for r in body if r[0].strip("* ") in keep]
 lt = pd.DataFrame(rows, columns=["row"] + [clean(h) for h in hdr[1:]])
 # draft 2: Zhao et al. 2021 column from the full text (zhao_values.csv), and the
-# "This work" column restated in the revised wording; "NOT-STATED" -> "not reported"
+# "This work" column restated in the wording of the v3 manuscript; "NOT-STATED" -> "not reported"
 ZHAO = {"Citation": "PRB 104, 224304 (2021), doi:10.1103/PhysRevB.104.224304",
         "Material / phase": "16 cubic oxide and fluoride perovskites, including SrTiO₃, cubic",
         "FC source, functional": "VASP PAW, GGA-PBE, PBE-optimized a = 3.94 Å (expt 3.91 Å); 2×2×2 supercell; cubic and "

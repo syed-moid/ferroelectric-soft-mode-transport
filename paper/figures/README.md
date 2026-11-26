@@ -11,13 +11,13 @@ Figure captions live in the manuscript, not in the images.
 
 ```bash
 source ../../.venv/bin/activate      # repo venv with `pip install -e ".[dev]"`
-python make_f1_dispersion.py         # ... make_f2 ... make_f5 (revised manuscript)
-python make_fsupp_sto.py             # revised supplementary S1-S3
+python make_f1_dispersion.py         # ... make_f2 ... make_f5 (v2 manuscript)
+python make_fsupp_sto.py             # v2 supplementary S1-S3
 python make_fig01.py                 # ... make_fig06 (v5 set; some survive as appendix figures)
 python make_supp.py                  # v5 supplementary
 ```
 
-## v3 figures (revised manuscript and SI)
+## v3 figures (v3 manuscript and SI)
 
 | Script | Figures | Data dependency |
 | --- | --- | --- |
@@ -26,7 +26,7 @@ python make_supp.py                  # v5 supplementary
 
 Both read tracked tables only: `python make_v8_figures.py && python make_si_v4_figures.py` from this directory.
 
-## v2 figures (computed SrTiO3 core of the earlier revision)
+## v2 figures (computed SrTiO3 core of the v2 manuscript)
 
 All read committed `data/processed/` (+ `data/literature/`) only — never `data/raw/`.
 
