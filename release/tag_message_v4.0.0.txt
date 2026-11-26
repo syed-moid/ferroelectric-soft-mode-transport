@@ -1,0 +1,5 @@
+v4.0.0: polar and rotational soft modes as heat carriers and scattering partners in cubic SrTiO₃
+
+Scripts, tables and raw-output archives of the paper: model A and model B, family labels from atomic motion,
+partner-resolved three-phonon linewidths (patched anphon), frequency-band comparison, run map and manifest.
+Package version 4.0.0.
